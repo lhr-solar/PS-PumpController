@@ -1,0 +1,11 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "utsvt-chips")(type "KiCad")(uri "${KIPRJMOD}/UTSVT-KiCadLibraries/utsvt-chips.kicad_sym")(options "")(descr ""))
+  (lib (name "utsvt-connectors")(type "KiCad")(uri "${KIPRJMOD}/UTSVT-KiCadLibraries/utsvt-connectors.kicad_sym")(options "")(descr ""))
+  (lib (name "utsvt-microcontrollers")(type "KiCad")(uri "${KIPRJMOD}/UTSVT-KiCadLibraries/utsvt-microcontrollers.kicad_sym")(options "")(descr ""))
+  (lib (name "utsvt-misc")(type "KiCad")(uri "${KIPRJMOD}/UTSVT-KiCadLibraries/utsvt-misc.kicad_sym")(options "")(descr ""))
+  (lib (name "utsvt-power-regulators")(type "KiCad")(uri "${KIPRJMOD}/UTSVT-KiCadLibraries/utsvt-power-regulators.kicad_sym")(options "")(descr ""))
+  (lib (name "Misc")(type "KiCad")(uri "${KIPRJMOD}/Misc.kicad_sym")(options "")(descr ""))
+  (lib (name "ADS130B02QPWRQ1")(type "KiCad")(uri "${KIPRJMOD}/Custom-KiCadLibraries/ul_ADS130B02QPWRQ1/KiCADv6/2025-03-29_20-22-36.kicad_sym")(options "")(descr ""))
+  (lib (name "ADS131M03QPWRQ1")(type "KiCad")(uri "${KIPRJMOD}/Custom-KiCadLibraries/ADS131M03QPWRQ1/ADS131M03QPWRQ1.kicad_sym")(options "")(descr ""))
+)

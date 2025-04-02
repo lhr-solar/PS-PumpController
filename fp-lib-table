@@ -1,0 +1,7 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "ADC")(type "KiCad")(uri "${KIPRJMOD}/Custom-KiCadLibraries/ul_ADS130B02QPWRQ1/KiCADv6/footprints.pretty")(options "")(descr ""))
+  (lib (name "LCD")(type "KiCad")(uri "${KIPRJMOD}/Custom-KiCadLibraries/ST7735/footprints.pretty")(options "")(descr ""))
+  (lib (name "PushButton")(type "KiCad")(uri "${KIPRJMOD}/Custom-KiCadLibraries/TL3305BF100QG/footprints.pretty")(options "")(descr ""))
+  (lib (name "ADC2")(type "KiCad")(uri "${KIPRJMOD}/Custom-KiCadLibraries/ADS131M03QPWRQ1/footprints.pretty")(options "")(descr ""))
+)

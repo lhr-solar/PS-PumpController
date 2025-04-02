@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ADS131M03QPWRQ1
+D Analog to Digital Converters - ADC Automotive, three-channel, 24-bit, 64-kSPS, simultaneous-sampling, delta-sigma ADC
+K
+F https://www.ti.com/lit/ds/symlink/ads131m03-q1.pdf
+$ENDCMP
+#
+#End Doc Library
