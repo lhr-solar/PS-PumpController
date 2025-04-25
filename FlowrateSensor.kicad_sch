@@ -1352,7 +1352,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:LFPAK33"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 118.11 41.91 0)
 			(effects
 				(font
