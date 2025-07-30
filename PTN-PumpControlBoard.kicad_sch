@@ -706,6 +706,156 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:D_Zener"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Zener"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Zener diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "D_Zener_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Zener_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R_US"
 			(pin_numbers
 				(hide yes)
@@ -840,6 +990,264 @@
 				)
 			)
 			(symbol "R_US_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:Thermistor_PTC"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TH"
+				(at -4.064 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Thermistor_PTC"
+				(at 3.048 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 1.27 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Temperature dependent resistor, positive temperature coefficient"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "resistor PTC thermistor sensor RTD"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "*PTC* *Thermistor* PIN?ARRAY* bornier* *Terminal?Block* R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Thermistor_PTC_0_1"
+				(arc
+					(start -3.175 2.413)
+					(mid -3.0506 2.3165)
+					(end -3.048 2.159)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -3.048 2.794)
+					(mid -2.9736 2.9736)
+					(end -2.794 3.048)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.794 3.048)
+					(mid -2.6144 2.9736)
+					(end -2.54 2.794)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.794 2.54)
+					(mid -2.9736 2.6144)
+					(end -3.048 2.794)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.794 1.905)
+					(mid -2.9736 1.9794)
+					(end -3.048 2.159)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.54 2.159)
+					(mid -2.6144 1.9794)
+					(end -2.794 1.905)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.159 2.794)
+					(mid -2.434 2.5608)
+					(end -2.794 2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 2.159) (xy -2.54 2.794)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -3.683) (xy -2.54 -1.397) (xy -2.794 -2.159) (xy -2.286 -2.159) (xy -2.54 -1.397) (xy -2.54 -1.651)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 2.54) (xy -1.778 1.524) (xy 1.778 -1.524) (xy 1.778 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -3.683) (xy -1.778 -1.397) (xy -2.032 -2.159) (xy -1.524 -2.159) (xy -1.778 -1.397)
+						(xy -1.778 -1.651)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.016 2.54)
+					(end 1.016 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Thermistor_PTC_1_1"
 				(pin passive line
 					(at 0 3.81 270)
 					(length 1.27)
@@ -2548,6 +2956,18 @@
 		)
 		(uuid f67b366f-1201-428e-80fa-b72ab96d74a7)
 	)
+	(rectangle
+		(start 156.21 109.22)
+		(end 211.455 153.67)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid fcaa2143-eac4-49ea-a402-d9cc47aae6fe)
+	)
 	(text "3 ADC pins for thermistors pls"
 		(exclude_from_sim no)
 		(at 136.906 99.822 0)
@@ -2557,6 +2977,16 @@
 			)
 		)
 		(uuid "3a5560bc-d287-4b0a-bc8d-512e42bcd366")
+	)
+	(text "flow sensor only rated for 24V so this\nmakes the board safe for 22-26V"
+		(exclude_from_sim no)
+		(at 176.276 150.622 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "6f67c3f5-d0c8-43c6-bc23-edaa50caa586")
 	)
 	(text "???"
 		(exclude_from_sim no)
@@ -2634,7 +3064,29 @@
 		)
 		(uuid "25e60222-010e-45af-9b7f-302fcd7b349e")
 	)
-	(text_box "TODO:\n- pick new 24V components\n- finalize nmos\n- low pass on sensors?"
+	(text_box "OVERVOLTAGE"
+		(exclude_from_sim no)
+		(at 196.215 148.59 0)
+		(size 15.24 5.08)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.381)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "3ad9c8a2-feb6-41c7-abaa-4e9d71885dbf")
+	)
+	(text_box "TODO/QUESTIONS:\n\n- is it ok to just change labels on psom? or new footprint?\n- low pass on sensors?"
 		(exclude_from_sim no)
 		(at 234.95 127 0)
 		(size 43.18 32.385)
@@ -2751,6 +3203,18 @@
 		(uuid "0eb6a6f3-da5d-4da3-90ec-6d147838c5c1")
 	)
 	(no_connect
+		(at 133.35 83.82)
+		(uuid "20363e41-26e9-4692-b6cf-e9e0eba9e3e1")
+	)
+	(no_connect
+		(at 133.35 78.74)
+		(uuid "26f90245-89c6-4fd5-ae9e-5bc798d2d0ab")
+	)
+	(no_connect
+		(at 133.35 81.28)
+		(uuid "4a1bb3b1-1e8f-4b4e-89cb-a4f539838685")
+	)
+	(no_connect
 		(at 120.65 140.97)
 		(uuid "5da2c831-cc6e-4eb8-b0d4-0f7e67b9cf3b")
 	)
@@ -2763,8 +3227,20 @@
 		(uuid "aaf0998b-5a0a-48f7-89fd-f138fd556802")
 	)
 	(no_connect
+		(at 133.35 86.36)
+		(uuid "c17747d7-633d-448c-a178-31c0918bd0da")
+	)
+	(no_connect
+		(at 133.35 74.93)
+		(uuid "da90d426-d6bd-4764-bec9-d53b15b06233")
+	)
+	(no_connect
 		(at 120.65 133.35)
 		(uuid "def0f4b4-8f26-49e1-a5e3-a38e6b2b083e")
+	)
+	(no_connect
+		(at 133.35 55.88)
+		(uuid "e72c44e2-efe9-4539-a71a-e2bda1b3dbc4")
 	)
 	(no_connect
 		(at 120.65 143.51)
@@ -2773,6 +3249,10 @@
 	(no_connect
 		(at 69.85 130.81)
 		(uuid "f176803c-e3ed-4736-879c-4c72ee544a15")
+	)
+	(no_connect
+		(at 133.35 53.34)
+		(uuid "f1c76ffa-0df1-4f4f-8992-64a7e3c2aa2f")
 	)
 	(wire
 		(pts
@@ -2856,16 +3336,6 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 81.28) (xy 137.16 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "262b1d8f-6796-451b-9bf5-14671687bec9")
-	)
-	(wire
-		(pts
 			(xy 180.34 60.96) (xy 194.31 60.96)
 		)
 		(stroke
@@ -2886,7 +3356,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 87.63) (xy 64.77 87.63)
+			(xy 62.23 24.13) (xy 64.77 24.13)
 		)
 		(stroke
 			(width 0)
@@ -2936,7 +3406,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 24.13) (xy 64.77 24.13)
+			(xy 62.23 45.72) (xy 64.77 45.72)
 		)
 		(stroke
 			(width 0)
@@ -2946,7 +3416,7 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 68.58) (xy 29.21 68.58)
+			(xy 26.67 90.17) (xy 29.21 90.17)
 		)
 		(stroke
 			(width 0)
@@ -2986,16 +3456,6 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 74.93) (xy 137.16 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "455b9949-7d3c-4e91-a9a8-bb75f8645df5")
-	)
-	(wire
-		(pts
 			(xy 24.13 118.11) (xy 24.13 121.92)
 		)
 		(stroke
@@ -3003,16 +3463,6 @@
 			(type default)
 		)
 		(uuid "4bfcd1d0-a083-4d23-bf53-15fab7ec3060")
-	)
-	(wire
-		(pts
-			(xy 133.35 78.74) (xy 137.16 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5237ae0d-1cd8-4e52-ad12-13fabb73eb84")
 	)
 	(wire
 		(pts
@@ -3036,6 +3486,16 @@
 	)
 	(wire
 		(pts
+			(xy 177.8 118.11) (xy 177.8 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6346ea52-d804-4ce2-af1a-a52e91fb52d9")
+	)
+	(wire
+		(pts
 			(xy 182.88 63.5) (xy 180.34 63.5)
 		)
 		(stroke
@@ -3056,16 +3516,6 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 53.34) (xy 137.16 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6941aecf-100d-471e-9fdc-adefab97c5ac")
-	)
-	(wire
-		(pts
 			(xy 133.35 72.39) (xy 137.16 72.39)
 		)
 		(stroke
@@ -3076,7 +3526,7 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 92.71) (xy 29.21 92.71)
+			(xy 26.67 29.21) (xy 29.21 29.21)
 		)
 		(stroke
 			(width 0)
@@ -3086,7 +3536,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 92.71) (xy 64.77 92.71)
+			(xy 62.23 29.21) (xy 64.77 29.21)
 		)
 		(stroke
 			(width 0)
@@ -3113,16 +3563,6 @@
 			(type default)
 		)
 		(uuid "73a3b275-9b04-4b27-9a78-b0921ca5ab69")
-	)
-	(wire
-		(pts
-			(xy 62.23 69.85) (xy 64.77 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7d605867-4807-489c-9379-2146df300e4d")
 	)
 	(wire
 		(pts
@@ -3163,16 +3603,6 @@
 			(type default)
 		)
 		(uuid "8596bba0-473d-4d6c-894f-c839867cf701")
-	)
-	(wire
-		(pts
-			(xy 133.35 83.82) (xy 137.16 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8c13326e-ede8-4c66-b015-7fcf8e8b0425")
 	)
 	(wire
 		(pts
@@ -3266,13 +3696,13 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 66.04) (xy 64.77 66.04)
+			(xy 177.8 137.16) (xy 177.8 139.7)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9ff8f601-3ef3-41aa-bfde-efb4c9e197be")
+		(uuid "9d0341b5-3ae4-4fe0-9e58-859d2f7527fa")
 	)
 	(wire
 		(pts
@@ -3336,16 +3766,6 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 55.88) (xy 137.16 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b7555b72-f943-48e5-83f7-7c625abe700e")
-	)
-	(wire
-		(pts
 			(xy 142.24 123.19) (xy 142.24 130.81)
 		)
 		(stroke
@@ -3356,7 +3776,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 46.99) (xy 64.77 46.99)
+			(xy 62.23 68.58) (xy 64.77 68.58)
 		)
 		(stroke
 			(width 0)
@@ -3366,7 +3786,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 26.67) (xy 64.77 26.67)
+			(xy 62.23 48.26) (xy 64.77 48.26)
 		)
 		(stroke
 			(width 0)
@@ -3376,7 +3796,17 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 87.63) (xy 29.21 87.63)
+			(xy 177.8 128.27) (xy 177.8 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2cf4b9a-3b3f-4495-a8f3-58a7ce7df181")
+	)
+	(wire
+		(pts
+			(xy 26.67 24.13) (xy 29.21 24.13)
 		)
 		(stroke
 			(width 0)
@@ -3386,7 +3816,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 29.21) (xy 64.77 29.21)
+			(xy 62.23 50.8) (xy 64.77 50.8)
 		)
 		(stroke
 			(width 0)
@@ -3446,16 +3876,6 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 86.36) (xy 137.16 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dcfec844-dfea-4565-91c6-d77895b3e76e")
-	)
-	(wire
-		(pts
 			(xy 87.63 78.74) (xy 95.25 78.74)
 		)
 		(stroke
@@ -3493,16 +3913,6 @@
 			(type default)
 		)
 		(uuid "e3cf416c-adc2-4d51-9a08-a9dcf491c59e")
-	)
-	(wire
-		(pts
-			(xy 62.23 72.39) (xy 64.77 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e6be1161-35f2-45e1-96b4-cd290dbfe4e8")
 	)
 	(wire
 		(pts
@@ -3566,6 +3976,16 @@
 	)
 	(wire
 		(pts
+			(xy 62.23 90.17) (xy 64.77 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fcd64eb5-17bd-4059-8e85-e8c391fdbf14")
+	)
+	(wire
+		(pts
 			(xy 95.25 86.36) (xy 95.25 92.71)
 		)
 		(stroke
@@ -3574,28 +3994,8 @@
 		)
 		(uuid "ffea1261-3b9d-434d-98b7-a5827d22b508")
 	)
-	(label "PUMP_PG"
-		(at 137.16 55.88 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "06976471-3c4a-4ab3-9d53-a96669d18d00")
-	)
-	(label "SHUNT_A"
-		(at 64.77 69.85 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "07bc9f5f-73fa-4548-88bb-cee80ecb3729")
-	)
 	(label "TEMP3"
-		(at 64.77 29.21 0)
+		(at 64.77 50.8 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3605,7 +4005,7 @@
 		(uuid "22c641f0-1599-4dbe-b354-160309143a1f")
 	)
 	(label "FAN2_PWM"
-		(at 26.67 92.71 180)
+		(at 26.67 29.21 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3624,6 +4024,16 @@
 		)
 		(uuid "299d0204-6b95-482b-aee4-36e81dec68b7")
 	)
+	(label "FLOW"
+		(at 137.16 67.31 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "29cb9967-fa46-4164-a20d-90b064d75715")
+	)
 	(label "CAN_H"
 		(at 182.88 34.29 0)
 		(effects
@@ -3635,7 +4045,7 @@
 		(uuid "36e442f1-8a6c-4cca-a9fa-86b4cc400774")
 	)
 	(label "FAN1_PWM"
-		(at 26.67 87.63 180)
+		(at 26.67 24.13 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3643,16 +4053,6 @@
 			(justify right bottom)
 		)
 		(uuid "3ffb940b-b273-4abf-bcd5-980bf3983529")
-	)
-	(label "PUMP_PG"
-		(at 64.77 66.04 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "40d3155e-fd64-44e0-8692-a5f37ebca963")
 	)
 	(label "CAN_L"
 		(at 182.88 36.83 0)
@@ -3663,6 +4063,16 @@
 			(justify left bottom)
 		)
 		(uuid "44480c1c-8ee0-42a8-a3c9-82b032296c7e")
+	)
+	(label "PUMP_FG"
+		(at 64.77 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4e49b256-7955-4609-bb4a-c92774cf9ed9")
 	)
 	(label "CAN_L"
 		(at 95.25 39.37 180)
@@ -3675,17 +4085,7 @@
 		(uuid "638751c0-2104-4f40-a68a-c377d33c6d26")
 	)
 	(label "PUMP_PWM"
-		(at 137.16 53.34 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7517b9fc-2b6f-4668-b730-12c0cdc1a5bf")
-	)
-	(label "PUMP_PWM"
-		(at 26.67 68.58 180)
+		(at 26.67 90.17 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3705,7 +4105,7 @@
 		(uuid "7f6b28d2-aa79-4e6e-b1e3-bbb9617c3d7d")
 	)
 	(label "TEMP1"
-		(at 64.77 24.13 0)
+		(at 64.77 45.72 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3755,7 +4155,7 @@
 		(uuid "a0e6b9af-45a8-4bcd-9482-76b3854bb857")
 	)
 	(label "FAN1_TACH"
-		(at 64.77 87.63 0)
+		(at 64.77 24.13 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3775,7 +4175,7 @@
 		(uuid "ad0d78b8-91d6-4eb0-b503-2c26a7508f87")
 	)
 	(label "FLOW"
-		(at 64.77 46.99 0)
+		(at 64.77 68.58 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3804,8 +4204,18 @@
 		)
 		(uuid "b4f1b80f-23a1-4710-a988-594fe155c4cd")
 	)
+	(label "PUMP_FG"
+		(at 137.16 72.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c049de8c-f7e7-46dd-b562-7f243072fe1a")
+	)
 	(label "FAN2_TACH"
-		(at 64.77 92.71 0)
+		(at 64.77 29.21 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3815,7 +4225,7 @@
 		(uuid "c356f6a7-ef9f-4cc1-9d4e-db2d96c1ef4a")
 	)
 	(label "TEMP2"
-		(at 64.77 26.67 0)
+		(at 64.77 48.26 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3834,16 +4244,6 @@
 		)
 		(uuid "df45f262-9b14-42a4-b5b0-d877d546d83a")
 	)
-	(label "FLOW"
-		(at 137.16 69.85 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e0487157-d1bc-4e8f-8cba-f79d694c8eea")
-	)
 	(label "CAN_L"
 		(at 182.88 66.04 0)
 		(effects
@@ -3854,16 +4254,6 @@
 		)
 		(uuid "ed382ced-6f0a-4b0d-b6d9-2034977bab31")
 	)
-	(label "SHUNT_B"
-		(at 64.77 72.39 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ee9eb44b-d03b-4963-84cc-dc9b36a93ba6")
-	)
 	(label "FAN1_TACH"
 		(at 69.85 135.89 180)
 		(effects
@@ -3873,6 +4263,16 @@
 			(justify right bottom)
 		)
 		(uuid "f05517e1-efcf-4de0-beca-9bd562cedab2")
+	)
+	(label "PUMP_PWM"
+		(at 137.16 69.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f0f3a19e-4a67-44cc-9ad6-d0d8fa7e5abc")
 	)
 	(label "FAN1_PWM"
 		(at 48.26 138.43 180)
@@ -3904,7 +4304,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0ee563da-0939-4fc9-b06f-27ae2cb78f34")
-		(property "Reference" "#PWR040"
+		(property "Reference" "#PWR01"
 			(at 194.31 29.21 0)
 			(effects
 				(font
@@ -3954,7 +4354,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "#PWR040")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -3970,7 +4370,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1ac782df-a64d-416b-91c2-51fc50a9d742")
-		(property "Reference" "R2"
+		(property "Reference" "R1"
 			(at 39.37 126.9999 0)
 			(effects
 				(font
@@ -4024,7 +4424,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "R2")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -4259,7 +4659,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2d4719fe-b63f-4e58-9a7e-beaa7968f4e3")
-		(property "Reference" "H2"
+		(property "Reference" "H3"
 			(at 165.1 95.2499 0)
 			(effects
 				(font
@@ -4307,7 +4707,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "H2")
+					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -4463,6 +4863,77 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:Thermistor_PTC")
+		(at 177.8 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3b3f2b98-da2d-43c3-aa55-97bba12523ec")
+		(property "Reference" "TH1"
+			(at 180.34 123.5074 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Thermistor_PTC"
+			(at 180.34 126.0474 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 179.07 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/ProductDetail/Vishay-Dale/TFPT0603L1000JM?qs=LpNeecrqRkO50%2FCrN6EtqQ%3D%3D"
+			(at 177.8 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Temperature dependent resistor, positive temperature coefficient"
+			(at 177.8 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "82348667-9618-474f-94e4-40a5475e3647")
+		)
+		(pin "1"
+			(uuid "a5207c7a-3ab6-4e10-8d7e-6de9dfd254fc")
+		)
+		(instances
+			(project ""
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
+					(reference "TH1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "+3.3V_1")
 		(lib_id "power:+3.3V")
 		(at 144.78 38.1 0)
@@ -4538,7 +5009,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4ef27231-b9f5-4f74-bec6-80626dc511d4")
-		(property "Reference" "#PWR01"
+		(property "Reference" "#PWR012"
 			(at 24.13 121.92 0)
 			(effects
 				(font
@@ -4588,7 +5059,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "#PWR01")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -4668,7 +5139,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7e90f1b6-1196-45fa-aa93-92b599c6595c")
-		(property "Reference" "R1"
+		(property "Reference" "R2"
 			(at 132.08 128.2699 0)
 			(effects
 				(font
@@ -4722,7 +5193,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "R1")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -4739,7 +5210,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8feb8244-796e-4ef0-a473-62f57d890156")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR03"
 			(at 137.16 36.83 0)
 			(effects
 				(font
@@ -4789,7 +5260,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "#PWR02")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -4804,7 +5275,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "922bfeaa-5a0c-4259-b55c-1ce181f48d1f")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR015"
 			(at 124.46 130.81 0)
 			(effects
 				(font
@@ -4854,7 +5325,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "#PWR05")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -4869,7 +5340,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9ae93d33-e232-4ef3-a0de-a62bcead68b7")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR014"
 			(at 142.24 124.46 0)
 			(effects
 				(font
@@ -4919,7 +5390,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "#PWR03")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -4934,7 +5405,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9c2853ce-b393-4b30-ae48-7c6899f51254")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR017"
 			(at 24.13 147.32 0)
 			(effects
 				(font
@@ -4984,7 +5455,77 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "#PWR07")
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 177.8 133.35 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9e2d487a-e239-4214-8e82-1b603f084b0f")
+		(property "Reference" "D1"
+			(at 180.34 132.0799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "D_Zener"
+			(at 180.34 134.6199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323F"
+			(at 177.8 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/ProductDetail/Nexperia/BZX84J-B24115?qs=18PanXkg8Ef6yLFLief0Dg%3D%3D"
+			(at 177.8 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Zener diode"
+			(at 177.8 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "59d7cbf1-f6f9-40cc-b955-6eeec6c66ad3")
+		)
+		(pin "2"
+			(uuid "efbd8aae-aa1a-42ce-84fa-44f065ffae16")
+		)
+		(instances
+			(project ""
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -5000,7 +5541,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a295b230-51ad-48e2-81c0-11dc59a95e13")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR02"
 			(at 92.71 35.56 0)
 			(effects
 				(font
@@ -5050,7 +5591,7 @@
 		(instances
 			(project ""
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "#PWR012")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -5142,7 +5683,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "aa1e1c3e-68ef-4cf0-8e3f-03842e886e8b")
-		(property "Reference" "U1"
+		(property "Reference" "U2"
 			(at 95.25 113.03 0)
 			(effects
 				(font
@@ -5250,7 +5791,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "U1")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -5266,7 +5807,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b14fcb6a-3bab-4761-ace5-4e83e2b104a7")
-		(property "Reference" "#PWR039"
+		(property "Reference" "#PWR08"
 			(at 194.31 72.39 0)
 			(effects
 				(font
@@ -5316,7 +5857,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "#PWR039")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -5332,7 +5873,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b385e264-552c-4b30-a384-307a718a689f")
-		(property "Reference" "#PWR038"
+		(property "Reference" "#PWR07"
 			(at 194.31 58.42 0)
 			(effects
 				(font
@@ -5382,7 +5923,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "#PWR038")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -5599,6 +6140,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+24V")
+		(at 177.8 118.11 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d9f46325-094a-4300-90f1-9dae6890bc4a")
+		(property "Reference" "#PWR013"
+			(at 177.8 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+24V"
+			(at 177.8 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.8 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.8 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+24V\""
+			(at 177.8 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7dcd7d6e-276c-4317-bbf1-e54dcd5cc5a5")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 31.75 140.97 0)
 		(unit 1)
@@ -5607,7 +6214,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "dfab40d1-2ec1-446e-bd7b-b297b14455b6")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR018"
 			(at 31.75 147.32 0)
 			(effects
 				(font
@@ -5657,7 +6264,72 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "#PWR08")
+					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 177.8 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e15e89a8-c581-4c3b-ad51-df7aeb8d3952")
+		(property "Reference" "#PWR016"
+			(at 177.8 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 177.8 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.8 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.8 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 177.8 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a120a1c4-8723-49fd-9939-d0d739c00143")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -5673,7 +6345,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e6786976-76b2-457a-95ca-1bcc964983ec")
-		(property "Reference" "U2"
+		(property "Reference" "U1"
 			(at 114.3 24.13 0)
 			(effects
 				(font
@@ -5808,7 +6480,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "U2")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -5824,7 +6496,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eb7ac2b9-48fe-4345-aa18-de529de17e71")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR05"
 			(at 194.31 40.64 0)
 			(effects
 				(font
@@ -5874,7 +6546,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "#PWR015")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -6022,7 +6694,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f84a5a6a-fee7-4a35-a331-238fd2fdf6af")
-		(property "Reference" "H3"
+		(property "Reference" "H2"
 			(at 190.5 88.8999 0)
 			(effects
 				(font
@@ -6070,162 +6742,8 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "H3")
+					(reference "H2")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(sheet
-		(at 29.21 20.32)
-		(size 33.02 12.7)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "0e5255e2-25aa-4e9a-a6ff-997dc3e398fd")
-		(property "Sheetname" "TempSensors"
-			(at 29.21 19.6084 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "TempSensors.kicad_sch"
-			(at 29.21 33.6046 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "TEMP_SEN2" output
-			(at 62.23 26.67 0)
-			(uuid "5b0a2acc-308a-427b-a47b-80bc4576037d")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "TEMP_SEN1" output
-			(at 62.23 24.13 0)
-			(uuid "f1a66eae-c465-4ab4-91cc-8eb520054e8e")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "TEMP_SEN3" output
-			(at 62.23 29.21 0)
-			(uuid "e04f185b-1ac9-471a-8054-ba4b92e4ee94")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(page "3")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 29.21 63.5)
-		(size 33.02 11.43)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "49b28e86-cfde-410d-931b-2f924e16f8d9")
-		(property "Sheetname" "Pump"
-			(at 29.21 62.7884 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "Pump.kicad_sch"
-			(at 29.21 75.5146 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "PWM3" input
-			(at 29.21 68.58 180)
-			(uuid "2ece5947-d24e-4d47-bd2f-31ceb68bb179")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "PG" output
-			(at 62.23 66.04 0)
-			(uuid "bee1679d-352c-4d7c-afbc-2ac74da89099")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "Shunt_A" output
-			(at 62.23 69.85 0)
-			(uuid "743fede9-3e1b-4764-aa1e-6484ef6e68c1")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "Shunt_B" output
-			(at 62.23 72.39 0)
-			(uuid "a7e06fe2-f3f7-476a-96a8-8ee7fcea2c4e")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(page "5")
 				)
 			)
 		)
@@ -6245,8 +6763,8 @@
 		(fill
 			(color 0 0 0 0.0000)
 		)
-		(uuid "72cbb232-97a0-4b9b-a6b0-3f04462a78a5")
-		(property "Sheetname" "FlowrateSensor"
+		(uuid "0e5255e2-25aa-4e9a-a6ff-997dc3e398fd")
+		(property "Sheetname" "TempSensors"
 			(at 29.21 41.1984 0)
 			(effects
 				(font
@@ -6255,7 +6773,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "FlowrateSensor.kicad_sch"
+		(property "Sheetfile" "TempSensors.kicad_sch"
 			(at 29.21 55.1946 0)
 			(effects
 				(font
@@ -6264,9 +6782,143 @@
 				(justify left top)
 			)
 		)
+		(pin "TEMP_SEN1" output
+			(at 62.23 45.72 0)
+			(uuid "5ead07cc-ef7c-4787-87a7-44c1d563a56b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "TEMP_SEN2" output
+			(at 62.23 48.26 0)
+			(uuid "9b500293-1394-404f-8643-68cf5b687796")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "TEMP_SEN3" output
+			(at 62.23 50.8 0)
+			(uuid "54bc73a5-e9ad-4d3c-af5c-ede10348bb34")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 29.21 85.09)
+		(size 33.02 11.43)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "49b28e86-cfde-410d-931b-2f924e16f8d9")
+		(property "Sheetname" "Pump"
+			(at 29.21 84.3784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Pump.kicad_sch"
+			(at 29.21 97.1046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "FG" output
+			(at 62.23 90.17 0)
+			(uuid "642c96d0-2952-4daf-89cf-2ea1a45dc226")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "PWM3" input
+			(at 29.21 90.17 180)
+			(uuid "31ffcd21-fc1b-460c-8eb8-69cd1084eb58")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 29.21 63.5)
+		(size 33.02 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "72cbb232-97a0-4b9b-a6b0-3f04462a78a5")
+		(property "Sheetname" "FlowrateSensor"
+			(at 29.21 62.7884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "FlowrateSensor.kicad_sch"
+			(at 29.21 76.7846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
 		(pin "FLOW_SEN" output
-			(at 62.23 46.99 0)
-			(uuid "eb18e231-3942-429b-b3d3-334fffbed8b4")
+			(at 62.23 68.58 0)
+			(uuid "b0d38f7b-6aee-4e48-91c6-b187f8c6eca0")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6283,7 +6935,7 @@
 		)
 	)
 	(sheet
-		(at 29.21 83.82)
+		(at 29.21 20.32)
 		(size 33.02 12.7)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6299,7 +6951,7 @@
 		)
 		(uuid "d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0")
 		(property "Sheetname" "Fans"
-			(at 29.21 83.1084 0)
+			(at 29.21 19.6084 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6308,7 +6960,7 @@
 			)
 		)
 		(property "Sheetfile" "Fans.kicad_sch"
-			(at 29.21 97.1046 0)
+			(at 29.21 33.6046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6316,9 +6968,9 @@
 				(justify left top)
 			)
 		)
-		(pin "PWM2" input
-			(at 29.21 92.71 180)
-			(uuid "9579865f-ce43-414d-b122-4adb72103c3c")
+		(pin "PWM1" input
+			(at 29.21 24.13 180)
+			(uuid "6b68f81f-d783-473a-bf3e-2e2784b01008")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6326,9 +6978,9 @@
 				(justify left)
 			)
 		)
-		(pin "PWM1" input
-			(at 29.21 87.63 180)
-			(uuid "92bf5434-cb5a-485c-a979-41073cef17f0")
+		(pin "PWM2" input
+			(at 29.21 29.21 180)
+			(uuid "ac592e51-b60b-43ff-b1a9-f618a449f36c")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6337,8 +6989,8 @@
 			)
 		)
 		(pin "TACH1" output
-			(at 62.23 87.63 0)
-			(uuid "07a1f70c-234d-4ddc-aff2-028bd76b93bf")
+			(at 62.23 24.13 0)
+			(uuid "e2f75a45-87f0-4cde-8277-0f704c826508")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6347,8 +6999,8 @@
 			)
 		)
 		(pin "TACH2" output
-			(at 62.23 92.71 0)
-			(uuid "bf94202e-a4e4-49fd-ab24-8a74c9c4635e")
+			(at 62.23 29.21 0)
+			(uuid "44fca2b7-8b84-4c39-95e4-6af415f15879")
 			(effects
 				(font
 					(size 1.27 1.27)

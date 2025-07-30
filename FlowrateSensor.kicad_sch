@@ -650,6 +650,131 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:+12V"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+12V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+12V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+12V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+12V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:GND"
 			(power)
 			(pin_numbers
@@ -752,10 +877,10 @@
 			(embedded_fonts no)
 		)
 	)
-	(text_box "- Flow out between -200mV and 200mV\n- Detecting voltages above 150mV for rising edge\n- Gain of 15 (1 + 1.4k/100)\n- 0.2V -> 3V & 150mV -> 2.25V"
+	(text_box "- rated for 4.5-24 V (nothing higher exists)\n- only tested at 12V, if the following values are different, I'll change Rf\n- Flow out between -200mV and 200mV\n- Detecting voltages above 150mV for rising edge\n- Gain of 15 (1 + 1.4k/100)\n- 0.2V -> 3V & 150mV -> 2.25V"
 		(exclude_from_sim no)
 		(at 165.1 50.8 0)
-		(size 43.815 12.7)
+		(size 46.355 18.415)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
@@ -806,13 +931,13 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 57.15) (xy 40.64 48.26)
+			(xy 54.61 57.15) (xy 58.42 57.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "111a50cc-8437-4d07-a6cf-20819d0d8079")
+		(uuid "24e10af3-6b48-490b-9cb0-5fa3edf0adff")
 	)
 	(wire
 		(pts
@@ -836,6 +961,16 @@
 	)
 	(wire
 		(pts
+			(xy 58.42 54.61) (xy 53.34 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40f28fa0-e1b8-44c8-a4e2-deb249cf7474")
+	)
+	(wire
+		(pts
 			(xy 130.81 50.8) (xy 133.35 50.8)
 		)
 		(stroke
@@ -843,26 +978,6 @@
 			(type default)
 		)
 		(uuid "488087fe-3dab-415b-9d70-9811087a2402")
-	)
-	(wire
-		(pts
-			(xy 54.61 54.61) (xy 58.42 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5864aed4-8509-45fb-87f2-4403e8d6662e")
-	)
-	(wire
-		(pts
-			(xy 58.42 57.15) (xy 40.64 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "603e2866-93b6-49da-aca0-0f3861b4a475")
 	)
 	(wire
 		(pts
@@ -903,6 +1018,16 @@
 			(type default)
 		)
 		(uuid "7a7b3e5f-e3bb-4734-9fb6-044fc003a148")
+	)
+	(wire
+		(pts
+			(xy 53.34 54.61) (xy 53.34 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "881a3e3c-fa30-4bdc-9f46-f21ebdf27a5e")
 	)
 	(wire
 		(pts
@@ -955,14 +1080,14 @@
 		(uuid "bfb69df1-d428-4fea-8280-cad4c474cc0e")
 	)
 	(label "FLOW_OUT"
-		(at 54.61 54.61 180)
+		(at 54.61 57.15 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "273eda07-0f1b-42e1-9e41-999f438a49ca")
+		(uuid "919e70b3-a75d-408d-9517-d763429fe0ae")
 	)
 	(label "FLOW_OUT"
 		(at 111.76 48.26 180)
@@ -973,16 +1098,6 @@
 			(justify right bottom)
 		)
 		(uuid "9a5d4717-5e3e-4200-8fcf-be9c6de7d0ad")
-	)
-	(label "+12V"
-		(at 40.64 48.26 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f3691be9-6599-435e-8235-c394dfd6666a")
 	)
 	(hierarchical_label "FLOW_SEN"
 		(shape output)
@@ -1005,7 +1120,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "47eca608-f030-47c7-8700-597e5d2f5dea")
-		(property "Reference" "#PWR044"
+		(property "Reference" "#PWR042"
 			(at 119.38 66.04 0)
 			(effects
 				(font
@@ -1055,7 +1170,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/72cbb232-97a0-4b9b-a6b0-3f04462a78a5"
-					(reference "#PWR044")
+					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -1071,7 +1186,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "49537e5d-238d-49d1-868b-a099d121dce1")
-		(property "Reference" "#PWR045"
+		(property "Reference" "#PWR041"
 			(at 101.6 64.77 0)
 			(effects
 				(font
@@ -1121,7 +1236,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/72cbb232-97a0-4b9b-a6b0-3f04462a78a5"
-					(reference "#PWR045")
+					(reference "#PWR041")
 					(unit 1)
 				)
 			)
@@ -1136,7 +1251,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "511d8322-2888-4546-b514-b29776442632")
-		(property "Reference" "R27"
+		(property "Reference" "R14"
 			(at 123.6981 68.58 90)
 			(effects
 				(font
@@ -1190,7 +1305,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/72cbb232-97a0-4b9b-a6b0-3f04462a78a5"
-					(reference "R27")
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -1206,7 +1321,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6e9ce0d0-abf7-4bd0-9c07-5c682a53f851")
-		(property "Reference" "FLOW2"
+		(property "Reference" "FLOW1"
 			(at 66.04 55.8799 0)
 			(effects
 				(font
@@ -1272,7 +1387,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/72cbb232-97a0-4b9b-a6b0-3f04462a78a5"
-					(reference "FLOW2")
+					(reference "FLOW1")
 					(unit 1)
 				)
 			)
@@ -1288,7 +1403,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "97c8e3cf-dd3f-4b27-b192-0feae8a17b10")
-		(property "Reference" "U5"
+		(property "Reference" "U6"
 			(at 134.62 44.3798 0)
 			(effects
 				(font
@@ -1349,7 +1464,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/72cbb232-97a0-4b9b-a6b0-3f04462a78a5"
-					(reference "U5")
+					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -1364,7 +1479,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9c0e3033-80de-44a4-823d-63d889e5f97f")
-		(property "Reference" "R28"
+		(property "Reference" "R13"
 			(at 107.1881 55.88 90)
 			(effects
 				(font
@@ -1418,7 +1533,73 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/72cbb232-97a0-4b9b-a6b0-3f04462a78a5"
-					(reference "R28")
+					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+12V")
+		(at 53.34 48.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c08a5cdc-80ad-4fd5-9db9-63cea784db11")
+		(property "Reference" "#PWR040"
+			(at 53.34 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+24V"
+			(at 53.34 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 53.34 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 53.34 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ec9f8f86-beea-45d3-a06d-0bc530e2cf11")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/72cbb232-97a0-4b9b-a6b0-3f04462a78a5"
+					(reference "#PWR040")
 					(unit 1)
 				)
 			)
@@ -1434,7 +1615,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c38ca2e2-ae18-4419-aa3e-5ea2e50eb1a7")
-		(property "Reference" "#PWR037"
+		(property "Reference" "#PWR043"
 			(at 53.34 71.12 0)
 			(effects
 				(font
@@ -1484,7 +1665,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/72cbb232-97a0-4b9b-a6b0-3f04462a78a5"
-					(reference "#PWR037")
+					(reference "#PWR043")
 					(unit 1)
 				)
 			)
@@ -1501,7 +1682,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ee026bd6-ddb7-4784-98cf-d70751f4385c")
-		(property "Reference" "#PWR043"
+		(property "Reference" "#PWR039"
 			(at 119.38 45.72 0)
 			(effects
 				(font
@@ -1551,7 +1732,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/72cbb232-97a0-4b9b-a6b0-3f04462a78a5"
-					(reference "#PWR043")
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
