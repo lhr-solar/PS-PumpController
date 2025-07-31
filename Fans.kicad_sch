@@ -503,156 +503,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Diode:C3D25170H"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "C3D25170H"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-247-2_Vertical"
-				(at 0 -4.445 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.wolfspeed.com/media/downloads/103/C3D25170H.pdf"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "1700V, 25A, SiC Schottky Diode, TO-247"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "sic diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "TO?247*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "C3D25170H_0_1"
-				(polyline
-					(pts
-						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "C3D25170H_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:+24V"
 			(power)
 			(pin_numbers
@@ -948,10 +798,10 @@
 		)
 		(uuid "79d86429-b15e-4d4d-b90d-f5c1f378ad4e")
 	)
-	(text_box "datasheet stipulates 3 pin fan with TACH or PWM so I've added circutry for both, I just won't use one pin"
+	(text_box "- datasheet stipulates 3 pin fan with TACH or PWM so I've added circutry for both, I just won't use one pin\n- do I need a flyback diode if I'm not controlling pwm manually with a fet?"
 		(exclude_from_sim no)
 		(at 234.95 19.05 0)
-		(size 30.48 10.16)
+		(size 30.48 16.51)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
@@ -975,30 +825,6 @@
 		(uuid "1ab9b9c0-9257-4691-9706-6f258a39c765")
 	)
 	(junction
-		(at 49.53 38.1)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6dfafa10-c81a-47d5-a3cb-d85af93b568a")
-	)
-	(junction
-		(at 157.48 53.34)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7e339914-495e-4c45-ae33-f1ac17ae3e88")
-	)
-	(junction
-		(at 157.48 38.1)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "83443420-4e6a-4c03-88d5-6089676f0dc1")
-	)
-	(junction
-		(at 49.53 53.34)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a05760e5-1dab-4b0e-a90f-c4345afe4c1f")
-	)
-	(junction
 		(at 97.79 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1013,26 +839,6 @@
 			(type default)
 		)
 		(uuid "05783f3d-6920-4f72-b310-ccd78b2d4fd8")
-	)
-	(wire
-		(pts
-			(xy 148.59 49.53) (xy 148.59 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "084c06c7-7f96-4414-8766-29cede9107a0")
-	)
-	(wire
-		(pts
-			(xy 49.53 38.1) (xy 40.64 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0b521b7d-0550-455b-8ed3-b822ddbf4f6f")
 	)
 	(wire
 		(pts
@@ -1076,16 +882,6 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 38.1) (xy 40.64 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1f053f7d-4f5b-4a17-8323-790631c1da7e")
-	)
-	(wire
-		(pts
 			(xy 97.79 40.64) (xy 97.79 43.18)
 		)
 		(stroke
@@ -1093,16 +889,6 @@
 			(type default)
 		)
 		(uuid "223dfcee-4368-4dd8-adb9-4cde1875cb8c")
-	)
-	(wire
-		(pts
-			(xy 40.64 53.34) (xy 49.53 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c7cb876-2c9d-43df-868c-23ff2b262a41")
 	)
 	(wire
 		(pts
@@ -1146,16 +932,6 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 38.1) (xy 148.59 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "67fab1b8-9a18-43c4-a233-bc251d0490ce")
-	)
-	(wire
-		(pts
 			(xy 93.98 53.34) (xy 97.79 53.34)
 		)
 		(stroke
@@ -1183,16 +959,6 @@
 			(type default)
 		)
 		(uuid "a80d166f-ec42-4d34-abbb-51c5160cf97b")
-	)
-	(wire
-		(pts
-			(xy 40.64 49.53) (xy 40.64 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a923db05-c301-4b59-a47d-18e7cad61cb8")
 	)
 	(wire
 		(pts
@@ -1246,16 +1012,6 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 53.34) (xy 157.48 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c8c4b4bf-2d59-4108-bb50-f3544ae85346")
-	)
-	(wire
-		(pts
 			(xy 166.37 41.91) (xy 167.64 41.91)
 		)
 		(stroke
@@ -1283,16 +1039,6 @@
 			(type default)
 		)
 		(uuid "d99bb145-0b31-453a-961a-a95f0c62e283")
-	)
-	(wire
-		(pts
-			(xy 157.48 38.1) (xy 148.59 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "db8bfdbf-7de5-4ad1-84c2-e3db65118139")
 	)
 	(wire
 		(pts
@@ -1538,144 +1284,6 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
 					(reference "R5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:C3D25170H")
-		(at 148.59 45.72 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "062c8684-3894-42f3-9e81-b0f743070f7d")
-		(property "Reference" "D3"
-			(at 151.13 43.18 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "VSSAF522-M3/H"
-			(at 131.064 43.688 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "UTSVT_Passive:DO-221AC"
-			(at 144.145 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.com/ProductDetail/Vishay-General-Semiconductor/VSSAF522-M3-H?qs=UkDUCjYnTB00gpgD%2Fb%2Fw%252BA%3D%3D"
-			(at 148.59 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 148.59 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ce667620-5850-40f7-aa5e-a13751bd7143")
-		)
-		(pin "2"
-			(uuid "871f5a9b-24a4-4656-8776-e036ccaead2a")
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
-					(reference "D3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:C3D25170H")
-		(at 40.64 45.72 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1a8e2227-4787-4d73-a713-4cecead41735")
-		(property "Reference" "D2"
-			(at 43.18 43.18 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "VSSAF522-M3/H"
-			(at 23.114 43.688 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "UTSVT_Passive:DO-221AC"
-			(at 36.195 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.com/ProductDetail/Vishay-General-Semiconductor/VSSAF522-M3-H?qs=UkDUCjYnTB00gpgD%2Fb%2Fw%252BA%3D%3D"
-			(at 40.64 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 40.64 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7228ceae-1d8e-400c-a7f7-e5f308435fdc")
-		)
-		(pin "2"
-			(uuid "28bb681a-5c4e-402c-bde7-40b0d01535b1")
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
-					(reference "D2")
 					(unit 1)
 				)
 			)

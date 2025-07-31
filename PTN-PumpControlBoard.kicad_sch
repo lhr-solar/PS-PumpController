@@ -3086,9 +3086,9 @@
 		)
 		(uuid "3ad9c8a2-feb6-41c7-abaa-4e9d71885dbf")
 	)
-	(text_box "TODO/QUESTIONS:\n\n- is it ok to just change labels on psom? or new footprint?\n- low pass on sensors?"
+	(text_box "TODO/QUESTIONS:\n\n- is it ok to just change labels on psom? or new footprint?\n- low pass on sensors?\n- reverse polarity protection?"
 		(exclude_from_sim no)
-		(at 234.95 127 0)
+		(at 15.24 156.21 0)
 		(size 43.18 32.385)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -3199,16 +3199,12 @@
 		(uuid "c002b728-3d6e-4d57-90d1-64ab0bdf09f6")
 	)
 	(no_connect
+		(at 133.35 72.39)
+		(uuid "06033c62-8872-4d5c-aa3d-beede69d9e21")
+	)
+	(no_connect
 		(at 120.65 130.81)
 		(uuid "0eb6a6f3-da5d-4da3-90ec-6d147838c5c1")
-	)
-	(no_connect
-		(at 133.35 83.82)
-		(uuid "20363e41-26e9-4692-b6cf-e9e0eba9e3e1")
-	)
-	(no_connect
-		(at 133.35 78.74)
-		(uuid "26f90245-89c6-4fd5-ae9e-5bc798d2d0ab")
 	)
 	(no_connect
 		(at 133.35 81.28)
@@ -3516,13 +3512,13 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 72.39) (xy 137.16 72.39)
+			(xy 133.35 83.82) (xy 137.16 83.82)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6f5bc31c-5477-48c9-8692-81913749f74c")
+		(uuid "705cd0ca-e3dd-4386-a56b-64ee41305691")
 	)
 	(wire
 		(pts
@@ -3603,6 +3599,16 @@
 			(type default)
 		)
 		(uuid "8596bba0-473d-4d6c-894f-c839867cf701")
+	)
+	(wire
+		(pts
+			(xy 133.35 78.74) (xy 137.16 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89d45151-2746-423d-a2e5-5e529f758a3f")
 	)
 	(wire
 		(pts
@@ -3994,6 +4000,16 @@
 		)
 		(uuid "ffea1261-3b9d-434d-98b7-a5827d22b508")
 	)
+	(label "~{SMBALERT}"
+		(at 137.16 83.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0f3c90f5-06c7-4cdc-8600-bbcb82f9a008")
+	)
 	(label "TEMP3"
 		(at 64.77 50.8 0)
 		(effects
@@ -4205,14 +4221,14 @@
 		(uuid "b4f1b80f-23a1-4710-a988-594fe155c4cd")
 	)
 	(label "PUMP_FG"
-		(at 137.16 72.39 0)
+		(at 137.16 78.74 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "c049de8c-f7e7-46dd-b562-7f243072fe1a")
+		(uuid "b8d2ff29-2223-4b47-a271-765c0cf3e791")
 	)
 	(label "FAN2_TACH"
 		(at 64.77 29.21 0)
@@ -4584,7 +4600,7 @@
 				)
 			)
 		)
-		(property "Value" "CAN_OUT"
+		(property "Value" "CAN_IN"
 			(at 170.18 54.61 0)
 			(effects
 				(font
@@ -4732,7 +4748,7 @@
 				)
 			)
 		)
-		(property "Value" "CAN_IN"
+		(property "Value" "CAN_OUT"
 			(at 170.18 25.4 0)
 			(effects
 				(font

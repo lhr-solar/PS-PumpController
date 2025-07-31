@@ -954,6 +954,16 @@
 	)
 	(wire
 		(pts
+			(xy 196.85 72.39) (xy 203.2 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "484a470b-501c-46d6-95fb-c4eea8ef2ebc")
+	)
+	(wire
+		(pts
 			(xy 44.45 69.85) (xy 50.8 69.85)
 		)
 		(stroke
@@ -1094,6 +1104,16 @@
 	)
 	(wire
 		(pts
+			(xy 44.45 72.39) (xy 50.8 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8917fc5f-8c0d-4d4f-b426-5929111aef0d")
+	)
+	(wire
+		(pts
 			(xy 160.02 64.77) (xy 156.21 64.77)
 		)
 		(stroke
@@ -1134,6 +1154,16 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 72.39) (xy 127 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b6a5ac8-6d43-4c79-8c44-9f80f2d704c3")
+	)
+	(wire
+		(pts
 			(xy 127 77.47) (xy 127 72.39)
 		)
 		(stroke
@@ -1151,16 +1181,6 @@
 			(type default)
 		)
 		(uuid "9ec54753-7fa2-444a-9dc6-6e419046bcb2")
-	)
-	(wire
-		(pts
-			(xy 50.8 72.39) (xy 44.45 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9ee6dfd4-a13f-404b-bf2c-10fcec7250b0")
 	)
 	(wire
 		(pts
@@ -1244,16 +1264,6 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 72.39) (xy 196.85 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d0a9e082-090e-49b5-965b-7e56072eb0a7")
-	)
-	(wire
-		(pts
 			(xy 203.2 48.26) (xy 203.2 50.8)
 		)
 		(stroke
@@ -1301,16 +1311,6 @@
 			(type default)
 		)
 		(uuid "e2e641e3-a615-4b25-8312-ea793936c29d")
-	)
-	(wire
-		(pts
-			(xy 127 72.39) (xy 120.65 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ec354315-04dc-4ccd-a178-1af0f3b3a64a")
 	)
 	(wire
 		(pts
@@ -1702,16 +1702,16 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 115.57 72.39 180)
+		(at 115.57 69.85 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "428bb1e0-06c6-43b2-91ec-58e72a07a1e9")
 		(property "Reference" "TEMP2"
-			(at 115.57 63.5 0)
+			(at 115.57 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1719,7 +1719,7 @@
 			)
 		)
 		(property "Value" "Conn_01x02"
-			(at 115.57 66.04 0)
+			(at 115.57 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1727,7 +1727,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Molex:Molex_Nano-Fit_105309-xx02_1x02_P2.50mm_Vertical"
-			(at 115.57 72.39 0)
+			(at 115.57 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1736,7 +1736,7 @@
 			)
 		)
 		(property "Datasheet" "https://koolance.com/files/products/manuals/Koolance_sen-ap008g_specifications.pdf"
-			(at 115.57 72.39 0)
+			(at 115.57 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1745,7 +1745,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 115.57 72.39 0)
+			(at 115.57 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2044,16 +2044,16 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 191.77 72.39 180)
+		(at 191.77 69.85 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "5789d196-b2a3-4923-bd44-290174484499")
 		(property "Reference" "TEMP3"
-			(at 191.77 63.5 0)
+			(at 191.77 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2061,7 +2061,7 @@
 			)
 		)
 		(property "Value" "Conn_01x02"
-			(at 191.77 66.04 0)
+			(at 191.77 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2069,7 +2069,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Molex:Molex_Nano-Fit_105309-xx02_1x02_P2.50mm_Vertical"
-			(at 191.77 72.39 0)
+			(at 191.77 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2078,7 +2078,7 @@
 			)
 		)
 		(property "Datasheet" "https://koolance.com/files/products/manuals/Koolance_sen-ap008g_specifications.pdf"
-			(at 191.77 72.39 0)
+			(at 191.77 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2087,7 +2087,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 191.77 72.39 0)
+			(at 191.77 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2374,16 +2374,16 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 39.37 72.39 180)
+		(at 39.37 69.85 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "b01c3e0c-e387-4969-84d2-a295686fe343")
 		(property "Reference" "TEMP1"
-			(at 39.37 63.5 0)
+			(at 39.37 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2391,7 +2391,7 @@
 			)
 		)
 		(property "Value" "Conn_01x02"
-			(at 39.37 66.04 0)
+			(at 39.37 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2399,7 +2399,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Molex:Molex_Nano-Fit_105309-xx02_1x02_P2.50mm_Vertical"
-			(at 39.37 72.39 0)
+			(at 39.37 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2408,7 +2408,7 @@
 			)
 		)
 		(property "Datasheet" "https://koolance.com/files/products/manuals/Koolance_sen-ap008g_specifications.pdf"
-			(at 39.37 72.39 0)
+			(at 39.37 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2417,7 +2417,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 39.37 72.39 0)
+			(at 39.37 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
