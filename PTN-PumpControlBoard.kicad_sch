@@ -1495,6 +1495,376 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "PPTC032LFBN-RC-6_pin:PPTC032LFBN-RC"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at -7.62 6.096 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" "PPTC032LFBN-RC"
+				(at -7.62 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "PPTC032LFBN-RC:SULLINS_PPTC032LFBN-RC"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "PARTREV" "L"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MANUFACTURER" "Sullins Connectors Solutions"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "SNAPEDA_PN" "PPTC032LFBN-RC"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MAXIMUM_PACKAGE_HEIGHT" "8.5mm"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "STANDARD" "Manufacturer Recommendations"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(symbol "PPTC032LFBN-RC_0_0"
+				(polyline
+					(pts
+						(xy -7.62 2.54) (xy -6.35 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -7.62 0) (xy -6.35 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -7.62 -2.54) (xy -6.35 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -7.62 -5.08)
+					(end 7.62 5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(arc
+					(start -5.715 1.905)
+					(mid -6.3472 2.54)
+					(end -5.715 3.175)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -5.715 -0.635)
+					(mid -6.3472 0)
+					(end -5.715 0.635)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -5.715 -3.175)
+					(mid -6.3472 -2.54)
+					(end -5.715 -1.905)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 5.715 3.175)
+					(mid 6.3472 2.54)
+					(end 5.715 1.905)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 5.715 0.635)
+					(mid 6.3472 0)
+					(end 5.715 -0.635)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 5.715 -1.905)
+					(mid 6.3472 -2.54)
+					(end 5.715 -3.175)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 2.54) (xy 6.35 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 0) (xy 6.35 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -2.54) (xy 6.35 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -12.7 2.54 0)
+					(length 5.08)
+					(name "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 0 0)
+					(length 5.08)
+					(name "3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 -2.54 0)
+					(length 5.08)
+					(name "5"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 2.54 180)
+					(length 5.08)
+					(name "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 0 180)
+					(length 5.08)
+					(name "4"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 -2.54 180)
+					(length 5.08)
+					(name "6"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "PeripheralCANConnector_1"
 			(pin_names
 				(offset 1.016)
@@ -1633,1266 +2003,6 @@
 						)
 					)
 					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "UTSVT_Connectors:SFH11-PBPC-D05-ST-BK"
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at 8.89 6.35 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Value" "SFH11-PBPC-D05-ST-BK"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.524 1.524)
-					)
-				)
-			)
-			(property "Footprint" "CONN_SFH11-xxxC-D05-ST-XX_SUL"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "SFH11-PBPC-D05-ST-BK"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "SFH11-PBPC-D05-ST-BK"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "CONN_SFH11-xxxC-D05-ST-XX_SUL"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SFH11-PBPC-D05-ST-BK_1_1"
-				(polyline
-					(pts
-						(xy 5.08 2.54) (xy 5.08 -25.4)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 -25.4) (xy 12.7 -25.4)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 0) (xy 5.08 0)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 0) (xy 8.89 0.8467)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 0) (xy 8.89 -0.8467)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -2.54) (xy 5.08 -2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -2.54) (xy 8.89 -1.6933)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -2.54) (xy 8.89 -3.3867)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -5.08) (xy 5.08 -5.08)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -5.08) (xy 8.89 -4.2333)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -5.08) (xy 8.89 -5.9267)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -7.62) (xy 5.08 -7.62)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -7.62) (xy 8.89 -6.7733)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -7.62) (xy 8.89 -8.4667)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -10.16) (xy 5.08 -10.16)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -10.16) (xy 8.89 -9.3133)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -10.16) (xy 8.89 -11.0067)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -12.7) (xy 5.08 -12.7)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -12.7) (xy 8.89 -11.8533)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -12.7) (xy 8.89 -13.5467)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -15.24) (xy 5.08 -15.24)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -15.24) (xy 8.89 -14.3933)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -15.24) (xy 8.89 -16.0867)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -17.78) (xy 5.08 -17.78)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -17.78) (xy 8.89 -16.9333)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -17.78) (xy 8.89 -18.6267)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -20.32) (xy 5.08 -20.32)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -20.32) (xy 8.89 -19.4733)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -20.32) (xy 8.89 -21.1667)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -22.86) (xy 5.08 -22.86)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -22.86) (xy 8.89 -22.0133)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -22.86) (xy 8.89 -23.7067)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 12.7 2.54) (xy 5.08 2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 12.7 -25.4) (xy 12.7 2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at 0 0 0)
-					(length 5.08)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -2.54 0)
-					(length 5.08)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -5.08 0)
-					(length 5.08)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -7.62 0)
-					(length 5.08)
-					(name "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -10.16 0)
-					(length 5.08)
-					(name "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -12.7 0)
-					(length 5.08)
-					(name "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -15.24 0)
-					(length 5.08)
-					(name "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -17.78 0)
-					(length 5.08)
-					(name "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -20.32 0)
-					(length 5.08)
-					(name "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -22.86 0)
-					(length 5.08)
-					(name "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "SFH11-PBPC-D05-ST-BK_1_2"
-				(polyline
-					(pts
-						(xy 5.08 2.54) (xy 5.08 -25.4)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 -25.4) (xy 12.7 -25.4)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 0) (xy 5.08 0)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 0) (xy 8.89 0.8467)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 0) (xy 8.89 -0.8467)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -2.54) (xy 5.08 -2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -2.54) (xy 8.89 -1.6933)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -2.54) (xy 8.89 -3.3867)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -5.08) (xy 5.08 -5.08)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -5.08) (xy 8.89 -4.2333)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -5.08) (xy 8.89 -5.9267)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -7.62) (xy 5.08 -7.62)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -7.62) (xy 8.89 -6.7733)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -7.62) (xy 8.89 -8.4667)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -10.16) (xy 5.08 -10.16)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -10.16) (xy 8.89 -9.3133)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -10.16) (xy 8.89 -11.0067)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -12.7) (xy 5.08 -12.7)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -12.7) (xy 8.89 -11.8533)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -12.7) (xy 8.89 -13.5467)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -15.24) (xy 5.08 -15.24)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -15.24) (xy 8.89 -14.3933)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -15.24) (xy 8.89 -16.0867)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -17.78) (xy 5.08 -17.78)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -17.78) (xy 8.89 -16.9333)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -17.78) (xy 8.89 -18.6267)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -20.32) (xy 5.08 -20.32)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -20.32) (xy 8.89 -19.4733)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -20.32) (xy 8.89 -21.1667)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -22.86) (xy 5.08 -22.86)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -22.86) (xy 8.89 -22.0133)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 7.62 -22.86) (xy 8.89 -23.7067)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 12.7 2.54) (xy 5.08 2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 12.7 -25.4) (xy 12.7 2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at 0 0 0)
-					(length 5.08)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -2.54 0)
-					(length 5.08)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -5.08 0)
-					(length 5.08)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -7.62 0)
-					(length 5.08)
-					(name "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -10.16 0)
-					(length 5.08)
-					(name "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -12.7 0)
-					(length 5.08)
-					(name "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -15.24 0)
-					(length 5.08)
-					(name "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -17.78 0)
-					(length 5.08)
-					(name "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -20.32 0)
-					(length 5.08)
-					(name "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -22.86 0)
-					(length 5.08)
-					(name "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3575,117 +2685,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "utsvt-misc:Logo_Placeholder"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "LOGO"
-				(at 0 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "Logo_Placeholder"
-				(at 0 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 1.905 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 1.905 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Graph footprint placeholder"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "graphic, symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Logo_Placeholder_0_1"
-				(polyline
-					(pts
-						(xy -0.635 1.27) (xy -0.635 0)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 1.905 0)
-					(mid 0 -1.8967)
-					(end -1.905 0)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 0)
-					(radius 2.8448)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 1.27) (xy 0.635 0)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "utsvt-misc:PeripheralSOM"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -4320,7 +3319,7 @@
 	)
 	(rectangle
 		(start 213.995 15.24)
-		(end 267.97 92.075)
+		(end 267.97 79.375)
 		(stroke
 			(width 0)
 			(type default)
@@ -4474,7 +3473,7 @@
 	)
 	(text_box "BREAKOUTS"
 		(exclude_from_sim no)
-		(at 254.635 86.995 0)
+		(at 254.635 74.295 0)
 		(size 13.335 5.08)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -4494,7 +3493,7 @@
 		)
 		(uuid "3d9409b2-d20c-447d-8196-85b2ceeee8ea")
 	)
-	(text_box "TODO/QUESTIONS:\n\n- is it ok to just change labels on psom? or new footprint?\n- low pass on sensors?\n- reverse polarity protection?\n- do I need to break out 24V, gndpwr, vdda, can, etc?"
+	(text_box "TODO/QUESTIONS:\n\n- is it ok to just change labels on psom? or new footprint?\n- low pass on sensors?\n- reverse polarity protection?\n- do I need to break out 24V, gndpwr, vdda, can, etc?\n- new fan tbd\n- overvoltage necessary?\n\nNOTE: 2 kinds of test points, some for scope probe and some flat"
 		(exclude_from_sim no)
 		(at 15.24 156.21 0)
 		(size 43.18 32.385)
@@ -4611,10 +3610,6 @@
 		(uuid "06033c62-8872-4d5c-aa3d-beede69d9e21")
 	)
 	(no_connect
-		(at 233.68 73.66)
-		(uuid "0c135b66-8aa7-42d4-b2a1-72cc63df4def")
-	)
-	(no_connect
 		(at 120.65 130.81)
 		(uuid "0eb6a6f3-da5d-4da3-90ec-6d147838c5c1")
 	)
@@ -4627,28 +3622,36 @@
 		(uuid "4a1bb3b1-1e8f-4b4e-89cb-a4f539838685")
 	)
 	(no_connect
+		(at 254 31.75)
+		(uuid "5ce1465c-c2b6-4b3b-8b2f-a672e598864a")
+	)
+	(no_connect
 		(at 120.65 140.97)
 		(uuid "5da2c831-cc6e-4eb8-b0d4-0f7e67b9cf3b")
+	)
+	(no_connect
+		(at 254 29.21)
+		(uuid "652572a5-06a7-4ce6-abb2-fd37bec2648e")
 	)
 	(no_connect
 		(at 120.65 128.27)
 		(uuid "731b9f74-d4de-488e-b16b-bc1dcfeb49e8")
 	)
 	(no_connect
-		(at 233.68 76.2)
-		(uuid "a12ef534-b0aa-4f3e-aaa4-7fe421d78c26")
+		(at 254 49.53)
+		(uuid "7554574a-5bb9-42d2-bc0a-20b1b172a66f")
+	)
+	(no_connect
+		(at 228.6 49.53)
+		(uuid "8d3f744a-9509-4c8d-9ac4-81cf2be2bf9e")
+	)
+	(no_connect
+		(at 228.6 31.75)
+		(uuid "aa1bd588-018f-442e-b8eb-36622bddb145")
 	)
 	(no_connect
 		(at 120.65 125.73)
 		(uuid "aaf0998b-5a0a-48f7-89fd-f138fd556802")
-	)
-	(no_connect
-		(at 233.68 71.12)
-		(uuid "b791ff7b-35e8-47d4-bca7-5e7c37fb8683")
-	)
-	(no_connect
-		(at 233.68 83.82)
-		(uuid "bb74f57b-2d7c-4c36-9e87-05e19ded11cd")
 	)
 	(no_connect
 		(at 133.35 74.93)
@@ -4665,18 +3668,6 @@
 	(no_connect
 		(at 120.65 143.51)
 		(uuid "eb25485a-6e54-4e6a-bbc9-e8761d0d3412")
-	)
-	(no_connect
-		(at 233.68 81.28)
-		(uuid "ebeb18a2-373b-453b-8401-fdcdb4698138")
-	)
-	(no_connect
-		(at 233.68 86.36)
-		(uuid "ee40993e-4df0-48ab-9ca0-9407f77ee114")
-	)
-	(no_connect
-		(at 233.68 78.74)
-		(uuid "f16b372b-859f-46c0-a1d9-65806a97a884")
 	)
 	(no_connect
 		(at 69.85 130.81)
@@ -5437,6 +4428,16 @@
 		(uuid "ffea1261-3b9d-434d-98b7-a5827d22b508")
 	)
 	(label "~{SMBALERT}"
+		(at 228.6 46.99 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "03acec00-bd54-4245-9e84-cd86326764d8")
+	)
+	(label "~{SMBALERT}"
 		(at 137.16 83.82 0)
 		(effects
 			(font
@@ -5446,45 +4447,15 @@
 		)
 		(uuid "0f3c90f5-06c7-4cdc-8600-bbcb82f9a008")
 	)
-	(label "PUMP_PWM"
-		(at 233.68 63.5 180)
+	(label "PUMP_FG"
+		(at 228.6 29.21 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "1621347f-784f-4f80-a163-54a6b093eb3b")
-	)
-	(label "TEMP1"
-		(at 233.68 34.29 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "184edb85-d2db-4c2f-a886-f8ac8a285c64")
-	)
-	(label "FAN1_TACH"
-		(at 233.68 46.99 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "1ea52196-546f-4bb1-be6a-f39a223fdec1")
-	)
-	(label "FAN1_PWM"
-		(at 233.68 49.53 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "204ae663-7796-4155-84b9-a622c049ef25")
+		(uuid "0fc391f0-fe62-48c1-a8f8-3d788b410745")
 	)
 	(label "TEMP3"
 		(at 64.77 50.8 0)
@@ -5536,16 +4507,6 @@
 		)
 		(uuid "2daefc30-fe75-4b92-b151-374e69cb1d7c")
 	)
-	(label "FAN_SCL"
-		(at 233.68 36.83 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "312d76fa-adf0-4a71-a7a0-4a3baa477428")
-	)
 	(label "CAN_H"
 		(at 182.88 34.29 0)
 		(effects
@@ -5555,16 +4516,6 @@
 			(justify left bottom)
 		)
 		(uuid "36e442f1-8a6c-4cca-a9fa-86b4cc400774")
-	)
-	(label "FAN2_TACH"
-		(at 233.68 44.45 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "3e1456a9-62be-4fab-ab7b-9764c0a5b74a")
 	)
 	(label "FAN1_PWM"
 		(at 26.67 24.13 180)
@@ -5586,6 +4537,16 @@
 		)
 		(uuid "44480c1c-8ee0-42a8-a3c9-82b032296c7e")
 	)
+	(label "TEMP3"
+		(at 228.6 44.45 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "47bb430a-813d-4c06-9631-c8a245191989")
+	)
 	(label "PUMP_FG"
 		(at 64.77 90.17 0)
 		(effects
@@ -5596,6 +4557,16 @@
 		)
 		(uuid "4e49b256-7955-4609-bb4a-c92774cf9ed9")
 	)
+	(label "PUMP_PWM"
+		(at 228.6 26.67 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "55491214-5e0c-4527-959f-8f4401f898dd")
+	)
 	(label "CAN_L"
 		(at 95.25 39.37 180)
 		(effects
@@ -5605,6 +4576,26 @@
 			(justify right bottom)
 		)
 		(uuid "638751c0-2104-4f40-a68a-c377d33c6d26")
+	)
+	(label "FAN_SCL"
+		(at 228.6 64.77 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "695b2eab-62e9-4782-abbb-cd195fd1b251")
+	)
+	(label "FAN_SDA"
+		(at 228.6 67.31 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "6aa8190c-5391-4997-8221-bba6f42db475")
 	)
 	(label "PUMP_PWM"
 		(at 26.67 90.17 180)
@@ -5625,6 +4616,16 @@
 			(justify right bottom)
 		)
 		(uuid "7f6b28d2-aa79-4e6e-b1e3-bbb9617c3d7d")
+	)
+	(label "FAN1_PWM"
+		(at 254 64.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "86f5ff91-5851-4a90-aace-744d9a4ea860")
 	)
 	(label "TEMP1"
 		(at 64.77 45.72 0)
@@ -5656,15 +4657,15 @@
 		)
 		(uuid "94dbc887-9357-465e-a2e4-7510f1462176")
 	)
-	(label "~{SMBALERT}"
-		(at 233.68 31.75 180)
+	(label "FLOW"
+		(at 254 26.67 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "9aa2810b-2333-4ce7-ae83-35b90532b889")
+		(uuid "981bbfc6-2f91-44a9-9b0b-982806380da3")
 	)
 	(label "FAN2_PWM"
 		(at 36.83 146.05 0)
@@ -5696,15 +4697,15 @@
 		)
 		(uuid "a232e81d-c4fc-40ad-ad34-cf1331e71773")
 	)
-	(label "TEMP3"
-		(at 233.68 26.67 180)
+	(label "TEMP1"
+		(at 254 46.99 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "a7a9c90c-f33c-4e26-8e80-d549897e8655")
+		(uuid "a27d66af-affd-48e8-97e6-e35ca30143aa")
 	)
 	(label "~{SMBALERT}"
 		(at 129.54 135.89 0)
@@ -5715,6 +4716,16 @@
 			(justify left bottom)
 		)
 		(uuid "ad0d78b8-91d6-4eb0-b503-2c26a7508f87")
+	)
+	(label "FAN2_PWM"
+		(at 228.6 62.23 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "aecb6344-8334-4686-b2f2-bfa81517cc85")
 	)
 	(label "FLOW"
 		(at 64.77 68.58 0)
@@ -5727,6 +4738,16 @@
 		(uuid "af0237ab-4998-4380-93e2-b6e013878001")
 	)
 	(label "TEMP2"
+		(at 254 44.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b15ae323-a8b3-4092-95d0-7b0492b5d4ff")
+	)
+	(label "TEMP2"
 		(at 137.16 45.72 0)
 		(effects
 			(font
@@ -5736,15 +4757,15 @@
 		)
 		(uuid "b1f52b20-d924-4ad8-b505-aef9c85df323")
 	)
-	(label "FLOW"
-		(at 233.68 66.04 180)
+	(label "FAN2_TACH"
+		(at 254 62.23 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "b3201182-c239-4212-95a2-b2ee658a46cc")
+		(uuid "b2c19caa-79b0-4ab3-aadc-64647eabe209")
 	)
 	(label "FAN_SDA"
 		(at 69.85 125.73 180)
@@ -5755,16 +4776,6 @@
 			(justify right bottom)
 		)
 		(uuid "b4f1b80f-23a1-4710-a988-594fe155c4cd")
-	)
-	(label "FAN2_PWM"
-		(at 233.68 39.37 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b9e9c029-8af4-4753-999d-d58462538e52")
 	)
 	(label "FAN2_TACH"
 		(at 64.77 29.21 0)
@@ -5786,25 +4797,15 @@
 		)
 		(uuid "cb7bdc70-c887-4957-a1fb-8054e457e22c")
 	)
-	(label "TEMP2"
-		(at 233.68 29.21 180)
+	(label "FAN1_TACH"
+		(at 254 67.31 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "cf17e2d4-8c1e-456c-895c-2fdf515d62dd")
-	)
-	(label "PUMP_FG"
-		(at 233.68 68.58 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "ddcaf896-0b38-4011-b6f3-f9790ac543ad")
+		(uuid "d3510ae9-4278-4bec-bd8a-1a9e310ed9c3")
 	)
 	(label "FAN_SCL"
 		(at 137.16 59.69 0)
@@ -5865,16 +4866,6 @@
 			(justify right bottom)
 		)
 		(uuid "f8148754-495b-4683-9db2-46a626c79398")
-	)
-	(label "FAN_SDA"
-		(at 233.68 41.91 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "fc48711a-746c-40a7-b164-1e4b5d9e1dd0")
 	)
 	(symbol
 		(lib_id "power:+12V")
@@ -6583,17 +5574,43 @@
 		)
 	)
 	(symbol
-		(lib_id "utsvt-misc:Logo_Placeholder")
-		(at 223.52 107.95 0)
+		(lib_id "PPTC032LFBN-RC-6_pin:PPTC032LFBN-RC")
+		(at 241.3 29.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "554321d0-ea62-4e34-baf9-41f68c3b5708")
-		(property "Reference" "LOGO1"
-			(at 223.52 104.14 0)
+		(uuid "472bd26c-fc53-4b31-b09e-750dfa24590c")
+		(property "Reference" "J3"
+			(at 241.3 19.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PPTC032LFBN-RC"
+			(at 241.3 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Headers:SULLINS_PPTC032LFBN-RC"
+			(at 241.3 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPTC032LFBN-RC/810210?gad_source=1&gad_campaignid=20470400566&gbraid=0AAAAADrbLljbTRvkJjU5x2tO5uQP0ri5v&gclid=CjwKCAjwy7HEBhBJEiwA5hQNogcZDRP-0lrStHjuYjpti_4MhNHu5yd3dr8jenNkdKU_cVdplOwvHBoCCnIQAvD_BwE&gclsrc=aw.ds"
+			(at 241.3 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6601,17 +5618,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "Logo_Placeholder"
-			(at 227.33 107.9499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 223.52 106.045 0)
+		(property "Description" ""
+			(at 241.3 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6619,28 +5627,340 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 223.52 106.045 0)
+		(property "PARTREV" "L"
+			(at 241.3 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify bottom)
 				(hide yes)
 			)
 		)
-		(property "Description" "Graph footprint placeholder"
-			(at 223.52 107.95 0)
+		(property "MANUFACTURER" "Sullins Connectors Solutions"
+			(at 241.3 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify bottom)
 				(hide yes)
 			)
+		)
+		(property "SNAPEDA_PN" "PPTC032LFBN-RC"
+			(at 241.3 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "8.5mm"
+			(at 241.3 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 241.3 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "39ef9837-62c7-4ecb-a931-659f331d241a")
+		)
+		(pin "3"
+			(uuid "95e0cc4e-07ad-4c6f-b228-5d42bf323862")
+		)
+		(pin "1"
+			(uuid "7f3a3fb0-a824-455d-8c43-26243c8edb71")
+		)
+		(pin "4"
+			(uuid "749d18dd-b9df-4262-b535-5e767fa241fb")
+		)
+		(pin "2"
+			(uuid "f4b36db1-8aaa-4197-b716-dedede2e2a50")
+		)
+		(pin "5"
+			(uuid "6a96d100-8686-4428-a694-ecc8a894b7e1")
 		)
 		(instances
 			(project ""
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "LOGO1")
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PPTC032LFBN-RC-6_pin:PPTC032LFBN-RC")
+		(at 241.3 64.77 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "535379e5-ef80-4dd6-9c55-4f7225946231")
+		(property "Reference" "J5"
+			(at 241.3 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PPTC032LFBN-RC"
+			(at 241.3 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Headers:SULLINS_PPTC032LFBN-RC"
+			(at 241.3 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPTC032LFBN-RC/810210?gad_source=1&gad_campaignid=20470400566&gbraid=0AAAAADrbLljbTRvkJjU5x2tO5uQP0ri5v&gclid=CjwKCAjwy7HEBhBJEiwA5hQNogcZDRP-0lrStHjuYjpti_4MhNHu5yd3dr8jenNkdKU_cVdplOwvHBoCCnIQAvD_BwE&gclsrc=aw.ds"
+			(at 241.3 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 241.3 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "L"
+			(at 241.3 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "Sullins Connectors Solutions"
+			(at 241.3 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SNAPEDA_PN" "PPTC032LFBN-RC"
+			(at 241.3 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "8.5mm"
+			(at 241.3 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 241.3 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "3db7b566-93ad-4137-9df9-12a005b1c24b")
+		)
+		(pin "3"
+			(uuid "0d27f42e-fa03-42ae-b0b5-f8a9f3a3d2d1")
+		)
+		(pin "1"
+			(uuid "4ddbf44c-ed0a-4f75-a7b1-c70f85c013be")
+		)
+		(pin "4"
+			(uuid "ad8e87b2-291c-4b53-a4f6-7581d1e086fe")
+		)
+		(pin "2"
+			(uuid "b674cbe6-2f45-4ab1-b775-5fbaca5b68ce")
+		)
+		(pin "5"
+			(uuid "ec0fd4e5-db93-4f67-ae49-68323c316aa4")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
+					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PPTC032LFBN-RC-6_pin:PPTC032LFBN-RC")
+		(at 241.3 46.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5ec50d86-2691-4f8e-bb5f-b820adecac22")
+		(property "Reference" "J4"
+			(at 241.3 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PPTC032LFBN-RC"
+			(at 241.3 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Headers:SULLINS_PPTC032LFBN-RC"
+			(at 241.3 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPTC032LFBN-RC/810210?gad_source=1&gad_campaignid=20470400566&gbraid=0AAAAADrbLljbTRvkJjU5x2tO5uQP0ri5v&gclid=CjwKCAjwy7HEBhBJEiwA5hQNogcZDRP-0lrStHjuYjpti_4MhNHu5yd3dr8jenNkdKU_cVdplOwvHBoCCnIQAvD_BwE&gclsrc=aw.ds"
+			(at 241.3 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 241.3 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "L"
+			(at 241.3 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "Sullins Connectors Solutions"
+			(at 241.3 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SNAPEDA_PN" "PPTC032LFBN-RC"
+			(at 241.3 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "8.5mm"
+			(at 241.3 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 241.3 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "eb2d8dfb-0c97-4a34-94cf-bbe7662fbabb")
+		)
+		(pin "3"
+			(uuid "e7f71e99-90e7-4cca-8fca-2e387e7e1de6")
+		)
+		(pin "1"
+			(uuid "c423d24b-7819-42f3-86aa-9d8f1ea79ad3")
+		)
+		(pin "4"
+			(uuid "8cad2aa9-f712-48ec-baf2-1d7c635f613f")
+		)
+		(pin "2"
+			(uuid "364c2778-6332-4f0c-add4-ae2798fd9d53")
+		)
+		(pin "5"
+			(uuid "2150eda6-0f92-4ef1-af77-60bcd336085c")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -6708,101 +6028,6 @@
 			(project ""
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
 					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "UTSVT_Connectors:SFH11-PBPC-D05-ST-BK")
-		(at 233.68 63.5 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6bd212ee-29ae-4cfa-849c-a10a00cf5824")
-		(property "Reference" "J4"
-			(at 240.665 55.88 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SFH11-PBPC-D05-ST-BK"
-			(at 228.6 59.055 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Headers:CONN_SFH11-xxxC-D05-ST-XX_SUL"
-			(at 233.68 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "SFH11-PBPC-D05-ST-BK"
-			(at 233.68 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 233.68 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "7"
-			(uuid "469e69e0-6086-4284-9330-bcc01fe11406")
-		)
-		(pin "9"
-			(uuid "ee13a105-f7e4-45b4-a92e-95fd184723f9")
-		)
-		(pin "8"
-			(uuid "a5a5fe8a-2368-4c7d-9567-0dab25cb76d7")
-		)
-		(pin "1"
-			(uuid "98be76f9-14f1-4c81-9503-c86166a8aa0d")
-		)
-		(pin "2"
-			(uuid "93b8bb77-eddf-4ba7-ae5f-14b4514219da")
-		)
-		(pin "3"
-			(uuid "613c53be-ebef-46f4-afdb-37798bc5b90c")
-		)
-		(pin "4"
-			(uuid "87ebe95c-4ba5-4715-b969-1efe7f025b85")
-		)
-		(pin "5"
-			(uuid "9abe6303-aacc-4b2d-99f0-1b45cc62760d")
-		)
-		(pin "6"
-			(uuid "9dcd489c-fe2a-41f7-8fbe-abcfda560888")
-		)
-		(pin "10"
-			(uuid "25f438c2-e8b5-4287-9a52-2aad682ad8c6")
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -6937,101 +6162,6 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
 					(reference "R2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "UTSVT_Connectors:SFH11-PBPC-D05-ST-BK")
-		(at 233.68 26.67 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8c96e3fe-756e-4312-8640-f6fae82f947c")
-		(property "Reference" "J3"
-			(at 240.665 19.05 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SFH11-PBPC-D05-ST-BK"
-			(at 228.6 22.225 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Headers:CONN_SFH11-xxxC-D05-ST-XX_SUL"
-			(at 233.68 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "SFH11-PBPC-D05-ST-BK"
-			(at 233.68 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 233.68 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "7"
-			(uuid "caa30c9b-e21d-449a-8e02-846b0e3561e9")
-		)
-		(pin "9"
-			(uuid "0984b159-cf6c-41e5-aeee-3a3804730fd9")
-		)
-		(pin "8"
-			(uuid "bddb826c-dc73-46c8-a906-0032e20c0c8b")
-		)
-		(pin "1"
-			(uuid "9549e976-499e-465c-91e4-7afad0d7e7a6")
-		)
-		(pin "2"
-			(uuid "23c0f985-6aca-4c6e-9ccf-825e179ead6b")
-		)
-		(pin "3"
-			(uuid "c2941489-cd82-49bd-95ec-5fa8636698f3")
-		)
-		(pin "4"
-			(uuid "2386da9f-c37c-473d-83c9-81f221a51a29")
-		)
-		(pin "5"
-			(uuid "87fd463f-76df-4cc3-b824-43a3a2a12362")
-		)
-		(pin "6"
-			(uuid "ec00b1cc-c95c-479d-8ee7-d7aa4270784f")
-		)
-		(pin "10"
-			(uuid "77cacbda-d38b-411d-9361-d435226e80d7")
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "J3")
 					(unit 1)
 				)
 			)

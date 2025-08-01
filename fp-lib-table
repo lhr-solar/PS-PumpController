@@ -7,5 +7,5 @@
   (lib (name "UTSVT_Passive")(type "KiCad")(uri "/Users/surabhi/Documents/lhr/UTSVT-KiCadLibraries-master/UTSVT_Passive.pretty")(options "")(descr ""))
   (lib (name "UTSVT_Power")(type "KiCad")(uri "/Users/surabhi/Documents/lhr/UTSVT-KiCadLibraries-master/UTSVT_Power.pretty")(options "")(descr ""))
   (lib (name "UTSVT_Special")(type "KiCad")(uri "/Users/surabhi/Documents/lhr/UTSVT-KiCadLibraries-master/UTSVT_Special.pretty")(options "")(descr ""))
-  (lib (name "Headers")(type "KiCad")(uri "${KIPRJMOD}/Custom-KiCadLibraries/Headers/footprints.pretty")(options "")(descr ""))
+  (lib (name "Headers")(type "KiCad")(uri "${KIPRJMOD}/Custom-KiCadLibraries/Headers/PPTC032LFBN_RC/footprints.pretty")(options "")(descr ""))
 )

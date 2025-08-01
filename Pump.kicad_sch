@@ -612,8 +612,12 @@
 		)
 		(symbol "power:+3.3V"
 			(power)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -713,8 +717,7 @@
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
-					(hide yes)
-					(name "+3.3V"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1190,7 +1193,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "295c5a1a-5ea8-4fa7-8eb5-c8c3f700f0c0")
+		(fields_autoplaced yes)
+		(uuid "56dd66c2-d551-403c-bea8-99cadfb5dc57")
 		(property "Reference" "#PWR042"
 			(at 44.45 39.37 0)
 			(effects
@@ -1201,7 +1205,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 44.45 31.75 0)
+			(at 44.45 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1236,10 +1240,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "4257185f-60e8-4fc8-9396-c71d9eb57c8c")
+			(uuid "ed26e61a-3cd6-4ad1-afc1-d61e595e8cf5")
 		)
 		(instances
-			(project "PTN-PumpControlBoard"
+			(project ""
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/49b28e86-cfde-410d-931b-2f924e16f8d9"
 					(reference "#PWR042")
 					(unit 1)
