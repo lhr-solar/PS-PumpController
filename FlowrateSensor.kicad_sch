@@ -306,6 +306,113 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector_Generic:Conn_01x03"
 			(pin_names
 				(offset 1.016)
@@ -898,10 +1005,22 @@
 		(uuid "524d1855-ae29-4fd8-a95d-18912787e0f2")
 	)
 	(junction
+		(at 134.62 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "041c9b3f-f046-46a1-96ec-34bdd21744ce")
+	)
+	(junction
 		(at 130.81 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "16f73a22-430d-4915-b7e3-77fefbe2b91e")
+	)
+	(junction
+		(at 113.03 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9d44e3c5-ad4a-435f-a0df-51585829f524")
 	)
 	(junction
 		(at 114.3 53.34)
@@ -928,6 +1047,16 @@
 			(type default)
 		)
 		(uuid "095f44ab-7671-48dc-a41e-e45bb9419d75")
+	)
+	(wire
+		(pts
+			(xy 134.62 50.8) (xy 137.16 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "210b7b89-21f8-4721-870b-a3216e285ae7")
 	)
 	(wire
 		(pts
@@ -971,7 +1100,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 50.8) (xy 133.35 50.8)
+			(xy 130.81 50.8) (xy 134.62 50.8)
 		)
 		(stroke
 			(width 0)
@@ -991,7 +1120,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 48.26) (xy 114.3 48.26)
+			(xy 109.22 48.26) (xy 113.03 48.26)
 		)
 		(stroke
 			(width 0)
@@ -1028,6 +1157,16 @@
 			(type default)
 		)
 		(uuid "881a3e3c-fa30-4bdc-9f46-f21ebdf27a5e")
+	)
+	(wire
+		(pts
+			(xy 113.03 43.18) (xy 113.03 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ea93fca-41b6-44b5-bc24-da48f3f47f14")
 	)
 	(wire
 		(pts
@@ -1079,6 +1218,26 @@
 		)
 		(uuid "bfb69df1-d428-4fea-8280-cad4c474cc0e")
 	)
+	(wire
+		(pts
+			(xy 134.62 50.8) (xy 134.62 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0f58ffa-7d20-496a-9930-2cd8e5b7e099")
+	)
+	(wire
+		(pts
+			(xy 113.03 48.26) (xy 114.3 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9f430ea-e6ee-42e5-b379-426d4e99ccfa")
+	)
 	(label "FLOW_OUT"
 		(at 54.61 57.15 180)
 		(effects
@@ -1090,7 +1249,7 @@
 		(uuid "919e70b3-a75d-408d-9517-d763429fe0ae")
 	)
 	(label "FLOW_OUT"
-		(at 111.76 48.26 180)
+		(at 109.22 48.26 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1101,7 +1260,7 @@
 	)
 	(hierarchical_label "FLOW_SEN"
 		(shape output)
-		(at 133.35 50.8 0)
+		(at 137.16 50.8 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1109,6 +1268,71 @@
 			(justify left)
 		)
 		(uuid "0a9533d0-c793-4717-a56b-e1581aeea971")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 113.03 43.18 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "070e7e3d-52b0-46fd-9873-87b45d4f7b57")
+		(property "Reference" "FL_OUT1"
+			(at 109.728 38.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Scope_TP"
+			(at 109.728 40.64 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5010-5014_Multipurpose"
+			(at 113.03 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 113.03 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 113.03 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2a39c25b-4fc1-42d0-ad35-4e67307ef27c")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/72cbb232-97a0-4b9b-a6b0-3f04462a78a5"
+					(reference "FL_OUT1")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -1120,7 +1344,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "47eca608-f030-47c7-8700-597e5d2f5dea")
-		(property "Reference" "#PWR042"
+		(property "Reference" "#PWR041"
 			(at 119.38 66.04 0)
 			(effects
 				(font
@@ -1170,7 +1394,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/72cbb232-97a0-4b9b-a6b0-3f04462a78a5"
-					(reference "#PWR042")
+					(reference "#PWR041")
 					(unit 1)
 				)
 			)
@@ -1186,7 +1410,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "49537e5d-238d-49d1-868b-a099d121dce1")
-		(property "Reference" "#PWR041"
+		(property "Reference" "#PWR039"
 			(at 101.6 64.77 0)
 			(effects
 				(font
@@ -1236,7 +1460,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/72cbb232-97a0-4b9b-a6b0-3f04462a78a5"
-					(reference "#PWR041")
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -1540,6 +1764,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 134.62 58.42 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b0abf662-be4a-45ff-80d2-7373ba0c8f55")
+		(property "Reference" "FL_TP1"
+			(at 139.7 57.1499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Scope_TP"
+			(at 139.7 59.6899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5010-5014_Multipurpose"
+			(at 134.62 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 134.62 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 134.62 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "74fe4971-714f-4304-84ca-ed89428e17eb")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/72cbb232-97a0-4b9b-a6b0-3f04462a78a5"
+					(reference "FL_TP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+12V")
 		(at 53.34 48.26 0)
 		(unit 1)
@@ -1549,7 +1840,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c08a5cdc-80ad-4fd5-9db9-63cea784db11")
-		(property "Reference" "#PWR040"
+		(property "Reference" "#PWR037"
 			(at 53.34 52.07 0)
 			(effects
 				(font
@@ -1599,7 +1890,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/72cbb232-97a0-4b9b-a6b0-3f04462a78a5"
-					(reference "#PWR040")
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -1615,7 +1906,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c38ca2e2-ae18-4419-aa3e-5ea2e50eb1a7")
-		(property "Reference" "#PWR043"
+		(property "Reference" "#PWR038"
 			(at 53.34 71.12 0)
 			(effects
 				(font
@@ -1665,7 +1956,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/72cbb232-97a0-4b9b-a6b0-3f04462a78a5"
-					(reference "#PWR043")
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -1682,7 +1973,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ee026bd6-ddb7-4784-98cf-d70751f4385c")
-		(property "Reference" "#PWR039"
+		(property "Reference" "#PWR040"
 			(at 119.38 45.72 0)
 			(effects
 				(font
@@ -1732,7 +2023,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/72cbb232-97a0-4b9b-a6b0-3f04462a78a5"
-					(reference "#PWR039")
+					(reference "#PWR040")
 					(unit 1)
 				)
 			)
