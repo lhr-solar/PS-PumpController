@@ -5561,7 +5561,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "37d3e04f-66d6-43dd-b50c-355148facd61")
-		(property "Reference" "+24V"
+		(property "Reference" "+24V1"
 			(at 243.84 90.1699 90)
 			(effects
 				(font
@@ -5612,7 +5612,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "+24V")
+					(reference "+24V1")
 					(unit 1)
 				)
 			)
@@ -6900,7 +6900,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a5b6720e-829b-4c45-a57f-340c252cb735")
-		(property "Reference" "GND"
+		(property "Reference" "GND3"
 			(at 243.84 96.5199 90)
 			(effects
 				(font
@@ -6951,7 +6951,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "GND")
+					(reference "GND3")
 					(unit 1)
 				)
 			)
