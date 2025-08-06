@@ -555,6 +555,146 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:C_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.254 1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Small"
+				(at 0.254 -2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "capacitor cap"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_Small_0_1"
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
+					(stroke
+						(width 0.3302)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R_US"
 			(pin_numbers
 				(hide yes)
@@ -856,7 +996,7 @@
 	)
 	(rectangle
 		(start 31.75 38.1)
-		(end 102.235 88.9)
+		(end 102.235 93.345)
 		(stroke
 			(width 0)
 			(type default)
@@ -868,7 +1008,7 @@
 	)
 	(text_box "TEMP 1"
 		(exclude_from_sim no)
-		(at 92.075 83.82 0)
+		(at 92.075 88.265 0)
 		(size 10.16 5.08)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -1107,7 +1247,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 67.31) (xy 63.5 80.01)
+			(xy 60.96 67.31) (xy 60.96 85.09)
 		)
 		(stroke
 			(width 0)
@@ -1307,6 +1447,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 72.39) (xy 68.58 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87d0e49a-e77b-4196-9953-7411128932b7")
+	)
+	(wire
+		(pts
 			(xy 44.45 72.39) (xy 50.8 72.39)
 		)
 		(stroke
@@ -1357,7 +1507,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 55.88) (xy 68.58 57.15)
+			(xy 68.58 49.53) (xy 68.58 50.8)
 		)
 		(stroke
 			(width 0)
@@ -1374,16 +1524,6 @@
 			(type default)
 		)
 		(uuid "998ff04a-0ad1-43f6-8b27-61a86bd5526e")
-	)
-	(wire
-		(pts
-			(xy 68.58 73.66) (xy 68.58 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9b0eddef-f507-4b95-9428-388573d1cee5")
 	)
 	(wire
 		(pts
@@ -1547,7 +1687,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 64.77) (xy 80.01 80.01)
+			(xy 80.01 64.77) (xy 80.01 85.09)
 		)
 		(stroke
 			(width 0)
@@ -1577,7 +1717,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 80.01) (xy 71.12 80.01)
+			(xy 60.96 85.09) (xy 71.12 85.09)
 		)
 		(stroke
 			(width 0)
@@ -1594,6 +1734,26 @@
 			(type default)
 		)
 		(uuid "e757d66c-6fca-42ac-b68f-2be86406c356")
+	)
+	(wire
+		(pts
+			(xy 68.58 55.88) (xy 68.58 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec3aeae8-1554-4ce4-a9d0-0f4eb0679766")
+	)
+	(wire
+		(pts
+			(xy 68.58 78.74) (xy 68.58 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "efe19982-6b5c-4e6a-875d-385d5951b78f")
 	)
 	(wire
 		(pts
@@ -1617,7 +1777,17 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 80.01) (xy 80.01 80.01)
+			(xy 60.96 67.31) (xy 63.5 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6b3dd87-9920-4588-95b3-774dd05109b9")
+	)
+	(wire
+		(pts
+			(xy 78.74 85.09) (xy 80.01 85.09)
 		)
 		(stroke
 			(width 0)
@@ -1727,7 +1897,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 74.93 80.01 270)
+		(at 74.93 85.09 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1735,7 +1905,7 @@
 		(dnp no)
 		(uuid "2d430d7b-7692-46fa-a51e-46c1c0f79316")
 		(property "Reference" "R10"
-			(at 72.8981 82.55 90)
+			(at 72.8981 87.63 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1744,7 +1914,7 @@
 			)
 		)
 		(property "Value" "0"
-			(at 73.66 84.074 90)
+			(at 73.66 89.154 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1753,7 +1923,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 74.676 81.026 90)
+			(at 74.676 86.106 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1762,7 +1932,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 74.93 80.01 0)
+			(at 74.93 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1771,7 +1941,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 74.93 80.01 0)
+			(at 74.93 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1866,7 +2036,7 @@
 	(symbol
 		(lib_name "+3.3V_1")
 		(lib_id "power:+3.3V")
-		(at 68.58 55.88 0)
+		(at 68.58 49.53 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1875,7 +2045,7 @@
 		(fields_autoplaced yes)
 		(uuid "2fce14e7-427e-4475-9d31-3a541503b43d")
 		(property "Reference" "#PWR027"
-			(at 68.58 59.69 0)
+			(at 68.58 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1884,7 +2054,7 @@
 			)
 		)
 		(property "Value" "VDDA"
-			(at 68.58 50.8 0)
+			(at 68.58 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1892,7 +2062,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 68.58 55.88 0)
+			(at 68.58 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1901,7 +2071,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 68.58 55.88 0)
+			(at 68.58 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1910,7 +2080,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 68.58 55.88 0)
+			(at 68.58 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2200,7 +2370,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 68.58 73.66 0)
+		(at 68.58 80.01 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2208,7 +2378,7 @@
 		(dnp no)
 		(uuid "5f2b2d97-d48e-4638-8d5b-7febb15119fc")
 		(property "Reference" "#PWR028"
-			(at 68.58 80.01 0)
+			(at 68.58 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2217,7 +2387,7 @@
 			)
 		)
 		(property "Value" "AGND"
-			(at 68.58 77.216 0)
+			(at 68.58 83.566 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2225,7 +2395,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 68.58 73.66 0)
+			(at 68.58 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2234,7 +2404,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 68.58 73.66 0)
+			(at 68.58 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2243,7 +2413,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 68.58 73.66 0)
+			(at 68.58 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2388,6 +2558,82 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/0e5255e2-25aa-4e9a-a6ff-997dc3e398fd"
 					(reference "#PWR032")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 68.58 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7011ad44-75a0-49f6-9dec-2202e9afe4ed")
+		(property "Reference" "C3"
+			(at 64.77 52.578 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1uF"
+			(at 64.77 55.118 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 68.58 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/447/KEM_C1006_X5R_SMD-3316465.pdf"
+			(at 68.58 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 68.58 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "C0805C105K5PACTU"
+			(at 68.58 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "55e5cd6d-3d2b-4984-a861-c046608dc691")
+		)
+		(pin "1"
+			(uuid "2e63392a-f9bc-4236-890d-8dde9a677492")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/0e5255e2-25aa-4e9a-a6ff-997dc3e398fd"
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -3690,6 +3936,82 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/0e5255e2-25aa-4e9a-a6ff-997dc3e398fd"
 					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 68.58 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e96a05c3-b484-4e41-b420-8374812c38fb")
+		(property "Reference" "C4"
+			(at 64.77 75.438 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1uF"
+			(at 64.77 77.978 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 68.58 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/447/KEM_C1006_X5R_SMD-3316465.pdf"
+			(at 68.58 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 68.58 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "C0805C105K5PACTU"
+			(at 68.58 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6b091927-bbf7-4cdd-8de2-28c5495992ce")
+		)
+		(pin "1"
+			(uuid "1de87f7c-2663-4c7a-b68b-c953864d4a5a")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/0e5255e2-25aa-4e9a-a6ff-997dc3e398fd"
+					(reference "C4")
 					(unit 1)
 				)
 			)
