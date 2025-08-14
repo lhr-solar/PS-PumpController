@@ -8,4 +8,5 @@
   (lib (name "UTSVT_Power")(type "KiCad")(uri "/Users/surabhi/Documents/lhr/UTSVT-KiCadLibraries-master/UTSVT_Power.pretty")(options "")(descr ""))
   (lib (name "UTSVT_Special")(type "KiCad")(uri "/Users/surabhi/Documents/lhr/UTSVT-KiCadLibraries-master/UTSVT_Special.pretty")(options "")(descr ""))
   (lib (name "Headers")(type "KiCad")(uri "${KIPRJMOD}/Custom-KiCadLibraries/Headers/10_pin/footprints.pretty")(options "")(descr ""))
+  (lib (name "OpAmp")(type "KiCad")(uri "${KIPRJMOD}/Custom-KiCadLibraries/TLV9002QDRQ1_opamp/footprints.pretty")(options "")(descr ""))
 )
