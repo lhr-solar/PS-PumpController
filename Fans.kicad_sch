@@ -1631,7 +1631,7 @@
 	)
 	(rectangle
 		(start 171.45 19.05)
-		(end 203.835 57.15)
+		(end 228.6 57.15)
 		(stroke
 			(width 0)
 			(type default)
@@ -1717,10 +1717,10 @@
 		)
 		(uuid "a9071839-a72b-4020-b778-20947e93bb6d")
 	)
-	(text_box "FLYBACK DIODE"
+	(text_box "FLYBACK DIODES"
 		(exclude_from_sim no)
-		(at 186.69 53.34 0)
-		(size 17.145 3.81)
+		(at 210.185 53.34 0)
+		(size 18.415 3.81)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
@@ -1763,7 +1763,7 @@
 	)
 	(text_box "- datasheet stipulates 3 pin fan with TACH or PWM so I've added circutry for both, I just won't use one pin\n- is only 1 flyback diode ok since it's just bw 24v & gnd?"
 		(exclude_from_sim no)
-		(at 208.915 19.05 0)
+		(at 250.19 17.145 0)
 		(size 32.385 16.51)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -2258,6 +2258,26 @@
 			(type default)
 		)
 		(uuid "e8a1e508-034d-4e7d-be99-fb5fcab2180d")
+	)
+	(wire
+		(pts
+			(xy 218.44 44.45) (xy 218.44 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e961af17-760a-4631-9371-de2dd759b617")
+	)
+	(wire
+		(pts
+			(xy 218.44 30.48) (xy 218.44 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb8633b7-7aa4-4c7f-9b26-a83d0fe28308")
 	)
 	(wire
 		(pts
@@ -6098,7 +6118,43 @@
 			"rP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs"
 			"/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/"
 			"0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Q"
-			"xaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0A=="
+			"xaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DF"
+			"rP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs"
+			"/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/8/ErNHMzJkFAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/v78E0MWtutDFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DF"
+			"rP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs"
+			"/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/"
+			"0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Q"
+			"xaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DF"
+			"rP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs"
+			"/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/"
+			"0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP9+enL/VFRU/1RUVP9U"
+			"VFT/VFRU/1RUVP9UVFT/VFRU/1RUVP9UVFT/VFRU/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DF"
+			"rP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs"
+			"/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/"
+			"0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Q"
+			"xaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DF"
+			"rP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs"
+			"/9DFrP/Qxaz/0MWs/9DFrP/Qxaz/0MWs/9DFrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
 		)
 	)
 	(image
@@ -7946,7 +8002,43 @@
 			"Wm12a1BQTStXVEpYb082YmtNU254NkhldlZxMWRRbHRCclNmdzJlT3doMXJadFc4RVdQa0tIOFJo"
 			"Rndqa2NGQzhCNWZjR0NUcCtpZU93MVZDL1BEZ1BBaUFBQWlBUWp3QjhhenhleUEwQ0lBQUN4VVln"
 			"SDM2ZWdzbktndlU2Ni9MYjV4OEt4aHR2dk9IQkdHZUVEdDNNUlFHREFpTDcxUk4ybmtaSExGaXd3"
-			"Rw=="
+			"RwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AP//////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAD/////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"/w=="
 		)
 	)
 	(label "CLK"
@@ -8984,6 +9076,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+24V")
+		(at 218.44 30.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5aa42f5f-f3f3-409e-ac03-f71556f53fb1")
+		(property "Reference" "#PWR066"
+			(at 218.44 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+24V"
+			(at 218.44 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 218.44 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 218.44 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+24V\""
+			(at 218.44 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "731cb70c-aa63-4a89-bfc8-b80533431489")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
+					(reference "#PWR066")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 53.34 46.99 0)
 		(unit 1)
@@ -9380,6 +9538,72 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
 					(reference "R22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 218.44 44.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8e250f41-9bc3-4aba-9b11-d23fed51e4fd")
+		(property "Reference" "#PWR067"
+			(at 218.44 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 218.44 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 218.44 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 218.44 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 218.44 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c2880838-0a2e-437e-bbb2-693a69c49fec")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
+					(reference "#PWR067")
 					(unit 1)
 				)
 			)
@@ -9912,6 +10136,75 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
 					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:C3D25170H")
+		(at 218.44 38.1 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b7194e25-16a5-498d-992d-faa0e3f1fd61")
+		(property "Reference" "D2"
+			(at 220.98 35.56 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "VSSAF522-M3/H"
+			(at 200.914 36.068 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "UTSVT_Passive:DO-221AC"
+			(at 213.995 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/ProductDetail/Vishay-General-Semiconductor/VSSAF522-M3-H?qs=UkDUCjYnTB00gpgD%2Fb%2Fw%252BA%3D%3D"
+			(at 218.44 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 218.44 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ece64115-2b5e-4d40-9960-e3f943b66751")
+		)
+		(pin "2"
+			(uuid "e38f608f-c952-44e1-98f4-8a79b44700f9")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
+					(reference "D2")
 					(unit 1)
 				)
 			)
