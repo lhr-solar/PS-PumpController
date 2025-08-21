@@ -10623,7 +10623,7 @@
 		)
 		(uuid "3d9409b2-d20c-447d-8196-85b2ceeee8ea")
 	)
-	(text_box "TODO/QUESTIONS:\n\n- flowrate sensor circuit???\n- where to find rpp mosfet??\n- is extra rpp needed for flowrate?\n- check tvs circuitry"
+	(text_box "QUESTIONS:\n\n- flowrate sensor circuit???\n- where to find rpp mosfet??\n- is extra rpp needed for flowrate?\n- check tvs circuitry\n\nTODO:\n- 3.3V header?"
 		(exclude_from_sim no)
 		(at 226.06 111.125 0)
 		(size 43.18 32.385)
