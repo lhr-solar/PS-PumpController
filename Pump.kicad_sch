@@ -1582,7 +1582,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1094cba1-00ef-43c3-a327-e2d2a3757f30")
-		(property "Reference" "R32"
+		(property "Reference" "R34"
 			(at 133.35 38.862 90)
 			(effects
 				(font
@@ -1636,7 +1636,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/49b28e86-cfde-410d-931b-2f924e16f8d9"
-					(reference "R32")
+					(reference "R34")
 					(unit 1)
 				)
 			)
@@ -2349,7 +2349,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b682156f-a892-4901-a95d-91f5bc8fbd13")
-		(property "Reference" "R31"
+		(property "Reference" "R33"
 			(at 69.85 39.3699 0)
 			(effects
 				(font
@@ -2403,7 +2403,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/49b28e86-cfde-410d-931b-2f924e16f8d9"
-					(reference "R31")
+					(reference "R33")
 					(unit 1)
 				)
 			)
@@ -2418,7 +2418,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "dd5e2a0e-7f34-415c-92ad-0a8fa7874f68")
-		(property "Reference" "R34"
+		(property "Reference" "R36"
 			(at 151.13 27.9399 0)
 			(effects
 				(font
@@ -2472,7 +2472,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/49b28e86-cfde-410d-931b-2f924e16f8d9"
-					(reference "R34")
+					(reference "R36")
 					(unit 1)
 				)
 			)
@@ -2487,7 +2487,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e87e8ca5-ed26-4678-8077-e33e1a4c76fc")
-		(property "Reference" "R33"
+		(property "Reference" "R35"
 			(at 139.7 48.2599 0)
 			(effects
 				(font
@@ -2541,7 +2541,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/49b28e86-cfde-410d-931b-2f924e16f8d9"
-					(reference "R33")
+					(reference "R35")
 					(unit 1)
 				)
 			)
