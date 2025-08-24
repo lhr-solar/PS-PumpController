@@ -1247,10 +1247,10 @@
 		(uuid "4618592d-9fbc-4475-ad03-266cf968687b")
 	)
 	(junction
-		(at 67.31 44.45)
+		(at 67.31 41.91)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "5fdb2c98-9d39-4902-b218-04904a9ab7dc")
+		(uuid "12e7341c-3768-420c-8a22-1aae49b5f074")
 	)
 	(junction
 		(at 137.16 43.18)
@@ -1306,16 +1306,6 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 44.45) (xy 86.36 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2b75b4b3-9181-44f6-8626-d39f0a19d38d")
-	)
-	(wire
-		(pts
 			(xy 124.46 43.18) (xy 128.27 43.18)
 		)
 		(stroke
@@ -1323,16 +1313,6 @@
 			(type default)
 		)
 		(uuid "2fedfd26-0533-4b86-aef4-28a79876297f")
-	)
-	(wire
-		(pts
-			(xy 67.31 35.56) (xy 67.31 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "473d1c74-57c5-4659-86b4-f68959baa211")
 	)
 	(wire
 		(pts
@@ -1356,16 +1336,6 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 41.91) (xy 86.36 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5af3bb8e-7479-48a7-a538-00439772b850")
-	)
-	(wire
-		(pts
 			(xy 85.09 39.37) (xy 86.36 39.37)
 		)
 		(stroke
@@ -1376,6 +1346,16 @@
 	)
 	(wire
 		(pts
+			(xy 82.55 44.45) (xy 86.36 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a4e37d9-c228-45c5-9f31-86172c942361")
+	)
+	(wire
+		(pts
 			(xy 85.09 36.83) (xy 85.09 39.37)
 		)
 		(stroke
@@ -1383,6 +1363,16 @@
 			(type default)
 		)
 		(uuid "87dd9e7e-5ac4-4f20-b9d1-c7b14a42234a")
+	)
+	(wire
+		(pts
+			(xy 67.31 41.91) (xy 86.36 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96926214-843d-4c80-b20f-b87d60b46fac")
 	)
 	(wire
 		(pts
@@ -1446,13 +1436,13 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 44.45) (xy 67.31 44.45)
+			(xy 64.77 41.91) (xy 67.31 41.91)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e6168f03-2f9a-4a00-922d-a9695f2be406")
+		(uuid "e974f059-dcfc-495c-8f7d-253611697283")
 	)
 	(wire
 		(pts
@@ -1463,6 +1453,16 @@
 			(type default)
 		)
 		(uuid "ed54ad47-ebf0-4bff-b042-69ff63dd3ef9")
+	)
+	(wire
+		(pts
+			(xy 67.31 33.02) (xy 67.31 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2271519-ba45-4f16-81be-4584e633bc6b")
 	)
 	(label "PWM"
 		(at 154.94 35.56 0)
@@ -1476,14 +1476,14 @@
 	)
 	(hierarchical_label "PWM3"
 		(shape input)
-		(at 82.55 41.91 180)
+		(at 82.55 44.45 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "1d0a3f06-2053-4a06-b2b6-6ee3ad1c797a")
+		(uuid "235e0e6b-c173-4a01-8283-47d4434d6762")
 	)
 	(hierarchical_label "PWM3"
 		(shape input)
@@ -1498,14 +1498,14 @@
 	)
 	(hierarchical_label "FG"
 		(shape output)
-		(at 64.77 44.45 180)
+		(at 64.77 41.91 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "bdba7598-ed20-4167-a531-95e13e9cb45c")
+		(uuid "96e989b5-5204-446b-844c-691555b50a53")
 	)
 	(symbol
 		(lib_id "power:+24V")
@@ -2040,7 +2040,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 67.31 35.56 0)
+		(at 67.31 33.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2049,7 +2049,7 @@
 		(fields_autoplaced yes)
 		(uuid "56dd66c2-d551-403c-bea8-99cadfb5dc57")
 		(property "Reference" "#PWR063"
-			(at 67.31 39.37 0)
+			(at 67.31 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2058,7 +2058,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 67.31 30.48 0)
+			(at 67.31 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2066,7 +2066,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 67.31 35.56 0)
+			(at 67.31 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2075,7 +2075,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 67.31 35.56 0)
+			(at 67.31 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2084,7 +2084,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 67.31 35.56 0)
+			(at 67.31 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2096,7 +2096,7 @@
 			(uuid "ed26e61a-3cd6-4ad1-afc1-d61e595e8cf5")
 		)
 		(instances
-			(project ""
+			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/49b28e86-cfde-410d-931b-2f924e16f8d9"
 					(reference "#PWR063")
 					(unit 1)
@@ -2342,7 +2342,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 67.31 40.64 0)
+		(at 67.31 38.1 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2350,7 +2350,7 @@
 		(dnp no)
 		(uuid "b682156f-a892-4901-a95d-91f5bc8fbd13")
 		(property "Reference" "R33"
-			(at 69.85 39.3699 0)
+			(at 69.85 36.8299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2359,7 +2359,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 69.85 41.9099 0)
+			(at 69.85 39.3699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2368,7 +2368,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 68.326 40.894 90)
+			(at 68.326 38.354 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2377,7 +2377,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 67.31 40.64 0)
+			(at 67.31 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2386,7 +2386,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 67.31 40.64 0)
+			(at 67.31 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
