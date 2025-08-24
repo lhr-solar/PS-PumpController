@@ -1743,6 +1743,12 @@
 		(uuid "577d4718-1b6c-4ebb-a422-170a67bd48b0")
 	)
 	(junction
+		(at 90.17 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6137de2b-6417-4389-ab0d-31125b0be2b3")
+	)
+	(junction
 		(at 81.915 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1803,6 +1809,12 @@
 		(uuid "d9aede23-803c-425b-94e2-800f3be497eb")
 	)
 	(junction
+		(at 49.53 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e4519493-f1fb-4389-a859-edd35354f4a9")
+	)
+	(junction
 		(at 46.355 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1827,6 +1839,26 @@
 			(type default)
 		)
 		(uuid "0ead3dee-f1e9-42ff-bc56-cc84226191b8")
+	)
+	(wire
+		(pts
+			(xy 90.17 43.18) (xy 93.345 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1446fa2c-0406-4eeb-811d-6c46eeab9247")
+	)
+	(wire
+		(pts
+			(xy 64.77 27.94) (xy 49.53 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17e478b1-5368-4f48-a7b5-de091ec46f35")
 	)
 	(wire
 		(pts
@@ -1887,6 +1919,16 @@
 			(type default)
 		)
 		(uuid "307b6eed-0367-4930-bddf-0574280c9479")
+	)
+	(wire
+		(pts
+			(xy 72.39 27.94) (xy 90.17 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3515047d-79c6-4389-81db-b04c7d709539")
 	)
 	(wire
 		(pts
@@ -1957,6 +1999,16 @@
 			(type default)
 		)
 		(uuid "5d036ddb-cf6b-44ad-a374-5d279d0fea43")
+	)
+	(wire
+		(pts
+			(xy 49.53 38.1) (xy 53.34 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61dae69f-d131-40cb-bdb2-94bd12ad0362")
 	)
 	(wire
 		(pts
@@ -2110,6 +2162,16 @@
 	)
 	(wire
 		(pts
+			(xy 90.17 27.94) (xy 90.17 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9bffdd64-200a-453c-916a-007affd06229")
+	)
+	(wire
+		(pts
 			(xy 86.36 77.47) (xy 92.075 77.47)
 		)
 		(stroke
@@ -2140,13 +2202,23 @@
 	)
 	(wire
 		(pts
-			(xy 86.995 43.18) (xy 93.345 43.18)
+			(xy 86.995 43.18) (xy 90.17 43.18)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "c2b108df-bfeb-4213-ab3c-856805b52334")
+	)
+	(wire
+		(pts
+			(xy 49.53 27.94) (xy 49.53 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c35324d9-95fb-4a12-a439-0c32b0b0b597")
 	)
 	(wire
 		(pts
@@ -2210,7 +2282,7 @@
 	)
 	(wire
 		(pts
-			(xy 46.355 38.1) (xy 53.34 38.1)
+			(xy 46.355 38.1) (xy 49.53 38.1)
 		)
 		(stroke
 			(width 0)
@@ -3122,6 +3194,75 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/7f721191-bbe1-432a-ba4a-c8116ab8eb09"
 					(reference "R37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 68.58 27.94 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp yes)
+		(uuid "80d947dc-3466-45ce-985b-8bd57c578268")
+		(property "Reference" "R40"
+			(at 70.6119 25.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0"
+			(at 69.85 23.876 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 68.834 26.924 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 68.58 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 68.58 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bb28ca71-5510-4116-84f8-dd0bde28f383")
+		)
+		(pin "2"
+			(uuid "7406d71b-0418-4a85-94dd-4a1f76e0f7d5")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/7f721191-bbe1-432a-ba4a-c8116ab8eb09"
+					(reference "R40")
 					(unit 1)
 				)
 			)
