@@ -625,6 +625,10 @@
     [
       "49b28e86-cfde-410d-931b-2f924e16f8d9",
       "Pump"
+    ],
+    [
+      "7f721191-bbe1-432a-ba4a-c8116ab8eb09",
+      "PowerProtection"
     ]
   ],
   "text_variables": {}
