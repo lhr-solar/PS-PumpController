@@ -2041,12 +2041,6 @@
 		(uuid "0025f2c2-c5a0-43a7-975a-261dac33fbef")
 	)
 	(junction
-		(at 180.34 57.15)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "02a103f2-e8ed-43ab-a5f8-0a55275f312d")
-	)
-	(junction
 		(at 38.1 135.89)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2057,18 +2051,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "03cf7eed-cf99-4543-82bb-74ed0374d71d")
-	)
-	(junction
-		(at 34.29 121.92)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "03de4de4-e9c2-43d2-8d05-bd2cf324c700")
-	)
-	(junction
-		(at 135.89 62.23)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0d010584-1f54-4f02-a840-67913858269a")
 	)
 	(junction
 		(at 231.14 44.45)
@@ -2087,12 +2069,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "17a78dce-8874-41ef-adf6-7a1fa875aa29")
-	)
-	(junction
-		(at 78.74 116.84)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1d9af839-2bc3-4123-a9d9-1a9c89c95144")
 	)
 	(junction
 		(at 96.52 57.15)
@@ -2276,16 +2252,6 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 62.23) (xy 135.89 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "017ceed1-750a-40ce-9f1f-af6766187fe1")
-	)
-	(wire
-		(pts
 			(xy 53.34 54.61) (xy 58.42 54.61)
 		)
 		(stroke
@@ -2466,26 +2432,6 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 54.61) (xy 135.89 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2cb7e6cd-1b03-4341-a39b-fd402df20e10")
-	)
-	(wire
-		(pts
-			(xy 180.34 57.15) (xy 180.34 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2d974ab7-6b26-4319-bfcc-9e92e0b9b509")
-	)
-	(wire
-		(pts
 			(xy 58.42 74.93) (xy 58.42 76.2)
 		)
 		(stroke
@@ -2546,7 +2492,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 57.15) (xy 184.15 57.15)
+			(xy 176.53 57.15) (xy 184.15 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2606,16 +2552,6 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 116.84) (xy 78.74 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "564ef0e9-dec7-4d53-b0b0-53d3f0a3a509")
-	)
-	(wire
-		(pts
 			(xy 58.42 134.62) (xy 58.42 135.89)
 		)
 		(stroke
@@ -2646,16 +2582,6 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 114.3) (xy 34.29 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5ca4a945-d2d6-4f34-995c-56ea9f96261b")
-	)
-	(wire
-		(pts
 			(xy 96.52 57.15) (xy 96.52 62.23)
 		)
 		(stroke
@@ -2663,16 +2589,6 @@
 			(type default)
 		)
 		(uuid "5eb2d33c-6f6e-408f-bcf1-498a4b9359ec")
-	)
-	(wire
-		(pts
-			(xy 74.93 116.84) (xy 78.74 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5f2976d4-2ac6-4ebe-a95c-ef4694b9e6ea")
 	)
 	(wire
 		(pts
@@ -2803,26 +2719,6 @@
 			(type default)
 		)
 		(uuid "781db2e9-c3c4-4df2-b66f-1245fda50fea")
-	)
-	(wire
-		(pts
-			(xy 31.75 114.3) (xy 34.29 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "78441879-080e-46d3-9809-36da16038ef6")
-	)
-	(wire
-		(pts
-			(xy 135.89 54.61) (xy 135.89 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7b3195d9-afff-4566-b69f-59e4329c4da7")
 	)
 	(wire
 		(pts
@@ -3196,7 +3092,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 62.23) (xy 139.7 62.23)
+			(xy 133.35 62.23) (xy 139.7 62.23)
 		)
 		(stroke
 			(width 0)
@@ -3366,16 +3262,6 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 57.15) (xy 180.34 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f07dd698-bd5b-47c7-9dcd-847fc1e62df5")
-	)
-	(wire
-		(pts
 			(xy 198.12 57.15) (xy 198.12 62.23)
 		)
 		(stroke
@@ -3386,23 +3272,13 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 116.84) (xy 82.55 116.84)
+			(xy 74.93 116.84) (xy 82.55 116.84)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "f1c63e59-7c0e-424a-8c09-46468e066fb4")
-	)
-	(wire
-		(pts
-			(xy 34.29 121.92) (xy 38.1 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f348c957-f12e-42e4-b256-37e497d11730")
 	)
 	(wire
 		(pts
@@ -3476,7 +3352,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 121.92) (xy 34.29 121.92)
+			(xy 31.75 121.92) (xy 38.1 121.92)
 		)
 		(stroke
 			(width 0)
@@ -4079,73 +3955,6 @@
 			(project ""
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/0e5255e2-25aa-4e9a-a6ff-997dc3e398fd"
 					(reference "R13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 180.34 64.77 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "18d7651f-5323-4b97-bf94-7df7460222a6")
-		(property "Reference" "T_TP3"
-			(at 182.88 66.8019 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Pad_TP"
-			(at 182.88 69.3419 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "UTSVT_Special:TestPoint_HEX_3mmID"
-			(at 175.26 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 175.26 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 180.34 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "aa02a739-7e5f-48fa-afb2-e6e5b63e0519")
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/0e5255e2-25aa-4e9a-a6ff-997dc3e398fd"
-					(reference "T_TP3")
 					(unit 1)
 				)
 			)
@@ -5413,71 +5222,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 31.75 114.3 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "83e5ca6d-57d2-4878-98cb-47ac1b1a62a9")
-		(property "Reference" "T_OUT2"
-			(at 28.448 109.22 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Pad_TP"
-			(at 28.448 111.76 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "UTSVT_Special:TestPoint_HEX_3mmID"
-			(at 31.75 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 31.75 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 31.75 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6e83a1bb-7a48-4bcc-8f00-33b3fec0d3f0")
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/0e5255e2-25aa-4e9a-a6ff-997dc3e398fd"
-					(reference "T_OUT2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_US")
 		(at 86.36 57.15 90)
 		(unit 1)
@@ -5555,7 +5299,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "874fb74e-c052-4ce2-9085-340bf6cf5a32")
-		(property "Reference" "TEMP2"
+		(property "Reference" "TEMP3"
 			(at 26.67 130.81 0)
 			(effects
 				(font
@@ -5607,74 +5351,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/0e5255e2-25aa-4e9a-a6ff-997dc3e398fd"
-					(reference "TEMP2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 78.74 124.46 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "87d5d069-af7c-42f7-8f64-5a7e9aa7623e")
-		(property "Reference" "T_TP2"
-			(at 81.28 126.4919 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Pad_TP"
-			(at 81.28 129.0319 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "UTSVT_Special:TestPoint_HEX_3mmID"
-			(at 73.66 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 73.66 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 78.74 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "176d00a5-231c-4a2f-b598-cfc6b3e4ee4c")
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/0e5255e2-25aa-4e9a-a6ff-997dc3e398fd"
-					(reference "T_TP2")
+					(reference "TEMP3")
 					(unit 1)
 				)
 			)
@@ -6393,7 +6070,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b41aff11-85f4-48da-9732-83ed92151ba5")
-		(property "Reference" "TEMP3"
+		(property "Reference" "TEMP2"
 			(at 128.27 71.12 0)
 			(effects
 				(font
@@ -6445,7 +6122,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/0e5255e2-25aa-4e9a-a6ff-997dc3e398fd"
-					(reference "TEMP3")
+					(reference "TEMP2")
 					(unit 1)
 				)
 			)
@@ -7046,71 +6723,6 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/0e5255e2-25aa-4e9a-a6ff-997dc3e398fd"
 					(reference "#PWR043")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 133.35 54.61 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "de997fec-6cdb-488d-a15d-cbb082b60723")
-		(property "Reference" "T_OUT3"
-			(at 130.048 49.53 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Pad_TP"
-			(at 130.048 52.07 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "UTSVT_Special:TestPoint_HEX_3mmID"
-			(at 133.35 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 133.35 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 133.35 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9d2e59b5-3bf0-4664-895f-de0226f5ab74")
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/0e5255e2-25aa-4e9a-a6ff-997dc3e398fd"
-					(reference "T_OUT3")
 					(unit 1)
 				)
 			)

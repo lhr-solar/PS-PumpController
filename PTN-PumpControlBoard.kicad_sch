@@ -17339,6 +17339,16 @@
 		)
 		(uuid "5577f680-0102-4774-8809-b9f035d9fb91")
 	)
+	(label "TEMP1"
+		(at 135.89 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "585dfb25-3977-4e9f-8833-1ad2e094db54")
+	)
 	(label "CAN_L"
 		(at 95.25 44.45 180)
 		(effects
@@ -17408,16 +17418,6 @@
 			(justify right bottom)
 		)
 		(uuid "7d90a545-76ff-4fbf-85de-e20d7d17d6d2")
-	)
-	(label "TEMP2"
-		(at 135.89 58.42 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7f7142e9-313d-4074-8633-56249d1ce031")
 	)
 	(label "TEMP1"
 		(at 64.77 50.8 0)
@@ -17539,7 +17539,7 @@
 		)
 		(uuid "ba7a4ea3-8a3b-44db-9ea0-549e247696ec")
 	)
-	(label "TEMP1"
+	(label "TEMP2"
 		(at 135.89 55.88 0)
 		(effects
 			(font
@@ -17547,7 +17547,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c740f3bd-6253-4cb1-a846-b04e3238e1b7")
+		(uuid "c9c1491d-4818-4d38-9918-83101d3f65ef")
 	)
 	(label "TEMP2"
 		(at 64.77 53.34 0)
