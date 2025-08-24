@@ -2140,16 +2140,6 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 66.04) (xy 86.36 66.675)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a75b159d-cb9d-4b43-8cd8-6d15f7e3fe04")
-	)
-	(wire
-		(pts
 			(xy 86.995 43.18) (xy 93.345 43.18)
 		)
 		(stroke
@@ -2307,16 +2297,6 @@
 			(justify left bottom)
 		)
 		(uuid "6235daf8-a2d3-4ce3-b61e-fb5f1af57b78")
-	)
-	(label "LV+"
-		(at 86.36 66.04 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d81cd12e-0e82-45da-be20-31bde05d7629")
 	)
 	(symbol
 		(lib_id "UTSVT_Power:PSMN8R5-40MSDX")
@@ -2691,7 +2671,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3V3"
+		(property "Value" "+3.3V"
 			(at 140.97 27.94 0)
 			(effects
 				(font
@@ -3405,6 +3385,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+12V")
+		(at 86.36 66.675 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "928bd731-327d-4199-a5bc-258ed0809224")
+		(property "Reference" "#PWR071"
+			(at 86.36 70.485 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+24V_IN"
+			(at 87.376 65.278 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 86.36 66.675 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3eb7f470-c994-4601-9b43-9424cdcc53a0")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/7f721191-bbe1-432a-ba4a-c8116ab8eb09"
+					(reference "#PWR071")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_US")
 		(at 95.885 77.47 90)
 		(unit 1)
@@ -3751,7 +3797,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e4bd9656-2929-4ee9-9a3a-7d16576e267d")
-		(property "Reference" "J6"
+		(property "Reference" "3.3V_In1"
 			(at 129.54 26.67 0)
 			(effects
 				(font
@@ -3803,7 +3849,7 @@
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/7f721191-bbe1-432a-ba4a-c8116ab8eb09"
-					(reference "J6")
+					(reference "3.3V_In1")
 					(unit 1)
 				)
 			)
