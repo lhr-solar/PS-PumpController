@@ -1958,16 +1958,6 @@
 		)
 		(uuid "ac544ea0-4dfd-49e4-b5c7-dd81a7a20cea")
 	)
-	(text "test point/logic analyzer for pwm (1x)"
-		(exclude_from_sim no)
-		(at 27.432 52.578 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "edafccd7-b270-437a-b4df-1cdfb0b49ff0")
-	)
 	(text_box "FAN CONTROL IC"
 		(exclude_from_sim no)
 		(at 101.6 115.57 0)
@@ -2079,6 +2069,12 @@
 		(uuid "de14f836-257a-43bc-a13c-6fe82e4557c3")
 	)
 	(junction
+		(at 116.84 49.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "21fb48f8-6998-4273-babe-bea5833229a0")
+	)
+	(junction
 		(at 44.45 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2089,6 +2085,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "63429ed0-d8ae-4e6a-bcea-2897bc44a3f0")
+	)
+	(junction
+		(at 43.18 49.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ae643580-f307-4eb3-97a5-fd76f893decd")
 	)
 	(junction
 		(at 118.11 40.64)
@@ -2138,6 +2140,16 @@
 	)
 	(wire
 		(pts
+			(xy 43.18 49.53) (xy 45.72 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05710b19-497c-45b7-a28c-2fe96f333a95")
+	)
+	(wire
+		(pts
 			(xy 44.45 30.48) (xy 44.45 31.75)
 		)
 		(stroke
@@ -2178,7 +2190,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 54.61) (xy 127 57.15)
+			(xy 127 54.61) (xy 127 59.69)
 		)
 		(stroke
 			(width 0)
@@ -2328,13 +2340,33 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 54.61) (xy 53.34 57.15)
+			(xy 116.84 58.42) (xy 116.84 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "542f62c6-d4dd-4973-9988-0c83009559f0")
+	)
+	(wire
+		(pts
+			(xy 53.34 54.61) (xy 53.34 59.69)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "54bb7616-4c8a-4ec0-b3e2-b60df255b958")
+	)
+	(wire
+		(pts
+			(xy 116.84 50.8) (xy 116.84 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d6eae1f-9eaa-420c-8681-91b5f3e301ca")
 	)
 	(wire
 		(pts
@@ -2358,6 +2390,16 @@
 	)
 	(wire
 		(pts
+			(xy 43.18 50.8) (xy 43.18 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67131a19-13e2-43c9-bd33-d90f3b8b9bcc")
+	)
+	(wire
+		(pts
 			(xy 44.45 40.64) (xy 54.61 40.64)
 		)
 		(stroke
@@ -2368,7 +2410,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 49.53) (xy 45.72 49.53)
+			(xy 41.91 49.53) (xy 43.18 49.53)
 		)
 		(stroke
 			(width 0)
@@ -2465,6 +2507,26 @@
 			(type default)
 		)
 		(uuid "ad53b2b6-0e2a-4648-97ef-30e3a4e06643")
+	)
+	(wire
+		(pts
+			(xy 43.18 58.42) (xy 43.18 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae3a8ad0-5258-4a11-8ff7-5b38c6fa233d")
+	)
+	(wire
+		(pts
+			(xy 116.84 49.53) (xy 119.38 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9f8f7d0-7a1f-4018-9d15-4903a9029da6")
 	)
 	(wire
 		(pts
@@ -2618,7 +2680,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 49.53) (xy 119.38 49.53)
+			(xy 115.57 49.53) (xy 116.84 49.53)
 		)
 		(stroke
 			(width 0)
@@ -6615,6 +6677,42 @@
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAP////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////AAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
 		)
 	)
@@ -8643,7 +8741,43 @@
 			"MTg1MDkwOTg2MiwgMC4wMDg4Nzk5NDQ0Mjg4NTU0NzQ0MjgsIDAuNDAwMDAwMDAwMDAwMDAwMDIy"
 			"MiApICkgOw0KIzE0MDIgPSBBWElTMl9QTEFDRU1FTlRfM0QgKCAnTk9ORScsICM2MTksICMxMDU5"
 			"LCAjNDg5ICkgOw0KIzE0MDMgPSBESVJFQ1RJT04gKCAnTk9ORScsICAoIDAuMDAwMDAwMDAwMDAw"
-			"MA=="
+			"MG11N2dHNWR6eGRRb0xsOUxhUHpXQkxZY2RwN0o0UG5Lb09uVUZ4S3U2Ri9JbmplejV3MUVkWE1z"
+			"Skw2czJrT0JrdU9mdDVUc2JRY3VMRVpqaEoycU5jc3RtbFdla0h6Q2xlTkphekFCTkZSL1RXSzNT"
+			"cXB3TkYvUzRtU2cyRzRtRVdDQWJqOVNid0hKeFdwNUNDM0c4TzUweVVVeVh3VjRJaklEc2pKYk5z"
+			"bWlEaWlXUmFrYW5QRHBZOEwvNUw3TGdTRHB3d0phWUdOeTIxWWtKZkRXYkpJK0ViU1Z0TFBYRGlG"
+			"Sm1haU1RcUtmcW96bkpPeFJnUmQ1dngyd21UcDhUVThUWk9OZUZvbGlESXlMNWFoczdXRDV5cXBQ"
+			"d0RHZEwxaEFpeStyMjlwL0ZWbnNJVlRxYTF3elFvM2Q2YnVBWXpuUSthVUxsQWdGTVpTdkt0VHBU"
+			"SW1ldUJra1Y0MUNjM1BqeVFzMXBkWGIzWUJOZ2J4eDg0UWVXbDhrQy9lenVxYUZKd090cjFnbDF5"
+			"VkJhK1ZiblA3bFNPOGFOSERvWVRzWFNhNHVUNERLZmxFNmNtdzBHbVZGODBKVkFzOXpqemdKZzRY"
+			"WGQ1bGgxQ1N4a3d2aitET1llSG43NEFCUjRWbnZWeSttajNyVjFoWWpsaDRMaEM1eGM0VjVlVXRa"
+			"bEQ1OS9ESFBKSDVTdFd3TVFHemxVQVU5b3pHRDBkSmt4V2FTZy93QzVjVUp5OHVlYXRPSHBBVEp5"
+			"cTRsQjZJSFdoSk1RY01ESGR3OHp6WWNMMFlEQ1dwMXliNCtzekhEMGZGQ2RQN3BVZThLeVZmTDZk"
+			"M3Vma0p6Q3huVEQ2THN5TGEzekw0bHpiT1ZqZU01aWNUNWdVRFFZM3RsV1MwWGE2Y24rR293ZkV4"
+			"Q2tPM0NMcTZCUkpCVXJwSUh0NWd0UDZpVk9yNFNDM1VXSjlqM0JpdU1mcDlpQnA0cWhiaGJMWHpC"
+			"ZVFndVB6TXh4OWo2bzRkTXdCSjZpYmg1ZGtzL1JzcFQzRFNlN0VDU29PaGFsL0FxWnRob3NWWmpF"
+			"b0FDYXBRT1JsTFNkY3ZCRk9TYzl3NmlHQTBHTnJ3d21hUTB4eFVuMkcwLzJKVTZkQTVNVUlGMklH"
+			"VHR4OHdtYU9QYnBRUEhINkZJamsrYmE4aUNBWWV0eDREeE9PVTcreVBBRVlKL2JTSkptbktlbEVl"
+			"WWFUd29tamI2am9Say9NdHhrb2RYTVZYMUZ5UDFGU05aUW1ObWx4VmlXY0VwN2gxSExpbEdRNFZj"
+			"eXVtS3NnR2RadllYcjBCMHlEYVpHdUJXV3VhdGJCZWRJYWVvRnp3dlJtTUxEN3QxZ0E0MitQTE9R"
+			"dwAAAAAAAO0sAAAAAAAA7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA7SwAAAAAAADtLAAAAAAAAO0s"
+			"AAAAAAAA7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA7SwA"
+			"AAAAAADtLAAAAAAAAO0sAAAAAAAA7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA7SwAAAAAAADtLAAA"
+			"AAAAAO0sAAAAAAAA7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA7SwAAAAAAADtLAAAAAAAAO0sAAAA"
+			"AAAA7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA7SwAAAAA"
+			"AADtLAAAAAAAAO0sAAAAAAAA7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA7SwAAAAAAADtLAAAAAAA"
+			"AO0sAAAAAAAA7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA"
+			"7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA7SwAAAAAAADt"
+			"LAAAAAAAAO0sAAAAAAAA7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA7SwAAAAAAADtLAAAAAAAAO0s"
+			"AAAAAAAA7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA7SwA"
+			"AAAAAADtLAAAAAAAAO0sAAAAAAAA7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA7SwAAAAAAADtLAAA"
+			"AAAAAO0sAAAAAAAA7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA7SwAAAAAAADtLAAAAAAAAO0sAAAA"
+			"AAAA7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA7SwAAAAA"
+			"AADtLAAAAAAAAO0sAAAAAAAA7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA7SwAAAAAAADtLAAAAAAA"
+			"AO0sAAAAAAAA7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA7SwAAAAAAADtLAAAAAAAAO0sAAAAAAAA"
+			"eywAAAAAAACuKgAAAAAAAL0kAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AA=="
 		)
 	)
 	(label "NET1"
@@ -9410,88 +9544,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:BUK7M27-80EX")
-		(at 124.46 49.53 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0f65379b-b558-4365-af89-437fb2163051")
-		(property "Reference" "Q2"
-			(at 130.81 48.2599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BUK7M27-80EX"
-			(at 130.81 50.7999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:LFPAK33"
-			(at 129.54 51.435 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BUK7M27-80E.pdf"
-			(at 129.54 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "30A Id, 80V Vds, N-Channel TrenchMOS MOSFET, 27mOhm Ron, 19.5nC Qqd, -55 to 175 °C, LFPAK33"
-			(at 124.46 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "206d8725-86bf-4d51-81c3-020fc1d33b7c")
-		)
-		(pin "3"
-			(uuid "844f64c6-ab5a-458e-bb38-1f0f24b419bf")
-		)
-		(pin "1"
-			(uuid "a41dcb1f-a7c0-42a8-95d5-89a8deddc0f1")
-		)
-		(pin "5"
-			(uuid "1507073a-ffc8-4a23-bd93-5186c752eeb9")
-		)
-		(pin "4"
-			(uuid "98358cdd-7505-455b-8f06-3a617a570284")
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
-					(reference "Q2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Diode:C3D25170H")
 		(at 176.53 38.1 90)
 		(unit 1)
@@ -9555,6 +9607,72 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
 					(reference "D7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 43.18 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "26c979d6-994b-450c-80d6-00595739ec10")
+		(property "Reference" "#PWR086"
+			(at 43.18 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 43.18 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 43.18 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 43.18 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1e8179b1-2876-4239-b31d-e604f275e777")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
+					(reference "#PWR086")
 					(unit 1)
 				)
 			)
@@ -9692,6 +9810,88 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
 					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:BUK7M27-80EX")
+		(at 124.46 49.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "58bc7670-b458-4933-8f56-f442d5ebebbb")
+		(property "Reference" "Q2"
+			(at 130.81 48.2599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PSMN8R5-40MSDX"
+			(at 130.81 50.7999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:LFPAK33"
+			(at 129.54 51.435 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PSMN8R5-40MSD.pdf"
+			(at 129.54 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "30A Id, 40V Vds, N-Channel TrenchMOS MOSFET, 27mOhm Ron, 19.5nC Qqd, -55 to 175 °C, LFPAK33"
+			(at 124.46 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ecfb73c2-5c4e-4787-8984-40ec5de57659")
+		)
+		(pin "3"
+			(uuid "0888a25c-a500-449d-a504-23b645d5017d")
+		)
+		(pin "1"
+			(uuid "0990fb5a-4e0f-4831-b074-e4b8a109b049")
+		)
+		(pin "5"
+			(uuid "737dfafa-1d2a-4413-8d55-ad6bc807c659")
+		)
+		(pin "4"
+			(uuid "3f31fd9c-143f-4adc-a26a-05c5e6b0184c")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
+					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -9899,7 +10099,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 53.34 57.15 0)
+		(at 53.34 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9908,7 +10108,7 @@
 		(fields_autoplaced yes)
 		(uuid "66209957-2059-463e-bf56-3614f549bb24")
 		(property "Reference" "#PWR025"
-			(at 53.34 63.5 0)
+			(at 53.34 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9917,7 +10117,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 53.34 62.23 0)
+			(at 53.34 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9925,7 +10125,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 53.34 57.15 0)
+			(at 53.34 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9934,7 +10134,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 53.34 57.15 0)
+			(at 53.34 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9943,7 +10143,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 53.34 57.15 0)
+			(at 53.34 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10164,8 +10364,77 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_US")
+		(at 116.84 54.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7ebf3188-cfdf-4b50-8d88-c04d41940be0")
+		(property "Reference" "R37"
+			(at 119.38 53.3399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 119.38 55.8799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 117.856 54.864 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 116.84 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 116.84 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "85c9a383-7281-480d-a823-6c23e613ec45")
+		)
+		(pin "2"
+			(uuid "b23d8ce3-7f43-4760-b285-b52adc999263")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
+					(reference "R37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
-		(at 127 57.15 0)
+		(at 127 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10174,7 +10443,7 @@
 		(fields_autoplaced yes)
 		(uuid "81ca2eb8-051b-4084-a621-8e2682c0ccca")
 		(property "Reference" "#PWR029"
-			(at 127 63.5 0)
+			(at 127 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10183,7 +10452,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 127 62.23 0)
+			(at 127 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10191,7 +10460,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 127 57.15 0)
+			(at 127 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10200,7 +10469,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 127 57.15 0)
+			(at 127 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10209,7 +10478,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 127 57.15 0)
+			(at 127 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10662,7 +10931,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BUK7M27-80EX"
+		(property "Value" "PSMN8R5-40MSDX"
 			(at 57.15 50.7999 0)
 			(effects
 				(font
@@ -10682,7 +10951,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BUK7M27-80E.pdf"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PSMN8R5-40MSD.pdf"
 			(at 55.88 53.34 0)
 			(effects
 				(font
@@ -10692,7 +10961,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "30A Id, 80V Vds, N-Channel TrenchMOS MOSFET, 27mOhm Ron, 19.5nC Qqd, -55 to 175 °C, LFPAK33"
+		(property "Description" "30A Id, 40V Vds, N-Channel TrenchMOS MOSFET, 27mOhm Ron, 19.5nC Qqd, -55 to 175 °C, LFPAK33"
 			(at 50.8 49.53 0)
 			(effects
 				(font
@@ -11126,6 +11395,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 116.84 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c9bc617e-cdd7-4238-9420-a1086efebdc3")
+		(property "Reference" "#PWR087"
+			(at 116.84 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 116.84 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.84 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.84 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 116.84 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1c0e25b5-b7da-4bbf-9aeb-7e937dc58e72")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
+					(reference "#PWR087")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "+3.3V_1")
 		(lib_id "power:+3.3V")
 		(at 118.11 30.48 0)
@@ -11525,6 +11860,75 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
 					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 43.18 54.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fd12a84a-7d40-44d9-85c2-a50d3766ddea")
+		(property "Reference" "R36"
+			(at 45.72 53.3399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 45.72 55.8799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 44.196 54.864 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 43.18 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 43.18 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8c09a198-78e8-42e4-a0b9-5cc733f98501")
+		)
+		(pin "2"
+			(uuid "25ca06de-39b1-480b-92d7-dc3501b83dea")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
+					(reference "R36")
 					(unit 1)
 				)
 			)

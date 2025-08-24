@@ -1878,6 +1878,27 @@
 		)
 		(uuid "b3475899-3c5c-415d-9cb3-0bc53890abf3")
 	)
+	(text_box "TEMP SENSORS:\n\nMin: -40C, 191.8k, 3.136V\nMax: 120C, 0.583k, 0.182V"
+		(exclude_from_sim no)
+		(at 120.65 139.7 0)
+		(size 47.625 10.16)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.1588)
+			)
+			(justify left top)
+		)
+		(uuid "0d7f7929-5590-4a50-b4b1-7a70a5551cd3")
+	)
 	(text_box "ACTIVE FILTER CALCS:\nAf = 1 + 0/10k = 1\nFc = 1/(2πRC) = 1/(2π*15k*1µ) ~ 10.6 Hz"
 		(exclude_from_sim no)
 		(at 120.65 126.365 0)

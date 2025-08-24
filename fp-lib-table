@@ -16,4 +16,5 @@
   (lib (name "UTSVT_Power")(type "KiCad")(uri "${KIPRJMOD}/KiCAD-Bild/UTSVT_Power.pretty")(options "")(descr ""))
   (lib (name "UTSVT_Special")(type "KiCad")(uri "${KIPRJMOD}/KiCAD-Bild/UTSVT_Special.pretty")(options "")(descr ""))
   (lib (name "TSR_1-24120SM")(type "KiCad")(uri "${KIPRJMOD}/Custom-KiCadLibraries/TSR_1-24120SM/footprints.pretty")(options "")(descr ""))
+  (lib (name "BUK6Y55-80PX")(type "KiCad")(uri "${KIPRJMOD}/Custom-KiCadLibraries/BUK6Y55-80PX/footprints.pretty")(options "")(descr ""))
 )
