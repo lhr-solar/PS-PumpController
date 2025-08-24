@@ -10725,7 +10725,7 @@
 		)
 		(uuid "3d9409b2-d20c-447d-8196-85b2ceeee8ea")
 	)
-	(text_box "QUESTIONS:\n\nTODO:\n~ cube mx ss\n~ make rpp circuit look nice\n~ steal psom buck calcs\n~ buck test points\n~ fan pwm in logic analyzer\n~ switch to pmos - scrapped\n~ temp range/voltage range\n~ bypass connector for buck\n~ pmos for pump pwm pin\n~ new pmos\n~ 3.3V header?"
+	(text_box "QUESTIONS:\n\nTODO:\n~ cube mx ss\n~ make rpp circuit look nice\n~ steal psom buck calcs\n~ buck test points\n~ fan pwm in logic analyzer\n~ switch to pmos - scrapped\n~ temp range/voltage range\n~ bypass connector for buck\n~ pmos for pump pwm pin\n~ new pmos\n~ 3.3V header"
 		(exclude_from_sim no)
 		(at 16.51 142.24 0)
 		(size 32.385 32.385)

@@ -2396,16 +2396,6 @@
 		)
 		(uuid "189860ff-5f5b-4cb9-b766-7c05163c37d3")
 	)
-	(text "check if psom pin is timer in/input capture"
-		(exclude_from_sim no)
-		(at 182.626 41.91 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "20b3d3e1-a735-4427-8214-ba1bbfabf3da")
-	)
 	(text "DNP RESISTOR IF\nBUCK DOESN'T WORK\n(USE EXTERNAL SUPPLY)"
 		(exclude_from_sim no)
 		(at 70.612 89.662 0)
@@ -2545,10 +2535,10 @@
 		)
 		(uuid "524d1855-ae29-4fd8-a95d-18912787e0f2")
 	)
-	(text_box "CONTINGENCY PLANS"
+	(text_box "TESTING CIRCUITRY"
 		(exclude_from_sim no)
-		(at 205.74 102.235 0)
-		(size 22.86 3.81)
+		(at 208.28 102.235 0)
+		(size 20.32 3.81)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
