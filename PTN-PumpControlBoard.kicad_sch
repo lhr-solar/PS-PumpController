@@ -16797,16 +16797,6 @@
 		)
 		(uuid "108f9a5b-17ac-4ccd-820f-4a5b2090d8c9")
 	)
-	(label "FAN1_TACH"
-		(at 234.95 30.48 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "1753a4dc-9410-4a81-8f8d-97a7912c4310")
-	)
 	(label "FAN_SDA"
 		(at 135.89 46.99 0)
 		(effects
@@ -16987,16 +16977,6 @@
 		)
 		(uuid "5d8f39d0-77e7-450e-b556-fb323f8ed8db")
 	)
-	(label "TEMP1"
-		(at 234.95 33.02 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "646f2ff0-5da2-4ae9-8cb5-cfc90bded456")
-	)
 	(label "TEMP2"
 		(at 148.59 113.03 0)
 		(effects
@@ -17137,6 +17117,16 @@
 		)
 		(uuid "ce501203-d025-4326-81b0-80b5eb310fe6")
 	)
+	(label "FAN1_TACH"
+		(at 234.95 33.02 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "cf8e46ca-c333-4b04-bf91-32119af9f8ba")
+	)
 	(label "CAN_L"
 		(at 175.26 33.02 0)
 		(effects
@@ -17156,6 +17146,16 @@
 			(justify right bottom)
 		)
 		(uuid "ea238711-b83e-46e9-ab65-e493a834df7a")
+	)
+	(label "TEMP1"
+		(at 234.95 30.48 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f21180d8-d6f9-49f1-8126-ffaab1c00c7c")
 	)
 	(label "TEMP1"
 		(at 133.35 113.03 0)
