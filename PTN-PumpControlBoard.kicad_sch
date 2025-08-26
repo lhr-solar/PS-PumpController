@@ -10445,7 +10445,7 @@
 	)
 	(rectangle
 		(start 179.07 107.95)
-		(end 200.025 140.335)
+		(end 211.455 140.335)
 		(stroke
 			(width 0)
 			(type default)
@@ -10481,7 +10481,7 @@
 	)
 	(rectangle
 		(start 213.995 15.24)
-		(end 267.97 106.045)
+		(end 267.97 61.595)
 		(stroke
 			(width 0)
 			(type default)
@@ -10605,16 +10605,6 @@
 		)
 		(uuid "e3981e78-30bc-40cf-a7c8-c4546b0c4335")
 	)
-	(text "only outputs, check pinout"
-		(exclude_from_sim no)
-		(at 240.03 104.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "fb3b63f8-ab7e-4d83-86fb-ddf0ea1ffb39")
-	)
 	(text_box "TVS DIODES"
 		(exclude_from_sim no)
 		(at 162.56 134.62 0)
@@ -10705,7 +10695,7 @@
 	)
 	(text_box "BREAKOUTS"
 		(exclude_from_sim no)
-		(at 254.635 100.965 0)
+		(at 254.635 56.515 0)
 		(size 13.335 5.08)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -10791,7 +10781,7 @@
 	)
 	(text_box "LOGOS"
 		(exclude_from_sim no)
-		(at 191.135 135.255 0)
+		(at 202.565 135.255 0)
 		(size 8.89 5.08)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -10818,12 +10808,6 @@
 		(uuid "0b3b4d8f-b517-4128-ba66-00e4815b5cda")
 	)
 	(junction
-		(at 231.14 90.17)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "57f7097c-a961-4d20-9209-8da056fa1d5d")
-	)
-	(junction
 		(at 95.25 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -10840,24 +10824,12 @@
 		(uuid "184312c7-ddd9-4682-8d75-7411557897ee")
 	)
 	(no_connect
-		(at 234.95 67.31)
-		(uuid "2458aecf-a3fd-4c12-8f31-4a6d182d87ac")
-	)
-	(no_connect
-		(at 234.95 69.85)
-		(uuid "27cce3c2-2baf-47f2-b5e4-b167adc8c2c6")
-	)
-	(no_connect
 		(at 95.25 74.93)
 		(uuid "29f1e584-af41-4d1f-9d74-331a390d99f8")
 	)
 	(no_connect
 		(at 135.89 53.34)
 		(uuid "373ae2f6-fd22-4c78-ac35-6cda5705d758")
-	)
-	(no_connect
-		(at 234.95 40.64)
-		(uuid "7be81f36-f5eb-40e7-99fe-c366b3285438")
 	)
 	(no_connect
 		(at 135.89 85.09)
@@ -11159,16 +11131,6 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 90.17) (xy 234.95 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6174bc66-f121-4e1e-bbbc-fbb2a24c5967")
-	)
-	(wire
-		(pts
 			(xy 135.89 87.63) (xy 133.35 87.63)
 		)
 		(stroke
@@ -11226,16 +11188,6 @@
 			(type default)
 		)
 		(uuid "6edd2d0f-1940-4927-bb93-a7c1828358de")
-	)
-	(wire
-		(pts
-			(xy 234.95 87.63) (xy 231.14 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7fd6c52f-c918-4ff6-a9dd-af63ba99d5ad")
 	)
 	(wire
 		(pts
@@ -11599,16 +11551,6 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 87.63) (xy 231.14 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d50f15c9-8d5a-4a73-ad2d-3500c7d2dcad")
-	)
-	(wire
-		(pts
 			(xy 95.25 33.02) (xy 95.25 34.29)
 		)
 		(stroke
@@ -11708,7 +11650,7 @@
 		(uuid "ff014316-b014-44bc-8a27-f6556d034327")
 	)
 	(image
-		(at 234.95 135.89)
+		(at 242.57 92.075)
 		(scale 0.288691)
 		(uuid "ac1dfe0f-dd72-46db-ad4e-4e4871e60c66")
 		(data "iVBORw0KGgoAAAANSUhEUgAABE4AAARKCAYAAABRrTWaAAAMTWlDQ1BJQ0MgUHJvZmlsZQAASImV"
@@ -16835,16 +16777,6 @@
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
 		)
 	)
-	(label "TEMP2"
-		(at 234.95 38.1 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "044c479b-c106-463b-a90f-655aeecb2bca")
-	)
 	(label "CAN_L"
 		(at 201.93 33.02 0)
 		(effects
@@ -16885,16 +16817,6 @@
 		)
 		(uuid "1af14476-5942-4971-b028-33a06510e22e")
 	)
-	(label "FLOW"
-		(at 234.95 85.09 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "1f1f5951-5f46-4e4c-861c-d9c1277ee825")
-	)
 	(label "TEMP3"
 		(at 64.77 55.88 0)
 		(effects
@@ -16904,16 +16826,6 @@
 			(justify left bottom)
 		)
 		(uuid "22c641f0-1599-4dbe-b354-160309143a1f")
-	)
-	(label "FAN1_PWM"
-		(at 234.95 45.72 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "26174f53-ba45-4af6-bd28-9a7f285ff6ba")
 	)
 	(label "TEMP3"
 		(at 165.1 113.03 0)
@@ -16945,6 +16857,26 @@
 		)
 		(uuid "2d9adf04-5001-4c6d-8302-11cd9a7216bf")
 	)
+	(label "TEMP2"
+		(at 135.89 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "33c0feb1-44a0-48c1-b336-dd1a84cebbcf")
+	)
+	(label "~{SMBALERT}"
+		(at 234.95 45.72 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "369cd5d9-69c7-46f1-a891-8bbae839f518")
+	)
 	(label "FLOW"
 		(at 118.11 113.03 0)
 		(effects
@@ -16955,6 +16887,16 @@
 		)
 		(uuid "440b26d6-2819-4876-a6cb-050e203bcaa8")
 	)
+	(label "FAN_SDA"
+		(at 234.95 35.56 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "458227c4-5a94-4e27-9d1b-796f7a720866")
+	)
 	(label "PUMP_PWM"
 		(at 135.89 87.63 0)
 		(effects
@@ -16964,6 +16906,16 @@
 			(justify left bottom)
 		)
 		(uuid "463bdce0-6c50-464f-9dc7-742dead697ab")
+	)
+	(label "FAN_SCL"
+		(at 234.95 40.64 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "46465c90-501e-4a88-a9b2-3076e55dee07")
 	)
 	(label "PUMP_PWM"
 		(at 86.36 113.03 0)
@@ -16985,6 +16937,16 @@
 		)
 		(uuid "49b3d06f-905d-41b8-b37b-b1ef35ed4109")
 	)
+	(label "PUMP_PWM"
+		(at 234.95 48.26 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4b1206bb-62ad-4586-bda8-2e324e656c61")
+	)
 	(label "PUMP_FG"
 		(at 135.89 82.55 0)
 		(effects
@@ -17005,25 +16967,15 @@
 		)
 		(uuid "4e49b256-7955-4609-bb4a-c92774cf9ed9")
 	)
-	(label "FAN_SCL"
-		(at 234.95 77.47 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "4fe9bf3e-020f-414d-b002-72e6c6b72ac8")
-	)
 	(label "TEMP1"
-		(at 135.89 58.42 0)
+		(at 135.89 55.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "585dfb25-3977-4e9f-8833-1ad2e094db54")
+		(uuid "58e6fdce-adfd-42e6-be15-76169d0d10ae")
 	)
 	(label "CAN_L"
 		(at 95.25 44.45 180)
@@ -17076,16 +17028,6 @@
 		(uuid "7468dfd4-b719-44f4-8a01-b8ff923e3734")
 	)
 	(label "PUMP_PWM"
-		(at 234.95 80.01 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "772e93e1-9a3f-4120-9388-e7d67f71bb07")
-	)
-	(label "PUMP_PWM"
 		(at 26.67 95.25 180)
 		(effects
 			(font
@@ -17125,16 +17067,6 @@
 		)
 		(uuid "8a67ef97-3804-488e-84a0-3fdf00cc5efc")
 	)
-	(label "FAN2_PWM"
-		(at 234.95 35.56 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "8c6e0709-9f42-411e-ad65-0f0e9a4f2ae6")
-	)
 	(label "FAN1_PWM"
 		(at 64.77 27.94 0)
 		(effects
@@ -17145,16 +17077,6 @@
 		)
 		(uuid "98666f8c-e50f-4fdd-8589-eb51ad2128e2")
 	)
-	(label "TEMP3"
-		(at 234.95 43.18 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "9ec7613a-7131-4601-b839-b3d14c553db0")
-	)
 	(label "FLOW"
 		(at 64.77 73.66 0)
 		(effects
@@ -17164,6 +17086,16 @@
 			(justify left bottom)
 		)
 		(uuid "af0237ab-4998-4380-93e2-b6e013878001")
+	)
+	(label "FLOW"
+		(at 234.95 43.18 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b1ab5efe-f15b-46b3-b1b4-88dfbe98fa2d")
 	)
 	(label "~{SMBALERT}"
 		(at 135.89 68.58 0)
@@ -17185,26 +17117,6 @@
 		)
 		(uuid "ba7a4ea3-8a3b-44db-9ea0-549e247696ec")
 	)
-	(label "FAN_SDA"
-		(at 234.95 72.39 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c5d39457-5603-4ab6-a973-5ef06b570da6")
-	)
-	(label "TEMP2"
-		(at 135.89 55.88 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c9c1491d-4818-4d38-9918-83101d3f65ef")
-	)
 	(label "TEMP2"
 		(at 64.77 53.34 0)
 		(effects
@@ -17224,26 +17136,6 @@
 			(justify left bottom)
 		)
 		(uuid "ce501203-d025-4326-81b0-80b5eb310fe6")
-	)
-	(label "FAN2_TACH"
-		(at 234.95 48.26 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "d3272a7b-416b-423d-bef6-eca63ea64573")
-	)
-	(label "~{SMBALERT}"
-		(at 234.95 82.55 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "e2f3e91b-3ad3-444f-bc04-0312943e092b")
 	)
 	(label "CAN_L"
 		(at 175.26 33.02 0)
@@ -17265,16 +17157,6 @@
 		)
 		(uuid "ea238711-b83e-46e9-ab65-e493a834df7a")
 	)
-	(label "PUMP_FG"
-		(at 234.95 74.93 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "ef6db9bd-df02-411a-992e-61a62e99d0cb")
-	)
 	(label "TEMP1"
 		(at 133.35 113.03 0)
 		(effects
@@ -17284,6 +17166,16 @@
 			(justify left bottom)
 		)
 		(uuid "f2c88827-0ec1-40f0-bb25-fc034fa653af")
+	)
+	(label "FAN1_PWM"
+		(at 234.95 38.1 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "fcd9a2b0-8c7b-4c5d-8c64-d8873de0fc9d")
 	)
 	(label "FAN_SCL"
 		(at 135.89 44.45 0)
@@ -18227,71 +18119,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 231.14 90.17 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4a860f2d-e235-4878-b6a9-1e90e0082399")
-		(property "Reference" "#PWR046"
-			(at 231.14 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 231.14 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 231.14 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 231.14 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 231.14 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8bf0e689-6de0-41a6-8a14-9120776e9247")
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "#PWR046")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 118.11 128.27 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -18696,7 +18523,7 @@
 	)
 	(symbol
 		(lib_id "UTSVT_Misc:Logo_Placeholder")
-		(at 184.15 114.3 0)
+		(at 189.23 115.57 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18705,7 +18532,7 @@
 		(fields_autoplaced yes)
 		(uuid "86e0d218-d43b-4b6f-aae2-221c1aae5799")
 		(property "Reference" "LOGO1"
-			(at 184.15 110.49 0)
+			(at 189.23 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18714,7 +18541,7 @@
 			)
 		)
 		(property "Value" "Dr. Hallock"
-			(at 187.96 114.2999 0)
+			(at 193.04 115.5699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18723,7 +18550,7 @@
 			)
 		)
 		(property "Footprint" "UTSVT_Logos:Hallock_Image_Tiny"
-			(at 184.15 112.395 0)
+			(at 189.23 113.665 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18732,7 +18559,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 184.15 112.395 0)
+			(at 189.23 113.665 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18741,7 +18568,7 @@
 			)
 		)
 		(property "Description" "Graph footprint placeholder"
-			(at 184.15 114.3 0)
+			(at 189.23 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18750,7 +18577,7 @@
 			)
 		)
 		(property "PN" ""
-			(at 184.15 114.3 0)
+			(at 189.23 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18759,7 +18586,7 @@
 			)
 		)
 		(property "p/n" ""
-			(at 184.15 114.3 0)
+			(at 189.23 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19112,101 +18939,6 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
 					(reference "#PWR017")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "UTSVT_Connectors:SFH11-PBPC-D05-ST-BK")
-		(at 234.95 67.31 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "bc2eb5b0-7f8c-49cc-b5ca-a8b18f4e3389")
-		(property "Reference" "J5"
-			(at 241.935 59.69 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SFH11-PBPC-D05-ST-BK"
-			(at 229.87 62.865 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "UTSVT_Connectors:CONN_SFH11-xxxC-D05-ST-XX_SUL"
-			(at 234.95 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "SFH11-PBPC-D05-ST-BK"
-			(at 234.95 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 234.95 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "7"
-			(uuid "f7f56efd-a3d8-4ccc-b61c-80cb2397315d")
-		)
-		(pin "9"
-			(uuid "8b4d5d8c-9ed8-4924-b229-f2d789d2b6ac")
-		)
-		(pin "8"
-			(uuid "662385f3-ee7d-46ee-bad4-beec2943740f")
-		)
-		(pin "1"
-			(uuid "bf18b23e-901c-4f65-bb2a-0088ae1ecfc9")
-		)
-		(pin "2"
-			(uuid "542622e3-1f2c-4df1-9e99-d959f97df6d4")
-		)
-		(pin "3"
-			(uuid "c2df3811-c78d-44d7-b1c9-693c2b19bdaf")
-		)
-		(pin "4"
-			(uuid "d9328cfc-92e7-4cb0-9ca2-e57e46825f71")
-		)
-		(pin "5"
-			(uuid "b792663d-e5dc-45a0-8e73-c93b3e879f4c")
-		)
-		(pin "6"
-			(uuid "c21f467b-89df-4bf0-8030-70befd0ffa64")
-		)
-		(pin "10"
-			(uuid "a8d46bd3-8377-4456-83fb-b264adb99a34")
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -20008,7 +19740,7 @@
 	)
 	(symbol
 		(lib_id "UTSVT_Misc:Logo_Placeholder")
-		(at 184.15 124.46 0)
+		(at 189.23 125.73 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -20017,7 +19749,7 @@
 		(fields_autoplaced yes)
 		(uuid "fb53e93f-e8c6-478f-b3b8-e19d6f7bc686")
 		(property "Reference" "LOGO2"
-			(at 184.15 120.65 0)
+			(at 189.23 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20026,7 +19758,7 @@
 			)
 		)
 		(property "Value" "LHRS"
-			(at 187.96 124.4599 0)
+			(at 193.04 125.7299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20035,7 +19767,7 @@
 			)
 		)
 		(property "Footprint" "UTSVT_Logos:LHRs_LOGO"
-			(at 184.15 122.555 0)
+			(at 189.23 123.825 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20044,7 +19776,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 184.15 122.555 0)
+			(at 189.23 123.825 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20053,7 +19785,7 @@
 			)
 		)
 		(property "Description" "Graph footprint placeholder"
-			(at 184.15 124.46 0)
+			(at 189.23 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20062,7 +19794,7 @@
 			)
 		)
 		(property "PN" ""
-			(at 184.15 124.46 0)
+			(at 189.23 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20071,7 +19803,7 @@
 			)
 		)
 		(property "p/n" ""
-			(at 184.15 124.46 0)
+			(at 189.23 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
