@@ -19,4 +19,5 @@
   (lib (name "PSMN8R5-40MSDX")(type "KiCad")(uri "${KIPRJMOD}/Custom-KiCadLibraries/PSMN8R5-40MSDX/footprints.pretty")(options "")(descr ""))
   (lib (name "DO-221AC-2")(type "KiCad")(uri "${KIPRJMOD}/Custom-KiCadLibraries/DO-221AC-2/footprints.pretty")(options "")(descr ""))
   (lib (name "LM74502HDDFR")(type "KiCad")(uri "${KIPRJMOD}/Custom-KiCadLibraries/LM74502HDDFR/footprints.pretty")(options "")(descr ""))
+  (lib (name "BUK6M61-60PX")(type "KiCad")(uri "${KIPRJMOD}/Custom-KiCadLibraries/BUK6M61-60PX/footprints.pretty")(options "")(descr ""))
 )

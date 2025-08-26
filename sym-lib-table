@@ -18,4 +18,5 @@
   (lib (name "UTSVT_Special")(type "KiCad")(uri "${KIPRJMOD}/KiCAD-Sharepoint/utsvt_special.kicad_sym")(options "")(descr ""))
   (lib (name "TSR_1-24120SM")(type "KiCad")(uri "${KIPRJMOD}/Custom-KiCadLibraries/TSR_1-24120SM/TSR_1-24120SM.kicad_sym")(options "")(descr ""))
   (lib (name "BUK6Y55-80PX")(type "KiCad")(uri "${KIPRJMOD}/Custom-KiCadLibraries/BUK6Y55-80PX/BUK6Y55-80PX.kicad_sym")(options "")(descr ""))
+  (lib (name "BUK6M61-60PX")(type "KiCad")(uri "${KIPRJMOD}/Custom-KiCadLibraries/BUK6M61-60PX/BUK6M61-60PX.kicad_sym")(options "")(descr ""))
 )
