@@ -31339,6 +31339,44 @@
 			(justify left bottom)
 		)
 	)
+	(gr_text "TACH"
+		(at 125 130.1 0)
+		(layer "F.SilkS")
+		(uuid "1ad880c1-23a0-4913-bb80-7938559c7bb4")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.125)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "-  +"
+		(at 115.8 131 180)
+		(layer "F.SilkS")
+		(uuid "1fd99890-2172-4f8d-8409-d439ad6be180")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "SDA"
+		(at 128.1 121.7 0)
+		(layer "F.SilkS")
+		(uuid "2d7eb482-1ddf-4949-8d87-b6cfc5566c1a")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.125)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "PTN PUMP\nCONTROL PCB\nSURABHI K\nLHRS 2025"
 		(at 155.8 63.4 0)
 		(layer "F.SilkS")
@@ -31359,6 +31397,19 @@
 			(font
 				(size 1 1)
 				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "SCL"
+		(at 130.6 121.7 0)
+		(layer "F.SilkS")
+		(uuid "3df0adbe-0974-4a4b-8df8-4b2bcf85f908")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.125)
+				(bold yes)
 			)
 			(justify left bottom)
 		)
@@ -31411,6 +31462,57 @@
 			(justify left bottom)
 		)
 	)
+	(gr_text "GND"
+		(at 135.6 130.1 0)
+		(layer "F.SilkS")
+		(uuid "6b6a3cb4-5c9f-4f12-8645-13834328801c")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.125)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "SMB"
+		(at 133.2 121.7 0)
+		(layer "F.SilkS")
+		(uuid "81d8e89b-53bc-42c0-89c2-8b1e2d1da0ce")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.125)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 135.9 121.7 0)
+		(layer "F.SilkS")
+		(uuid "9d42f91e-11b3-46a5-972b-7e24b59db676")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.125)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "-  +"
+		(at 168.5 124.1 90)
+		(layer "F.SilkS")
+		(uuid "a28bed55-5a95-45ba-bf14-b2341cc2ebf5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "L  H  -  +"
 		(at 168.32 87.42 90)
 		(layer "F.SilkS")
@@ -31431,6 +31533,58 @@
 			(font
 				(size 1 1)
 				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "FPWM"
+		(at 127.5 130.1 0)
+		(layer "F.SilkS")
+		(uuid "d79076f9-4926-4096-9507-ee1d95b14b58")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.125)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "PPWM"
+		(at 132.7 130.1 0)
+		(layer "F.SilkS")
+		(uuid "e465eb12-56d1-46c9-84c8-61c624639b6b")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.125)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "FLOW"
+		(at 130.1 130.1 0)
+		(layer "F.SilkS")
+		(uuid "eb8c4861-e975-4319-ba26-ed5371702608")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.125)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "TEMP"
+		(at 125.1 121.7 0)
+		(layer "F.SilkS")
+		(uuid "ec09ca8e-5a4c-408c-b844-8cfa4a6ccae8")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.125)
+				(bold yes)
 			)
 			(justify left bottom)
 		)
