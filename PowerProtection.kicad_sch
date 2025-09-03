@@ -2673,7 +2673,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "22n"
+		(property "Value" "22nF"
 			(at 50.8 43.434 0)
 			(effects
 				(font
@@ -3408,7 +3408,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "220u"
+		(property "Value" "10uF"
 			(at 90.17 53.9749 0)
 			(effects
 				(font
@@ -3609,7 +3609,7 @@
 				)
 			)
 		)
-		(property "Value" "8k"
+		(property "Value" "9k"
 			(at 95.885 73.66 90)
 			(effects
 				(font

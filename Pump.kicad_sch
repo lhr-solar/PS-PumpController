@@ -1520,7 +1520,7 @@
 		)
 		(uuid "6c62e750-bcf4-4289-83cf-dc857e14b01f")
 	)
-	(text "real nmos symbol with correct footprint"
+	(text "real pmos symbol with correct footprint"
 		(exclude_from_sim no)
 		(at 206.248 55.118 0)
 		(effects
