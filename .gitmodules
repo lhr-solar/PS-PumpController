@@ -1,3 +1,7 @@
-[submodule "UTSVT-KiCadLibraries"]
-	path = UTSVT-KiCadLibraries
-	url = git@github.com:lhr-solar/UTSVT-KiCadLibraries.git
+[submodule "KiCAD-Sharepoint"]
+	path = KiCAD-Sharepoint
+	url = git@github.com:lhr-solar/KiCAD-Sharepoint.git
+
+[submodule "KiCAD-Bild"]
+        path = KiCAD-Bild
+        url = git@github.com:lhr-solar/KiCAD-Bild.git
