@@ -2584,7 +2584,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BUK6M61-60P.pdf"
 			(at 146.05 30.48 0)
 			(effects
 				(font
