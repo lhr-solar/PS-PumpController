@@ -108,6 +108,7 @@
         "solder_mask_bridge": "error",
         "starved_thermal": "error",
         "text_height": "warning",
+        "text_on_edge_cuts": "error",
         "text_thickness": "warning",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
@@ -722,11 +723,11 @@
     ],
     [
       "72cbb232-97a0-4b9b-a6b0-3f04462a78a5",
-      "FlowrateSensor"
+      "BuckConverter"
     ],
     [
       "49b28e86-cfde-410d-931b-2f924e16f8d9",
-      "Pump"
+      "Pump&Flowrate"
     ],
     [
       "7f721191-bbe1-432a-ba4a-c8116ab8eb09",

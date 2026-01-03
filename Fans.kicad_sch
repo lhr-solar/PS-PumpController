@@ -5,256 +5,6 @@
 	(uuid "c59a12c1-4a0f-4d0d-933f-2ba9c3634300")
 	(paper "A4")
 	(lib_symbols
-		(symbol "+3.3V_1"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+3.3V"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+3.3V_1_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+3.3V_1_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "+3.3V_2"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+3.3V"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+3.3V_2_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+3.3V_2_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "2024-11-02_21-04-42:EMC2305-1-AP-TR"
 			(pin_names
 				(offset 0.254)
@@ -1765,6 +1515,131 @@
 				)
 			)
 			(symbol "+24V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:+3.3V"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+3.3V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+3.3V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+3.3V_1_1"
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
@@ -6857,7 +6732,61 @@
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHQAAAB1AAAAbQAAAGkAAAB6AAAAVgAAAE4A"
+			"AAByAAAAbQAAAFYAAABtAAAAMQAAAFkAAAB6AAAAcgAAAGkAAABrAAAAVQAAAGgAAABRAAAANgAA"
+			"AGkAAABBAAAAaQAAAG8AAAA4AAAAdQAAADEAAABuAAAAQwAAAGUAAABuAAAASAAAAGgAAAB5AAAA"
+			"MAAAADgAAAB1AAAARQAAAHIAAABQAAAAegAAAHoAAABwAAAANQAAAHkAAABKAAAAQQAAAGgAAABX"
+			"AAAAcgAAAHQAAABxAAAASAAAAGUAAABTAAAAeAAAADMAAABkAAAAYQAAAG0AAABDAAAAUAAAAEwA"
+			"AABqAAAAUQAAADcAAAAyAAAATwAAAEMAAABJAAAAcwAAAG0AAABQAAAAZgAAAGgAAABRAAAAeQAA"
+			"ADEAAABOAAAAUwAAACsAAABjAAAAOAAAAFQAAAAzAAAAOAAAAFEAAAByAAAASQAAAFUAAABBAAAA"
+			"SQAAAEUAAABBAAAASwAAAEUAAABRAAAASAAAAGsAAABRAAAAaQAAAFAAAAB2AAAAYwAAAEMAAABG"
+			"AAAAeAAAAE4AAAB4AAAAQwAAAFYAAABhAAAASAAAAGcAAABpAAAAOAAAAHIAAABlAAAANgAAADgA"
+			"AAA4AAAAOAAAADYAAABlAAAARgAAAHcAAABKAAAAcwAAADAAAABRAAAAaAAAADYAAAB3AAAAYwAA"
+			"AEIAAABMAAAAdgAAAGgAAABsAAAAaQAAAEcAAABUAAAAaAAAAGcAAABJAAAAUgAAAFAAAABrAAAA"
+			"ZwAAAHcAAABkAAAAYgAAAGoAAABlAAAAQgAAAEEAAABWAAAAdgAAADEAAABUAAAAdwAAADMAAAAr"
+			"AAAAcQAAADMAAABGAAAAMQAAADQAAAA0AAAAWQAAAFUAAABlAAAAdgAAAG0AAABCAAAAYQAAAC8A"
+			"AABPAAAARwAAAEgAAABIAAAANgAAAHIAAABGAAAAcgAAAEgAAABuAAAAVAAAAFEAAABrAAAASAAA"
+			"ADIAAABFAAAAUwAAAEoAAAA3AAAASgAAAFoAAABHAAAAaQAAAEsAAABIAAAAUwAAAEEAAABSAAAA"
+			"OAAAACsAAABlAAAAUAAAAFQAAAAyAAAAeQAAAFEAAABEAAAAawAAAHcAAABiAAAAZAAAAG8AAAAw"
+			"AAAAaAAAAFIAAAAwAAAAbwAAAGQAAABQAAAAYgAAAGwAAABqAAAAWgAAAHQAAAB0AAAAeAAAAG8A"
+			"AABlAAAATwAAAG4AAABoAAAAeQAAAGcAAAAxAAAARQAAAEcAAABWAAAAQgAAAGYAAAB6AAAAQgAA"
+			"AG8AAAB6AAAAYgAAAGcAAABkAAAAUgAAAHYAAABUAAAALwAAAE0AAAAyAAAAbAAAAEUAAABTAAAA"
+			"KwAAAGEAAABOAAAAOQAAAC8AAABPAAAAQwAAAGIAAABkAAAANwAAADYAAABYAAAARAAAAEQAAABO"
+			"AAAAOAAAAGgAAABLAAAAZAAAADUAAAB4AAAATwAAADQAAABvAAAASAAAAG4AAABxAAAARgAAAEcA"
+			"AABqAAAAcgAAAEQAAAB0AAAAOAAAAG8AAABEAAAAQgAAAFQAAABuAAAAYQAAADEAAAA4AAAASQAA"
+			"AEYAAAAwAAAAYwAAADcAAABXAAAAQwAAAFgAAABMAAAAUQAAAEoAAABVAAAAeAAAAHQAAABsAAAA"
+			"UwAAAFoAAABtAAAAcAAAAHAAAABFAAAATQAAAEIAAAB1AAAAUQAAAE4AAAB0AAAAeAAAAHkAAABi"
+			"AAAAUAAAAE8AAABPAAAAawAAAHQAAABMAAAALwAAAG8AAABJAAAATAAAAEwAAABqAAAARAAAAFcA"
+			"AABXAAAAOAAAAGoAAABhAAAAdAAAAEcAAAAxAAAAZgAAAEUAAAByAAAAUAAAAFYAAAArAAAANQAA"
+			"AE4AAABPAAAATwAAAGsAAABrAAAARwAAADAAAAB6AAAANwAAAFIAAABSAAAAbQAAAE0AAABIAAAA"
+			"SAAAAFMAAAAxAAAAVAAAADEAAABHAAAAOQAAAFMAAAA2AAAAQgAAAFMAAABkAAAAWgAAAGgAAABi"
+			"AAAAdAAAAGoAAABJAAAAMQAAAEcAAABIAAAAZgAAAHUAAAB5AAAAbwAAAHYAAABzAAAAbAAAAGIA"
+			"AABRAAAASAAAAGkAAABqAAAANwAAAGsAAABoAAAAUQAAAE8AAAB0AAAAaAAAAGIAAABvAAAAawAA"
+			"AHcAAAA0AAAAUwAAAFkAAABDAAAAbgAAAGEAAAA3AAAAUQAAAGcAAABlAAAAMAAAADMAAABtAAAA"
+			"OAAAAE8AAAB0AAAAcAAAADcAAABSAAAATQAAAFUAAAByAAAALwAAAHUAAABNAAAAaAAAAFgAAABi"
+			"AAAAagAAAFkAAAB1AAAAMgAAAHkAAAAxAAAASAAAAEEAAABBAAAAMAAAAHcAAAAzAAAAZwAAAEQA"
+			"AAA2AAAATwAAAFoAAABPAAAASAAAAG0AAAAzAAAAUQAAAE0AAABPAAAATwAAAEsAAABCAAAAaAAA"
+			"AGQAAABnAAAASAAAAEcAAABlAAAAdAAAAEYAAABuAAAAcQAAAGMAAAA1AAAAMwAAAHoAAABBAAAA"
+			"dwAAADYAAABMAAAAbgAAAE0AAABCAAAAbQAAAGEAAAA2AAAAdAAAAC8AAAA4AAAAdAAAAHIAAABy"
+			"AAAARwAAADEAAABUAAAANgAAAEcAAABRAAAAcAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA"
+			"AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP9C/0L/lP+U"
+			"/+b/5v9H////R7i4/0dnZ/9HFkf/RwBH/0cAR/9H/0f/R/9H/0f/R/9H/0f/RwBH/0cAR/9HDkf/"
+			"R2Fh/0e0tP9H////6v/q/5f/l/9E/0T/AAAA/0IAQv+UAJT/5gDm//8A///LAMv/ewB7/ysAK/8A"
+			"AAD/AAAA/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A7gD/AJ0A/wBNAP8AAAD/AAAA/wAA"
+			"AP8AAAD//wAA//9JSf//nZ3///Dw//////+x/7H/XQBd/woACv8AAAD/AAAA/wAAAP8AAAD//wAA"
+			"//8AAP//AAD/zwAA/30AAP8sAAD/AAAA/wAAAP8AAAD/AAAA/zkAOf+DAIP/ygDK//8A///aANr/"
+			"nAic/20pbf9R/1H/RP9E/z//P/8//z//P/8//z/6P/8/pz//P1M//wAAP/8AAD//AAA//wAAP/8A"
+			"AAD/AAAA/wAAAP8AVgD/AKkA/wAAAP8AAAD/AAAA/wAAAP//MjL//4WF///Z2f//////yP/I/3X/"
+			"df8h/yH/AP8A/wD/AP8A/wD/AP8A/wD/AP8AQQD/AAAA/wAAAP8AAAD/AAAA/wBWAP8AqQD/AP0A"
+			"/wD/AP8AAAD/AAAA/wAyMv8AhYX/ANnZ///////I/8j/df91/yH/If8A/wD/AP8A/wD/AP8A/wD/"
+			"AP8A/wD/AP8A/wD/AAAA/wAAAP8AAAD/OAA4/4oAiv/cANz//wD//8oAyv94AHj/JgAm/wAAAP8A"
+			"AAD/AAAA/wALC/8AVlb/AKGh/wDs7P8A3Nz/AJGR/w5GRv9gAGD/swCz////////8PD//56e//9M"
+			"TP//AAD/AAAA//8AAP//AAD//wAA//8cHP//RUX//2Zm//9+fv//j4///5qa//+goP//oqL//6Cg"
+			"//+bm///k5P//4mJ//97e//famr/jVVV/zw9PP8AJAD/AAAA//8AAP//AAD//wAA//8AAP//ERH/"
+			"/y4u//lJSf+mYWH/U3ZT/wCLAP8AoAD/ALUA/wDKAP8A4AD/APUA/wD/AP8A/wD/AP8A/wD/AP8A"
+			"/wD/AP8A/wAAAP8AAAD/AAAA/wAAAP9WKir/qT09//1PT///X1///2xs//94eP//goL//4mJ//+N"
+			"jf//jo7//4qK//+Bgf//cHD//1hY//84OP//EBD//wAA//8AAP//AAD//wAA/wAAAP8+bz7/Pr0+"
+			"/z7/Pv8+/z7/Prc+/z5nPv8XFz7/AAA+/wAAPg=="
 		)
 	)
 	(image
@@ -9065,6 +8994,60 @@
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"ACwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZsb2F0NCBvZmZzZXRbM10sCiAgICAg"
+			"ICAgICAgICAgICAgICAgICAgICAgICAgICBTTUFBVGV4dHVyZTJEKGNvbG9yVGV4KQogICAgICAg"
+			"ICAgICAgICAgICAgICAgICAgICAgICAgI2lmIFNNQUFfUFJFRElDQVRJT04KICAgICAgICAgICAg"
+			"ICAgICAgICAgICAgICAgICAgICwgU01BQVRleHR1cmUyRChwcmVkaWNhdGlvblRleCkKICAgICAg"
+			"ICAgICAgICAgICAgICAgICAgICAgICAgICNlbmRpZgogICAgICAgICAgICAgICAgICAgICAgICAg"
+			"ICAgICAgKSB7CiAgICAvLyBDYWxjdWxhdGUgdGhlIHRocmVzaG9sZDoKICAgICNpZiBTTUFBX1BS"
+			"RURJQ0FUSU9OCiAgICBmbG9hdDIgdGhyZXNob2xkID0gU01BQUNhbGN1bGF0ZVByZWRpY2F0ZWRU"
+			"aHJlc2hvbGQodGV4Y29vcmQsIG9mZnNldCwgU01BQVRleHR1cmVQYXNzMkQocHJlZGljYXRpb25U"
+			"ZXgpKTsKICAgICNlbHNlCiAgICBmbG9hdDIgdGhyZXNob2xkID0gZmxvYXQyKFNNQUFfVEhSRVNI"
+			"T0xELCBTTUFBX1RIUkVTSE9MRCk7CiAgICAjZW5kaWYKCiAgICAvLyBDYWxjdWxhdGUgbHVtYXM6"
+			"CiAgICBmbG9hdDMgd2VpZ2h0cyA9IGZsb2F0MygwLjIxMjYsIDAuNzE1MiwgMC4wNzIyKTsKICAg"
+			"IGZsb2F0IEwgPSBkb3QoU01BQVNhbXBsZVBvaW50KGNvbG9yVGV4LCB0ZXhjb29yZCkucmdiLCB3"
+			"ZWlnaHRzKTsKCiAgICBmbG9hdCBMbGVmdCA9IGRvdChTTUFBU2FtcGxlUG9pbnQoY29sb3JUZXgs"
+			"IG9mZnNldFswXS54eSkucmdiLCB3ZWlnaHRzKTsKICAgIGZsb2F0IEx0b3AgID0gZG90KFNNQUFT"
+			"YW1wbGVQb2ludChjb2xvclRleCwgb2Zmc2V0WzBdLnp3KS5yZ2IsIHdlaWdodHMpOwoKICAgIC8v"
+			"IFdlIGRvIHRoZSB1c3VhbCB0aHJlc2hvbGQ6CiAgICBmbG9hdDQgZGVsdGE7CiAgICBkZWx0YS54"
+			"eSA9IGFicyhMIC0gZmxvYXQyKExsZWZ0LCBMdG9wKSk7CiAgICBmbG9hdDIgZWRnZXMgPSBzdGVw"
+			"KHRocmVzaG9sZCwgZGVsdGEueHkpOwoKICAgIC8vIFRoZW4gZGlzY2FyZCBpZiB0aGVyZSBpcyBu"
+			"b0hIAAAAAAAAAAASAAAAEgAAAAABAAA2TVM1OHL4IAEAAAAAjnRleGNvb3JkAAAuAI56dwBCWXFi"
+			"SVF2VlFkd1hoNTZZYUp2bkxoV0Y2cWlpWnVQVytwZkZnYWtSZDlLaS9zbzhtdHR3TGlBQndzVnNB"
+			"eWJMR1hqYUlPKzBlL0pGWnFHdGE2cHZKV0hDM2UydVZlRlB0andsaE9SR3NrcnByRVY4dUZOWEx3"
+			"bHhVZUpoRytyYTE0VGZmcysyNnhSU2xwTmQzVWtDQWxYVnJEZDFpQlpaVjFnMWp4OWpadER0SVhF"
+			"VGs1U0psbFBaeXVCdFlTVDJORTF3d3N5MytUOWRnRDA2ckQzaWdLSXpRbExmcERPZFJadlMzY2lY"
+			"bXlDSkh0cBDbbwEAAAAAAAAAAAAAAGBz+CABAAAAcHP4IAEAAAAAAAAAAAAAAG1hY3JvYXJnMgA3"
+			"cm00VHMAAAAAAAAAAAYAAAAGAAAAAAEAAFZyWSuQc/ggAQAAAACKMC4wAHJkQzJlT1lmQXVra2F5"
+			"dzZBZ0tRL2g1Q2g4ODQzR2FtRS9UT0w5T0JTc2RrTWg0eEptZjJBa2hEb211eXpEeVpuNmdQSm1u"
+			"WjY5WGNsSXd0UFBxd05nRXA1ZTRheEpBemVIWHVUQ2lINFQyaGJ1MmJScEVmVDJRN1NHRVpHS3ZD"
+			"eDhIcklhM3htWFFNYVlYdGxpeDZGRFN1L0JaSmx6a09ISmVEUk5ydGJZOXA0Z043d0pkQjR1YkR1"
+			"WndKcktVSERRNGNTOWpXT09PVWpiWkQzTTdFb3ROc3duU0k2OCtYMGV0c2JndTYxR013aVBPNFBS"
+			"T2NBcWVmNGNwENtvAQAAAAAAAAAAAAAAuHT4IAEAAADIdPggAQAAAAAAAAAAAAAAbWFjcm9hcmcy"
+			"AE1zazNjcQAAAAAAAAAAGAAAABgAAAAAAQAAZTBBOeh0+CABAAAAAI5pdmVjMgAAKAAtAI8yAAAs"
+			"AI8xAAApM2s5WTE0ZGJRVFVnUEFlQlU5YkRUSXRWamIyMkNaS2IwT3VhaDAwcXE1bGpHZVI4dmR4"
+			"TjNaalFuNTIwenlxTWorcDh5endQbVJGWXpSblBIWWdTdEJwaGVnNjkvWXhubVU2V0JqdFpzazNQ"
+			"UEdRTnhLVlR1SVBOSW1PMnJZTUtlTTZ6VEN6RUVSeFJyWG5JV2l0NEk3bWpBWTg2UWpyazlSejR5"
+			"MWtQcDBsRzNVcVludU9iRVNJdlhKNkgyZFI0VG44OHMvRGEwV3puMlJ5VlI0ZWVUQlBiaUtRL2U4"
+			"eW1NTWFZZzdhVvB1+CABAAAAcBDbbwEAAAAAAAAAAAAAABh2+CABAAAAKHb4IAEAAAAAAAAAAAAA"
 			"AA=="
 		)
 	)
@@ -9322,7 +9305,6 @@
 		(uuid "f6565180-111b-4a21-8ba5-8ce9bc70ea74")
 	)
 	(symbol
-		(lib_name "+3.3V_2")
 		(lib_id "power:+3.3V")
 		(at 179.07 101.6 0)
 		(unit 1)
@@ -9425,7 +9407,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.coolerguys.com/products/coolerguys-120mm-120x120x25-3000-rpm-ip67-24v-waterproof-fan-cg12025h24-ip67?srsltid=AfmBOoq3GbJD2-QdFyyd4g1RvQeUmcytZcuAu3ThIyLhBSjuGqU85IXB"
+		(property "Datasheet" "~"
 			(at 135.89 39.37 0)
 			(effects
 				(font
@@ -9576,7 +9558,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.coolerguys.com/products/coolerguys-120mm-120x120x25-3000-rpm-ip67-24v-waterproof-fan-cg12025h24-ip67?srsltid=AfmBOoq3GbJD2-QdFyyd4g1RvQeUmcytZcuAu3ThIyLhBSjuGqU85IXB"
+		(property "Datasheet" "~"
 			(at 62.23 38.1 0)
 			(effects
 				(font
@@ -9858,7 +9840,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "UTSVT_Passive:MMDL101T1G"
+		(property "Footprint" "Package_TO_SOT_THT:TO-247-2_Vertical"
 			(at 183.515 44.45 0)
 			(effects
 				(font
@@ -9867,7 +9849,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.com/ProductDetail/Vishay-General-Semiconductor/VSSAF522-M3-H?qs=UkDUCjYnTB00gpgD%2Fb%2Fw%252BA%3D%3D"
+		(property "Datasheet" "https://www.wolfspeed.com/media/downloads/103/C3D25170H.pdf"
 			(at 187.96 44.45 0)
 			(effects
 				(font
@@ -9876,7 +9858,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "1700V, 25A, SiC Schottky Diode, TO-247"
 			(at 187.96 44.45 0)
 			(effects
 				(font
@@ -9967,7 +9949,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+3.3V_2")
 		(lib_id "power:+3.3V")
 		(at 137.16 80.01 0)
 		(unit 1)
@@ -10142,7 +10123,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PSMN8R5-40MSD.pdf"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BUK7M27-80E.pdf"
 			(at 132.08 52.07 0)
 			(effects
 				(font
@@ -10152,7 +10133,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "30A Id, 40V Vds, N-Channel TrenchMOS MOSFET, 27mOhm Ron, 19.5nC Qqd, -55 to 175 °C, LFPAK33"
+		(property "Description" "30A Id, 80V Vds, N-Channel TrenchMOS MOSFET, 27mOhm Ron, 19.5nC Qqd, -55 to 175 °C, LFPAK33"
 			(at 127 48.26 0)
 			(effects
 				(font
@@ -10186,7 +10167,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+3.3V_1")
 		(lib_id "power:+3.3V")
 		(at 46.99 27.94 0)
 		(unit 1)
@@ -10253,7 +10233,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+3.3V_2")
 		(lib_id "power:+3.3V")
 		(at 199.39 80.01 0)
 		(unit 1)
@@ -10452,7 +10431,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+3.3V_2")
 		(lib_id "power:+3.3V")
 		(at 27.94 90.17 0)
 		(unit 1)
@@ -10585,7 +10563,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+3.3V_2")
 		(lib_id "power:+3.3V")
 		(at 179.07 80.01 0)
 		(unit 1)
@@ -10926,7 +10903,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+3.3V_2")
 		(lib_id "power:+3.3V")
 		(at 218.44 80.01 0)
 		(unit 1)
@@ -11058,7 +11034,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+3.3V_2")
 		(lib_id "power:+3.3V")
 		(at 138.43 101.6 0)
 		(unit 1)
@@ -11158,7 +11133,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.com/datasheet/2/447/KEM_C1006_X5R_SMD-3316465.pdf"
+		(property "Datasheet" "~"
 			(at 36.83 95.25 0)
 			(effects
 				(font
@@ -11239,7 +11214,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PSMN8R5-40MSD.pdf"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BUK7M27-80E.pdf"
 			(at 58.42 50.8 0)
 			(effects
 				(font
@@ -11249,7 +11224,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "30A Id, 40V Vds, N-Channel TrenchMOS MOSFET, 27mOhm Ron, 19.5nC Qqd, -55 to 175 °C, LFPAK33"
+		(property "Description" "30A Id, 80V Vds, N-Channel TrenchMOS MOSFET, 27mOhm Ron, 19.5nC Qqd, -55 to 175 °C, LFPAK33"
 			(at 53.34 46.99 0)
 			(effects
 				(font
@@ -11499,7 +11474,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "UTSVT_Passive:MMDL101T1G"
+		(property "Footprint" "Package_TO_SOT_THT:TO-247-2_Vertical"
 			(at 210.185 44.45 0)
 			(effects
 				(font
@@ -11508,7 +11483,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.com/ProductDetail/Vishay-General-Semiconductor/VSSAF522-M3-H?qs=UkDUCjYnTB00gpgD%2Fb%2Fw%252BA%3D%3D"
+		(property "Datasheet" "https://www.wolfspeed.com/media/downloads/103/C3D25170H.pdf"
 			(at 214.63 44.45 0)
 			(effects
 				(font
@@ -11517,7 +11492,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "1700V, 25A, SiC Schottky Diode, TO-247"
 			(at 214.63 44.45 0)
 			(effects
 				(font
@@ -11575,7 +11550,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.com/datasheet/2/447/KEM_C1006_X5R_SMD-3316465.pdf"
+		(property "Datasheet" "~"
 			(at 27.94 95.25 0)
 			(effects
 				(font
@@ -11749,7 +11724,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+3.3V_1")
 		(lib_id "power:+3.3V")
 		(at 120.65 29.21 0)
 		(unit 1)
@@ -11816,7 +11790,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+3.3V_2")
 		(lib_id "power:+3.3V")
 		(at 157.48 80.01 0)
 		(unit 1)
