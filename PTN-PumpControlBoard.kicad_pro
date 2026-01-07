@@ -715,23 +715,15 @@
     ],
     [
       "d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0",
-      "Fans"
+      "Fans+Pump"
     ],
     [
       "0e5255e2-25aa-4e9a-a6ff-997dc3e398fd",
-      "TempSensors"
-    ],
-    [
-      "72cbb232-97a0-4b9b-a6b0-3f04462a78a5",
-      "BuckConverter"
-    ],
-    [
-      "49b28e86-cfde-410d-931b-2f924e16f8d9",
-      "Pump&Flowrate"
+      "Temp+Flowrate"
     ],
     [
       "7f721191-bbe1-432a-ba4a-c8116ab8eb09",
-      "PowerProtection"
+      "Power"
     ]
   ],
   "text_variables": {}
