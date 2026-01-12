@@ -10312,7 +10312,43 @@
 			"ZhI3qfXtBujMV4+SqQcCIFV8PzxmnchOLdDLMllSgXoUQsZgtjDXo/GDOTCPxMUPAHYAVYHUwhaQ"
 			"NgFK6gubVzxT8MDkOHhwJQgXL6OqHQcT0wwAAAGNhXokXAAABAMARzBFAiEAt80mtHGDDtFkQKDS"
 			"fyiSpUeXjf3z57nN/+iJt2rICNgCID7C+pY9uqrsJTasluPmQX6Bb6aMBIqjsjp4iXEzoenRMA0G"
-			"CSqGSIb3DQEBCwUAA4IBAQB+srRb2H+jb9m/AloUZJkGoFsQ3A8Fvj98S5x9Dw=="
+			"CSqGSIb3DQEBCwUAA4IBAQB+srRb2H+jb9m/AloUZJkGoFsQ3A8Fvj98S5x9DwAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvAAAATAAAAEYA"
+			"AABrAAAAaQAAAG8AAABEAAAAdgAAAFYAAABnAAAARAAAAGkAAABEAAAAVgAAAGUAAAB2AAAAWAAA"
+			"AGcAAAAvAAAAbgAAAFgAAABuAAAAZwAAAG4AAABYAAAAZgAAAEMAAAA1AAAAZAAAAHEAAAAzAAAA"
+			"egAAAFkAAABOAAAASAAAADMAAABIAAAAMQAAAEQAAAAxAAAARgAAAFgAAABVAAAAZQAAAGcAAABF"
+			"AAAAVwAAAEwAAABsAAAALwAAAE8AAABtAAAAMgAAAHYAAABhAAAAVgAAAGwAAAA5AAAAZQAAAEUA"
+			"AABiAAAAKwAAAGUAAABNAAAAMAAAAGUAAABwAAAAUgAAAGsAAABWAAAAWQAAAEYAAABJAAAARwAA"
+			"ADcAAABXAAAAeAAAAEQAAABWAAAAZAAAADgAAABsAAAATgAAAFkAAABTAAAAUwAAAEsAAABwAAAA"
+			"eQAAADIAAABIAAAAcAAAAE4AAABhAAAAcQAAAFoAAABxAAAAVwAAAGcAAAB0AAAAOQAAAGoAAABo"
+			"AAAAUQAAAHEAAAArAAAAbQAAAGkAAAB0AAAAbAAAAFEAAAB1AAAAQgAAAGcAAAB3AAAAcwAAAGgA"
+			"AABvAAAAbQAAAEgAAABxAAAAYQAAAHIAAABiAAAARAAAAEoAAAB1AAAATgAAADQAAABuAAAANQAA"
+			"AHoAAABFAAAAUwAAAE0AAABHAAAARwAAADQAAABRAAAAMAAAAHQAAABQAAAASAAAADQAAAB3AAAA"
+			"RQAAAEEAAAA4AAAASgAAAFkAAAA1AAAAUAAAAEQAAABBAAAAZAAAAE8AAABIAAAAUAAAADYAAABJ"
+			"AAAASQAAAFUAAABUAAAAagAAAEcAAAA4AAAATQAAAFUAAABmAAAAeQAAAHcAAABPAAAARgAAAFQA"
+			"AAA4AAAAZAAAAFgAAABGAAAAbwAAAEMAAABoAAAAMQAAAGoAAABoAAAAYQAAAG8AAABzAAAARQAA"
+			"AFkAAAA2AAAARwAAAGoAAAB1AAAAbgAAAHgAAAB0AAAATgAAADYAAABGAAAAQgAAADMAAABVAAAA"
+			"UgAAAGYAAABYAAAAcQAAAC8AAABYAAAAUgAAAEsAAAB5AAAANAAAAG0AAAAyAAAAdgAAAGUAAABU"
+			"AAAAMgAAADYAAAA3AAAANAAAAG4AAABqAAAARQAAAFEAAABFAAAAdwAAAHQAAABqAAAAZwAAADgA"
+			"AABNAAAASgAAAFkAAAA1AAAAUAAAAGYAAAA1AAAAYQAAAGYAAABJAAAANQAAADQAAAB3AAAAYwAA"
+			"AEYAAABLAAAASQAAAFkAAABYAAAAUAAAAGoAAABUAAAASQAAAHkAAABsAAAANw=="
 		)
 	)
 	(label "FLOW1_SIG"
@@ -11166,6 +11202,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:D_TVS")
+		(at 101.6 123.19 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "074f2e45-3fe9-42fa-9345-fe4cb9ebce7d")
+		(property "Reference" "D2"
+			(at 104.14 121.9199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TVS"
+			(at 104.14 124.4599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMB"
+			(at 101.6 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 101.6 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Bidirectional transient-voltage-suppression diode"
+			(at 101.6 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "SMBJ30CD-M3/I"
+			(at 101.6 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "43de1825-fd38-400c-85ce-87eb75ad6098")
+		)
+		(pin "2"
+			(uuid "415d12c0-84c6-423f-a779-4731e1859eac")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 21.59 172.72 0)
 		(unit 1)
@@ -11510,85 +11625,6 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
 					(reference "#PWR09")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D_TVS")
-		(at 135.89 123.19 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2226228e-d30f-4b44-8bf3-4df01cac8dcb")
-		(property "Reference" "D4"
-			(at 138.43 121.9199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TVS"
-			(at 138.43 124.4599 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_0603_1608Metric"
-			(at 135.89 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 135.89 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Bidirectional transient-voltage-suppression diode"
-			(at 135.89 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "P/N" "CPDUC5V0R-HF "
-			(at 135.89 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e97dc9bb-5b60-4f2f-9610-3c2db9cbf625")
-		)
-		(pin "2"
-			(uuid "b6d5bd98-2f3e-46e8-8760-a577d030f1dd")
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -12471,6 +12507,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:D_TVS")
+		(at 135.89 123.19 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5ad620c9-ab75-467a-a460-c4a77216c833")
+		(property "Reference" "D4"
+			(at 138.43 121.9199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TVS"
+			(at 138.43 124.4599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMB"
+			(at 135.89 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 135.89 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Bidirectional transient-voltage-suppression diode"
+			(at 135.89 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "SMBJ30CD-M3/I"
+			(at 135.89 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "db4c74ea-597d-4904-86d6-03a98d668b33")
+		)
+		(pin "2"
+			(uuid "eb57f36b-a2c4-4a9b-8f60-cc6235c08756")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 154.94 152.4 0)
 		(unit 1)
@@ -12595,6 +12710,85 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
 					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_TVS")
+		(at 121.92 123.19 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "65457925-8c8d-4b24-8960-85f2558659a9")
+		(property "Reference" "D3"
+			(at 124.46 121.9199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TVS"
+			(at 124.46 124.4599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMB"
+			(at 121.92 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 121.92 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Bidirectional transient-voltage-suppression diode"
+			(at 121.92 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "SMBJ30CD-M3/I"
+			(at 121.92 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c103a9f8-cda2-4827-b527-90877e92dd2b")
+		)
+		(pin "2"
+			(uuid "aed883f3-78a1-4d1f-9f23-b456f958da6f")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
+					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -13110,16 +13304,16 @@
 	)
 	(symbol
 		(lib_id "Device:D_TVS")
-		(at 121.92 123.19 90)
+		(at 168.91 123.19 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "8567f057-a21b-4e25-87d3-14ffae662ca0")
-		(property "Reference" "D3"
-			(at 124.46 121.9199 90)
+		(uuid "85bad9b8-cf82-42ee-bede-5914e26028e3")
+		(property "Reference" "D6"
+			(at 171.45 121.9199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13128,7 +13322,7 @@
 			)
 		)
 		(property "Value" "TVS"
-			(at 124.46 124.4599 90)
+			(at 171.45 124.4599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13136,8 +13330,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0603_1608Metric"
-			(at 121.92 123.19 0)
+		(property "Footprint" "Diode_SMD:D_SMB"
+			(at 168.91 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13146,7 +13340,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 121.92 123.19 0)
+			(at 168.91 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13155,7 +13349,7 @@
 			)
 		)
 		(property "Description" "Bidirectional transient-voltage-suppression diode"
-			(at 121.92 123.19 0)
+			(at 168.91 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13163,8 +13357,8 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "CPDUC5V0R-HF "
-			(at 121.92 123.19 0)
+		(property "P/N" "SMBJ30CD-M3/I"
+			(at 168.91 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13173,15 +13367,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "dace3865-842e-4273-bb59-d300db2b21d9")
+			(uuid "f5e143e3-5a65-4c13-9369-758236e812dc")
 		)
 		(pin "2"
-			(uuid "41ee52bf-62b5-4d7e-8ff1-87255606a534")
+			(uuid "18ace78f-1330-4c81-8f36-7adc759825c9")
 		)
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "D3")
+					(reference "D6")
 					(unit 1)
 				)
 			)
@@ -13834,85 +14028,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D_TVS")
-		(at 168.91 123.19 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a2ad92b5-0b15-469d-bf0c-28df8861f00b")
-		(property "Reference" "D6"
-			(at 171.45 121.9199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TVS"
-			(at 171.45 124.4599 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_0603_1608Metric"
-			(at 168.91 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 168.91 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Bidirectional transient-voltage-suppression diode"
-			(at 168.91 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "P/N" "CPDUC5V0R-HF "
-			(at 168.91 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "68e073d2-7980-425e-9f94-ad466ab2a56e")
-		)
-		(pin "2"
-			(uuid "5a746fac-41c3-4869-8a0a-1c1bd0938d56")
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "D6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_US")
 		(at 21.59 167.64 0)
 		(unit 1)
@@ -14116,6 +14231,85 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
 					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_TVS")
+		(at 156.21 123.19 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b9638e8e-b359-441f-b3ea-7efe65a8579b")
+		(property "Reference" "D5"
+			(at 158.75 121.9199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TVS"
+			(at 158.75 124.4599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMB"
+			(at 156.21 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 156.21 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Bidirectional transient-voltage-suppression diode"
+			(at 156.21 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "SMBJ30CD-M3/I"
+			(at 156.21 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a985fd20-27a0-4b05-ad6c-75206ce4518b")
+		)
+		(pin "2"
+			(uuid "703917bd-c673-42dd-aae7-f4280d769be6")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
+					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -14749,85 +14943,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D_TVS")
-		(at 156.21 123.19 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ddbc970d-a4ad-4922-939d-26f29cb62d22")
-		(property "Reference" "D5"
-			(at 158.75 121.9199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TVS"
-			(at 158.75 124.4599 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_0603_1608Metric"
-			(at 156.21 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 156.21 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Bidirectional transient-voltage-suppression diode"
-			(at 156.21 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "P/N" "CPDUC5V0R-HF "
-			(at 156.21 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0699bd01-c4cd-4707-bafc-885cca8cbd22")
-		)
-		(pin "2"
-			(uuid "86e324b7-9320-48d4-9acb-e47b16e03ed7")
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "D5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+24V")
 		(at 139.7 152.4 0)
 		(unit 1)
@@ -15355,7 +15470,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_0603_1608Metric"
+		(property "Footprint" "Diode_SMD:D_SMB"
 			(at 86.36 123.19 0)
 			(effects
 				(font
@@ -15382,7 +15497,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "CPDUC5V0R-HF "
+		(property "P/N" "SMBJ30CD-M3/I"
 			(at 86.36 123.19 0)
 			(effects
 				(font
@@ -15465,85 +15580,6 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
 					(reference "H2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D_TVS")
-		(at 101.6 123.19 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fa663771-d567-4462-b009-064c03f241a1")
-		(property "Reference" "D2"
-			(at 104.14 121.9199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TVS"
-			(at 104.14 124.4599 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_0603_1608Metric"
-			(at 101.6 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 101.6 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Bidirectional transient-voltage-suppression diode"
-			(at 101.6 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "P/N" "CPDUC5V0R-HF "
-			(at 101.6 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "36173afc-f64d-41a3-a41d-934962628d2d")
-		)
-		(pin "2"
-			(uuid "7a695ffc-3e90-4f7d-a22a-61836b1b6d17")
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "D2")
 					(unit 1)
 				)
 			)
