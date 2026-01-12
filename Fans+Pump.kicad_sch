@@ -1104,6 +1104,131 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:+12V"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+12V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+12V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+12V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+12V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+24V"
 			(power)
 			(pin_numbers
@@ -1482,7 +1607,7 @@
 	)
 	(rectangle
 		(start 149.86 16.51)
-		(end 228.6 68.58)
+		(end 254 68.58)
 		(stroke
 			(width 0)
 			(type default)
@@ -1619,7 +1744,7 @@
 	)
 	(text_box "PULL-UPS"
 		(exclude_from_sim no)
-		(at 215.9 63.5 0)
+		(at 241.3 63.5 0)
 		(size 12.7 5.08)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -1809,7 +1934,7 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 55.88) (xy 218.44 55.88)
+			(xy 243.84 33.02) (xy 245.11 33.02)
 		)
 		(stroke
 			(width 0)
@@ -2066,6 +2191,16 @@
 			(type default)
 		)
 		(uuid "eb8633b7-7aa4-4c7f-9b26-a83d0fe28308")
+	)
+	(wire
+		(pts
+			(xy 217.17 55.88) (xy 218.44 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef9ee600-86ad-427d-b162-22a995142a09")
 	)
 	(wire
 		(pts
@@ -6366,7 +6501,79 @@
 			"////////////////////////////////////////////////////////////////////////////"
 			"////////////////////////////////////////////////////////////////////////////"
 			"////////////////////////////////////////////////////////////////////////////"
-			"/////////////////////////////////////w=="
+			"/////////////////////////////////////wBPAAAAUwAAAEUAAABaAAAASwAAAHgAAABMAAAA"
+			"eAAAAGYAAABCAAAAZwAAAGwAAABGAAAARAAAAEkAAABaAAAAWAAAAFIAAAAyAAAASAAAAG0AAABp"
+			"AAAAcwAAAHYAAABNAAAAcwAAAFIAAAA3AAAAVgAAADQAAABHAAAAQgAAAFIAAAA5AAAARAAAAGgA"
+			"AABBAAAAZQAAAHEAAAB6AAAARQAAAFcAAABDAAAAaAAAAHYAAABGAAAASQAAADMAAABvAAAAcQAA"
+			"ADgAAABVAAAATAAAAEIAAABRAAAAMgAAAEwAAABsAAAARgAAAFkAAABIAAAAZgAAAFoAAABuAAAA"
+			"VwAAACsAAABjAAAAVgAAAEYAAAAvAAAAbQAAAHcAAAA0AAAARwAAAHIAAAA1AAAARwAAAG8AAABF"
+			"AAAAcQAAAGgAAABGAAAAbwAAADYAAABSAAAARwAAAG8AAABHAAAAaQAAAGMAAAB0AAAAUAAAAGEA"
+			"AABKAAAAVgAAAHYAAABHAAAAbwAAAEUAAABXAAAAbQAAAEUAAABFAAAAMgAAAE0AAABhAAAASgAA"
+			"AG4AAABkAAAAVwAAAFUAAABiAAAAWgAAAHcAAABrAAAAMAAAAHgAAABWAAAANQAAAGQAAABwAAAA"
+			"UQAAADkAAABtAAAAaQAAAGgAAABPAAAATwAAADgAAABhAAAAQQAAAEEAAABrAAAAMAAAAHQAAABV"
+			"AAAAVQAAAEYAAABvAAAAegAAAGQAAABiAAAAUAAAAE8AAABlAAAATAAAAEQAAABTAAAAQQAAAEoA"
+			"AAB5AAAAbAAAAE4AAABTAAAAbQAAAGEAAABjAAAAbAAAAEUAAABPAAAAawAAAFgAAABsAAAATAAA"
+			"AFUAAABFAAAAUgAAADUAAABTAAAAdQAAAHcAAABEAAAARQAAAEkAAABrAAAAYQAAAGkAAABZAAAA"
+			"MwAAAFEAAABSAAAARQAAAFYAAABTAAAASQAAAHoAAABKAAAAeAAAAG0AAABJAAAAOAAAAGoAAABN"
+			"AAAAawAAAGwAAABqAAAAbAAAADIAAAB4AAAANQAAAGoAAABCAAAAbQAAAEwAAAA3AAAAZwAAAEsA"
+			"AABYAAAAQgAAADAAAABqAAAATAAAAGMAAABiAAAAdwAAAFQAAABpAAAAOQAAAEYAAABGAAAAUQAA"
+			"AGcAAABIAAAAegAAAFQAAABOAAAAWQAAAGEAAAAyAAAASgAAAE0AAABEAAAAQwAAAFEAAABwAAAA"
+			"awAAAHgAAABZAAAAcAAAAEsAAABDAAAAUQAAAGMAAAB6AAAAbwAAAEIAAABvAAAASQAAADYAAABE"
+			"AAAARwAAAFEAAABVAAAAVQAAAGIAAABqAAAAbtMAAAD///84agAAPWoAAAD////7VwEA/VcBAAD/"
+			"//9YcAEAXXABAAD///9kcAEAaXABAAD////sfAAA8XwAAAD////yfAAA93wAAAD////4fAAA/XwA"
+			"AAD///9siQEAcYkBAAD///9yiQEAd4kBAAD///+UjwAAmY8AAAD///+ajwAAn48AAAD///+gjwAA"
+			"pY8AAAD///+mjwAAq48AAAD///8KxQAAD8UAAAAQMGvoyAAA7cgAAAAAAADuyAAA88gAAAC4bXD0"
+			"yAAA+cgAAAAAAAD6yAAA/8gAAAAA//9iYwEAZ2MBAAAAAAAm3wAAK98AAAABAAAs3wAAMd8AAAAA"
+			"AAAy3wAAN98AAAD///843wAAPd8AAAD///+YUQEAnVEBAAD///9uYwEAc2MBAAD////kawEA6WsB"
+			"AAD////NGQEA0hkBAAD////TGQEA2BkBAAD////lGQEA6hkBAAD////rGQEA8BkBAAD////3GQEA"
+			"/BkBAAD///9cYwEAYWMBAAD////BGQEAxhkBAAD////HGQEAzBkBAAD////ZGQEA3hkBAAD////f"
+			"GQEA5BkBAAD////xGQEA9hkBAAD///+ilQEApJUBAAD////+xAAAA8UAAAD///8ExQAACcUAAAD/"
+			"//8QxQAAFcUAAAD////YJgEA3SYBAAD////eJgEA4yYBAAAAAADkJgEA6SYBAAC8bXDqJgEA7yYB"
+			"AAAAAABoYwEAbWMBAAC5bXB6UQEAf1EBAAAAAACAUQEAhVEBAABhY3KSUQEAl1EBAAD///+qUQEA"
+			"r1EBAAAAAACGUQEAi1EBAAD///+MUQEAkVEBAAAAjnaeUQEAo1EBAAAALACkUQEAqVEBAAD///+w"
+			"UQEAtVEBAAD////qawEA72sBAAD////wawEA9WsBAAD////2awEA+2sBAAD////eeAAA43gAAAD/"
+			"//804wAAOeMAAAD///9A4wAAReMAAAD///9G4wAAS+MAAAD///8QNAEAFTQBAAD///9vQQEAdEEB"
+			"AAD///97QQEAgEEBAAD///+BQQEAhkEBAAD///+E8wAAifMAAAD///+K8wAAj/MAAAD///+Q8wAA"
+			"lfMAAAD///8KNAEADzQBAAD///+MjQEAkY0BAAD///+SjQEAl40BAAD///+YjQEAnY0BAAD///+e"
+			"jQEAo40BAAAAAADUMwEA2TMBAAAAAADaMwEA3zMBAAAAAADsMwEA8TMBAABhcmfyMwEA9zMBAAAA"
+			"AAA64wAAP+MAAAAAAAAWNAEAGzQBAAC7bXAoNAEALTQBAABBX1IuNAEAMzQBAAAALo51QQEAekEB"
+			"AAD///9+8wAAg/MAAAD///8ENAEACTQBAAD//wAAAACrq6v/////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"///////////g4OCIiIgwMDAAAAAAAAAAAAAICAhUVFStra339/f/////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"/////////////////////////////////////19SRVBSRVNFTlRBVElPTiAoICMxOTM3LCAjMzEz"
+			"OCApIDsNCiMzMjQxID0gQ0FSVEVTSUFOX1BPSU5UICggJ05PTkUnLCAgKCA2Ljg2NDk5NDE1MjUz"
+			"NjAyOTY0NUUtMTgsIDAuMDAwMDAwMDAwMDAwMDAwMDAwMCwgLTEuMjYxODEyOTYxNTQ1MzU3NDky"
+			"ICkgKSA7DQojMzI0MiA9IERJUkVDVElPTiAoICdOT05FJywgICggMS4wMDAwMDAwMDAwMDAwMDAw"
+			"MDAsIDMuODI0Mjg2NTgzMDU3NTk4MTM2RS0xNiwgMC4wMDAwMDAwMDAwMDAwMDAwMDAwICkgKSA7"
+			"DQojMzI0MyA9IFZFQ1RPUiAoICdOT05FJywgIzIwOTgsIDEwMDAuMDAwMDAwMDAwMDAwMDAwICkg"
+			"Ow0KIzMyNDQgPSBPUklFTlRFRF9FREdFICggJ05PTkUnLCAqLCAqLCAjMjIxLCAuRi4gKSA7DQoj"
+			"MzI0NSA9IENBUlRFU0lBTl9QT0lOVCAoICdOT05FJywgICggLTAuMTU0OTk5OTk5OTk5OTk5OTcx"
+			"MSwgMC4wMDAwMDAwMDAwMDAwMDAwMDAwLCAwLjAwMDAwMDAwMDAwMDAwMDAwMDAgKSApIDsNCiMz"
+			"MjQ2ID0gVkVSVEVYX1BPSU5UICggJ05PTkUnLCAjMjk5NCApIDsNCiMzMjQ3ID0gRURHRV9MT09Q"
+			"ICggJ05PTkUnLCAoICMxNjUzLCAjMTg2NSwgIzI0OTkgKSApIDsNCiMzMjQ4ID0oIE5BTUVEX1VO"
+			"SVQgKCAqICkgU0lfVU5JVCAoICQsIC5TVEVSQURJQU4uICkgU09MSURfQU5HTEVfVU5JVCAoICkg"
+			"KTsNCiMzMjQ5ID0gQ0FSVEVTSUFOX1BPSU5UICggJ05PTkUnLCAgKCAyLjAwMDAwMDAwMDAwMDAw"
+			"MDAwMCwgMC4xNzk5OTk5OTk5OTk5OTk5Mzc4LCAwLjEwMDAwMDAwMDAwMDAwMDAwNTYgKSApIDsN"
+			"CiMzMjUwID0gT1JJRU5URURfRURHRSAoICdOT05FJywgKiwgKiwgIzE2NCwgLkYuICkgOw0KIzMy"
+			"NTEgPSBQUk9EVUNUX0RFRklOSVRJT05fRk9STUFUSU9OX1dJVEhfU1BFQ0lGSUVEX1NPVVJDRSAo"
+			"ICdBTlknLCAnJywgIzI2NDAsIC5OT1RfS05PV04uICkgOw0KIzMyNTIgPSBESVJFQ1RJT04gKCAn"
+			"Tk9ORScsICAoIC0wLjM4MDg4NDU3NTg3OTg1NzMwMTEsIC0wLjkyNDYyMjU5MzIwMDUwMjEwNzUs"
+			"IDAuMDAwMDAwMDAwMDAwMDAwMDAwMCApICkgOw=="
 		)
 	)
 	(image
@@ -8664,7 +8871,79 @@
 			"AAEG/0R5w//6////////////////////////////////////////////////////////////////"
 			"////////////////////////////////////////////////////////////////////////////"
 			"////////////////////////////////////////////////////////////////////////////"
-			"/w=="
+			"/2YveEM1d0dETVdUSUVFVi9qei94Q3VidmwvTm9FSUdpdEF1ZWxRdS9Yd2cwTUpqTmpRQWF6SHU2"
+			"dmpnSnFKQW9jaWVRTEZHOXNNUjVYa282WmowcUhYdGdyNDhwMjF5VlFXR3o1V0NEOCt5V09EeVQ0"
+			"am83OE54UFF4SHZCQkEyZVQzcitOWWZrMUJmR25UWDZEc2JudmN1Rms2QnYxY0lOUEJYc2REY0gw"
+			"am5NdjNJUFBUbjNBcUpPNDc0SFFnRE1HK3Z2MmNwaGlhLzRSeXIza0FEOWVwUy82M3F5RmlCZ1JY"
+			"RmptUkVRbThzUG04Y1JNYjRvTUZLUEZaUkJBM2MyMGVsbjZzODhLWGZCaiszWXJUei9IT0xyUVQ2"
+			"VDFpSGd2dlZydXlhaWE3YzRFS2M5SXhBNDhGemNGblZZcUYwWWt1ZHZvRXlrZHdtQkxqelkvLzFm"
+			"WUZKYjdkQWJ1MmNpRHBDLzRGQUF6ZFpuQjhKTkhCS29lb0hwWDBVZGZyQzJyMTc3cUJCWklsZStQ"
+			"SHZURUczckpNLzRjRUs0cEUrMW9oS0dMbndkRmd2ZWhhMU1CRm80RnZCTkE1a2p4VThCTVFnK2F1"
+			"enZoOXd1ME9kOTg0dFFKOGZMM01Md2xXRWR0b1cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAL6kAADCpAAAxqQAAMqkAADOpAAA0qQAANakAADapAAA3qQAAOKkAADmpAAA6qQAAO6kAADyp"
+			"AAA9qQAAPqkAAD+pAABAqQAAQakAAEKpAABDqQAARKkAAEWpAABGqQAAR6kAAEipAABJqQAASqkA"
+			"AEupAABMqQAATakAAE6pAABPqQAAUKkAAFGpAABSqQAAU6kAAFSpAABVqQAAVqkAAFepAABYqQAA"
+			"fakAAH6pAAB/qQAAgKkAAIGpAACCqQAAg6kAAISpAACFqQAAhqkAAIepAACIqQAAiakAAIqpAACL"
+			"qQAAjKkAAI2pAACOqQAAj6kAAJCpAACRqQAAkqkAAJOpAACUqQAAlakAAJapAACXqQAAmKkAAJmp"
+			"AACaqQAAm6kAAJypAACdqQAAnqkAAJ+pAACgqQAAoakAAKKpAACjqQAApKkAAKWpAACmqQAAp6kA"
+			"AKipAACpqQAAqqkAAKupAACsqQAArakAAK6pAACvqQAAsKkAALGpAACyqQAAs6kAALSpAAC1qQAA"
+			"tqkAALepAAC4qQAAuakAALqpAAC7qQAAvKkAAL2pAAC+qQAAv6kAAMCpAADBqQAAwqkAAMOpAADE"
+			"qQAAxakAAMapAADHqQAAyKkAAMmpAADKqQAAy6kAAMypAADNqQAAzqkAAM+pAADQqQAA0akAANKp"
+			"AADTqQAA1KkAANWpAADWqQAA16kAANipAADZqQAA2qkAANupAADcqQAA3akAAN6pAADfqQAA4KkA"
+			"AOGpAADiqQAA46kAAOSpAADlqQAA5qkAAOepAADoqQAA6akAAOqpAADrqQAA7KkAAO2pAADuqQAA"
+			"76kAAPCpAADxqQAA8qkAAPOpAAD0qQAA9akAAPapAAD3qQAA+KkAAPmpAAD6qQAA+6kAAPypAAD9"
+			"qQAA/qkAAP+pAAAAqgAAAaoAAAKqAAADqgAABKoAAAWqAAAGqgAAB6oAAAiqAAAJqgAACqoAAAuq"
+			"AAAMqgAADaoAAA6qAAAPqgAAEKoAABGqAAASqgAAE6oAABSqAAAVqgAAFqoAABeqAAAYqgAAGaoA"
+			"ABqqAAAbqgAAHKoAAB2qAAAeqgAAH6oAACCqAAAhqgAAIqoAACOqAAAkqgAAJaoAACaqAAAnqgAA"
+			"KKoAACmqAAAqqgAAK6oAACyqAAAtqgAALqoAAC+qAAAwqgAAMaoAADKqAAAzqgAANKoAADWqAAA2"
+			"qgAAW6oAAFyqAABdqgAAXqoAAF+qAABgqgAAYaoAAGKqAABjqgAAZKoAAGWqAABmqgAAZ6oAAGiq"
+			"AABpqgAAaqoAAGuqAABsqgAAbaoAAG6qAABvqgAAcKoAAHGqAAByqgAAc6oAAHSqAAB1qgAAdqoA"
+			"AA=="
 		)
 	)
 	(label "PUMP_TACH_CHIP"
@@ -8793,7 +9072,7 @@
 	)
 	(hierarchical_label "FAN2_TACH"
 		(shape input)
-		(at 217.17 55.88 180)
+		(at 243.84 33.02 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8812,6 +9091,17 @@
 			(justify right)
 		)
 		(uuid "50551a98-85c2-4343-b5e7-521834f990c3")
+	)
+	(hierarchical_label "PUMP_TACH"
+		(shape input)
+		(at 217.17 55.88 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "599c5757-4fec-41f2-9c62-2884fda2280a")
 	)
 	(hierarchical_label "FAN1_PWM"
 		(shape output)
@@ -9703,76 +9993,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 218.44 52.07 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "860b4f3a-855c-46e0-ba1f-d7aa01786478")
-		(property "Reference" "R9"
-			(at 220.98 50.7999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "5k"
-			(at 220.98 53.3399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 217.424 51.816 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 218.44 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 218.44 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "29cdb514-ba37-4bbf-aaf9-9331e2630c57")
-		)
-		(pin "1"
-			(uuid "6778e439-51b8-4f30-8495-a5b2f1842133")
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
-					(reference "R9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3.3V")
 		(at 218.44 48.26 0)
 		(unit 1)
@@ -9781,8 +10001,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "8e4b1a0f-c996-4979-8280-aa78f830381d")
-		(property "Reference" "#PWR040"
+		(uuid "7ef25700-3a6b-4b66-8798-2fe0195e4fd7")
+		(property "Reference" "#PWR039"
 			(at 218.44 52.07 0)
 			(effects
 				(font
@@ -9819,6 +10039,142 @@
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 			(at 218.44 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b61faae6-776e-459f-b646-7522a560f2c8")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
+					(reference "#PWR039")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 245.11 29.21 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "860b4f3a-855c-46e0-ba1f-d7aa01786478")
+		(property "Reference" "R9"
+			(at 247.65 27.9399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "5k"
+			(at 247.65 30.4799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 244.094 28.956 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 245.11 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 245.11 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "29cdb514-ba37-4bbf-aaf9-9331e2630c57")
+		)
+		(pin "1"
+			(uuid "6778e439-51b8-4f30-8495-a5b2f1842133")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 245.11 25.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8e4b1a0f-c996-4979-8280-aa78f830381d")
+		(property "Reference" "#PWR040"
+			(at 245.11 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 245.11 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 245.11 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 245.11 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 245.11 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9964,72 +10320,6 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
 					(reference "#PWR026")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+24V")
-		(at 149.86 88.9 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "93663b34-5cd6-4a08-9b64-66002605c3da")
-		(property "Reference" "#PWR04"
-			(at 149.86 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+24V"
-			(at 149.86 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 149.86 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 149.86 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+24V\""
-			(at 149.86 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5c7c4df8-d831-491e-87c9-e9662086e81f")
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
-					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -10585,6 +10875,76 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
+		(at 218.44 52.07 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c65de047-014b-4873-9999-eeabdd76b9c2")
+		(property "Reference" "R32"
+			(at 220.98 50.7999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "5k"
+			(at 220.98 53.3399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 217.424 51.816 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 218.44 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 218.44 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "26cb57f6-c2fc-4b15-8831-f9359fff36c3")
+		)
+		(pin "1"
+			(uuid "7f96f6aa-2e5a-4d5f-85c9-ba486254a16f")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
+					(reference "R32")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
 		(at 125.73 40.64 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11050,6 +11410,72 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
 					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+12V")
+		(at 149.86 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f70ac179-5465-4486-b4cd-368889982a22")
+		(property "Reference" "#PWR04"
+			(at 149.86 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+12V"
+			(at 149.86 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 149.86 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 149.86 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b393002a-afc2-4427-81ee-fe75a65da61f")
+		)
+		(instances
+			(project ""
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
