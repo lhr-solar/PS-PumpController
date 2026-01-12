@@ -511,23 +511,27 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Mechanical:MountingHole"
+		(symbol "Mechanical:MountingHole_Pad"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 1.016)
+				(hide yes)
 			)
-			(exclude_from_sim yes)
+			(exclude_from_sim no)
 			(in_bom no)
 			(on_board yes)
 			(property "Reference" "H"
-				(at 0 5.08 0)
+				(at 0 6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "MountingHole"
-				(at 0 3.175 0)
+			(property "Value" "MountingHole_Pad"
+				(at 0 4.445 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -552,7 +556,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Mounting Hole without connection"
+			(property "Description" "Mounting Hole with connection"
 				(at 0 0 0)
 				(effects
 					(font
@@ -570,7 +574,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "MountingHole*"
+			(property "ki_fp_filters" "MountingHole*Pad*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -579,9 +583,9 @@
 					(hide yes)
 				)
 			)
-			(symbol "MountingHole_0_1"
+			(symbol "MountingHole_Pad_0_1"
 				(circle
-					(center 0 0)
+					(center 0 1.27)
 					(radius 1.27)
 					(stroke
 						(width 1.27)
@@ -589,6 +593,26 @@
 					)
 					(fill
 						(type none)
+					)
+				)
+			)
+			(symbol "MountingHole_Pad_1_1"
+				(pin input line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
 					)
 				)
 			)
@@ -3984,6 +4008,22 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dd664007-cfb9-45a2-a661-9bf78dcd9ba4")
+	)
+	(no_connect
+		(at 22.86 121.92)
+		(uuid "27a6fc26-6ff4-41af-9c78-899d83807952")
+	)
+	(no_connect
+		(at 49.53 132.08)
+		(uuid "4ee04e8f-cf8b-4b88-9a19-563c6b96371d")
+	)
+	(no_connect
+		(at 49.53 121.92)
+		(uuid "bc44b787-4120-41dc-b55e-bbcdc51060ce")
+	)
+	(no_connect
+		(at 22.86 132.08)
+		(uuid "d8fb20e7-0498-4473-8235-dc51f2d0b647")
 	)
 	(wire
 		(pts
@@ -10348,7 +10388,61 @@
 			"UgAAAGYAAABYAAAAcQAAAC8AAABYAAAAUgAAAEsAAAB5AAAANAAAAG0AAAAyAAAAdgAAAGUAAABU"
 			"AAAAMgAAADYAAAA3AAAANAAAAG4AAABqAAAARQAAAFEAAABFAAAAdwAAAHQAAABqAAAAZwAAADgA"
 			"AABNAAAASgAAAFkAAAA1AAAAUAAAAGYAAAA1AAAAYQAAAGYAAABJAAAANQAAADQAAAB3AAAAYwAA"
-			"AEYAAABLAAAASQAAAFkAAABYAAAAUAAAAGoAAABUAAAASQAAAHkAAABsAAAANw=="
+			"AEYAAABLAAAASQAAAFkAAABYAAAAUAAAAGoAAABUAAAASQAAAHkAAABsAAAANwAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDPAAADgj8BA4I/"
+			"AQEAAAAAAAACAAEngICAzwF2gm0EAAIBUYCAgM8BdoJtBAOCPwGC0BEAAQABK4CAgM8BdoJtBAAB"
+			"AQFUgICAzwF2gm0EAgoyCgAAAgFRgoACBAF2gm0EAYC5grgRAAEBUABxAXaCqwIBCgKB/wMAAAAB"
+			"UYKAAgQBdoJtBAGAxIK4EQABAVAAcQF2gqsCASICgf8DAAAAAVGAgIDPAXaCbQQDgj8BgtARAAEA"
+			"ASuAgAQBdoJtBAABAQErgIAEAXaCbQQAAgIBLoCABAF2gm0EA4JLAQABBAAAA4JLAQOCSwEBAAAA"
+			"AAAAAgABJ4CABAF2gm0EAAIBUYCABAF2gm0EA4JLAYLfEQABAAErgIAEAXaCbQQAAQEBAICABAF2"
+			"gm0EBAABAVGAgIDPAXaCbQQDgj8BgtARAAEAAVGAgAQBdoJtBAOCSwGC3xEAAQABLoCABAF2gm0E"
+			"A4JUAQABBAAAA4JUAQOCVAEAAAAAAAAAAgABK4CAAgF2gm0EAAICASeAgAIBdoJtBAACAVGAgAIB"
+			"doJtBAOCVAGC5xEAAQFQgIBxAXaCbQQBAQKB/wMAAAABUYCAAgF2gm0EA4JLAYLfEQABAVCAgHEB"
+			"doJtBAEBAoH/AwAAAAEngIACAXaCbQQAAgFRgIACAXaCbQQDglQBgucRAAEBUICAcQF2gm0EAQkC"
+			"gf8DAAAAAVGAgAIBdoJtBAOCSwGC3xEAAQFQgIBxAXaCbQQBCQKB/wMAAAABUYCABAF2gm0EA4JU"
+			"AYLnEQABAAABUQAEAXaCbQQEgsYRgscRAAEAAUGAgHEBdoJuBAEBLoCABAF2gm4ECAFyb3VuZGlu"
+			"ZwEBBAAACIL7EQiC+xEBAAAAAAAAAgABJ4CABAF2gm4EAAIBUYCABAF2gm4ECIL7EYL8EQABAAFU"
+			"gIAEAXaCbgQCAiICAAACAQNgAgF2gm4EAkMAAVGAgAQBdoJuBAmCwBGCwREAAQABQYCAcQF2gnAE"
+			"AQErgIAEAnKB/wACAgEugIACAnKB/wQBJDE3NQABAgAABIIFEgSCBRIBAAAAAAAAAgABJ4CAAgJy"
+			"gf8AAgFRgIACAnKB/wSCBRKCBhIAAQABK4CAAgF2gnAEAAEBAVSAgAIBdoJwBAIBHwEAAAIBUYCA"
+			"AgF2gnAECYLAEYLBEQABAVAAcQF2gnAEAQECgf8DAAAAAVGAgAIBdoJwBAmCwBGCwREAAQFQAHEB"
+			"doJwBAEJAoH/AwAAAAEngIAEAXaCcAQAAgFRgIAEAXaCcAQIgvsRgvwRAAEAAVSAgAQBdoJwBAIC"
+			"OgIAAAIBUYCABAF2gnAECIL7EYL8EQABAAFRgIACAnKB/wSCBRKCBhIAAQABQf//////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"////////////////////////////////////////////////////////////////////////////"
+			"/////////////////////////////////////////////////////////////w=="
 		)
 	)
 	(label "FLOW1_SIG"
@@ -10411,6 +10505,16 @@
 		)
 		(uuid "12e9eb2d-3e6e-42e5-9a65-e8d3958cac63")
 	)
+	(label "TEMP_IN1"
+		(at 26.67 62.23 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "13db8170-aa8a-41eb-a7c1-e9d21ff91bc1")
+	)
 	(label "FAN_SDA"
 		(at 130.81 46.99 0)
 		(effects
@@ -10421,7 +10525,7 @@
 		)
 		(uuid "1af14476-5942-4971-b028-33a06510e22e")
 	)
-	(label "TEMP1"
+	(label "TEMP_IN1"
 		(at 179.07 55.88 180)
 		(effects
 			(font
@@ -10430,16 +10534,6 @@
 			(justify right bottom)
 		)
 		(uuid "1c907226-4877-4ee3-95d6-94c4e7dd199d")
-	)
-	(label "TEMP1"
-		(at 26.67 62.23 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "1f5e2682-5d08-402f-8767-29384461f390")
 	)
 	(label "FAN2_TACH"
 		(at 26.67 36.83 180)
@@ -10721,16 +10815,6 @@
 		)
 		(uuid "6ebe7271-1bf8-45a6-9882-ade6ac59c402")
 	)
-	(label "TEMP2"
-		(at 26.67 64.77 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "7d7acdd8-d559-4b9a-8e3f-f08e1aa5a016")
-	)
 	(label "TEMP1"
 		(at 64.77 62.23 0)
 		(effects
@@ -10851,7 +10935,7 @@
 		)
 		(uuid "a3df31ac-d768-45b6-89fe-43e73d2ee51d")
 	)
-	(label "TEMP2"
+	(label "TEMP_IN2"
 		(at 179.07 59.69 180)
 		(effects
 			(font
@@ -10940,6 +11024,16 @@
 			(justify right bottom)
 		)
 		(uuid "d4aecccb-ae55-4264-8928-4fa5d4688c5c")
+	)
+	(label "TEMP_IN2"
+		(at 26.67 64.77 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d50a8ce0-0b1b-4932-afb8-02c472ea31ac")
 	)
 	(label "PUMP_LED"
 		(at 21.59 152.4 0)
@@ -11131,6 +11225,91 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
 					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 49.53 129.54 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "04f93e19-9a36-47a8-87e5-1b5165176910")
+		(property "Reference" "H4"
+			(at 52.705 126.9999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 52.705 129.5399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_TopBottom"
+			(at 49.53 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 49.53 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 49.53 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "If" ""
+			(at 49.53 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vf" ""
+			(at 49.53 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f9629633-7f00-4dec-90cd-175e92ef2288")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
+					(reference "H4")
 					(unit 1)
 				)
 			)
@@ -11769,70 +11948,6 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
 					(reference "R43")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 25.4 127 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2d4719fe-b63f-4e58-9a7e-beaa7968f4e3")
-		(property "Reference" "H3"
-			(at 27.94 125.7299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole"
-			(at 27.94 128.2699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 25.4 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 25.4 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 25.4 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -13160,70 +13275,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 50.8 127 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7c0c7d6b-4c03-4966-ab7d-a71971da4c46")
-		(property "Reference" "H4"
-			(at 53.34 125.7299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole"
-			(at 53.34 128.2699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 50.8 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 50.8 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 50.8 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "H4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_US")
 		(at 121.92 167.64 0)
 		(unit 1)
@@ -13805,6 +13856,91 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 22.86 129.54 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9ab4c3c1-7607-408a-b746-dd022c8e4122")
+		(property "Reference" "H3"
+			(at 26.035 126.9999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 26.035 129.5399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_TopBottom"
+			(at 22.86 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 22.86 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 22.86 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "If" ""
+			(at 22.86 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vf" ""
+			(at 22.86 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3ece542b-ed86-46d0-b2d0-95123fcfbcb2")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
+					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_US")
 		(at 139.7 167.64 0)
 		(unit 1)
@@ -14101,6 +14237,91 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
 					(reference "R39")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 49.53 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a8482f85-e8fa-463e-891a-ad017d974381")
+		(property "Reference" "H2"
+			(at 52.705 116.8399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 52.705 119.3799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_TopBottom"
+			(at 49.53 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 49.53 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 49.53 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "If" ""
+			(at 49.53 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vf" ""
+			(at 49.53 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d6b6506a-d877-48e0-a67d-e4cc1f33c069")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
+					(reference "H2")
 					(unit 1)
 				)
 			)
@@ -14879,17 +15100,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 25.4 118.11 0)
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 22.86 119.38 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d872c041-943b-44f6-8c05-2bfe1215dfb6")
 		(property "Reference" "H1"
-			(at 27.94 116.8399 0)
+			(at 26.035 116.8399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14898,7 +15119,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 27.94 119.3799 0)
+			(at 26.035 119.3799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14906,8 +15127,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 25.4 118.11 0)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_TopBottom"
+			(at 22.86 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14916,7 +15137,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 25.4 118.11 0)
+			(at 22.86 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14924,14 +15145,35 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Mounting Hole without connection"
-			(at 25.4 118.11 0)
+		(property "Description" "Mounting Hole with connection"
+			(at 22.86 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
+		)
+		(property "If" ""
+			(at 22.86 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vf" ""
+			(at 22.86 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b9569bed-c3ed-4e3c-aa66-85ed189db05b")
 		)
 		(instances
 			(project "PTN-PumpControlBoard"
@@ -15516,70 +15758,6 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
 					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 50.8 118.11 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f84a5a6a-fee7-4a35-a331-238fd2fdf6af")
-		(property "Reference" "H2"
-			(at 53.34 116.8399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole"
-			(at 53.34 119.3799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 50.8 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 50.8 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 50.8 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "PTN-PumpControlBoard"
-				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58"
-					(reference "H2")
 					(unit 1)
 				)
 			)
