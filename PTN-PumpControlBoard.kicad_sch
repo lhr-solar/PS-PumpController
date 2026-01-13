@@ -5308,7 +5308,7 @@
 		)
 		(uuid "7f8bc5ff-5ba6-41dd-9d57-bb96676b11a8")
 	)
-	(text_box "to do:\n- turn pin header into 0 ohms\n- remove temp from logic analyzer and add tps\n- planes for 12V\n- put inductor on back And close to chip\n- round corners"
+	(text_box "to do:\n- remove temp from logic analyzer and add tps\n- planes for 12V, 12V bucked\n- round corners\n- move pwr debug elsewhere"
 		(exclude_from_sim no)
 		(at 251.46 139.7 0)
 		(size 30.48 20.32)
@@ -5478,6 +5478,10 @@
 	(no_connect
 		(at 22.86 132.08)
 		(uuid "d8fb20e7-0498-4473-8235-dc51f2d0b647")
+	)
+	(no_connect
+		(at 170.18 74.93)
+		(uuid "f3514ca6-a287-4b6c-81a0-e462e0ddcc97")
 	)
 	(wire
 		(pts
@@ -12826,16 +12830,6 @@
 			(justify right bottom)
 		)
 		(uuid "665dd8de-5d88-4089-b5fa-7ca1b28a142c")
-	)
-	(label "TEMP1"
-		(at 170.18 74.93 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "69eb9a8b-8f65-4045-bc77-66694aa30592")
 	)
 	(label "TEMP2"
 		(at 168.91 116.84 0)

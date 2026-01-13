@@ -904,206 +904,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Jumper:Jumper_3_Open"
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom no)
-			(on_board yes)
-			(property "Reference" "JP"
-				(at -2.54 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Jumper_3_Open"
-				(at 0 2.794 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Jumper, 3-pole, both open"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "Jumper SPDT"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Jumper* TestPoint*3Pads* TestPoint*Bridge*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Jumper_3_Open_0_0"
-				(circle
-					(center -3.302 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 3.302 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Jumper_3_Open_0_1"
-				(arc
-					(start -3.048 1.016)
-					(mid -1.651 1.4992)
-					(end -0.254 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -0.508) (xy 0 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0.254 1.016)
-					(mid 1.651 1.4992)
-					(end 3.048 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Jumper_3_Open_1_1"
-				(pin passive line
-					(at -6.35 0 0)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 6.35 0 180)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:+12V"
 			(power)
 			(pin_numbers
@@ -1805,6 +1605,18 @@
 		(uuid "2e6c3006-9820-44c5-9c78-41a7a251c7f7")
 	)
 	(junction
+		(at 45.72 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "82814c18-2ffe-4344-b70c-84713c49a2f1")
+	)
+	(junction
+		(at 45.72 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a5e9590c-51eb-4515-a88c-e7e4637f8028")
+	)
+	(junction
 		(at 25.4 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1844,16 +1656,6 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 106.68) (xy 60.96 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "152501da-5e40-4977-b1ce-a0d04db251ee")
-	)
-	(wire
-		(pts
 			(xy 62.23 33.02) (xy 66.04 33.02)
 		)
 		(stroke
@@ -1874,16 +1676,6 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 114.3) (xy 54.61 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1b876b73-db5f-4f9f-993a-5a7d739a0ea7")
-	)
-	(wire
-		(pts
 			(xy 34.29 44.45) (xy 34.29 46.99)
 		)
 		(stroke
@@ -1901,6 +1693,46 @@
 			(type default)
 		)
 		(uuid "2e082093-0588-48e5-b7dc-51170ce63520")
+	)
+	(wire
+		(pts
+			(xy 55.88 91.44) (xy 62.23 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2eee129f-90f8-4280-b4f6-08b306a33d9b")
+	)
+	(wire
+		(pts
+			(xy 48.26 82.55) (xy 45.72 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33f5a1a8-e067-4697-b265-24d0e0460ee3")
+	)
+	(wire
+		(pts
+			(xy 45.72 82.55) (xy 45.72 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "388378ee-eaf5-4fbf-a051-7b38edb78f01")
+	)
+	(wire
+		(pts
+			(xy 45.72 91.44) (xy 48.26 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38dd4ce0-f037-452b-b096-943caaab4696")
 	)
 	(wire
 		(pts
@@ -1954,6 +1786,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 102.87) (xy 45.72 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4dd0c607-0583-4b46-a340-e74bc0749240")
+	)
+	(wire
+		(pts
 			(xy 25.4 39.37) (xy 25.4 38.1)
 		)
 		(stroke
@@ -1984,13 +1826,13 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 85.09) (xy 60.96 85.09)
+			(xy 45.72 106.68) (xy 45.72 111.76)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "60806bb4-1ef1-475d-a15f-836e87b4a2a4")
+		(uuid "6052043d-44c4-45fe-9adf-ef2c245ead50")
 	)
 	(wire
 		(pts
@@ -2014,6 +1856,16 @@
 	)
 	(wire
 		(pts
+			(xy 55.88 82.55) (xy 62.23 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "776ef8bb-2a04-4f9f-9e64-e6b3471d9269")
+	)
+	(wire
+		(pts
 			(xy 217.17 33.02) (xy 218.44 33.02)
 		)
 		(stroke
@@ -2024,13 +1876,13 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 114.3) (xy 54.61 110.49)
+			(xy 55.88 111.76) (xy 62.23 111.76)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "80f58592-1983-4975-8727-e2421d5aa94d")
+		(uuid "82288eb6-cdc3-4364-b7f5-a8f39cd75aa5")
 	)
 	(wire
 		(pts
@@ -2041,6 +1893,16 @@
 			(type default)
 		)
 		(uuid "8aa17af7-f70f-4cf3-9d97-4915a4e191bf")
+	)
+	(wire
+		(pts
+			(xy 45.72 86.36) (xy 45.72 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b3168d1-9081-4225-a29f-f3b6f25095ba")
 	)
 	(wire
 		(pts
@@ -2064,13 +1926,23 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 106.68) (xy 48.26 106.68)
+			(xy 55.88 102.87) (xy 62.23 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ab73d30b-e410-43e9-8f6f-b80822319e70")
+		(uuid "944914d9-2e0c-42bc-8483-f08657970b76")
+	)
+	(wire
+		(pts
+			(xy 41.91 106.68) (xy 45.72 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac8a4b38-d672-4ab7-b5fd-70b9e9e1457e")
 	)
 	(wire
 		(pts
@@ -2084,6 +1956,16 @@
 	)
 	(wire
 		(pts
+			(xy 48.26 102.87) (xy 45.72 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be4e3d75-5a35-4cd7-938e-42df59b829b4")
+	)
+	(wire
+		(pts
 			(xy 34.29 39.37) (xy 34.29 38.1)
 		)
 		(stroke
@@ -2091,6 +1973,16 @@
 			(type default)
 		)
 		(uuid "c12d0ae5-9868-4a2d-869a-a5a11713c04e")
+	)
+	(wire
+		(pts
+			(xy 45.72 111.76) (xy 48.26 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9bb0a7d-13ca-4f95-a717-38a61ac8f3ff")
 	)
 	(wire
 		(pts
@@ -2124,7 +2016,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 88.9) (xy 43.18 88.9)
+			(xy 41.91 86.36) (xy 45.72 86.36)
 		)
 		(stroke
 			(width 0)
@@ -2201,16 +2093,6 @@
 			(type default)
 		)
 		(uuid "fe5d7fd2-826d-4bcc-80bb-03808e46a25a")
-	)
-	(wire
-		(pts
-			(xy 58.42 88.9) (xy 55.88 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ff21ac19-7afe-4983-b14c-a4bb7a065104")
 	)
 	(image
 		(at 184.15 49.53)
@@ -9241,7 +9123,7 @@
 		)
 	)
 	(label "PUMP_TACH_CHIP"
-		(at 62.23 85.09 0)
+		(at 62.23 82.55 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9271,7 +9153,7 @@
 		(uuid "5c7894cf-70c8-4806-b433-ac061102584c")
 	)
 	(label "PUMP_PWM_CHIP"
-		(at 62.23 106.68 0)
+		(at 62.23 102.87 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9333,7 +9215,7 @@
 	)
 	(hierarchical_label "PUMP_TACH"
 		(shape input)
-		(at 41.91 88.9 180)
+		(at 41.91 86.36 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9344,7 +9226,7 @@
 	)
 	(hierarchical_label "PUMP_PWM_PSOM"
 		(shape input)
-		(at 45.72 106.68 180)
+		(at 41.91 106.68 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -9432,18 +9314,18 @@
 	)
 	(hierarchical_label "PUMP_PWM"
 		(shape output)
-		(at 53.34 114.3 180)
+		(at 62.23 111.76 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "a8e19e30-c8de-459a-ae89-12f6fc405f30")
 	)
 	(hierarchical_label "PUMP_TACH_PSOM"
 		(shape output)
-		(at 58.42 88.9 0)
+		(at 62.23 91.44 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10352,6 +10234,75 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_US")
+		(at 52.07 111.76 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp yes)
+		(uuid "909910c3-f57d-47c0-bc5d-597fe821a345")
+		(property "Reference" "R50"
+			(at 54.1019 109.22 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0"
+			(at 53.34 107.696 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 52.324 110.744 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 52.07 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 52.07 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ceb7c74a-1e2c-4dd6-9cee-1783e4ab51e2")
+		)
+		(pin "2"
+			(uuid "a204e46c-d99f-4640-9247-6192b17520a8")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
+					(reference "R50")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 120.65 34.29 0)
 		(unit 1)
@@ -10749,33 +10700,34 @@
 		)
 	)
 	(symbol
-		(lib_id "Jumper:Jumper_3_Open")
-		(at 54.61 106.68 0)
+		(lib_id "Device:R_US")
+		(at 52.07 82.55 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b2ef820f-45a8-4171-bea8-21a341dd1525")
-		(property "Reference" "JP2"
-			(at 54.61 100.33 0)
+		(uuid "ad009795-c492-4e90-8266-195ca2d108b6")
+		(property "Reference" "R41"
+			(at 54.1019 80.01 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "P_PWM"
-			(at 54.61 102.87 0)
+		(property "Value" "0"
+			(at 53.34 78.486 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
-			(at 54.61 106.68 0)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 52.324 81.534 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10784,7 +10736,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 54.61 106.68 0)
+			(at 52.07 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10792,8 +10744,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Jumper, 3-pole, both open"
-			(at 54.61 106.68 0)
+		(property "Description" "Resistor, US symbol"
+			(at 52.07 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10802,18 +10754,84 @@
 			)
 		)
 		(pin "1"
-			(uuid "095aa03c-e989-4053-9cf6-c713297f0ca7")
+			(uuid "2bd35e5f-5ed4-4f92-8ecb-7c530b97b396")
 		)
 		(pin "2"
-			(uuid "c4ddef3d-574f-4727-a882-60d1820481ab")
-		)
-		(pin "3"
-			(uuid "74abf752-28a8-44d6-b9c9-3d93f0dbd07e")
+			(uuid "6dd0943e-013b-4c20-b8b4-84c1b5eb6e38")
 		)
 		(instances
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
-					(reference "JP2")
+					(reference "R41")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 52.07 102.87 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b79b650c-6942-4f22-b2c6-46a48c08e763")
+		(property "Reference" "R49"
+			(at 54.1019 100.33 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0"
+			(at 53.34 98.806 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 52.324 101.854 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 52.07 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 52.07 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "af2997c2-9119-496e-a741-a5c72624b674")
+		)
+		(pin "2"
+			(uuid "4f595799-686c-4f25-abb3-ea302e2addb2")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
+					(reference "R49")
 					(unit 1)
 				)
 			)
@@ -11231,6 +11249,75 @@
 			(project "PTN-PumpControlBoard"
 				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
 					(reference "#PWR024")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 52.07 91.44 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp yes)
+		(uuid "da40af33-0295-4d75-85a8-951bccd5faef")
+		(property "Reference" "R48"
+			(at 54.1019 88.9 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0"
+			(at 53.34 87.376 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 52.324 90.424 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 52.07 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 52.07 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "45002391-fd7d-4656-8e31-5ccb7e308fe8")
+		)
+		(pin "2"
+			(uuid "1d593832-25a4-4c78-98cf-42e4374c33d7")
+		)
+		(instances
+			(project "PTN-PumpControlBoard"
+				(path "/591f46f8-eb1d-42dc-a4cb-8182eac4ef58/d90f7da4-ca39-48c6-8d97-b8d1e37c7dd0"
+					(reference "R48")
 					(unit 1)
 				)
 			)
