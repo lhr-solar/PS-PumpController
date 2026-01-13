@@ -9943,7 +9943,7 @@
 				)
 			)
 		)
-		(property "Value" "Jumper_3_Open"
+		(property "Value" "P_Tach"
 			(at 54.61 81.28 0)
 			(effects
 				(font
@@ -10811,7 +10811,7 @@
 				)
 			)
 		)
-		(property "Value" "Jumper_3_Open"
+		(property "Value" "P_PWM"
 			(at 54.61 102.87 0)
 			(effects
 				(font

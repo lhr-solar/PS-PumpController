@@ -14198,7 +14198,7 @@
 				)
 			)
 		)
-		(property "Value" "FlowFan"
+		(property "Value" "Flow_Fan"
 			(at 233.68 -46.99 0)
 			(effects
 				(font
@@ -15961,7 +15961,7 @@
 				)
 			)
 		)
-		(property "Value" "PumpTemp"
+		(property "Value" "Pump_Temp"
 			(at 181.61 -45.72 0)
 			(effects
 				(font
