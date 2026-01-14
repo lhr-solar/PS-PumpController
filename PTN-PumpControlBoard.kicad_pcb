@@ -32275,7 +32275,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "SURABHI K\nLHRS 2025\nPUMP CONTROLLER"
+	(gr_text "SURABHI K\nLHRS 2026\nPUMP CONTROLLER"
 		(at 150.6 58.2 0)
 		(layer "F.SilkS")
 		(uuid "3064082b-342c-4820-9e67-40ed3e58e680")
