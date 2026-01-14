@@ -9329,7 +9329,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "12V_OUT"
+		(property "Value" "12V"
 			(at 120.65 114.8079 0)
 			(effects
 				(font

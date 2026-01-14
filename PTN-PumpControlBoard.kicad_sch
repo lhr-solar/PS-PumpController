@@ -11913,6 +11913,16 @@
 		)
 		(uuid "1f16bd11-12db-463e-a4f0-8980a44e274f")
 	)
+	(label "TEMP_LED"
+		(at 130.81 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1fc3e89c-85cf-4a67-9486-9b6bf95d1a86")
+	)
 	(label "FAN2_TACH"
 		(at 26.67 36.83 180)
 		(effects
@@ -12012,16 +12022,6 @@
 			(justify right bottom)
 		)
 		(uuid "366c22f1-a500-4860-acdb-0eedda195a0c")
-	)
-	(label "TEMP_LED"
-		(at 130.81 80.01 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "3c4b7e4f-aa42-4162-97cb-0e6e92036aab")
 	)
 	(label "FAN_CHIP"
 		(at 59.69 152.4 0)
@@ -12123,16 +12123,6 @@
 		)
 		(uuid "551b0689-c558-449e-9f24-2d50313b88b9")
 	)
-	(label "FLOW_LED"
-		(at 130.81 76.2 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5708a1da-75dc-4f8c-a3dd-1e9fe7477838")
-	)
 	(label "FAN_SCL"
 		(at 170.18 85.09 180)
 		(effects
@@ -12162,16 +12152,6 @@
 			(justify left bottom)
 		)
 		(uuid "60ba5020-cd16-49b5-b91b-a520f2f535fe")
-	)
-	(label "LED1"
-		(at 130.81 85.09 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "6379b0af-158a-44f4-9b8d-c5dfd78cef36")
 	)
 	(label "FAN1_PWM"
 		(at 170.18 82.55 180)
@@ -12353,16 +12333,6 @@
 		)
 		(uuid "9f20eb29-6be5-457d-89fe-f5e14a535d17")
 	)
-	(label "FAN_CHIP"
-		(at 130.81 71.12 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a25dc057-8c2c-43bf-ac03-404bfea2bead")
-	)
 	(label "TEMP2"
 		(at 130.81 60.96 0)
 		(effects
@@ -12432,6 +12402,16 @@
 			(justify left bottom)
 		)
 		(uuid "b5344c3d-a084-4df5-b960-f9f98d25f757")
+	)
+	(label "FLOW_LED"
+		(at 130.81 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b962f35b-1d43-4314-aa36-b1c039e8e3d1")
 	)
 	(label "FAN2_TACH"
 		(at 227.33 -31.75 180)
@@ -12543,6 +12523,16 @@
 		)
 		(uuid "dba765bd-58dd-4ced-befa-661140fe61c6")
 	)
+	(label "LED1"
+		(at 130.81 80.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dc72e672-72eb-4085-9b2b-9d084ec753b0")
+	)
 	(label "FLOW1"
 		(at 170.18 87.63 180)
 		(effects
@@ -12652,6 +12642,16 @@
 			(justify left bottom)
 		)
 		(uuid "f47e1e41-5e19-4e25-a904-2b71b88d41bd")
+	)
+	(label "FAN_CHIP"
+		(at 130.81 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f57c7845-967a-4b42-93fd-3bdf673cf6e7")
 	)
 	(label "TEMP_IN1"
 		(at 175.26 -38.1 180)
