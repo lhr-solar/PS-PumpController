@@ -16412,7 +16412,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.littelfuse.com/assetdocs/tvs-diodes-smf3-3-datasheet?assetguid=2E80CD26-B0C3-442F-9D77-27A283CCFF4F"
 			(at 86.36 123.19 0)
 			(effects
 				(font
