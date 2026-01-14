@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP BUK6M61-60PX
-D 60 V, P-channel Trench MOSFET
-K
-F https://assets.nexperia.com/documents/data-sheet/BUK6M61-60P.pdf
-$ENDCMP
-#
-#End Doc Library
