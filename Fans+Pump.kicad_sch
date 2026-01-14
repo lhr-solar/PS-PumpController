@@ -9226,14 +9226,14 @@
 	)
 	(hierarchical_label "PUMP_PWM_PSOM"
 		(shape input)
-		(at 41.91 106.68 180)
+		(at 62.23 111.76 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
-		(uuid "2c9df0d4-a22a-4646-aa6c-13498687b846")
+		(uuid "34f3598c-fc50-429f-bba2-e6519dd9066f")
 	)
 	(hierarchical_label "FAN_SCL"
 		(shape input)
@@ -9314,14 +9314,14 @@
 	)
 	(hierarchical_label "PUMP_PWM"
 		(shape output)
-		(at 62.23 111.76 0)
+		(at 41.91 106.68 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
-		(uuid "a8e19e30-c8de-459a-ae89-12f6fc405f30")
+		(uuid "9de9fb0f-a2da-470e-b4db-898f5989ec8b")
 	)
 	(hierarchical_label "PUMP_TACH_PSOM"
 		(shape output)
