@@ -4934,7 +4934,7 @@
 		)
 		(uuid "7f8bc5ff-5ba6-41dd-9d57-bb96676b11a8")
 	)
-	(text_box "to do:\n- round corners\n- move pwr debug elsewhere"
+	(text_box "to do:\n- round corners"
 		(exclude_from_sim no)
 		(at 251.46 139.7 0)
 		(size 30.48 20.32)
@@ -11823,16 +11823,6 @@
 		)
 		(uuid "00831655-ce20-487a-b5b7-ecdcb6fa5e83")
 	)
-	(label "PUMP_TACH"
-		(at 101.6 116.84 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "034c77ef-ac26-4b1c-8577-ac1c82ae0609")
-	)
 	(label "FAN2_PWM"
 		(at 208.28 40.64 0)
 		(effects
@@ -12083,16 +12073,6 @@
 		)
 		(uuid "45614729-148a-4667-a60e-798d8b25bfd2")
 	)
-	(label "PUMP_PWM"
-		(at 86.36 116.84 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "49865f9e-720d-425c-b50c-381aecb20fef")
-	)
 	(label "FAN_SDA"
 		(at 170.18 80.01 180)
 		(effects
@@ -12192,6 +12172,16 @@
 			(justify left bottom)
 		)
 		(uuid "6b9bf908-3260-4ae0-b98b-4dae9efac0be")
+	)
+	(label "PWM_PSOM"
+		(at 86.36 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6d4d1c21-2255-4435-8e59-019f04c69e95")
 	)
 	(label "FLOW1"
 		(at 130.81 82.55 0)
@@ -12412,6 +12402,16 @@
 			(justify left bottom)
 		)
 		(uuid "b962f35b-1d43-4314-aa36-b1c039e8e3d1")
+	)
+	(label "TACH_PSOM"
+		(at 101.6 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c313c756-cf97-49b9-b78c-668f6f652f40")
 	)
 	(label "FAN2_TACH"
 		(at 227.33 -31.75 180)
