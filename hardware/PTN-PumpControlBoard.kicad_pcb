@@ -19598,6 +19598,13 @@
 			(uuid "03b1dfef-eb6a-45f7-b585-97ceea7f23b4")
 		)
 		(embedded_fonts no)
+		(embedded_files
+			(file
+				(name "Nano-Fit_2x03_P2.50mm_Vertical.stp")
+				(type model)
+				(checksum "278721014F5326E00432D94788093CC5")
+			)
+		)
 		(model "kicad-embed://Nano-Fit_2x03_P2.50mm_Vertical.stp"
 			(offset
 				(xyz 1.25 -2.5 5)
