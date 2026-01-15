@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP LM74502HDDFR
-D Hot Swap Voltage Controllers 3.2-V to 65-V industrial RPP controller with load disconnect, OVP, and high gate drive
-K
-F https://www.ti.com/lit/ds/symlink/lm74502h.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1659509238199&ref_url=https%253A%252F%252Fwww.mouser.vn%252F
-$ENDCMP
-#
-#End Doc Library

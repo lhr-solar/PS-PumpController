@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP BUK6Y55-80PX
-D 80 V, P-channel Trench MOSFET
-K
-F https://assets.nexperia.com/documents/data-sheet/BUK6Y55-80P.pdf
-$ENDCMP
-#
-#End Doc Library
