@@ -83,7 +83,7 @@ export PROJECT_BUILD_DIR
 
 #-------------------------------
 # Clang
-BEAR_PREFIX := 
+BEAR_PREFIX :=
 # check if bear is installed
 BEAR_INSTALLED := $(shell command -v bear >/dev/null 2>&1 && echo yes || echo no)
 
