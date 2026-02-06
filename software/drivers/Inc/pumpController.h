@@ -110,6 +110,16 @@ void HAL_I2C_MasterRxCpltCallback(I2C_HandleTypeDef* hi2c);*/
 // LED macros
 #define TOGGLE_TIME 500                                         // same as blinky
 
+// LED structs
+GPIO_Pin_t led_configs[] = {
+    {PUMP_LED_PORT, PUMP_LED_PIN},
+    {FAN_LED_PORT, FAN_LED_PIN},
+    {FANCHIP_LED_PORT, FANCHIP_LED_PIN},
+    {FLOW_LED_PORT, FLOW_LED_PIN},
+    {TEMP_LED_PORT, TEMP_LED_PIN},
+    {STATUS_LED_PORT, STATUS_LED_PIN}
+};
+
 // LED functions
 void LEDs_Init(void);
 void LED_Blink(GPIO_Pin_t led_pin);
