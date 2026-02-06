@@ -30,4 +30,5 @@ fp-info-cache
 *.xml
 *.csv
 
+*/build
 .DS_*

@@ -1,7 +1,17 @@
 #ifndef PUMPCONTROLLER_H
 #define PUMPCONTROLLER_H
 
-#include "common.h"
+#include "stm32xx_hal.h"
+
+/*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
+/*                              SHARED STRUCTS                                   */
+/*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
+typedef enum State_e {OFF = 0, ON} State;
+
+typedef struct {
+    GPIO_TypeDef* port;
+    uint32_t pin;
+} GPIO_Pin_t;
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 /*                              FANS + FAN CHIP                                  */
@@ -17,8 +27,14 @@
 #define FAN_SMBALERT_PORT       GPIOB
 #define FAN_SMBALERT_PIN        GPIO_PIN_12
 
+// Fan macros
+// [insert macros here]
+
 // Fan functions
-// [insert functions here]
+/*void Init_Task(void* argument);
+void EMC2305_Task_1(void* argument);
+void HAL_I2C_MasterTxCpltCallback(I2C_HandleTypeDef* hi2c);
+void HAL_I2C_MasterRxCpltCallback(I2C_HandleTypeDef* hi2c);*/
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 /*                              PUMP CONTROL                                     */
@@ -30,6 +46,9 @@
 
 #define PUMP_TACH_PORT          GPIOA
 #define PUMP_TACH_PIN           GPIO_PIN_11
+
+// Pump macros
+// [insert macros here]
 
 // Pump functions
 // [insert functions here]
@@ -45,6 +64,9 @@
 #define TEMP2_ADC_PORT          GPIOA
 #define TEMP2_ADC_PIN           GPIO_PIN_5
 
+// Temp macros
+// [insert macros here]
+
 // Temp functions
 // [insert functions here]
 
@@ -55,6 +77,9 @@
 // Flowrate pins
 #define FLOW_TACH_PORT          GPIOB
 #define FLOW_TACH_PIN           GPIO_PIN_3
+
+// Flowrate macros
+// [insert macros here]
 
 // Flowrate functions
 // [insert functions here]
@@ -86,5 +111,7 @@
 #define TOGGLE_TIME 500                                         // same as blinky
 
 // LED functions
-void LED_Init(void);
-void LED_Toggle(GPIO_Pin_t led_pin);
+void LEDs_Init(void);
+void LED_Blink(GPIO_Pin_t led_pin);
+
+#endif /* PUMPCONTROLLER_H */

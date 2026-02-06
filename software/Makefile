@@ -28,7 +28,9 @@ PROJECT_TARGET ?= stm32l431cbt
 ####
 # source and include directories
 PROJECT_C_INCLUDES = $(wildcard */Inc)
+$(info INCLUDES: $(PROJECT_C_INCLUDES))
 PROJECT_C_SOURCES = $(wildcard */Src/*.c)
+$(info SOURCES: $(PROJECT_C_SOURCES))
 ####
 
 # build directories
@@ -46,7 +48,7 @@ MAKEFILE_DIR = $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 # Define where the main function is relative to the Makefile
 # It's suggested to create a core or apps directory where high level code is placed
 ####
-PROJECT_MAIN_DIR ?= core/Src/main
+PROJECT_MAIN_DIR ?= ./
 ####
 
 ifneq ($(TEST), main)

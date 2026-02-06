@@ -1,33 +1,41 @@
 #include "pumpController.h"
+#include "stm32xx_hal.h"
 
-// initialize all LED GPIOs
-void LED_Init(void) {
-    GPIO_InitTypeDef led_config = {
-        .Mode = GPIO_MODE_OUTPUT_PP,
-        .Pull = GPIO_NOPULL,
-        .Pin = PUMP_LED_PIN
-    };
-    gpio_clock_enable((uint32_t)PUMP_LED_PIN);
+// initialize an individual LED
+void LED_Init(GPIO_Pin_t led_config) {
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
 
-    HAL_GPIO_Init(PUMP_LED_PORT, &led_config);
+    __HAL_RCC_GPIOB_CLK_ENABLE();
 
-    led_config.Pin = FAN_LED_PIN;
-    HAL_GPIO_Init(FAN_LED_PORT, &led_config);
+    GPIO_InitStruct.Pin = led_config.pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 
-    led_config.Pin = FANCHIP_LED_PIN;
-    HAL_GPIO_Init(FANCHIP_LED_PORT, &led_config);
+    HAL_GPIO_Init(led_config.port, &GPIO_InitStruct);
 
-    led_config.Pin = FLOW_LED_PIN;
-    HAL_GPIO_Init(FLOW_LED_PORT, &led_config);
-
-    led_config.Pin = TEMP_LED_PIN;
-    HAL_GPIO_Init(TEMP_LED_PORT, &led_config);
-
-    led_config.Pin = STATUS_LED_PIN;
-    HAL_GPIO_Init(STATUS_LED_PORT, &led_config);
+    HAL_GPIO_WritePin(led_config.port, led_config.pin, GPIO_PIN_RESET);
 }
 
-void LED_Toggle(GPIO_Pin_t led_pin) {
-    HAL_GPIO_TogglePin(led_pin.port, led_pin.pin);
+// initialize all LED GPIOs
+void LEDs_Init(void) {    
+    GPIO_Pin_t led_configs[] = {
+        {PUMP_LED_PORT, PUMP_LED_PIN},
+        {FAN_LED_PORT, FAN_LED_PIN},
+        {FANCHIP_LED_PORT, FANCHIP_LED_PIN},
+        {FLOW_LED_PORT, FLOW_LED_PIN},
+        {TEMP_LED_PORT, TEMP_LED_PIN},
+        {STATUS_LED_PORT, STATUS_LED_PIN}
+    };
+
+    for (int i = 0; i < sizeof(led_configs) / sizeof(GPIO_Pin_t); i++) {
+        LED_Init(led_configs[i]);
+    }
+}
+
+void LED_Blink(GPIO_Pin_t led_config) {
+    HAL_GPIO_TogglePin(led_config.port, led_config.pin);
+    HAL_Delay(TOGGLE_TIME);
+    HAL_GPIO_TogglePin(led_config.port, led_config.pin);
     HAL_Delay(TOGGLE_TIME);
 }
