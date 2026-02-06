@@ -1,38 +1,24 @@
 #include "stm32xx_hal.h"
 #include "pumpController.h"
 
-// // Initialize clock for heartbeat LED port
-// void Heartbeat_Clock_Init() {
-//     switch ((uint32_t)STATUS_LED_PORT) {
-//         case (uint32_t)GPIOA:
-//             __HAL_RCC_GPIOA_CLK_ENABLE();
-//             break;
-//         case (uint32_t)GPIOB:
-//             __HAL_RCC_GPIOB_CLK_ENABLE();
-//             break;
-//         case (uint32_t)GPIOC:
-//             __HAL_RCC_GPIOC_CLK_ENABLE();
-//             break;
-//     }
-// }
+GPIO_Pin_t led_configs[] = {
+    {PUMP_LED_PORT, PUMP_LED_PIN},
+    {FAN_LED_PORT, FAN_LED_PIN},
+    {FANCHIP_LED_PORT, FANCHIP_LED_PIN},
+    {FLOW_LED_PORT, FLOW_LED_PIN},
+    {TEMP_LED_PORT, TEMP_LED_PIN},
+    {STATUS_LED_PORT, STATUS_LED_PIN}
+};
 
 int main(){
     HAL_Init();
-
-    // Heartbeat LED on VCU is PB14
-    // GPIO_InitTypeDef led_config = {
-    //     .Mode = GPIO_MODE_OUTPUT_PP,
-    //     .Pull = GPIO_NOPULL,
-    //     .Pin = FAN_LED_PIN
-    // };
-    
-    //Heartbeat_Clock_Init(); // enable clock for HB_LED_PORT
-    //HAL_GPIO_Init(FAN_LED_PORT, &led_config); // initialize HB_LED_PORT with led_config
+    LEDs_Init();
 
     while(1){
-        // HAL_GPIO_TogglePin(STATUS_LED_PORT, STATUS_LED_PIN);
-        // HAL_Delay(500);
-        
+        // Blink all LEDs in sequence
+        for (int i = 0; i < sizeof(led_configs) / sizeof(GPIO_Pin_t); i++) {
+            LED_Blink(led_configs[i]);
+        }
 
     }
 
