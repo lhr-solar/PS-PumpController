@@ -77,34 +77,6 @@ void EMC2305_Task_1(void* argument) {
     };
 }
 
-int main(void) {
-    // Init your HAL, System Clock, and Peripherals here
-
-    // Create tasks
-    xTaskCreateStatic(Init_Task,
-        "Init Task",
-        configMINIMAL_STACK_SIZE,
-        NULL,
-        tskIDLE_PRIORITY + 1,
-        initTaskStack,
-        &initTaskBuffer);
-
-    xTaskCreateStatic(EMC2305_Task_1,
-        "EMC2305 Task 1",
-        configMINIMAL_STACK_SIZE,
-        NULL,
-        tskIDLE_PRIORITY + 2,
-        emc2305TaskStack_1,
-        &emc2305TaskBuffer_1);
-
-    vTaskStartScheduler();
-
-    while (1) {
-    }
-
-    return 0;
-}
-
 // I2C Transmit Interrupt Callback
 void HAL_I2C_MasterTxCpltCallback(I2C_HandleTypeDef* hi2c) {
     EMC2305_I2C_MasterTxCpltCallback(hi2c);

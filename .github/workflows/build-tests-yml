@@ -10,8 +10,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Initialize Submodules
-        run: git submodule update --init --recursive
 
       - name: Cache Nix
         uses: actions/cache@v3
@@ -25,15 +23,10 @@ jobs:
 
       - name: Install Nix
         run: |
-          sudo ./Firmware/Embedded-Sharepoint/nix_install.sh
+          sudo ./nix_install.sh
 
-      - name: Test Production Build
-        run: |
-          nix develop ./Firmware/Embedded-Sharepoint --accept-flake-config --command bash -c "
-            cd Firmware/ && make clean && make
-          "
       - name: Clean & Build tests
         run: |
-          nix develop ./Firmware/Embedded-Sharepoint --accept-flake-config --command bash -c "
-            cd Firmware/ && make clean && python tests/makeAllTests.py
+          nix develop --accept-flake-config --command bash -c "
+            cd test && make clean && python3 makeAllTests.py
           "

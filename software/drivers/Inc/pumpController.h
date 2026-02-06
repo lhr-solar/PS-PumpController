@@ -31,10 +31,10 @@ typedef struct {
 // [insert macros here]
 
 // Fan functions
-/*void Init_Task(void* argument);
+void Init_Task(void* argument);
 void EMC2305_Task_1(void* argument);
 void HAL_I2C_MasterTxCpltCallback(I2C_HandleTypeDef* hi2c);
-void HAL_I2C_MasterRxCpltCallback(I2C_HandleTypeDef* hi2c);*/
+void HAL_I2C_MasterRxCpltCallback(I2C_HandleTypeDef* hi2c);
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 /*                              PUMP CONTROL                                     */
@@ -124,4 +124,4 @@ GPIO_Pin_t led_configs[] = {
 void LEDs_Init(void);
 void LED_Blink(GPIO_Pin_t led_pin);
 
-#endif /* PUMPCONTROLLER_H */
+#endif
