@@ -1,5 +1,6 @@
 #include "stm32xx_hal.h"
 #include "pumpController.h"
+#include "EMC2305.h"
 
 int main(void) {
     // Init your HAL, System Clock, and Peripherals here

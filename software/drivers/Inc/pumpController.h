@@ -27,8 +27,13 @@ typedef struct {
 #define FAN_SMBALERT_PORT       GPIOB
 #define FAN_SMBALERT_PIN        GPIO_PIN_12
 
-// Fan macros
-// [insert macros here]
+// Fan macros/globals
+StaticTask_t initTaskBuffer;
+StackType_t initTaskStack[configMINIMAL_STACK_SIZE];
+StaticTask_t emc2305TaskBuffer_1;
+StackType_t emc2305TaskStack_1[configMINIMAL_STACK_SIZE];
+StaticTask_t emc2305TaskBuffer_2;
+StackType_t emc2305TaskStack_2[configMINIMAL_STACK_SIZE];
 
 // Fan functions
 void Init_Task(void* argument);
@@ -107,10 +112,9 @@ void HAL_I2C_MasterRxCpltCallback(I2C_HandleTypeDef* hi2c);
 #define STATUS_LED_PORT         GPIOB
 #define STATUS_LED_PIN          GPIO_PIN_0
 
-// LED macros
+// LED macros/globals
 #define TOGGLE_TIME 500                                         // same as blinky
 
-// LED structs
 GPIO_Pin_t led_configs[] = {
     {PUMP_LED_PORT, PUMP_LED_PIN},
     {FAN_LED_PORT, FAN_LED_PIN},
