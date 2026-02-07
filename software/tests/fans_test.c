@@ -1,12 +1,23 @@
 #include "stm32xx_hal.h"
 #include "pumpController.h"
 #include "EMC2305.h"
+#include "printf.h"
+
+#include <stdio.h>
 
 int main(void) {
-    // Init your HAL, System Clock, and Peripherals here
-    HAL_Init();
+    // initialize the HAL and system clock
+    if (HAL_Init() != HAL_OK) Error_Handler();
+    SystemClock_Config();
+    __HAL_RCC_SYSCFG_CLK_ENABLE();
+    __HAL_RCC_PWR_CLK_ENABLE();
 
-    // Create tasks
+    // Init peripherals
+    MX_I2C1_Init();
+
+    HAL_GPIO_TogglePin(STATUS_LED_PORT, STATUS_LED_PIN);
+    printf("Task 2: EMC2305 Initialized\r\n");
+
     xTaskCreateStatic(Init_Task,
         "Init Task",
         configMINIMAL_STACK_SIZE,
@@ -22,6 +33,14 @@ int main(void) {
         tskIDLE_PRIORITY + 2,
         emc2305TaskStack_1,
         &emc2305TaskBuffer_1);
+
+    // xTaskCreateStatic(EMC2305_Task_2,
+    //     "EMC2305 Task 2",
+    //     configMINIMAL_STACK_SIZE,
+    //     NULL,
+    //     tskIDLE_PRIORITY + 5,
+    //     emc2305TaskStack_2,
+    //     &emc2305TaskBuffer_2);
 
     vTaskStartScheduler();
 

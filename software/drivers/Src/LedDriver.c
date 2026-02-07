@@ -30,3 +30,7 @@ void LED_Blink(GPIO_Pin_t led_config) {
     HAL_GPIO_TogglePin(led_config.port, led_config.pin);
     HAL_Delay(TOGGLE_TIME);
 }
+
+void LED_On(GPIO_Pin_t led_config) {
+    HAL_GPIO_WritePin(led_config.port, led_config.pin, GPIO_PIN_SET);
+}

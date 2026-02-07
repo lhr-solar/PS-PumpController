@@ -1,4 +1,3 @@
-
 # crazy colors ------------------
 RED=\033[0;31m
 GREEN=\033[0;32m
@@ -28,9 +27,7 @@ PROJECT_TARGET ?= stm32l431cbt
 ####
 # source and include directories
 PROJECT_C_INCLUDES = $(wildcard */Inc)
-$(info INCLUDES: $(PROJECT_C_INCLUDES))
 PROJECT_C_SOURCES = $(wildcard */Src/*.c)
-$(info SOURCES: $(PROJECT_C_SOURCES))
 ####
 
 # build directories
@@ -48,7 +45,7 @@ MAKEFILE_DIR = $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 # Define where the main function is relative to the Makefile
 # It's suggested to create a core or apps directory where high level code is placed
 ####
-PROJECT_MAIN_DIR ?= ./
+PROJECT_MAIN_DIR ?= core/Src/main
 ####
 
 ifneq ($(TEST), main)
@@ -85,7 +82,7 @@ export PROJECT_BUILD_DIR
 
 #-------------------------------
 # Clang
-BEAR_PREFIX :=
+BEAR_PREFIX := 
 # check if bear is installed
 BEAR_INSTALLED := $(shell command -v bear >/dev/null 2>&1 && echo yes || echo no)
 
@@ -117,13 +114,22 @@ else
 endif
 	$(BEAR_PREFIX) $(MAKE) -C $(BUILD_MAKEFILE_DIR) all -j
 	@echo -e "${GREEN}Compiled! Splendid! Jolly Good!!${NC}"
-#---------------------------------
 
 
 #-------------------------------
 # Flash
 flash: 	
 	$(MAKE) -C $(BUILD_MAKEFILE_DIR) flash
+
+#-------------------------------
+# Flash via UART
+flash-uart: 	
+	$(MAKE) -C $(BUILD_MAKEFILE_DIR) flash-uart
+
+#-------------------------------
+# OpenOCD debug
+debug: 	
+	$(MAKE) -C $(BUILD_MAKEFILE_DIR) debug
 
 #-------------- 
 # Documentation

@@ -18,13 +18,9 @@ typedef struct {
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
 // Fan pins
-#define FAN_SCL_PORT            GPIOB
+#define FAN_I2C_PORT            GPIOB
 #define FAN_SCL_PIN             GPIO_PIN_6
-
-#define FAN_SDA_PORT            GPIOB
 #define FAN_SDA_PIN             GPIO_PIN_7
-
-#define FAN_SMBALERT_PORT       GPIOB
 #define FAN_SMBALERT_PIN        GPIO_PIN_12
 
 // Fan macros/globals
@@ -34,8 +30,10 @@ StaticTask_t emc2305TaskBuffer_1;
 StackType_t emc2305TaskStack_1[configMINIMAL_STACK_SIZE];
 StaticTask_t emc2305TaskBuffer_2;
 StackType_t emc2305TaskStack_2[configMINIMAL_STACK_SIZE];
+I2C_HandleTypeDef hi2c1;
 
 // Fan functions
+void MX_I2C1_Init(void);
 void Init_Task(void* argument);
 void EMC2305_Task_1(void* argument);
 void HAL_I2C_MasterTxCpltCallback(I2C_HandleTypeDef* hi2c);
@@ -113,7 +111,8 @@ void HAL_I2C_MasterRxCpltCallback(I2C_HandleTypeDef* hi2c);
 #define STATUS_LED_PIN          GPIO_PIN_0
 
 // LED macros/globals
-#define TOGGLE_TIME 500                                         // same as blinky
+#define TOGGLE_TIME 500     // same as blinky
+enum LED_Index {PUMP_LED = 0, FAN_LED, FANCHIP_LED, FLOW_LED, TEMP_LED, STATUS_LED};
 
 GPIO_Pin_t led_configs[] = {
     {PUMP_LED_PORT, PUMP_LED_PIN},
@@ -127,5 +126,6 @@ GPIO_Pin_t led_configs[] = {
 // LED functions
 void LEDs_Init(void);
 void LED_Blink(GPIO_Pin_t led_pin);
+void LED_On(GPIO_Pin_t led_pin);
 
 #endif
