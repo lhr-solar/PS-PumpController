@@ -5,6 +5,13 @@
 
 #include <stdio.h>
 
+StaticTask_t initTaskBuffer;
+StackType_t initTaskStack[configMINIMAL_STACK_SIZE];
+StaticTask_t emc2305TaskBuffer_1;
+StackType_t emc2305TaskStack_1[configMINIMAL_STACK_SIZE];
+//static StaticTask_t emc2305TaskBuffer_2;
+//static StackType_t emc2305TaskStack_2[configMINIMAL_STACK_SIZE];
+
 int main(void) {
     // initialize the HAL and system clock
     if (HAL_Init() != HAL_OK) Error_Handler();

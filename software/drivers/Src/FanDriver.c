@@ -3,6 +3,7 @@
 #include "stm32xx_hal.h"
 
 EMC2305_HandleTypeDef chip;
+I2C_HandleTypeDef hi2c1;
 
 // Initializes and configs I2C1 pins PB6 and PB7 for PSOM
 void MX_I2C1_Init(void) {
