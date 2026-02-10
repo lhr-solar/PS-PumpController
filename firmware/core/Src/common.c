@@ -44,8 +44,6 @@ void SystemClock_Config(void) {
 void Error_Handler(void) {
   // turn on LED for fault
   HAL_GPIO_WritePin(STATUS_LED_PORT, STATUS_LED_PIN, GPIO_PIN_SET);
-  
-  __disable_irq();
-  while (1) {
+    while (1) {
   }
 }

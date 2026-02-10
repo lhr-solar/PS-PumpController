@@ -1,20 +1,16 @@
 #include "pumpController.h"
 #include "stm32xx_hal.h"
 
-GPIO_Pin_t led_configs[] = {
-    {PUMP_LED_PORT, PUMP_LED_PIN},
-    {FAN_LED_PORT, FAN_LED_PIN},
-    {FANCHIP_LED_PORT, FANCHIP_LED_PIN},
-    {FLOW_LED_PORT, FLOW_LED_PIN},
-    {TEMP_LED_PORT, TEMP_LED_PIN},
-    {STATUS_LED_PORT, STATUS_LED_PIN}
-};
+extern GPIO_Pin_t led_configs[6];
+
 
 // initialize an individual LED
 void LED_Init(GPIO_Pin_t led_config) {
     GPIO_InitTypeDef GPIO_InitStruct = {0};
 
+    __HAL_RCC_GPIOA_CLK_ENABLE();
     __HAL_RCC_GPIOB_CLK_ENABLE();
+    __HAL_RCC_GPIOC_CLK_ENABLE();
 
     GPIO_InitStruct.Pin = led_config.pin;
     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -28,9 +24,15 @@ void LED_Init(GPIO_Pin_t led_config) {
 
 // initialize all LED GPIOs
 void LEDs_Init(void) {    
-    for (int i = 0; i < sizeof(led_configs) / sizeof(GPIO_Pin_t); i++) {
-        LED_Init(led_configs[i]);
-    }
+    // for (int i = 0; i < sizeof(led_configs) / sizeof(GPIO_Pin_t); i++) {
+    //     LED_Init(led_configs[i]);
+    // }
+    LED_Init(led_configs[PUMP_LED]);
+    LED_Init(led_configs[FAN_LED]);
+    LED_Init(led_configs[FANCHIP_LED]);
+    LED_Init(led_configs[FLOW_LED]);
+    LED_Init(led_configs[TEMP_LED]);
+    LED_Init(led_configs[STATUS_LED]);
 }
 
 void LED_Blink(GPIO_Pin_t led_config) {
