@@ -1,8 +1,14 @@
 #include "pumpController.h"
 #include "stm32xx_hal.h"
 
-extern GPIO_Pin_t led_configs[6];
-
+GPIO_Pin_t led_configs[] = {
+    {PUMP_LED_PORT, PUMP_LED_PIN},
+    {FAN_LED_PORT, FAN_LED_PIN},
+    {FANCHIP_LED_PORT, FANCHIP_LED_PIN},
+    {FLOW_LED_PORT, FLOW_LED_PIN},
+    {TEMP_LED_PORT, TEMP_LED_PIN},
+    {PUMP_STATUS_LED_PORT, PUMP_STATUS_LED_PIN}
+};
 
 // initialize an individual LED
 void LED_Init(GPIO_Pin_t led_config) {

@@ -62,5 +62,5 @@
 #define TEMP_LED_PORT           GPIOA
 #define TEMP_LED_PIN            GPIO_PIN_12
 
-#define STATUS_LED_PORT         GPIOB
-#define STATUS_LED_PIN          GPIO_PIN_0
+#define PUMP_STATUS_LED_PORT         GPIOB
+#define PUMP_STATUS_LED_PIN          GPIO_PIN_0

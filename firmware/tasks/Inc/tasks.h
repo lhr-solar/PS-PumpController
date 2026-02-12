@@ -4,4 +4,4 @@
 
 
 void Init_Task(void* argument);
-void EMC2305_Task_1(void* argument);
+void FanSpeed_Task(void* argument);
