@@ -6,6 +6,8 @@
 #include "printf.h"
 #include "FreeRTOS.h"
 #include "UART.h"
+#include "common.h"
+#include "tempTable.h"
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 /*                              SHARED STRUCTS                                   */
@@ -21,13 +23,31 @@ typedef struct {
 /*                              FANS + FAN CHIP                                  */
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
-//I2C_HandleTypeDef hi2c1;
-
+/**
+  * @brief ADC1 Initialization Function
+  * @param None
+  * @retval None
+  */
 void MX_I2C1_Init(void);
-//void EMC2305_Task_1(void* argument);
+
+/**
+  * @brief I2C Transmit Interrupt Callback
+  */
 void HAL_I2C_MasterTxCpltCallback(I2C_HandleTypeDef* hi2c);
+
+/**
+  * @brief I2C Recieve Interrupt Callback
+  */
 void HAL_I2C_MasterRxCpltCallback(I2C_HandleTypeDef* hi2c);
+
+/**
+  * @brief This function handles I2C1 event interrupt.
+  */
 void I2C1_EV_IRQHandler(void);
+
+/**
+  * @brief This function handles I2C1 error interrupt.
+  */
 void I2C1_ER_IRQHandler(void);
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
@@ -48,7 +68,9 @@ void I2C1_ER_IRQHandler(void);
 // [insert macros here]
 
 // Temp functions
-// [insert functions here]
+int getTemp(void);
+
+void printTemp(void);
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 /*                              FLOWRATE SENSOR                                  */
@@ -69,6 +91,17 @@ enum LED_Index {PUMP_LED = 0, FAN_LED, FANCHIP_LED, FLOW_LED, TEMP_LED, STATUS_L
 
 extern GPIO_Pin_t led_configs[6];
 
+/**
+  * @brief LED Initialization Function
+  */
 void LEDs_Init(void);
+
+/**
+  * @brief Turns on LED for a given amount of time
+  */
 void LED_Blink(GPIO_Pin_t led_pin);
+
+/**
+  * @brief Turns on LED indefinitely
+  */
 void LED_On(GPIO_Pin_t led_pin);

@@ -7,47 +7,6 @@ StaticTask_t initTaskBuffer;
 StaticTask_t emc2305TaskBuffer_1;
 StackType_t emc2305TaskStack_1[configMINIMAL_STACK_SIZE];
 
-// LED pins for PSOM
-#define STATUS_LED_PORT GPIOA
-#define STATUS_LED_PIN_1 GPIO_PIN_7
-#define STATUS_LED_PIN_2 GPIO_PIN_8
-#define STATUS_LED_PIN_3 GPIO_PIN_15
-
-// USART pins for PSOM
-#define USART_PORT GPIOA
-#define USART_TX_PIN GPIO_PIN_9
-#define USART_RX_PIN GPIO_PIN_10
-void mx_uart_init(void) {
-    // UART init
-    GPIO_InitTypeDef InitStruct = { 0 };
-    RCC_PeriphCLKInitTypeDef PeriphClkInit = { 0 };
-
-    /** Initializes the peripherals clock
-    */
-    PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART1;
-    PeriphClkInit.Usart1ClockSelection = RCC_USART1CLKSOURCE_PCLK2;
-    if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
-    {
-        Error_Handler();
-    }
-
-    /* Peripheral clock enable */
-    __HAL_RCC_USART1_CLK_ENABLE();
-
-    __HAL_RCC_GPIOA_CLK_ENABLE();
-    /**USART1 GPIO Configuration
-    PA9     ------> USART1_TX
-    PA10     ------> USART1_RX
-    */
-    InitStruct.Pin = USART_TX_PIN | USART_RX_PIN;
-    InitStruct.Mode = GPIO_MODE_AF_PP;
-    InitStruct.Pull = GPIO_NOPULL;
-    InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-    InitStruct.Alternate = GPIO_AF7_USART1;
-    HAL_GPIO_Init(USART_PORT, &InitStruct);
-    printf("uart initialized\n");
-}
-
 void Init_Task(void* argument) {
     // Initialize EMC2305
     // Only call from ONE task!
@@ -135,7 +94,6 @@ void EMC2305_Task_1(void* argument) {
 }
 
 int main(void) {
-    // Init your HAL, System Clock, and Peripherals here
     printf("Starting EMC2305 Test\r\n");
     HAL_Init();
     if (HAL_Init() != HAL_OK) Error_Handler();
@@ -148,8 +106,6 @@ int main(void) {
     MX_I2C1_Init();
     LEDs_Init();
     
-    HAL_GPIO_Init(GPIOB, &hb_init);
-
     // Create tasks
     xTaskCreateStatic(Init_Task,
         "Init Task",

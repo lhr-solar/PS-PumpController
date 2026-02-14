@@ -96,12 +96,10 @@ void I2C1_ER_IRQHandler(void) {
 
 // I2C Transmit Interrupt Callback
 void HAL_I2C_MasterTxCpltCallback(I2C_HandleTypeDef* hi2c) {
-    LED_On(led_configs[FANCHIP_LED]);
     EMC2305_I2C_MasterTxCpltCallback(hi2c);
 }
 
 // I2C Receive Interrupt Callback
 void HAL_I2C_MasterRxCpltCallback(I2C_HandleTypeDef* hi2c) {
-    LED_On(led_configs[FAN_LED]);
     EMC2305_I2C_MasterRxCpltCallback(hi2c);
 }

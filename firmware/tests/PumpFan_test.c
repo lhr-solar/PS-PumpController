@@ -10,38 +10,18 @@ StackType_t emc2305TaskStack_1[configMINIMAL_STACK_SIZE];
 StaticTask_t emc2305TaskBuffer_2;
 StackType_t emc2305TaskStack_2[configMINIMAL_STACK_SIZE];
 
-void mx_uart_init(void) {
-    // UART init
-    GPIO_InitTypeDef InitStruct = { 0 };
-    RCC_PeriphCLKInitTypeDef PeriphClkInit = { 0 };
-
-    /** Initializes the peripherals clock
-    */
-    PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART1;
-    PeriphClkInit.Usart1ClockSelection = RCC_USART1CLKSOURCE_PCLK2;
-    if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
-    {
-        Error_Handler();
-    }
-
-    /* Peripheral clock enable */
-    __HAL_RCC_USART1_CLK_ENABLE();
-
-    __HAL_RCC_GPIOA_CLK_ENABLE();
-    /**USART1 GPIO Configuration
-    PA9     ------> USART1_TX
-    PA10     ------> USART1_RX
-    */
-    InitStruct.Pin = USART_TX_PIN | USART_RX_PIN;
-    InitStruct.Mode = GPIO_MODE_AF_PP;
-    InitStruct.Pull = GPIO_NOPULL;
-    InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-    InitStruct.Alternate = GPIO_AF7_USART1;
-    HAL_GPIO_Init(USART_PORT, &InitStruct);
-    printf("uart initialized\n");
-}
-
 void Init_Task(void* argument) {
+    // Init UART printf
+    husart1->Init.BaudRate = 115200;
+    husart1->Init.WordLength = UART_WORDLENGTH_8B;
+    husart1->Init.StopBits = UART_STOPBITS_1;
+    husart1->Init.Parity = UART_PARITY_NONE;
+    husart1->Init.Mode = UART_MODE_TX_RX;
+    husart1->Init.HwFlowCtl = UART_HWCONTROL_NONE;
+    husart1->Init.OverSampling = UART_OVERSAMPLING_16;
+
+    printf_init(husart1);
+    
     // Initialize EMC2305
     // Only call from ONE task!
     if (EMC2305_Init(&chip, &hi2c1, 0x4D) != EMC2305_OK) {
@@ -56,7 +36,6 @@ void Init_Task(void* argument) {
 void EMC2305_Task_1(void* argument) {
     // Allow chip to power on
     vTaskDelay(pdMS_TO_TICKS(250));
-    HAL_GPIO_TogglePin(FANCHIP_LED_PORT, FANCHIP_LED_PIN);
 
     // Set global config
     EMC2305_Global_Config config = { 0 };
@@ -69,7 +48,7 @@ void EMC2305_Task_1(void* argument) {
     printf("Task 1: Global Config Set\r\n");
     // Set config1 and config2
     EMC2305_Fan_Config1 config1 = { 0 };
-    config1.enable_closed_loop = true; // Set this to true if using FSC (Closed Loop RPM Control). False for using PWM directly
+    config1.enable_closed_loop = false; // Set this to true if using FSC (Closed Loop RPM Control). False for using PWM directly
     config1.edges = EMC2305_EDG_5; // 5 edges is default for 2 pole fans
     config1.range = EMC2305_RNG_2000;
 
@@ -111,25 +90,32 @@ void EMC2305_Task_1(void* argument) {
         // vTaskDelay(pdMS_TO_TICKS(5000));
 
         // Set PWM2 duty cycle to 75%
-        // if (EMC2305_SetFanPWM(&chip, EMC2305_FAN2, 75) != EMC2305_OK) {
-        //     Error_Handler();
-        // };
+        if (EMC2305_SetFanPWM(&chip, EMC2305_FAN2, 50) != EMC2305_OK) {
+            Error_Handler();
+        };
+        vTaskDelay(pdMS_TO_TICKS(10000));
+
+        if (EMC2305_SetFanPWM(&chip, EMC2305_FAN2, 0) != EMC2305_OK) {
+            Error_Handler();
+        };
+        vTaskDelay(pdMS_TO_TICKS(10000));
+
         // printf("Task 1: PWM2 drive set to 25%%\r\n");
 
         // Testing FSC Mode
         // Set RPM to 3000
-        if (EMC2305_SetFanRPM(&chip, EMC2305_FAN2, 3000) != EMC2305_OK) {
-            Error_Handler();
-        };
-        printf("Task 1: RPM target set to 3000\r\n");
+        // if (EMC2305_SetFanRPM(&chip, EMC2305_FAN2, 3000) != EMC2305_OK) {
+        //     Error_Handler();
+        // };
+        // //printf("Task 1: Fan RPM target set to 3000\r\n");
 
-        vTaskDelay(pdMS_TO_TICKS(10000));
+        // vTaskDelay(pdMS_TO_TICKS(10000));
 
-        if (EMC2305_SetFanRPM(&chip, EMC2305_FAN2, 8000) != EMC2305_OK) {
-            Error_Handler();
-        };
-        printf("Task 1: RPM target set to 8000\r\n");
-        vTaskDelay(pdMS_TO_TICKS(10000));
+        // if (EMC2305_SetFanRPM(&chip, EMC2305_FAN2, 100) != EMC2305_OK) {
+        //     Error_Handler();
+        // };
+        // //printf("Task 1: Fan RPM target set to 8000\r\n");
+        // vTaskDelay(pdMS_TO_TICKS(10000));
 
         // // Get current rpm
         //  uint16_t rpm = EMC2305_GetFanRPM(&chip, EMC2305_FAN2);
@@ -140,7 +126,8 @@ void EMC2305_Task_1(void* argument) {
         // printf("Drive PWM: %u\r\n", pwm);
 
         // Blink fan LED
-        //LED_Blink(led_configs[FANCHIP_LED]);
+        LED_Blink(led_configs[FANCHIP_LED]);
+        //HAL_GPIO_TogglePin(FANCHIP_LED_PORT, FANCHIP_LED_PIN);
 
     }
 }
@@ -149,7 +136,6 @@ void EMC2305_Task_1(void* argument) {
 void EMC2305_Task_2(void* argument) {
     // Allow chip to power on
     vTaskDelay(pdMS_TO_TICKS(250));
-    HAL_GPIO_TogglePin(PUMP_LED_PORT, PUMP_LED_PIN);
 
     // Set global config
     EMC2305_Global_Config config = { 0 };
@@ -198,26 +184,24 @@ void EMC2305_Task_2(void* argument) {
         if (EMC2305_SetFanPWM(&chip, EMC2305_FAN3, 25) != EMC2305_OK) {
             Error_Handler();
         };
-        //printf("Task 1: Pump PWM drive set to 25%%\r\n");
+        //printf("Task 2: Pump PWM drive set to 25%%\r\n");
+        printf("Measured RPM for 25: %u\r\n", EMC2305_GetFanRPM(&chip, EMC2305_FAN3));
         vTaskDelay(pdMS_TO_TICKS(10000));
 
         // Set PWM2 duty cycle to 25%
         if (EMC2305_SetFanPWM(&chip, EMC2305_FAN3, 100) != EMC2305_OK) {
             Error_Handler();
         };
-        //printf("Task 1: PWM1 drive set to 100%%\r\n");
+        //printf("Task 2: Pump PWM drive set to 100%%\r\n");
+        printf("Measured RPM for 100: %u\r\n", EMC2305_GetFanRPM(&chip, EMC2305_FAN3));
         vTaskDelay(pdMS_TO_TICKS(10000));
-
-        // // Get current rpm
-        //  uint16_t rpm = EMC2305_GetFanRPM(&chip, EMC2305_FAN3);
-        //  printf("Measured RPM: %u\r\n", rpm);
 
         // // Get current pwm
         // uint8_t pwm = EMC2305_GetFanPWM(&chip, EMC2305_FAN3);
         // printf("Drive PWM: %u\r\n", pwm);
 
         // Blink pump LED
-        //LED_Blink(led_configs[PUMP_LED]);
+        LED_Blink(led_configs[PUMP_LED]);
     }
 }
 
