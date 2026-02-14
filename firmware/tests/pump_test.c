@@ -1,7 +1,4 @@
-#include "EMC2305.h"
 #include "pumpController.h"
-#include "UART.h"
-#include "printf.h"
 
 extern I2C_HandleTypeDef hi2c1;
 EMC2305_HandleTypeDef chip;
@@ -103,65 +100,26 @@ void EMC2305_Task_1(void* argument) {
     if (EMC2305_WriteReg(&chip, EMC2305_FAN_REG_ADDR(EMC2305_FAN3, EMC2305_REG_GAIN1), 0x00) != EMC2305_OK) {
         Error_Handler();
     };
-        LED_On(led_configs[PUMP_LED]);
 
     // Set PWM output mode to open-drain (use false for push-pull)
     if (EMC2305_SetPWMOutputMode(&chip, EMC2305_FAN3, false) != EMC2305_OK) {
         Error_Handler();
     };
-            LED_On(led_configs[FLOW_LED]);
-
-    // Control with direct PWM
-    // Set PWM2 duty cycle to 25%
-    if (EMC2305_SetFanPWM(&chip, EMC2305_FAN3, 25) != EMC2305_OK) {
-        Error_Handler();
-    };
-            LED_On(led_configs[TEMP_LED]);
-
-    // Control with closed-loop FSC
-    // Set RPM to 3000
-//     if (EMC2305_SetFanRPM(&chip, EMC2305_FAN3, 3000) != EMC2305_OK) {
-//         Error_Handler();
-//     };
 
     while (1) {
         // Testing Direct PWM Drive Mode
         if (EMC2305_SetFanPWM(&chip, EMC2305_FAN3, 25) != EMC2305_OK) {
             Error_Handler();
         };
-        //printf("Task 1: PWM1 drive set to 25%%\r\n");
-
+        //printf("Task 1: Pump PWM drive set to 25%%\r\n");
         vTaskDelay(pdMS_TO_TICKS(5000));
+
         // Set PWM2 duty cycle to 25%
         if (EMC2305_SetFanPWM(&chip, EMC2305_FAN3, 100) != EMC2305_OK) {
             Error_Handler();
         };
         //printf("Task 1: PWM1 drive set to 25%%\r\n");
-
         vTaskDelay(pdMS_TO_TICKS(5000));
-
-        // if (EMC2305_SetFanPWM(&chip, EMC2305_FAN3, 50) != EMC2305_OK) {
-        //     Error_Handler();
-        // };
-        // vTaskDelay(pdMS_TO_TICKS(5000));
-        // //printf("Task 1: PWM2 drive set to 25%%\r\n");
-        // if (EMC2305_SetFanPWM(&chip, EMC2305_FAN3, 100) != EMC2305_OK) {
-        //     Error_Handler();
-        // };
-        // vTaskDelay(pdMS_TO_TICKS(5000));
-
-        // Testing FSC Mode
-        // Set RPM to 3000
-        // if (EMC2305_SetFanRPM(&chip, EMC2305_FAN3, 3000) != EMC2305_OK) {
-        //     Error_Handler();
-        // };
-        // printf("Task 1: RPM target set to 3000\r\n");
-
-        //         vTaskDelay(pdMS_TO_TICKS(5000));
-
-        // if (EMC2305_SetFanRPM(&chip, EMC2305_FAN3, 8000) != EMC2305_OK) {
-        //     Error_Handler();
-        // };
 
         // // Get current rpm
         //  uint16_t rpm = EMC2305_GetFanRPM(&chip, EMC2305_FAN3);
@@ -171,11 +129,8 @@ void EMC2305_Task_1(void* argument) {
         // uint8_t pwm = EMC2305_GetFanPWM(&chip, EMC2305_FAN3);
         // printf("Drive PWM: %u\r\n", pwm);
 
-
-        // Blink Heartbeat LED
-        HAL_GPIO_TogglePin(PUMP_LED_PORT, PUMP_LED_PIN);
-
-        vTaskDelay(pdMS_TO_TICKS(5000));
+        // Blink pump LED
+        LED_Blink(led_configs[PUMP_LED]);
     }
 }
 
@@ -192,20 +147,7 @@ int main(void) {
     mx_uart_init();
     MX_I2C1_Init();
     LEDs_Init();
-        // Status LED init
-    GPIO_InitTypeDef led_init = {
-        .Mode = GPIO_MODE_OUTPUT_PP,
-        .Pull = GPIO_NOPULL,
-        .Pin = STATUS_LED_PIN_1 | STATUS_LED_PIN_2 | STATUS_LED_PIN_3,
-    };
-    HAL_GPIO_Init(STATUS_LED_PORT, &led_init);
-
-    // Heartbeat LED init
-    GPIO_InitTypeDef hb_init = {
-        .Mode = GPIO_MODE_OUTPUT_PP,
-        .Pull = GPIO_NOPULL,
-        .Pin = GPIO_PIN_11,
-    };
+    
     HAL_GPIO_Init(GPIOB, &hb_init);
 
     // Create tasks

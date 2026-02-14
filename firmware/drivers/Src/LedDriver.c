@@ -39,6 +39,21 @@ void LEDs_Init(void) {
     LED_Init(led_configs[FLOW_LED]);
     LED_Init(led_configs[TEMP_LED]);
     LED_Init(led_configs[STATUS_LED]);
+
+    // PSOM status LED init
+    GPIO_InitTypeDef led_init = {
+        .Mode = GPIO_MODE_OUTPUT_PP,
+        .Pull = GPIO_NOPULL,
+        .Pin = STATUS_LED_PIN_1 | STATUS_LED_PIN_2 | STATUS_LED_PIN_3,
+    };
+    HAL_GPIO_Init(STATUS_LED_PORT, &led_init);
+
+    // PSOM heartbeat LED init
+    // GPIO_InitTypeDef hb_init = {
+    //     .Mode = GPIO_MODE_OUTPUT_PP,
+    //     .Pull = GPIO_NOPULL,
+    //     .Pin = GPIO_PIN_11,
+    // };
 }
 
 void LED_Blink(GPIO_Pin_t led_config) {

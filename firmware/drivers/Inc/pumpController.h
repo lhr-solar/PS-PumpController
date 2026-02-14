@@ -5,6 +5,7 @@
 #include "EMC2305.h"
 #include "printf.h"
 #include "FreeRTOS.h"
+#include "UART.h"
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 /*                              SHARED STRUCTS                                   */
