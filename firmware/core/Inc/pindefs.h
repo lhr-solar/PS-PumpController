@@ -66,6 +66,10 @@
 #define PUMP_STATUS_LED_PIN          GPIO_PIN_0
 
 
+/*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
+/*                            MISCELANOUS PINS                                   */
+/*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
+
 // LED pins for PSOM
 #define STATUS_LED_PORT GPIOA
 #define STATUS_LED_PIN_1 GPIO_PIN_7

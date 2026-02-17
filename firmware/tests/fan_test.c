@@ -1,8 +1,13 @@
+/*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
+/*          FAN TEST: SETS FAN SPEED TO 3000 RPM THEN 8000 RPM ON LOOP           */
+/*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
+
 #include "pumpController.h"
+#include "tasks.h"
 
 
 extern I2C_HandleTypeDef hi2c1;
-EMC2305_HandleTypeDef chip;
+// extern EMC2305_HandleTypeDef chip;
 StackType_t initTaskStack[configMINIMAL_STACK_SIZE];
 StaticTask_t initTaskBuffer;
 StaticTask_t emc2305TaskBuffer_1;
@@ -121,14 +126,14 @@ void EMC2305_Task_1(void* argument) {
         };
         printf("Task 1: RPM target set to 3000\r\n");
 
-        vTaskDelay(pdMS_TO_TICKS(5000));
+        vTaskDelay(pdMS_TO_TICKS(10000));
 
         if (EMC2305_SetFanRPM(&chip, EMC2305_FAN2, 8000) != EMC2305_OK) {
             Error_Handler();
         };
         printf("Task 1: RPM target set to 8000\r\n");
 
-        vTaskDelay(pdMS_TO_TICKS(5000));
+        vTaskDelay(pdMS_TO_TICKS(10000));
 
         // // Get current rpm
         //  uint16_t rpm = EMC2305_GetFanRPM(&chip, EMC2305_FAN2);

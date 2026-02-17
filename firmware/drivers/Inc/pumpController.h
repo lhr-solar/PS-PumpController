@@ -8,6 +8,7 @@
 #include "UART.h"
 #include "common.h"
 #include "tempTable.h"
+#include "ADC.h"
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 /*                              SHARED STRUCTS                                   */
@@ -24,9 +25,7 @@ typedef struct {
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
 /**
-  * @brief ADC1 Initialization Function
-  * @param None
-  * @retval None
+  * @brief I2C Initialization Function
   */
 void MX_I2C1_Init(void);
 
@@ -66,11 +65,26 @@ void I2C1_ER_IRQHandler(void);
 
 // Temp macros
 // [insert macros here]
+extern ADC_HandleTypeDef hADC1;
 
-// Temp functions
+
+/**
+  * @brief This function converts ADC reading to a temperature
+  * @param adc_value: the raw ADC value read from the temp sensor
+  * @return the corresponding temperature in degrees Celsius
+  */
 int getTemp(void);
 
+/**
+  * @brief This function prints the current temperature
+  * @param adc_value: the raw ADC value read from the temp sensor
+  */
 void printTemp(void);
+
+/**
+  * @brief ADC Initialization Function
+  */
+void MX_ADC1_Init(void);
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 /*                              FLOWRATE SENSOR                                  */

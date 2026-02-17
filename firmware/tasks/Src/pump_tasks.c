@@ -1,32 +1,10 @@
-/*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
-/*          PUMP TEST: SETS PUMP TO 25% DUTY CYCLE THEN 100% ON LOOP             */
-/*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
-
 #include "pumpController.h"
 #include "tasks.h"
 
-extern I2C_HandleTypeDef hi2c1;
-// extern EMC2305_HandleTypeDef chip;
-StackType_t initTaskStack[configMINIMAL_STACK_SIZE];
-StaticTask_t initTaskBuffer;
-StaticTask_t emc2305TaskBuffer_1;
-StackType_t emc2305TaskStack_1[configMINIMAL_STACK_SIZE];
-
-void Init_Task(void* argument) {
-    // Initialize EMC2305
-    // Only call from ONE task!
-    if (EMC2305_Init(&chip, &hi2c1, 0x4D) != EMC2305_OK) {
-        Error_Handler();
-    }
-    printf("EMC2305 Initialized\r\n");
-    // Task kills itself
-    vTaskDelete(NULL);
-}
-
-void EMC2305_Task_1(void* argument) {
+// pump control
+void PumpSpeed_Task(void* argument) {
     // Allow chip to power on
     vTaskDelay(pdMS_TO_TICKS(250));
-    HAL_GPIO_TogglePin(PUMP_STATUS_LED_PORT, PUMP_STATUS_LED_PIN);
 
     // Set global config
     EMC2305_Global_Config config = { 0 };
@@ -75,19 +53,17 @@ void EMC2305_Task_1(void* argument) {
         if (EMC2305_SetFanPWM(&chip, EMC2305_FAN3, 25) != EMC2305_OK) {
             Error_Handler();
         };
-        //printf("Task 1: Pump PWM drive set to 25%%\r\n");
-        vTaskDelay(pdMS_TO_TICKS(5000));
+        //printf("Task 2: Pump PWM drive set to 25%%\r\n");
+        printf("Measured RPM for 25: %u\r\n", EMC2305_GetFanRPM(&chip, EMC2305_FAN3));
+        vTaskDelay(pdMS_TO_TICKS(10000));
 
         // Set PWM2 duty cycle to 25%
         if (EMC2305_SetFanPWM(&chip, EMC2305_FAN3, 100) != EMC2305_OK) {
             Error_Handler();
         };
-        //printf("Task 1: PWM1 drive set to 25%%\r\n");
-        vTaskDelay(pdMS_TO_TICKS(5000));
-
-        // // Get current rpm
-        //  uint16_t rpm = EMC2305_GetFanRPM(&chip, EMC2305_FAN3);
-        //  printf("Measured RPM: %u\r\n", rpm);
+        //printf("Task 2: Pump PWM drive set to 100%%\r\n");
+        printf("Measured RPM for 100: %u\r\n", EMC2305_GetFanRPM(&chip, EMC2305_FAN3));
+        vTaskDelay(pdMS_TO_TICKS(10000));
 
         // // Get current pwm
         // uint8_t pwm = EMC2305_GetFanPWM(&chip, EMC2305_FAN3);
@@ -96,42 +72,4 @@ void EMC2305_Task_1(void* argument) {
         // Blink pump LED
         LED_Blink(led_configs[PUMP_LED]);
     }
-}
-
-int main(void) {
-    printf("Starting EMC2305 Test\r\n");
-    HAL_Init();
-    if (HAL_Init() != HAL_OK) Error_Handler();
-    SystemClock_Config();
-    __HAL_RCC_SYSCFG_CLK_ENABLE();
-    __HAL_RCC_PWR_CLK_ENABLE();
-
-    // Init peripherals
-    mx_uart_init();
-    MX_I2C1_Init();
-    LEDs_Init();
-    
-    // Create tasks
-    xTaskCreateStatic(Init_Task,
-        "Init Task",
-        configMINIMAL_STACK_SIZE,
-        NULL,
-        tskIDLE_PRIORITY + 1,
-        initTaskStack,
-        &initTaskBuffer);
-
-    xTaskCreateStatic(EMC2305_Task_1,
-        "EMC2305 Task 1",
-        configMINIMAL_STACK_SIZE,
-        NULL,
-        tskIDLE_PRIORITY + 2,
-        emc2305TaskStack_1,
-        &emc2305TaskBuffer_1);
-
-    vTaskStartScheduler();
-
-    while (1) {
-    }
-
-    return 0;
 }

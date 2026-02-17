@@ -1,5 +1,4 @@
 #include "pumpController.h"
-#include "stm32xx_hal.h"
 
 GPIO_Pin_t led_configs[] = {
     {PUMP_LED_PORT, PUMP_LED_PIN},

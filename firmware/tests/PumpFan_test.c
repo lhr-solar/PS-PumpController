@@ -1,8 +1,12 @@
-#include "pumpController.h"
+/* .·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·. */
+/* PUMP_FAN TEST: SETS PUMP TO 25% THEN 100% AND FAN TO 3000 THEN 8000 RPM ON LOOP */
+/* .·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·. */
 
+#include "pumpController.h"
+#include "tasks.h"
 
 extern I2C_HandleTypeDef hi2c1;
-EMC2305_HandleTypeDef chip;
+// extern EMC2305_HandleTypeDef chip;
 StaticTask_t initTaskBuffer;
 StackType_t initTaskStack[configMINIMAL_STACK_SIZE];
 StaticTask_t emc2305TaskBuffer_1;
