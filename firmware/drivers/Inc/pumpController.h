@@ -9,16 +9,28 @@
 #include "common.h"
 #include "tempTable.h"
 #include "ADC.h"
+#include "tasks.h"
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
-/*                              SHARED STRUCTS                                   */
+/*                                    SHARED                                     */
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
-typedef enum State_e {OFF = 0, ON} State_t;
 
 typedef struct {
     GPIO_TypeDef* port;
     uint16_t pin;
 } GPIO_Pin_t;
+
+typedef enum PumpControllerStatus {
+    PUMP_CONTROLLER_OK,
+    PUMP_CONTROLLER_INIT_FAIL,
+    TEMP_OK,
+    TEMP_INIT_FAIL,
+    TEMP_ADC_START_FAIL,
+    TEMP_ADC_READ_FAIL,
+    TEMP_QUEUE_FULL,
+} PumpControllerStatus_t;
+
+PumpControllerStatus_t PumpController_Init();
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 /*                              FANS + FAN CHIP                                  */
@@ -27,7 +39,7 @@ typedef struct {
 /**
   * @brief I2C Initialization Function
   */
-void MX_I2C1_Init(void);
+bool MX_I2C1_Init(void);
 
 /**
   * @brief I2C Transmit Interrupt Callback
@@ -63,28 +75,23 @@ void I2C1_ER_IRQHandler(void);
 /*                              TEMP SENSORS                                     */
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
-// Temp macros
-// [insert macros here]
-extern ADC_HandleTypeDef hADC1;
+#define TEMP_TABLE_SIZE 4096    // 12 bit ADC
+#define ADC_TASK_PRIO tskIDLE_PRIORITY + 4
 
+typedef struct {
+    int16_t temp_data;   // signed, 32 bit
+    uint16_t adc_val;   // unsigned, 12 bit
+} TempMsg_t;
 
-/**
-  * @brief This function converts ADC reading to a temperature
-  * @param adc_value: the raw ADC value read from the temp sensor
-  * @return the corresponding temperature in degrees Celsius
-  */
-int getTemp(void);
+bool Temp_ADC_Init();
 
-/**
-  * @brief This function prints the current temperature
-  * @param adc_value: the raw ADC value read from the temp sensor
-  */
-void printTemp(void);
+void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc);
 
-/**
-  * @brief ADC Initialization Function
-  */
-void MX_ADC1_Init(void);
+PumpControllerStatus_t Temp_StartADC(bool clearQueue);
+
+PumpControllerStatus_t Temp_GetReading(TempMsg_t *message, TickType_t ticksToWait);
+
+int16_t ADCToTemp(uint16_t adc_val);
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 /*                              FLOWRATE SENSOR                                  */
@@ -108,7 +115,7 @@ extern GPIO_Pin_t led_configs[6];
 /**
   * @brief LED Initialization Function
   */
-void LEDs_Init(void);
+bool LEDs_Init(void);
 
 /**
   * @brief Turns on LED for a given amount of time

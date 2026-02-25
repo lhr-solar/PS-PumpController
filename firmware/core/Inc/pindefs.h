@@ -30,6 +30,8 @@
 // Temp pins
 #define TEMP1_ADC_PORT          GPIOA
 #define TEMP1_ADC_PIN           GPIO_PIN_4
+#define TEMP1_ADC_CHANNEL       ADC_CHANNEL_9
+#define TEMP1_SAMPLE_TIME       47
 
 #define TEMP2_ADC_PORT          GPIOA
 #define TEMP2_ADC_PIN           GPIO_PIN_5
@@ -67,7 +69,7 @@
 
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
-/*                            MISCELANOUS PINS                                   */
+/*                                 MISC PINS                                     */
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
 // LED pins for PSOM

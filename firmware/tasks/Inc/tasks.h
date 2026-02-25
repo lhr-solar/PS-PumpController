@@ -7,7 +7,7 @@
 /**
   * @brief Initializes all EMC2305, then kills itself. Only call from ONE task!
   */
-void Init_Task(void* argument);
+// void Init_Task(void* argument);
 
 
 /**

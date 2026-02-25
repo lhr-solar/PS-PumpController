@@ -55,7 +55,7 @@ void Error_Handler(void) {
   }
 }
 
-void mx_uart_init(void) {
+bool mx_uart_init(void) {
     // UART init
     GPIO_InitTypeDef InitStruct = { 0 };
     RCC_PeriphCLKInitTypeDef PeriphClkInit = { 0 };
@@ -84,4 +84,5 @@ void mx_uart_init(void) {
     InitStruct.Alternate = GPIO_AF7_USART1;
     HAL_GPIO_Init(USART_PORT, &InitStruct);
     printf("uart initialized\n");
+    return true;
 }

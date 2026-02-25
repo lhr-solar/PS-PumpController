@@ -4,34 +4,34 @@
 
 extern I2C_HandleTypeDef hi2c1;
 EMC2305_HandleTypeDef chip;
-StaticTask_t initTaskBuffer;
-StackType_t initTaskStack[configMINIMAL_STACK_SIZE];
+// StaticTask_t initTaskBuffer;
+// StackType_t initTaskStack[configMINIMAL_STACK_SIZE];
 StaticTask_t emc2305TaskBuffer_1;
 StackType_t emc2305TaskStack_1[configMINIMAL_STACK_SIZE];
 StaticTask_t emc2305TaskBuffer_2;
 StackType_t emc2305TaskStack_2[configMINIMAL_STACK_SIZE];
 
-void Init_Task(void* argument) {
-    // Init UART printf
-    husart1->Init.BaudRate = 115200;
-    husart1->Init.WordLength = UART_WORDLENGTH_8B;
-    husart1->Init.StopBits = UART_STOPBITS_1;
-    husart1->Init.Parity = UART_PARITY_NONE;
-    husart1->Init.Mode = UART_MODE_TX_RX;
-    husart1->Init.HwFlowCtl = UART_HWCONTROL_NONE;
-    husart1->Init.OverSampling = UART_OVERSAMPLING_16;
+// void Init_Task(void* argument) {
+//     // Init UART printf
+//     husart1->Init.BaudRate = 115200;
+//     husart1->Init.WordLength = UART_WORDLENGTH_8B;
+//     husart1->Init.StopBits = UART_STOPBITS_1;
+//     husart1->Init.Parity = UART_PARITY_NONE;
+//     husart1->Init.Mode = UART_MODE_TX_RX;
+//     husart1->Init.HwFlowCtl = UART_HWCONTROL_NONE;
+//     husart1->Init.OverSampling = UART_OVERSAMPLING_16;
 
-    printf_init(husart1);
+//     printf_init(husart1);
     
-    // Initialize EMC2305
-    // Only call from ONE task!
-    if (EMC2305_Init(&chip, &hi2c1, 0x4D) != EMC2305_OK) {
-        Error_Handler();
-    }
-    printf("EMC2305 Initialized\r\n");
-    // Task kills itself
-    vTaskDelete(NULL);
-}
+//     // Initialize EMC2305
+//     // Only call from ONE task!
+//     if (EMC2305_Init(&chip, &hi2c1, 0x4D) != EMC2305_OK) {
+//         Error_Handler();
+//     }
+//     printf("EMC2305 Initialized\r\n");
+//     // Task kills itself
+//     vTaskDelete(NULL);
+// }
 
 // fan control
 void FanSpeed_Task(void* argument) {

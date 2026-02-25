@@ -1,112 +1,17 @@
-/*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
-/*     TEMP TEST: PRINTS TEMPERATURE READINGS TO VERIFY THERMISTOR ACCURACY      */
-/*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
-
-// basic test to verify if thermistor reading is correctly converted
-
 #include "pumpController.h"
 #include "tasks.h"
-#include "stm32xx_hal.h"
-#include "printf.h"
 
-#define STACK_SIZE 200
+StaticTask_t initTaskBuffer;
+StackType_t initTaskStack[200];
+StaticTask_t xBlinkyTaskBuffer;
+StackType_t xBlinkyStack[ 200 ];
+StaticTask_t xADCTaskBuffer;
+StackType_t xADCStack[ 200 ];
+// StaticTask_t xQueueTaskBuffer;
+// StackType_t xQueueStack[ 200 ];
 
-StaticTask_t xTaskBuffer;
-StackType_t xStack[ STACK_SIZE ];
-
-#define QUEUE_LENGTH    10
-#define ITEM_SIZE       sizeof( uint32_t )
-
-uint8_t qStorage[QUEUE_LENGTH * ITEM_SIZE];
-static StaticQueue_t xStaticQueue;
-
-QueueHandle_t xReadings;
-
-static void error_handler(adc_status_t err) {
-    while(1) {
-        // set bkpt here
-        printf("error handler reached\n");
-    }
-}
-
-static void success_handler(void) {
-    // blinky
-
-    GPIO_InitTypeDef led_config = {
-        .Mode = GPIO_MODE_OUTPUT_PP,
-        .Pull = GPIO_NOPULL,
-        .Pin = GPIO_PIN_5
-    };
-    
-     // enable clock for GPIOA
-    HAL_GPIO_Init(GPIOA, &led_config); // initialize GPIOA with led_config
-
-    while(1){
-        LED_Blink(led_configs[TEMP_LED]);
-    }
-  }
-
-void Temp_Task(void* argument) {
-    
-
-    while (1) {
-        
-        // Blink temp LED
-        LED_Blink(led_configs[TEMP_LED]);
-    }
-}
-
-void TestADC1(void *pvParameters) {
-    // Set bkpt in error_handler();
-    uint32_t reading = 0;
-
-    // read once
-    for (int i = 0; i < 10; i++) {
-        #ifdef ADC_SAMPLETIME_3CYCLES
-        adc_status_t stat = adc_read(ADC_CHANNEL_1,  ADC_SAMPLETIME_3CYCLES, hadc1, xReadings);
-        #else
-        adc_status_t stat = adc_read(ADC_CHANNEL_1,  ADC_SAMPLETIME_2CYCLES_5, hadc1, xReadings);
-        #endif
-        
-        if (stat != ADC_OK) {
-            error_handler(stat);
-        }
-    }
-
-    for (int i = 0; i < 10; i++) {
-        xQueueReceive(xReadings, &reading, 0);
-    }
-    
-    success_handler();
-}
-
-int main() {
-    // GPIO Init
-    HAL_Init();
-    SystemClock_Config();
-    
-    __HAL_RCC_GPIOA_CLK_ENABLE();
-
-    GPIO_InitTypeDef input =  {
-        .Pin = GPIO_PIN_0,
-        .Mode = GPIO_MODE_ANALOG,
-        .Pull = GPIO_NOPULL,
-    };
-
-    HAL_GPIO_Init(GPIOA, &input);
-    LEDs_Init();
-    LED_On(led_configs[STATUS_LED]);
-
-    xReadings = xQueueCreateStatic(QUEUE_LENGTH, ITEM_SIZE, qStorage, &xStaticQueue);
-
-    HAL_ADC_MspInit(hadc1);
-
-    // init ADC
-    ADC_InitTypeDef adc_init_1 = {0};
-    mx_uart_init();
-    MX_I2C1_Init();
-    LED_On(led_configs[TEMP_LED]);
-
+// Initialize UART and EMC2305
+void Init_Task(void* argument) {
     // Init UART printf
     husart1->Init.BaudRate = 115200;
     husart1->Init.WordLength = UART_WORDLENGTH_8B;
@@ -118,38 +23,93 @@ int main() {
 
     printf_init(husart1);
 
-    // Testing F4 Init
-    adc_init_1.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2;
-    adc_init_1.Resolution = ADC_RESOLUTION_12B;
-    adc_init_1.DataAlign = ADC_DATAALIGN_RIGHT;
-    adc_init_1.EOCSelection = ADC_EOC_SINGLE_CONV;
-    adc_init_1.ContinuousConvMode = DISABLE;
-    adc_init_1.NbrOfConversion = 1;
-    adc_init_1.DiscontinuousConvMode = DISABLE;
-    adc_init_1.ExternalTrigConv = ADC_SOFTWARE_START;
-    adc_init_1.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
-    adc_init_1.DMAContinuousRequests = DISABLE;
-    LED_On(led_configs[FLOW_LED]);
+    // Task kills itself
+    vTaskDelete(NULL);
+}
 
-    volatile adc_status_t s = adc_init(&adc_init_1, hadc1);
-    s+=0;
-    if (s != ADC_OK) error_handler(ADC_INIT_FAIL);
-    LED_On(led_configs[FANCHIP_LED]);
+void ADC_Task(void *pvParameters) {
+    TempMsg_t message;
+    TickType_t xLastWakeTime = xTaskGetTickCount();
 
-    xTaskCreateStatic(TestADC1,
-                    "ADC Test",
-                    configMINIMAL_STACK_SIZE,
-                    (void*) 1,
-                    tskIDLE_PRIORITY+4,
-                    xStack,
-                    &xTaskBuffer);
+    while (1) {
+        // Start ADC reading
+        // Reset queue to prevent race condition (data already in queue and task does not wake up)
+        if (Temp_StartADC(true) != TEMP_OK) {
+            Error_Handler();
+        };
+
+        // Block until we receive data in queue
+        if (Temp_GetReading(&message, portMAX_DELAY) == TEMP_OK) {
+            // Convert data to current measurent
+            message.temp_data = ADCToTemp(message.adc_val);
+            printf("ADC Value: %u, Temp: %d\n\r", message.adc_val, message.temp_data);
+        }
+        
+        HAL_GPIO_TogglePin(TEMP_LED_PORT, TEMP_LED_PIN);
+        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(1000));
+    }
+}
+
+void Task_Blinky(void *pvParameters) {
+    while (1) {
+        HAL_GPIO_TogglePin(PUMP_STATUS_LED_PORT, PUMP_STATUS_LED_PIN);
+        vTaskDelay(pdMS_TO_TICKS(500));
+    }
+}
+
+// void Test_Queue(void *pvParameters) {
+//     int val = 3000;
+//     while (1) {
+//         xQueueSend(adc_queue, &val, 0);
+//         vTaskDelay(pdMS_TO_TICKS(1000));
+//     }
+// }
+
+int main() {
+    HAL_Init();
+    SystemClock_Config();
+    
+    if(PumpController_Init() == PUMP_CONTROLLER_INIT_FAIL) Error_Handler();
+
+    xTaskCreateStatic(Init_Task,
+        "Init Task",
+        configMINIMAL_STACK_SIZE,
+        NULL,
+        tskIDLE_PRIORITY + 1,
+        initTaskStack,
+        &initTaskBuffer);
+    
+    xTaskCreateStatic(
+        ADC_Task,
+        "ADC Task",
+        200,
+        (void*) 1,
+        ADC_TASK_PRIO,
+        xADCStack,
+        &xADCTaskBuffer
+    );
+
+    xTaskCreateStatic(
+        Task_Blinky,
+        "Blinky",
+        200,
+        (void*) 1,
+        tskIDLE_PRIORITY+3,
+        xBlinkyStack,
+        &xBlinkyTaskBuffer
+    );
+
+    // xTaskCreateStatic(
+    //     Test_Queue,
+    //     "Queue Send",
+    //     200,
+    //     (void*) 1,
+    //     tskIDLE_PRIORITY+4,
+    //     xQueueStack,
+    //     &xQueueTaskBuffer
+    // );
 
     vTaskStartScheduler();
-    LED_On(led_configs[FAN_LED]);
-
-    // should never reach
-    HAL_ADC_MspDeInit(hadc1);
 
     return 0;
 }
-

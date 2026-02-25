@@ -5,7 +5,7 @@
 I2C_HandleTypeDef hi2c1;
 
 // Initializes and configs I2C1 pins PB6 and PB7 for PSOM
-void MX_I2C1_Init(void) {
+bool MX_I2C1_Init(void) {
     // initialize I2C pins on PSOM
     GPIO_InitTypeDef GPIO_InitStruct = { 0 };
     RCC_PeriphCLKInitTypeDef ClkInit = { 0 };
@@ -65,6 +65,8 @@ void MX_I2C1_Init(void) {
     {
         Error_Handler();
     }
+
+    return true;
 
 }
 

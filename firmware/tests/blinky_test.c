@@ -2,7 +2,6 @@
 /*              BLINKY TEST: Blinks every LED in sequence then loops             */
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
-#include "stm32xx_hal.h"
 #include "pumpController.h"
 
 void LED_Blink_Test() {

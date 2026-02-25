@@ -13,9 +13,7 @@ GPIO_Pin_t led_configs[] = {
 void LED_Init(GPIO_Pin_t led_config) {
     GPIO_InitTypeDef GPIO_InitStruct = {0};
 
-    __HAL_RCC_GPIOA_CLK_ENABLE();
-    __HAL_RCC_GPIOB_CLK_ENABLE();
-    __HAL_RCC_GPIOC_CLK_ENABLE();
+
 
     GPIO_InitStruct.Pin = led_config.pin;
     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -25,13 +23,19 @@ void LED_Init(GPIO_Pin_t led_config) {
     HAL_GPIO_Init(led_config.port, &GPIO_InitStruct);
 
     HAL_GPIO_WritePin(led_config.port, led_config.pin, GPIO_PIN_RESET);
+
+    return;
 }
 
 // initialize all LED GPIOs
-void LEDs_Init(void) {    
+bool LEDs_Init(void) {    
     // for (int i = 0; i < sizeof(led_configs) / sizeof(GPIO_Pin_t); i++) {
     //     LED_Init(led_configs[i]);
     // }
+    __HAL_RCC_GPIOA_CLK_ENABLE();
+    __HAL_RCC_GPIOB_CLK_ENABLE();
+    __HAL_RCC_GPIOC_CLK_ENABLE();
+
     LED_Init(led_configs[PUMP_LED]);
     LED_Init(led_configs[FAN_LED]);
     LED_Init(led_configs[FANCHIP_LED]);
@@ -47,12 +51,7 @@ void LEDs_Init(void) {
     };
     HAL_GPIO_Init(STATUS_LED_PORT, &led_init);
 
-    // PSOM heartbeat LED init
-    // GPIO_InitTypeDef hb_init = {
-    //     .Mode = GPIO_MODE_OUTPUT_PP,
-    //     .Pull = GPIO_NOPULL,
-    //     .Pin = GPIO_PIN_11,
-    // };
+    return true;
 }
 
 void LED_Blink(GPIO_Pin_t led_config) {

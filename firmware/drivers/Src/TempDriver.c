@@ -1,68 +1,118 @@
 #include "pumpController.h"
-#include "ADC.h"
-#include "tempTable.h"
 
-ADC_HandleTypeDef hADC1;
+//extern ADC_HandleTypeDef hADC1;
 // adc_status_t adc_read(uint32_t channel, uint32_t samplingTime, ADC_HandleTypeDef *h, QueueHandle_t q);
+extern const int16_t temp_table[4096];
 
+#define ADC_ITEM_SIZE sizeof(uint16_t)
+#ifndef ADC_QUEUE_LENGTH
+    #define ADC_QUEUE_LENGTH 2
+#endif
+QueueHandle_t adc_queue;
+uint8_t adc_qStorage[ADC_QUEUE_LENGTH * ADC_ITEM_SIZE];
+static StaticQueue_t xStaticQueue_adc;
 
-int getTemp(void) {
-    return 1;
-    //return adc_to_temp[adc_read(TEMP1_ADC_PORT, TEMP1_ADC_PIN)];
+bool Temp_ADC_Init() {
+    /* Initialize queue */
+    adc_queue = xQueueCreateStatic(
+        ADC_QUEUE_LENGTH, 
+        ADC_ITEM_SIZE, 
+        adc_qStorage, 
+        &xStaticQueue_adc
+    );
+    
+    /* ================ ADC Init Struct ================ */
+    ADC_InitTypeDef init = {0};
+
+    init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2; /* ADC clock: synchronous */
+    init.Resolution = ADC_RESOLUTION_12B;           /* 12 bit ADC */
+    init.DataAlign = ADC_DATAALIGN_RIGHT;
+    init.ScanConvMode = ADC_SCAN_DISABLE;
+    init.EOCSelection = ADC_EOC_SINGLE_CONV;
+    init.LowPowerAutoWait = DISABLE;
+    init.ContinuousConvMode = DISABLE;              /* Single Conversion */
+    init.NbrOfConversion = 1;
+    init.DiscontinuousConvMode = DISABLE;
+    init.DMAContinuousRequests = DISABLE;
+    init.Overrun = ADC_OVR_DATA_OVERWRITTEN;    // Overwrites data on overrun: vs ADC_OVR_DATA_PRESERVED
+    init.OversamplingMode = DISABLE;
+
+    /* Software triggered conversion */
+    init.ExternalTrigConv = ADC_SOFTWARE_START;
+    init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+
+    /* Initialize ADC */
+    volatile adc_status_t s = adc_init(&init, hadc1);
+    s+=0;
+    if (s != ADC_OK) return false;
+    
+    /* Calibrate after initialization (must be after clock setup)*/
+    HAL_ADCEx_Calibration_Start(hadc1, ADC_SINGLE_ENDED);
+
+    return true;
 }
 
-void printTemp(void) {
-    printf("Current Temperature: %d°C\r\n", getTemp());
+void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc) {
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+    RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+
+    if(hadc->Instance==ADC1) {
+    /** Initializes the peripherals clock
+     */
+    PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC;
+    PeriphClkInit.AdcClockSelection = RCC_ADCCLKSOURCE_PLLSAI1;
+    PeriphClkInit.PLLSAI1.PLLSAI1Source = RCC_PLLSOURCE_MSI;
+    PeriphClkInit.PLLSAI1.PLLSAI1M = 1;
+    PeriphClkInit.PLLSAI1.PLLSAI1N = 16;
+    PeriphClkInit.PLLSAI1.PLLSAI1P = RCC_PLLP_DIV7;
+    PeriphClkInit.PLLSAI1.PLLSAI1Q = RCC_PLLQ_DIV2;
+    PeriphClkInit.PLLSAI1.PLLSAI1R = RCC_PLLR_DIV2;
+    PeriphClkInit.PLLSAI1.PLLSAI1ClockOut = RCC_PLLSAI1_ADC1CLK;
+    if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK) {
+      Error_Handler();
+    }
+
+    /* Peripheral clock enable */
+    __HAL_RCC_ADC_CLK_ENABLE();
+
+    /**ADC1 GPIO Configuration
+    PA0     ------> ADC1_IN5
+    */
+    __HAL_RCC_GPIOA_CLK_ENABLE();
+    GPIO_InitStruct.Pin = TEMP1_ADC_PIN;
+    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG_ADC_CONTROL;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(TEMP1_ADC_PORT, &GPIO_InitStruct);
+
+    /* ADC1 interrupt Init: PRIO MUST BE AT LEAST 5 */
+    HAL_NVIC_SetPriority(ADC1_IRQn, configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY, 0);
+    HAL_NVIC_EnableIRQ(ADC1_IRQn);
+  }
 }
 
-void MX_ADC1_Init(void) {
+PumpControllerStatus_t Temp_StartADC(bool clearQueue) {
+    // Clear queue if requested
+    if (clearQueue) { xQueueReset(adc_queue); }
+    // Start ADC conversion: result will appear in queue
+    if (adc_read(TEMP1_ADC_CHANNEL, TEMP1_SAMPLE_TIME, hadc1, adc_queue) != ADC_OK) {
+        return TEMP_ADC_START_FAIL;
+    }
+    return TEMP_OK;
+}
 
-  /* USER CODE BEGIN ADC1_Init 0 */
+PumpControllerStatus_t Temp_GetReading(TempMsg_t *message, TickType_t ticksToWait) {
+    // Get ADC value from queue
+    if (xQueueReceive(adc_queue, &(message->adc_val), ticksToWait) != pdPASS) { 
+        return TEMP_ADC_READ_FAIL;
+    }
+    message->temp_data = ADCToTemp(message->adc_val);
+    return TEMP_OK;
+}
 
-  /* USER CODE END ADC1_Init 0 */
-
-  ADC_ChannelConfTypeDef sConfig = {0};
-
-  /* USER CODE BEGIN ADC1_Init 1 */
-
-  /* USER CODE END ADC1_Init 1 */
-
-  /** Common config
-  */
-  hADC1.Instance = ADC1;
-  hADC1.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
-  hADC1.Init.Resolution = ADC_RESOLUTION_12B;
-  hADC1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-  hADC1.Init.ScanConvMode = ADC_SCAN_DISABLE;
-  hADC1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
-  hADC1.Init.LowPowerAutoWait = DISABLE;
-  hADC1.Init.ContinuousConvMode = DISABLE;
-  hADC1.Init.NbrOfConversion = 1;
-  hADC1.Init.DiscontinuousConvMode = DISABLE;
-  hADC1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
-  hADC1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
-  hADC1.Init.DMAContinuousRequests = DISABLE;
-  hADC1.Init.Overrun = ADC_OVR_DATA_PRESERVED;
-  hADC1.Init.OversamplingMode = DISABLE;
-  if (HAL_ADC_Init(&hADC1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
-  /** Configure Regular Channel
-  */
-  sConfig.Channel = ADC_CHANNEL_9;
-  sConfig.Rank = ADC_REGULAR_RANK_1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
-  sConfig.SingleDiff = ADC_SINGLE_ENDED;
-  sConfig.OffsetNumber = ADC_OFFSET_NONE;
-  sConfig.Offset = 0;
-  if (HAL_ADC_ConfigChannel(&hADC1, &sConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN ADC1_Init 2 */
-
-  /* USER CODE END ADC1_Init 2 */
-
+int16_t ADCToTemp(uint16_t adc_val) {
+    // Convert ADC value to temperature using lookup table
+    if (adc_val >= TEMP_TABLE_SIZE) {
+        return 0; // Cap at max index
+    }
+    return temp_table[adc_val];
 }
