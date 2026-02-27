@@ -106,7 +106,7 @@ def main():
 
     ports = ["stm32l431cbt"]
 
-    tests_dir = Path("firmware/Tests")
+    tests_dir = Path("firmware/tests")
     tests = find_tests(git_dir / tests_dir)
 
     makefile_dir = Path("firmware")
