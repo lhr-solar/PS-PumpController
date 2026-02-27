@@ -40,7 +40,7 @@ def find_tests(tests_dir: Path):
     tests = []
     for cfile in tests_dir.glob("*.c"):
         clean_name = cfile.name.replace("_test.c", "")
-        tests.append(cfile)
+        tests.append(clean_name)
 
         ###
 
