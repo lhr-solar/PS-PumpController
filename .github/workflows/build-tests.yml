@@ -25,7 +25,7 @@ jobs:
 
       - name: Install Nix
         run: |
-          sudo ./Firmware/Embedded-Sharepoint/nix_install.sh
+          sudo ./firmware/Embedded-Sharepoint/nix_install.sh
 
       - name: Clean & Build tests
         run: |
