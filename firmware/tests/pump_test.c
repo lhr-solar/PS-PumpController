@@ -6,12 +6,12 @@
 
 extern I2C_HandleTypeDef hi2c1;
 // extern EMC2305_HandleTypeDef chip;
-StackType_t initTaskStack[configMINIMAL_STACK_SIZE];
-StaticTask_t initTaskBuffer;
+StackType_t initsTaskStack[configMINIMAL_STACK_SIZE];
+StaticTask_t initsTaskBuffer;
 StaticTask_t emc2305TaskBuffer_1;
 StackType_t emc2305TaskStack_1[configMINIMAL_STACK_SIZE];
 
-void Init_Task(void* argument) {
+void Inits_Task(void* argument) {
     // Initialize EMC2305
     // Only call from ONE task!
     if (EMC2305_Init(&chip, &hi2c1, 0x4D) != EMC2305_OK) {
@@ -22,7 +22,7 @@ void Init_Task(void* argument) {
     vTaskDelete(NULL);
 }
 
-void EMC2305_Task_1(void* argument) {
+void PumpSpeed_Task(void* argument) {
     // Allow chip to power on
     vTaskDelay(pdMS_TO_TICKS(250));
     HAL_GPIO_TogglePin(PUMP_STATUS_LED_PORT, PUMP_STATUS_LED_PIN);
@@ -111,16 +111,16 @@ int main(void) {
     LEDs_Init();
     
     // Create tasks
-    xTaskCreateStatic(Init_Task,
-        "Init Task",
+    xTaskCreateStatic(Inits_Task,
+        "Inits Task",
         configMINIMAL_STACK_SIZE,
         NULL,
         tskIDLE_PRIORITY + 1,
-        initTaskStack,
-        &initTaskBuffer);
+        initsTaskStack,
+        &initsTaskBuffer);
 
-    xTaskCreateStatic(EMC2305_Task_1,
-        "EMC2305 Task 1",
+    xTaskCreateStatic(PumpSpeed_Task,
+        "Pump Control Task",
         configMINIMAL_STACK_SIZE,
         NULL,
         tskIDLE_PRIORITY + 2,

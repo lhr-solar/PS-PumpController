@@ -6,16 +6,16 @@
 
 extern I2C_HandleTypeDef hi2c1;
 // extern EMC2305_HandleTypeDef chip;
-StaticTask_t initTaskBuffer;
-StackType_t initTaskStack[configMINIMAL_STACK_SIZE];
+StaticTask_t initsTaskBuffer;
+StackType_t initsTaskStack[configMINIMAL_STACK_SIZE];
 StaticTask_t emc2305TaskBuffer_1;
 StackType_t emc2305TaskStack_1[configMINIMAL_STACK_SIZE];
 StaticTask_t emc2305TaskBuffer_2;
 StackType_t emc2305TaskStack_2[configMINIMAL_STACK_SIZE];
 
-void Init_Task(void* argument) {
+void Inits_Task(void* argument) {
     // Init UART printf
-    husart1->Init.BaudRate = 115200;
+    husart1->Init.BaudRate = BAUD_RATE;
     husart1->Init.WordLength = UART_WORDLENGTH_8B;
     husart1->Init.StopBits = UART_STOPBITS_1;
     husart1->Init.Parity = UART_PARITY_NONE;
@@ -35,8 +35,7 @@ void Init_Task(void* argument) {
     vTaskDelete(NULL);
 }
 
-// fan control
-void EMC2305_Task_1(void* argument) {
+void FanSpeed_Task(void* argument) {
     // Allow chip to power on
     vTaskDelay(pdMS_TO_TICKS(250));
 
@@ -96,12 +95,12 @@ void EMC2305_Task_1(void* argument) {
         if (EMC2305_SetFanPWM(&chip, EMC2305_FAN2, 50) != EMC2305_OK) {
             Error_Handler();
         };
-        vTaskDelay(pdMS_TO_TICKS(10000));
+        vTaskDelay(pdMS_TO_TICKS(DELAY_TIME));
 
         if (EMC2305_SetFanPWM(&chip, EMC2305_FAN2, 0) != EMC2305_OK) {
             Error_Handler();
         };
-        vTaskDelay(pdMS_TO_TICKS(10000));
+        vTaskDelay(pdMS_TO_TICKS(DELAY_TIME));
 
         // printf("Task 1: PWM2 drive set to 25%%\r\n");
 
@@ -112,13 +111,13 @@ void EMC2305_Task_1(void* argument) {
         // };
         // //printf("Task 1: Fan RPM target set to 3000\r\n");
 
-        // vTaskDelay(pdMS_TO_TICKS(10000));
+        // vTaskDelay(pdMS_TO_TICKS(DELAY_TIME));
 
         // if (EMC2305_SetFanRPM(&chip, EMC2305_FAN2, 100) != EMC2305_OK) {
         //     Error_Handler();
         // };
         // //printf("Task 1: Fan RPM target set to 8000\r\n");
-        // vTaskDelay(pdMS_TO_TICKS(10000));
+        // vTaskDelay(pdMS_TO_TICKS(DELAY_TIME));
 
         // // Get current rpm
         //  uint16_t rpm = EMC2305_GetFanRPM(&chip, EMC2305_FAN2);
@@ -129,14 +128,12 @@ void EMC2305_Task_1(void* argument) {
         // printf("Drive PWM: %u\r\n", pwm);
 
         // Blink fan LED
-        LED_Blink(led_configs[FANCHIP_LED]);
-        //HAL_GPIO_TogglePin(FANCHIP_LED_PORT, FANCHIP_LED_PIN);
+        HAL_GPIO_TogglePin(FANCHIP_LED_PORT, FANCHIP_LED_PIN);
 
     }
 }
 
-// pump control
-void EMC2305_Task_2(void* argument) {
+void PumpSpeed_Task(void* argument) {
     // Allow chip to power on
     vTaskDelay(pdMS_TO_TICKS(250));
 
@@ -189,7 +186,7 @@ void EMC2305_Task_2(void* argument) {
         };
         //printf("Task 2: Pump PWM drive set to 25%%\r\n");
         printf("Measured RPM for 25: %u\r\n", EMC2305_GetFanRPM(&chip, EMC2305_FAN3));
-        vTaskDelay(pdMS_TO_TICKS(10000));
+        vTaskDelay(pdMS_TO_TICKS(DELAY_TIME));
 
         // Set PWM2 duty cycle to 25%
         if (EMC2305_SetFanPWM(&chip, EMC2305_FAN3, 100) != EMC2305_OK) {
@@ -197,19 +194,18 @@ void EMC2305_Task_2(void* argument) {
         };
         //printf("Task 2: Pump PWM drive set to 100%%\r\n");
         printf("Measured RPM for 100: %u\r\n", EMC2305_GetFanRPM(&chip, EMC2305_FAN3));
-        vTaskDelay(pdMS_TO_TICKS(10000));
+        vTaskDelay(pdMS_TO_TICKS(DELAY_TIME));
 
         // // Get current pwm
         // uint8_t pwm = EMC2305_GetFanPWM(&chip, EMC2305_FAN3);
         // printf("Drive PWM: %u\r\n", pwm);
 
         // Blink pump LED
-        LED_Blink(led_configs[PUMP_LED]);
+        HAL_GPIO_TogglePin(PUMP_LED_PORT, PUMP_LED_PIN);
     }
 }
 
 int main(void) {
-    // Init your HAL, System Clock, and Peripherals here
     printf("Starting EMC2305 Test\r\n");
     HAL_Init();
     if (HAL_Init() != HAL_OK) Error_Handler();
@@ -218,30 +214,29 @@ int main(void) {
     __HAL_RCC_PWR_CLK_ENABLE();
 
     // Init peripherals
-    mx_uart_init();
-    MX_I2C1_Init();
-    LEDs_Init();
+    
+    if (!PumpController_Init();) Error_Handler();
 
     LED_Blink(led_configs[STATUS_LED]);
     // Create tasks
-    xTaskCreateStatic(Init_Task,
+    xTaskCreateStatic(Inits_Task,
         "Init Task",
         configMINIMAL_STACK_SIZE,
         NULL,
         tskIDLE_PRIORITY + 1,
-        initTaskStack,
-        &initTaskBuffer);
+        initsTaskStack,
+        &initsTaskBuffer);
 
-    xTaskCreateStatic(EMC2305_Task_1,
-        "EMC2305 Task 1",
+    xTaskCreateStatic(FanSpeed_Task,
+        "Fan Control Task",
         configMINIMAL_STACK_SIZE,
         NULL,
         tskIDLE_PRIORITY + 2,
         emc2305TaskStack_1,
         &emc2305TaskBuffer_1);
 
-    xTaskCreateStatic(EMC2305_Task_2,
-        "EMC2305 Task 2",
+    xTaskCreateStatic(PumpSpeed_Task,
+        "Pump Control Task",
         configMINIMAL_STACK_SIZE,
         NULL,
         tskIDLE_PRIORITY + 5,

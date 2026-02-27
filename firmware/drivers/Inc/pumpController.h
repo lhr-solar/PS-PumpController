@@ -15,6 +15,9 @@
 /*                                    SHARED                                     */
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
+#define BAUD_RATE 115200
+#define DELAY_TIME 10000
+
 typedef struct {
     GPIO_TypeDef* port;
     uint16_t pin;
@@ -66,10 +69,11 @@ void I2C1_ER_IRQHandler(void);
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
 // Pump macros
-// [insert macros here]
-
-// Pump functions
-// [insert functions here]
+#define PERCENT_0   0
+#define PERCENT_25  25
+#define PERCENT_50  50
+#define PERCENT_75  75
+#define PERCENT_100 100
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 /*                              TEMP SENSORS                                     */
@@ -109,8 +113,7 @@ int16_t ADCToTemp(uint16_t adc_val);
 
 #define TOGGLE_TIME 500     // same as blinky
 enum LED_Index {PUMP_LED = 0, FAN_LED, FANCHIP_LED, FLOW_LED, TEMP_LED, STATUS_LED};
-
-extern GPIO_Pin_t led_configs[6];
+extern const GPIO_Pin_t led_configs[];
 
 /**
   * @brief LED Initialization Function
@@ -120,7 +123,7 @@ bool LEDs_Init(void);
 /**
   * @brief Turns on LED for a given amount of time
   */
-void LED_Blink(GPIO_Pin_t led_pin);
+void LED_Blink(GPIO_Pin_t led_config);
 
 /**
   * @brief Turns on LED indefinitely

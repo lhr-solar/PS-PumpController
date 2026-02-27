@@ -4,21 +4,31 @@
 
 #include "pumpController.h"
 
+extern EMC2305_HandleTypeDef chip;
+extern I2C_HandleTypeDef hi2c1;
+
+extern StaticTask_t initTaskBuffer;
+extern StackType_t initTaskStack[configMINIMAL_STACK_SIZE];
+
+extern StaticTask_t FanControlTaskBuffer;
+extern StackType_t FanControlStack[configMINIMAL_STACK_SIZE];
+
+extern StaticTask_t PumpControlTaskBuffer;
+extern StackType_t PumpControlStack[configMINIMAL_STACK_SIZE];
+
 /**
   * @brief Initializes all EMC2305, then kills itself. Only call from ONE task!
   */
-// void Init_Task(void* argument);
+void Init_Task(void* argument);
 
 
 /**
   * @brief Sets fan speed to 3000 RPM then 8000 RPM on loop, while blinking fanchip LED
   */
-void FanSpeed_Task(void* argument);
+void FanControl_Task(void* argument);
 
 
 /**
   * @brief Sets pump duty cycle to 25% then 100% on loop, while blinking pump LED
   */
-void PumpSpeed_Task(void* argument);
-
-extern EMC2305_HandleTypeDef chip;
+void PumpControl_Task(void* argument);

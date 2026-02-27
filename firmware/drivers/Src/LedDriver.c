@@ -1,6 +1,6 @@
 #include "pumpController.h"
 
-GPIO_Pin_t led_configs[] = {
+const GPIO_Pin_t led_configs[] = {
     {PUMP_LED_PORT, PUMP_LED_PIN},
     {FAN_LED_PORT, FAN_LED_PIN},
     {FANCHIP_LED_PORT, FANCHIP_LED_PIN},
@@ -8,12 +8,9 @@ GPIO_Pin_t led_configs[] = {
     {TEMP_LED_PORT, TEMP_LED_PIN},
     {PUMP_STATUS_LED_PORT, PUMP_STATUS_LED_PIN}
 };
-
 // initialize an individual LED
 void LED_Init(GPIO_Pin_t led_config) {
     GPIO_InitTypeDef GPIO_InitStruct = {0};
-
-
 
     GPIO_InitStruct.Pin = led_config.pin;
     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -29,9 +26,7 @@ void LED_Init(GPIO_Pin_t led_config) {
 
 // initialize all LED GPIOs
 bool LEDs_Init(void) {    
-    // for (int i = 0; i < sizeof(led_configs) / sizeof(GPIO_Pin_t); i++) {
-    //     LED_Init(led_configs[i]);
-    // }
+    
     __HAL_RCC_GPIOA_CLK_ENABLE();
     __HAL_RCC_GPIOB_CLK_ENABLE();
     __HAL_RCC_GPIOC_CLK_ENABLE();
