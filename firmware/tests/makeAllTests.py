@@ -39,9 +39,12 @@ def find_tests(tests_dir: Path):
 
     tests = []
     for cfile in tests_dir.glob("*.c"):
-        clean_name = cfile.name.replace("_test.c", "")
-        tests.append(clean_name)
-        #tests.append(cfile)
+        # ❗ CHANGE THIS ❗
+        # Your c test files might be named like "example_test.c, " but you want to compile them as "example"
+        # Write the code to clean the filename here then apppend to tests list
+        # The string you append should match what you'd put into make TEST=[]
+        ####
+        tests.append(cfile)
 
         ###
 
@@ -103,7 +106,7 @@ def main():
 
     ports = ["stm32l431cbt"]
 
-    tests_dir = Path("firmware/tests")
+    tests_dir = Path("firmware/Tests")
     tests = find_tests(git_dir / tests_dir)
 
     makefile_dir = Path("firmware")
