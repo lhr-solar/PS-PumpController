@@ -3,7 +3,7 @@
 
 void Init_Task(void* argument) {
     // Init UART printf
-    husart1->Init.BaudRate = BAUD_RATE;
+    husart1->Init.BaudRate = UART_BAUD_RATE;
     husart1->Init.WordLength = UART_WORDLENGTH_8B;
     husart1->Init.StopBits = UART_STOPBITS_1;
     husart1->Init.Parity = UART_PARITY_NONE;
@@ -19,6 +19,7 @@ void Init_Task(void* argument) {
         Error_Handler();
     }
     printf("EMC2305 Initialized\r\n");
+    HAL_GPIO_TogglePin(PUMP_STATUS_LED_PORT, PUMP_STATUS_LED_PIN);
     // Task kills itself
     vTaskDelete(NULL);
 }

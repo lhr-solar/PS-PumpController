@@ -2,7 +2,7 @@
 #include "tasks.h"
 
 // pump control
-void PumpSpeed_Task(void* argument) {
+void PumpControl_Task(void* argument) {
     // Allow chip to power on
     vTaskDelay(pdMS_TO_TICKS(250));
 
@@ -50,14 +50,14 @@ void PumpSpeed_Task(void* argument) {
 
     while (1) {
         // Testing Direct PWM Drive Mode
-        if (EMC2305_SetFanPWM(&chip, EMC2305_FAN3, 25) != EMC2305_OK) {
-            Error_Handler();
-        };
-        //printf("Task 2: Pump PWM drive set to 25%%\r\n");
-        printf("Measured RPM for 25: %u\r\n", EMC2305_GetFanRPM(&chip, EMC2305_FAN3));
-        vTaskDelay(pdMS_TO_TICKS(10000));
+        // if (EMC2305_SetFanPWM(&chip, EMC2305_FAN3, 25) != EMC2305_OK) {
+        //     Error_Handler();
+        // };
+        // //printf("Task 2: Pump PWM drive set to 25%%\r\n");
+        // printf("Measured RPM for 25: %u\r\n", EMC2305_GetFanRPM(&chip, EMC2305_FAN3));
+        // vTaskDelay(pdMS_TO_TICKS(10000));
 
-        // Set PWM2 duty cycle to 25%
+        // Set PWM2 duty cycle to 100%
         if (EMC2305_SetFanPWM(&chip, EMC2305_FAN3, 100) != EMC2305_OK) {
             Error_Handler();
         };
@@ -70,6 +70,7 @@ void PumpSpeed_Task(void* argument) {
         // printf("Drive PWM: %u\r\n", pwm);
 
         // Blink pump LED
-        LED_Blink(led_configs[PUMP_LED]);
+        // LED_Blink(led_configs[PUMP_LED]);
+        HAL_GPIO_TogglePin(PUMP_LED_PORT, PUMP_LED_PIN);
     }
 }

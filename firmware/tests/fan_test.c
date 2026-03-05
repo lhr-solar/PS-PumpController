@@ -142,7 +142,7 @@ void FanSpeed_Task(void* argument) {
         // printf("Drive PWM: %u\r\n", pwm);
 
         // Blink fan LED
-        LED_Blink(led_configs[FANCHIP_LED]);
+        // LED_Blink(led_configs[FANCHIP_LED]);
 
     }
 }

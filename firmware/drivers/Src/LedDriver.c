@@ -1,6 +1,15 @@
 #include "pumpController.h"
 
-const GPIO_Pin_t led_configs[] = {
+// static enum LED_Index {
+//     PUMP_LED,
+//     FAN_LED,
+//     FANCHIP_LED,
+//     FLOW_LED,
+//     TEMP_LED,
+//     STATUS_LED
+// } LED_Index_t;
+
+static const GPIO_Pin_t led_configs[] = {
     {PUMP_LED_PORT, PUMP_LED_PIN},
     {FAN_LED_PORT, FAN_LED_PIN},
     {FANCHIP_LED_PORT, FANCHIP_LED_PIN},
@@ -8,6 +17,7 @@ const GPIO_Pin_t led_configs[] = {
     {TEMP_LED_PORT, TEMP_LED_PIN},
     {PUMP_STATUS_LED_PORT, PUMP_STATUS_LED_PIN}
 };
+
 // initialize an individual LED
 void LED_Init(GPIO_Pin_t led_config) {
     GPIO_InitTypeDef GPIO_InitStruct = {0};
@@ -25,37 +35,39 @@ void LED_Init(GPIO_Pin_t led_config) {
 }
 
 // initialize all LED GPIOs
-bool LEDs_Init(void) {    
+LED_Status_t LEDs_Init(void) {    
     
     __HAL_RCC_GPIOA_CLK_ENABLE();
     __HAL_RCC_GPIOB_CLK_ENABLE();
     __HAL_RCC_GPIOC_CLK_ENABLE();
 
-    LED_Init(led_configs[PUMP_LED]);
-    LED_Init(led_configs[FAN_LED]);
-    LED_Init(led_configs[FANCHIP_LED]);
-    LED_Init(led_configs[FLOW_LED]);
-    LED_Init(led_configs[TEMP_LED]);
-    LED_Init(led_configs[STATUS_LED]);
+    for(int i = 0; i < sizeof(led_configs) / sizeof(GPIO_Pin_t); i++) {
+        LED_Init(led_configs[i]);
+    }
 
     // PSOM status LED init
-    GPIO_InitTypeDef led_init = {
-        .Mode = GPIO_MODE_OUTPUT_PP,
-        .Pull = GPIO_NOPULL,
-        .Pin = STATUS_LED_PIN_1 | STATUS_LED_PIN_2 | STATUS_LED_PIN_3,
-    };
-    HAL_GPIO_Init(STATUS_LED_PORT, &led_init);
+    // GPIO_InitTypeDef led_init = {
+    //     .Mode = GPIO_MODE_OUTPUT_PP,
+    //     .Pull = GPIO_NOPULL,
+    //     .Pin = STATUS_LED_PIN_1 | STATUS_LED_PIN_2 | STATUS_LED_PIN_3,
+    // };
 
-    return true;
+    // HAL_GPIO_Init(STATUS_LED_PORT, &led_init);
+
+    return LED_OK;
 }
 
-void LED_Blink(GPIO_Pin_t led_config) {
-    HAL_GPIO_TogglePin(led_config.port, led_config.pin);
-    HAL_Delay(TOGGLE_TIME);
-    HAL_GPIO_TogglePin(led_config.port, led_config.pin);
-    HAL_Delay(TOGGLE_TIME);
-}
+// void LED_Blink(GPIO_Pin_t gpio) {
+//     HAL_GPIO_TogglePin(gpio.port, gpio.pin);
+//     HAL_Delay(TOGGLE_TIME);
+//     HAL_GPIO_TogglePin(gpio.port, gpio.pin);
+//     HAL_Delay(TOGGLE_TIME);
+// }
 
-void LED_On(GPIO_Pin_t led_config) {
-    HAL_GPIO_WritePin(led_config.port, led_config.pin, GPIO_PIN_SET);
-}
+// void LED_On(GPIO_Pin_t gpio) {
+//     HAL_GPIO_WritePin(gpio.port, gpio.pin, GPIO_PIN_SET);
+// }
+
+// void LED_Off(GPIO_Pin_t gpio) {
+//     HAL_GPIO_WritePin(gpio.port, gpio.pin, GPIO_PIN_CLEAR);
+// }

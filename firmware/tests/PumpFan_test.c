@@ -217,7 +217,7 @@ int main(void) {
     
     if (!PumpController_Init();) Error_Handler();
 
-    LED_Blink(led_configs[STATUS_LED]);
+    // LED_Blink(led_configs[STATUS_LED]);
     // Create tasks
     xTaskCreateStatic(Inits_Task,
         "Init Task",

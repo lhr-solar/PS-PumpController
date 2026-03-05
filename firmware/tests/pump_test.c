@@ -93,7 +93,7 @@ void PumpSpeed_Task(void* argument) {
         // printf("Drive PWM: %u\r\n", pwm);
 
         // Blink pump LED
-        LED_Blink(led_configs[PUMP_LED]);
+        // LED_Blink(led_configs[PUMP_LED]);
     }
 }
 

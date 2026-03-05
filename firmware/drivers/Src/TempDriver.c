@@ -1,19 +1,25 @@
 #include "pumpController.h"
 
-//extern ADC_HandleTypeDef hADC1;
+// extern ADC_HandleTypeDef hadc1;
+extern ADC_HandleTypeDef* hadc1;
 // adc_status_t adc_read(uint32_t channel, uint32_t samplingTime, ADC_HandleTypeDef *h, QueueHandle_t q);
 extern const int16_t temp_table[4096];
 
 #define ADC_ITEM_SIZE sizeof(uint16_t)
-#ifndef ADC_QUEUE_LENGTH
-    #define ADC_QUEUE_LENGTH 2
-#endif
+#define ADC_QUEUE_LENGTH 2
+
 QueueHandle_t adc_queue;
 uint8_t adc_qStorage[ADC_QUEUE_LENGTH * ADC_ITEM_SIZE];
 static StaticQueue_t xStaticQueue_adc;
 
-bool Temp_ADC_Init() {
+ADC_ChannelConfTypeDef ADC_Config = {
+    .Channel = TEMP1_ADC_CHANNEL,
+    .SamplingTime =  TEMP1_SAMPLE_TIME
+};
+
+Temp_Status_t Temp_ADC_Init() {
     /* Initialize queue */
+
     adc_queue = xQueueCreateStatic(
         ADC_QUEUE_LENGTH, 
         ADC_ITEM_SIZE, 
@@ -43,13 +49,11 @@ bool Temp_ADC_Init() {
 
     /* Initialize ADC */
     volatile adc_status_t s = adc_init(&init, hadc1);
-    s+=0;
-    if (s != ADC_OK) return false;
+    if (s != ADC_OK) return TEMP_INIT_FAIL;
     
     /* Calibrate after initialization (must be after clock setup)*/
-    HAL_ADCEx_Calibration_Start(hadc1, ADC_SINGLE_ENDED);
 
-    return true;
+    return TEMP_OK;
 }
 
 void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc) {
@@ -90,17 +94,18 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc) {
   }
 }
 
-PumpControllerStatus_t Temp_StartADC(bool clearQueue) {
+Temp_Status_t Temp_StartADC(bool clearQueue) {
     // Clear queue if requested
     if (clearQueue) { xQueueReset(adc_queue); }
     // Start ADC conversion: result will appear in queue
-    if (adc_read(TEMP1_ADC_CHANNEL, TEMP1_SAMPLE_TIME, hadc1, adc_queue) != ADC_OK) {
+    // if (adc_read(TEMP1_ADC_CHANNEL, TEMP1_SAMPLE_TIME, hadc1, adc_queue) != ADC_OK) {
+    if (adc_read(hadc1, &ADC_Config ,adc_queue) != ADC_OK) {
         return TEMP_ADC_START_FAIL;
     }
     return TEMP_OK;
 }
 
-PumpControllerStatus_t Temp_GetReading(TempMsg_t *message, TickType_t ticksToWait) {
+Temp_Status_t Temp_GetReading(TempMsg_t *message, TickType_t ticksToWait) {
     // Get ADC value from queue
     if (xQueueReceive(adc_queue, &(message->adc_val), ticksToWait) != pdPASS) { 
         return TEMP_ADC_READ_FAIL;

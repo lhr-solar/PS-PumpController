@@ -15,7 +15,7 @@ StackType_t xADCStack[ 200 ];
 // Initialize UART
 void Inits_Task(void* argument) {
     // Init UART printf
-    husart1->Init.BaudRate = BAUD_RATE;
+    husart1->Init.BaudRate = UART_BAUD_RATE;
     husart1->Init.WordLength = UART_WORDLENGTH_8B;
     husart1->Init.StopBits = UART_STOPBITS_1;
     husart1->Init.Parity = UART_PARITY_NONE;

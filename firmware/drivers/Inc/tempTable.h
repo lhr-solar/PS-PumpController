@@ -1,5 +1,7 @@
 #pragma once
 
+// generated from therm_table.py based on thermistor datasheet
+
 static const int16_t temp_table[4096] = {
 120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,
 120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,

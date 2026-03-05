@@ -1,8 +1,7 @@
 #include "common.h"
 #include "stm32xx_hal.h"
 
-void SystemClock_Config(void)
-{
+void SystemClock_Config(void) {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
@@ -50,7 +49,7 @@ void SystemClock_Config(void)
 
 void Error_Handler(void) {
   // turn on LED for fault
-  HAL_GPIO_WritePin(PUMP_STATUS_LED_PORT, PUMP_STATUS_LED_PIN, GPIO_PIN_SET);
+  // HAL_GPIO_WritePin(PUMP_STATUS_LED_PORT, PUMP_STATUS_LED_PIN, GPIO_PIN_SET);
     while (1) {
   }
 }

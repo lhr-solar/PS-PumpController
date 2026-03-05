@@ -40,9 +40,12 @@
 /*                            FLOWRATE SENSOR PINS                               */
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
-// Flowrate pins
-#define FLOW_TACH_PORT          GPIOB
-#define FLOW_TACH_PIN           GPIO_PIN_3
+// Flowrate pins - timer 2, channel 2
+#define FLOW1_TACH_PORT          GPIOB
+#define FLOW1_TACH_PIN           GPIO_PIN_3
+
+#define FLOW2_TACH_PORT          GPIOA
+#define FLOW2_TACH_PIN           GPIO_PIN_2
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 /*                            STATUS LED PINS                                    */

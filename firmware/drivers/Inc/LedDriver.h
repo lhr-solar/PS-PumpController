@@ -1,0 +1,37 @@
+#pragma once
+
+#include "pumpController.h"
+#include "pindefs.h"
+
+#include "stm32xx_hal.h"
+
+/*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
+/*                              STATUS LEDS                                      */
+/*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
+
+#define TOGGLE_TIME 500     // same as blinky
+
+typedef enum LED_Status {
+    LED_INIT_FAIL,
+    LED_OK
+} LED_Status_t;
+
+/**
+* @brief LED Initialization Function
+*/
+LED_Status_t LEDs_Init(void);
+
+// /**
+// * @brief Turns on LED for a given amount of time
+// */
+// void LED_Blink(GPIO_Pin_t gpio)
+
+// /**
+// * @brief Turns on LED indefinitely
+// */
+// void LED_On(GPIO_Pin_t gpio)
+
+// /**
+// * @brief Turns off LED indefinitely
+// */
+// void LED_Off(GPIO_Pin_t gpio)

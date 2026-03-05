@@ -5,7 +5,7 @@
 I2C_HandleTypeDef hi2c1;
 
 // Initializes and configs I2C1 pins PB6 and PB7 for PSOM
-bool MX_I2C1_Init(void) {
+FanChip_Status_t MX_I2C1_Init(void) {
     // initialize I2C pins on PSOM
     GPIO_InitTypeDef GPIO_InitStruct = { 0 };
     RCC_PeriphCLKInitTypeDef ClkInit = { 0 };
@@ -15,7 +15,7 @@ bool MX_I2C1_Init(void) {
     ClkInit.I2c1ClockSelection = RCC_I2C1CLKSOURCE_PCLK1;
     if (HAL_RCCEx_PeriphCLKConfig(&ClkInit) != HAL_OK)
     {
-        Error_Handler();
+        return FAN_CHIP_INIT_FAIL;
     }
 
     __HAL_RCC_GPIOB_CLK_ENABLE();
@@ -31,9 +31,9 @@ bool MX_I2C1_Init(void) {
     HAL_GPIO_Init(FAN_I2C_PORT, &GPIO_InitStruct);
 
     // I2C Interrupt Init
-    HAL_NVIC_SetPriority(I2C1_EV_IRQn, 5, 0);
+    HAL_NVIC_SetPriority(I2C1_EV_IRQn, configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY, 0);
     HAL_NVIC_EnableIRQ(I2C1_EV_IRQn);
-    HAL_NVIC_SetPriority(I2C1_ER_IRQn, 5, 0);
+    HAL_NVIC_SetPriority(I2C1_ER_IRQn, configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY, 0);
     HAL_NVIC_EnableIRQ(I2C1_ER_IRQn);
 
     /* Peripheral clock enable */
@@ -51,22 +51,22 @@ bool MX_I2C1_Init(void) {
     hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
     if (HAL_I2C_Init(&hi2c1) != HAL_OK)
     {
-        Error_Handler();
+        return FAN_CHIP_INIT_FAIL;
     }
 
     // Configure Analog filter
     if (HAL_I2CEx_ConfigAnalogFilter(&hi2c1, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
     {
-        Error_Handler();
+        return FAN_CHIP_INIT_FAIL;
     }
 
     // Configure Digital filter
     if (HAL_I2CEx_ConfigDigitalFilter(&hi2c1, 0) != HAL_OK)
     {
-        Error_Handler();
+        return FAN_CHIP_INIT_FAIL;
     }
 
-    return true;
+    return FAN_CHIP_OK;
 
 }
 
