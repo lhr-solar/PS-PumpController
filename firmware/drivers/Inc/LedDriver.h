@@ -1,7 +1,7 @@
 #pragma once
 
-#include "pumpController.h"
 #include "pindefs.h"
+#include "pumpController.h"
 
 #include "stm32xx_hal.h"
 

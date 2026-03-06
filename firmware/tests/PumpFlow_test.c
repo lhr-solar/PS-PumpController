@@ -2,8 +2,9 @@
 /*    PUMP_FLOW TEST: SETS PUMP TO 25% THEN 100% AND PRINTS FLOWRATE TO CONSOLE    */
 /* .·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·. */
 
-#include "pumpController.h"
-#include "task.h"
+#include "tasks.h"
+#include "common.h"
+#include "pindefs.h"
 
 EMC2305_HandleTypeDef chip;
 extern I2C_HandleTypeDef hi2c1;
@@ -18,43 +19,33 @@ StaticTask_t FlowrateTaskBuffer;
 StackType_t FlowrateStack[configMINIMAL_STACK_SIZE];
 
 StaticTask_t xBlinkyTaskBuffer;
-StackType_t xBlinkyStack[ 200 ];
-
-void Task_Blinky(void *pvParameters) {
-    while (1) {
-        HAL_GPIO_TogglePin(PUMP_STATUS_LED_PORT, PUMP_STATUS_LED_PIN);
-        vTaskDelay(pdMS_TO_TICKS(500));
-    }
-}
+StackType_t xBlinkyStack[configMINIMAL_STACK_SIZE];
 
 int main(void) {
-    HAL_Init();
+
     if (HAL_Init() != HAL_OK) Error_Handler();
     SystemClock_Config();
     __HAL_RCC_SYSCFG_CLK_ENABLE();
     __HAL_RCC_PWR_CLK_ENABLE();
 
-    // Init peripherals
-    
     if (!PumpController_Init()) Error_Handler();
     HAL_GPIO_TogglePin(TEMP_LED_PORT, TEMP_LED_PIN);
 
-    // LED_Blink(led_configs[STATUS_LED]);
     // Create tasks
     xTaskCreateStatic(Init_Task,
         "Init Task",
         configMINIMAL_STACK_SIZE,
         NULL,
-        tskIDLE_PRIORITY + 1,
+        INIT_TASK_PRIO,
         initTaskStack,
         &initTaskBuffer);
     
     xTaskCreateStatic(
-        Task_Blinky,
+        Blinky_Task,
         "Blinky",
         configMINIMAL_STACK_SIZE,
-        (void*) 1,
-        tskIDLE_PRIORITY+3,
+        NULL,
+        BLINKY_TASK_PRIO,
         xBlinkyStack,
         &xBlinkyTaskBuffer
     );

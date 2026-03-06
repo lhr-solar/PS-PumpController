@@ -1,14 +1,17 @@
 #pragma once
 
-#include "pumpController.h"
 #include "pindefs.h"
-
+#include "printf.h"
 #include "stm32xx_hal.h"
 #include "EMC2305.h"
+#include "common.h"
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 /*                              FANS + FAN CHIP                                  */
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
+
+
+// extern EMC2305_HandleTypeDef chip;
 
 // returned by MX_I2C1_Init()
 typedef enum FanChip_Status {

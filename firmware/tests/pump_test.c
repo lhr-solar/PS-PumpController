@@ -2,7 +2,9 @@
 /*          PUMP TEST: SETS PUMP TO 25% DUTY CYCLE THEN 100% ON LOOP             */
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
-#include "pumpController.h"
+#include "tasks.h"
+#include "common.h"
+#include "pindefs.h"
 
 extern I2C_HandleTypeDef hi2c1;
 EMC2305_HandleTypeDef chip;

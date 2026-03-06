@@ -1,6 +1,8 @@
 #pragma once
-
-#include "pumpController.h"
+#include "stm32xx_hal.h"
+#include "UART.h"
+#include "printf.h"
+#include "pindefs.h"
 
 void Error_Handler(void);
 void SystemClock_Config(void);

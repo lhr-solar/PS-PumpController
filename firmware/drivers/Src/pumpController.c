@@ -1,6 +1,4 @@
 #include "pumpController.h"
-#include "pindefs.h"
-#include "common.h"
 
 PumpController_Status_t PumpController_Init() {
     /* HAL_Init should be run before this is called */

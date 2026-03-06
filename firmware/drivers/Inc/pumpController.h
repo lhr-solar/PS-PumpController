@@ -2,16 +2,14 @@
 
 #include "pindefs.h"
 #include "common.h"
-#include "tasks.h"
-#include "Fan_I2C.h"
-#include "FlowrateDriver.h"
-#include "LedDriver.h"
-#include "TempDriver.h"
 
 #include "stm32xx_hal.h"
 #include "printf.h"
-#include "FreeRTOS.h"
 #include "UART.h"
+#include "LedDriver.h"
+#include "Fan_I2C.h"
+#include "FlowrateDriver.h"
+#include "TempDriver.h"
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 /*                                    SHARED                                     */

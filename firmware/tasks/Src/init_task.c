@@ -1,5 +1,8 @@
-#include "pumpController.h"
 #include "tasks.h"
+#include "pumpController.h"
+
+extern EMC2305_HandleTypeDef chip;
+
 
 void Init_Task(void* argument) {
     // Init UART printf
@@ -22,4 +25,11 @@ void Init_Task(void* argument) {
     HAL_GPIO_TogglePin(PUMP_STATUS_LED_PORT, PUMP_STATUS_LED_PIN);
 
     vTaskDelete(NULL);
+}
+
+void Blinky_Task(void *pvParameters) {
+    while (1) {
+        HAL_GPIO_TogglePin(PUMP_STATUS_LED_PORT, PUMP_STATUS_LED_PIN);
+        vTaskDelay(pdMS_TO_TICKS(500));
+    }
 }

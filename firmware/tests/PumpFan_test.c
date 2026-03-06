@@ -2,7 +2,9 @@
 /* PUMP_FAN TEST: SETS PUMP TO 25% THEN 100% AND FAN TO 3000 THEN 8000 RPM ON LOOP */
 /* .·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·. */
 
-#include "pumpController.h"
+#include "tasks.h"
+#include "common.h"
+#include "pindefs.h"
 
 extern I2C_HandleTypeDef hi2c1;
 EMC2305_HandleTypeDef chip;

@@ -1,8 +1,7 @@
-#include "EMC2305.h"
-#include "pumpController.h"
-#include "stm32xx_hal.h"
+#include "Fan_I2C.h"
 
 I2C_HandleTypeDef hi2c1;
+extern EMC2305_HandleTypeDef chip;
 
 // Initializes and configs I2C1 pins PB6 and PB7 for PSOM
 FanChip_Status_t MX_I2C1_Init(void) {

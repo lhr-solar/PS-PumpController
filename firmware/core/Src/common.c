@@ -1,5 +1,4 @@
 #include "common.h"
-#include "stm32xx_hal.h"
 
 void SystemClock_Config(void) {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};

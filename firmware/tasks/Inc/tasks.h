@@ -1,6 +1,12 @@
 #pragma once
 
+#include "Fan_I2C.h"
+#include "FlowrateDriver.h"
+#include "LedDriver.h"
+#include "TempDriver.h"
 #include "pumpController.h"
+#include "common.h"
+#include "pindefs.h"
 #include "EMC2305.h"
 
 extern EMC2305_HandleTypeDef chip;
@@ -9,6 +15,10 @@ extern I2C_HandleTypeDef hi2c1;
 #define INIT_TASK_PRIO       tskIDLE_PRIORITY + 1
 extern StaticTask_t initTaskBuffer;
 extern StackType_t initTaskStack[configMINIMAL_STACK_SIZE];
+
+#define BLINKY_TASK_PRIO       tskIDLE_PRIORITY + 1
+extern StaticTask_t xBlinkyTaskBuffer;
+extern StackType_t xBlinkyStack[configMINIMAL_STACK_SIZE];
 
 #define FAN_TASK_PRIO       tskIDLE_PRIORITY + 4
 extern StaticTask_t FanControlTaskBuffer;
@@ -31,6 +41,11 @@ extern StackType_t xTempStack[configMINIMAL_STACK_SIZE];
   */
 void Init_Task(void* argument);
 
+/**
+  * @brief Toggles status LED every 500 ms to indicate system is running
+  */
+void Blinky_Task(void *pvParameters);
+
 
 /**
   * @brief Sets fan speed to 3000 RPM then 8000 RPM on loop, while blinking fanchip LED
@@ -47,3 +62,8 @@ void PumpControl_Task(void* argument);
   * @brief Reads flowrate from flowrate driver and prints to UART, while blinking flowrate LED
   */
 void Flowrate_Task(void* argument);
+
+/**
+  * @brief Reads temperature from ADC, converts to Celsius, and prints to UART, while blinking temp LED
+  */
+void Temp_Task(void *pvParameters);
