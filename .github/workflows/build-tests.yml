@@ -2,7 +2,6 @@ name: Build Tests
 
 on:
   push:
-  pull_request:
 
 jobs:
   build:
@@ -10,25 +9,21 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Initialize Submodules
-        run: git submodule update --init --recursive
 
       - name: Cache Nix
         uses: actions/cache@v3
         with:
           path: |
-            /nix/store
             ~/.cache/nix
           key: nix-${{ runner.os }}-${{ hashFiles('flake.lock') }}
           restore-keys: |
             nix-${{ runner.os }}-
 
-      - name: Install Nix
-        run: |
-          sudo ./firmware/Embedded-Sharepoint/nix_install.sh
+      - name: Install Nix Action
+        uses: cachix/install-nix-action@v31
 
       - name: Clean & Build tests
         run: |
-          nix develop ./firmware/Embedded-Sharepoint --accept-flake-config --command bash -c "
-            cd firmware/ && make clean && python3 tests/makeAllTests.py
+          nix develop --accept-flake-config --command bash -c "
+            cd test && make clean && python3 makeAllTests.py
           "

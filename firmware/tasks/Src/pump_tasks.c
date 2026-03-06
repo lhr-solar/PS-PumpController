@@ -50,12 +50,12 @@ void PumpControl_Task(void* argument) {
 
     while (1) {
         // Testing Direct PWM Drive Mode
-        // if (EMC2305_SetFanPWM(&chip, EMC2305_FAN3, 25) != EMC2305_OK) {
-        //     Error_Handler();
-        // };
-        // //printf("Task 2: Pump PWM drive set to 25%%\r\n");
-        // printf("Measured RPM for 25: %u\r\n", EMC2305_GetFanRPM(&chip, EMC2305_FAN3));
-        // vTaskDelay(pdMS_TO_TICKS(10000));
+        if (EMC2305_SetFanPWM(&chip, EMC2305_FAN3, 25) != EMC2305_OK) {
+            Error_Handler();
+        };
+        //printf("Task 2: Pump PWM drive set to 25%%\r\n");
+        printf("Measured RPM for 25: %u\r\n", EMC2305_GetFanRPM(&chip, EMC2305_FAN3));
+        vTaskDelay(pdMS_TO_TICKS(10000));
 
         // Set PWM2 duty cycle to 100%
         if (EMC2305_SetFanPWM(&chip, EMC2305_FAN3, 100) != EMC2305_OK) {

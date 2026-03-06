@@ -21,6 +21,6 @@ void Flowrate_Task(void *pvParameters) {
         
         printf("Flowrate: %u.%u L/min\n\r", message.flowrate_x10 / 10, message.flowrate_x10 % 10);
         HAL_GPIO_TogglePin(FLOW_LED_PORT, FLOW_LED_PIN);
-        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(1000));
+        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(100));
     }
 }
