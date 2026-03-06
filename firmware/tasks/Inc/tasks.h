@@ -1,5 +1,3 @@
-// note: not fully finalized yet, currently a copy of the working test
-
 #pragma once
 
 #include "pumpController.h"

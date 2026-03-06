@@ -48,8 +48,6 @@ void SystemClock_Config(void) {
 
 
 void Error_Handler(void) {
-  // turn on LED for fault
-  // HAL_GPIO_WritePin(PUMP_STATUS_LED_PORT, PUMP_STATUS_LED_PIN, GPIO_PIN_SET);
     while (1) {
   }
 }

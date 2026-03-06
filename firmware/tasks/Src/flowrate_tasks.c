@@ -6,11 +6,8 @@ static FlowMsg_t message;
 
 void Flowrate_Task(void *pvParameters) {
     TickType_t xLastWakeTime = xTaskGetTickCount();
-    // queue init
-    
 
     while (1) {
-        // need to reset queue? no.
 
         if (xQueueReceive(flowrate_queue, &message.diff, portMAX_DELAY)) {
             

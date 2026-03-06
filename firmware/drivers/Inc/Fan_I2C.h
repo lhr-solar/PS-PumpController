@@ -10,6 +10,10 @@
 /*                              FANS + FAN CHIP                                  */
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
+#define FAN_TASK_PRIO       tskIDLE_PRIORITY + 4
+#define PUMP_TASK_PRIO       tskIDLE_PRIORITY + 4
+
+// returned by MX_I2C1_Init()
 typedef enum FanChip_Status {
     FAN_CHIP_INIT_FAIL,
     FAN_CHIP_OK,
@@ -19,16 +23,19 @@ typedef enum FanChip_Status {
 
 /**
 * @brief I2C Initialization Function
+* @return FanChip_Status_t indicating failure (0) or success (1) of initialization
 */
 FanChip_Status_t MX_I2C1_Init(void);
 
 /**
 * @brief I2C Transmit Interrupt Callback
+* @param hi2c: pointer to I2C handle structure
 */
 void HAL_I2C_MasterTxCpltCallback(I2C_HandleTypeDef* hi2c);
 
 /**
 * @brief I2C Recieve Interrupt Callback
+* @param hi2c: pointer to I2C handle structure
 */
 void HAL_I2C_MasterRxCpltCallback(I2C_HandleTypeDef* hi2c);
 

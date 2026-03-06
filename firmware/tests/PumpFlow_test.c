@@ -1,3 +1,7 @@
+/* .·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·. */
+/*    PUMP_FLOW TEST: SETS PUMP TO 25% THEN 100% AND PRINTS FLOWRATE TO CONSOLE    */
+/* .·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·. */
+
 #include "pumpController.h"
 #include "task.h"
 

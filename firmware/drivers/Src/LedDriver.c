@@ -1,14 +1,5 @@
 #include "pumpController.h"
 
-// static enum LED_Index {
-//     PUMP_LED,
-//     FAN_LED,
-//     FANCHIP_LED,
-//     FLOW_LED,
-//     TEMP_LED,
-//     STATUS_LED
-// } LED_Index_t;
-
 static const GPIO_Pin_t led_configs[] = {
     {PUMP_LED_PORT, PUMP_LED_PIN},
     {FAN_LED_PORT, FAN_LED_PIN},
@@ -44,15 +35,6 @@ LED_Status_t LEDs_Init(void) {
     for(int i = 0; i < sizeof(led_configs) / sizeof(GPIO_Pin_t); i++) {
         LED_Init(led_configs[i]);
     }
-
-    // PSOM status LED init
-    // GPIO_InitTypeDef led_init = {
-    //     .Mode = GPIO_MODE_OUTPUT_PP,
-    //     .Pull = GPIO_NOPULL,
-    //     .Pin = STATUS_LED_PIN_1 | STATUS_LED_PIN_2 | STATUS_LED_PIN_3,
-    // };
-
-    // HAL_GPIO_Init(STATUS_LED_PORT, &led_init);
 
     return LED_OK;
 }

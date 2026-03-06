@@ -11,6 +11,7 @@
 
 #define TOGGLE_TIME 500     // same as blinky
 
+// returned by LEDs_Init()
 typedef enum LED_Status {
     LED_INIT_FAIL,
     LED_OK
@@ -18,6 +19,7 @@ typedef enum LED_Status {
 
 /**
 * @brief LED Initialization Function
+* @return LED_Status_t indicating failure (0) or success (1) of initialization
 */
 LED_Status_t LEDs_Init(void);
 

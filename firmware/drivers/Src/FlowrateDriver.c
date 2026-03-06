@@ -9,15 +9,8 @@ QueueHandle_t flowrate_queue;
 uint8_t flowrate_qStorage[FLOW_QUEUE_LENGTH * FLOW_ITEM_SIZE];
 static StaticQueue_t xStaticQueue_flowrate;
 
-// static StaticQueue_t xStaticQueue_adc;
+Flow_Status_t MX_TIM2_Init(void) {
 
-/**
-  * @brief TIM2 Initialization Function
-  * @param None
-  * @retval None
-  */
-Flow_Status_t MX_TIM2_Init(void)
-{
     __HAL_RCC_TIM2_CLK_ENABLE();
     __HAL_RCC_GPIOB_CLK_ENABLE();
 
@@ -69,13 +62,13 @@ Flow_Status_t MX_TIM2_Init(void)
     return FLOWRATE_OK;
 }
 
+
 void TIM2_IRQHandler(void) {
     HAL_TIM_IRQHandler(&htim2);
 }
 
 
-void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
-{
+void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
     static uint32_t last_capture = 0;
     uint32_t current_capture;
 
