@@ -61,7 +61,7 @@ def compile_test(script_dir: Path, port: str, test_name: str,
         f"TEST={test_name}",
         f"PROJECT_TARGET={port}",
         "BEAR_ENABLE=0",
-        #f"PROJECT_BUILD_DIR={build_dir}",
+        f"PROJECT_BUILD_DIR={build_dir}",
         *make_flags,
     ]
 
