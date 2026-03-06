@@ -20,6 +20,6 @@ void Init_Task(void* argument) {
     }
     printf("EMC2305 Initialized\r\n");
     HAL_GPIO_TogglePin(PUMP_STATUS_LED_PORT, PUMP_STATUS_LED_PIN);
-    // Task kills itself
+
     vTaskDelete(NULL);
 }

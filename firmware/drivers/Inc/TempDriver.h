@@ -12,7 +12,6 @@
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
 #define TEMP_TABLE_SIZE     4096    // 12 bit ADC
-#define ADC_TASK_PRIO       tskIDLE_PRIORITY + 4
 
 // returned by Temp_ADC_Init() and Temp_StartADC()
 typedef enum Temp_Status {

@@ -231,7 +231,7 @@ int main(void) {
         "Fan Control Task",
         configMINIMAL_STACK_SIZE,
         NULL,
-        tskIDLE_PRIORITY + 2,
+        FAN_TASK_PRIO,
         emc2305TaskStack_1,
         &emc2305TaskBuffer_1);
 
@@ -239,7 +239,7 @@ int main(void) {
         "Pump Control Task",
         configMINIMAL_STACK_SIZE,
         NULL,
-        tskIDLE_PRIORITY + 5,
+        PUMP_TASK_PRIO,
         emc2305TaskStack_2,
         &emc2305TaskBuffer_2);
 

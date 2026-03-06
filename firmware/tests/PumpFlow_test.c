@@ -63,7 +63,7 @@ int main(void) {
         "Pump Control Task",
         configMINIMAL_STACK_SIZE,
         NULL,
-        tskIDLE_PRIORITY + 5,
+        PUMP_TASK_PRIO,
         PumpControlStack,
         &PumpControlTaskBuffer);
 
@@ -71,7 +71,7 @@ int main(void) {
         "Flowrate Task",
         configMINIMAL_STACK_SIZE,
         NULL,
-        tskIDLE_PRIORITY + 5,
+        FLOWRATE_TASK_PRIO,
         FlowrateStack,
         &FlowrateTaskBuffer);
 

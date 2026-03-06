@@ -89,3 +89,56 @@ void HAL_I2C_MasterTxCpltCallback(I2C_HandleTypeDef* hi2c) {
 void HAL_I2C_MasterRxCpltCallback(I2C_HandleTypeDef* hi2c) {
     EMC2305_I2C_MasterRxCpltCallback(hi2c);
 }
+
+FanChip_Status_t FanChip_Init(FanChip_Device_t device, FanChip_Mode_t mode) {
+    // Allow chip to power on
+    vTaskDelay(pdMS_TO_TICKS(250));
+
+    // Set global config
+    EMC2305_Global_Config config = { 0 };
+    config.watchdog_enable = true;
+    printf("global config set\n");
+
+    if (EMC2305_SetGlobalConfig(&chip, &config) != EMC2305_OK) {
+        Error_Handler();
+    }
+    printf("Task 1: Global Config Set\r\n");
+    // Set config1 and config2
+    EMC2305_Fan_Config1 config1 = { 0 };
+    if(mode == FSC_MODE) {
+        config1.enable_closed_loop = true; // Set this to true if using FSC (Closed Loop RPM Control)
+    } else {
+        config1.enable_closed_loop = false; // False for using PWM directly
+    }
+    config1.edges = EMC2305_EDG_5; // 5 edges is default for 2 pole fans
+    config1.range = EMC2305_RNG_2000;
+
+    EMC2305_Fan_Config2 config2 = { 0 };
+    config2.enable_ramp_rate_ctl = true;
+    config2.enable_glitch_filter = true;
+    config2.error_window = EMC2305_ERG_200RPM;
+    config2.derivative_options = EMC2305_DPT_BOTH;
+
+    if (EMC2305_SetFanConfig(&chip, device, &config1, &config2) != EMC2305_OK) {
+        Error_Handler();
+    };
+    // Depends on the fan (should be in datasheet)
+    if (EMC2305_SetPWMBaseFrequency(&chip, device, EMC2305_PWM_19k53) != EMC2305_OK) {
+        Error_Handler();
+    };
+    // Set minimum drive to 0%
+    if (EMC2305_WriteReg(&chip, EMC2305_FAN_REG_ADDR(device, EMC2305_REG_FAN1_MIN_DRIVE), 0x00) != EMC2305_OK) {
+        Error_Handler();
+    };
+    // Set PID Gain to lowest (1x)
+    if (EMC2305_WriteReg(&chip, EMC2305_FAN_REG_ADDR(device, EMC2305_REG_GAIN1), 0x00) != EMC2305_OK) {
+        Error_Handler();
+    };
+
+    // Set PWM output mode to open-drain (use false for push-pull)
+    if (EMC2305_SetPWMOutputMode(&chip, device, true) != EMC2305_OK) {
+        Error_Handler();
+    };
+
+    return FAN_CHIP_OK;
+}

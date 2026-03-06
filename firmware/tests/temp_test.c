@@ -78,7 +78,7 @@ int main() {
         "ADC Task",
         configMINIMAL_STACK_SIZE,
         (void*) 1,
-        ADC_TASK_PRIO,
+        TEMP_TASK_PRIO,
         xADCStack,
         &xADCTaskBuffer
     );

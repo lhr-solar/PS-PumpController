@@ -38,18 +38,3 @@ LED_Status_t LEDs_Init(void) {
 
     return LED_OK;
 }
-
-// void LED_Blink(GPIO_Pin_t gpio) {
-//     HAL_GPIO_TogglePin(gpio.port, gpio.pin);
-//     HAL_Delay(TOGGLE_TIME);
-//     HAL_GPIO_TogglePin(gpio.port, gpio.pin);
-//     HAL_Delay(TOGGLE_TIME);
-// }
-
-// void LED_On(GPIO_Pin_t gpio) {
-//     HAL_GPIO_WritePin(gpio.port, gpio.pin, GPIO_PIN_SET);
-// }
-
-// void LED_Off(GPIO_Pin_t gpio) {
-//     HAL_GPIO_WritePin(gpio.port, gpio.pin, GPIO_PIN_CLEAR);
-// }

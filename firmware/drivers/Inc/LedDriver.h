@@ -22,18 +22,3 @@ typedef enum LED_Status {
 * @return LED_Status_t indicating failure (0) or success (1) of initialization
 */
 LED_Status_t LEDs_Init(void);
-
-// /**
-// * @brief Turns on LED for a given amount of time
-// */
-// void LED_Blink(GPIO_Pin_t gpio)
-
-// /**
-// * @brief Turns on LED indefinitely
-// */
-// void LED_On(GPIO_Pin_t gpio)
-
-// /**
-// * @brief Turns off LED indefinitely
-// */
-// void LED_Off(GPIO_Pin_t gpio)

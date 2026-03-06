@@ -1,10 +1,5 @@
 #pragma once
 
-#include "stm32xx_hal.h"
-#include "printf.h"
-#include "FreeRTOS.h"
-#include "UART.h"
-
 #include "pindefs.h"
 #include "common.h"
 #include "tasks.h"
@@ -12,6 +7,11 @@
 #include "FlowrateDriver.h"
 #include "LedDriver.h"
 #include "TempDriver.h"
+
+#include "stm32xx_hal.h"
+#include "printf.h"
+#include "FreeRTOS.h"
+#include "UART.h"
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 /*                                    SHARED                                     */

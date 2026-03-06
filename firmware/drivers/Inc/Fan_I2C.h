@@ -10,9 +10,6 @@
 /*                              FANS + FAN CHIP                                  */
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
-#define FAN_TASK_PRIO       tskIDLE_PRIORITY + 4
-#define PUMP_TASK_PRIO       tskIDLE_PRIORITY + 4
-
 // returned by MX_I2C1_Init()
 typedef enum FanChip_Status {
     FAN_CHIP_INIT_FAIL,
@@ -20,6 +17,17 @@ typedef enum FanChip_Status {
     FAN_CHIP_WRITE_FAIL,
     FAN_CHIP_READ_FAIL,
 } FanChip_Status_t;
+
+typedef enum FanChip_Device {
+    FAN1,
+    FAN2,
+    PUMP,
+} FanChip_Device_t;
+
+typedef enum FanChip_Mode {
+    PWM_MODE,
+    FSC_MODE,
+} FanChip_Mode_t;
 
 /**
 * @brief I2C Initialization Function
@@ -48,6 +56,12 @@ void I2C1_EV_IRQHandler(void);
 * @brief This function handles I2C1 error interrupt.
 */
 void I2C1_ER_IRQHandler(void);
+
+/**
+* @brief Initializes the fan chip (EMC2305) over I2C, called at the start of fanchip task
+* @return FanChip_Status_t indicating failure (0) or success (1) of initialization
+*/
+FanChip_Status_t FanChip_Init(FanChip_Device_t device, FanChip_Mode_t mode);
 
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
