@@ -3,45 +3,14 @@
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
 #include "pumpController.h"
+#include "common.h"
 
 extern I2C_HandleTypeDef hi2c1;
-// extern EMC2305_HandleTypeDef chip;
+EMC2305_HandleTypeDef chip;
 StackType_t initsTaskStack[configMINIMAL_STACK_SIZE];
 StaticTask_t initsTaskBuffer;
 StaticTask_t emc2305TaskBuffer_1;
 StackType_t emc2305TaskStack_1[configMINIMAL_STACK_SIZE];
-
-
-void mx_uart_init(void) {
-    // UART init
-    GPIO_InitTypeDef InitStruct = { 0 };
-    RCC_PeriphCLKInitTypeDef PeriphClkInit = { 0 };
-
-    /** Initializes the peripherals clock
-    */
-    PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART1;
-    PeriphClkInit.Usart1ClockSelection = RCC_USART1CLKSOURCE_PCLK2;
-    if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
-    {
-        Error_Handler();
-    }
-
-    /* Peripheral clock enable */
-    __HAL_RCC_USART1_CLK_ENABLE();
-
-    __HAL_RCC_GPIOA_CLK_ENABLE();
-    /**USART1 GPIO Configuration
-    PA9     ------> USART1_TX
-    PA10     ------> USART1_RX
-    */
-    InitStruct.Pin = USART_TX_PIN | USART_RX_PIN;
-    InitStruct.Mode = GPIO_MODE_AF_PP;
-    InitStruct.Pull = GPIO_NOPULL;
-    InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-    InitStruct.Alternate = GPIO_AF7_USART1;
-    HAL_GPIO_Init(USART_PORT, &InitStruct);
-    printf("uart initialized\n");
-}
 
 void Inits_Task(void* argument) {
     // Initialize EMC2305

@@ -5,7 +5,7 @@
 #include "pumpController.h"
 
 extern I2C_HandleTypeDef hi2c1;
-// extern EMC2305_HandleTypeDef chip;
+EMC2305_HandleTypeDef chip;
 StaticTask_t initsTaskBuffer;
 StackType_t initsTaskStack[configMINIMAL_STACK_SIZE];
 StaticTask_t emc2305TaskBuffer_1;
@@ -15,7 +15,7 @@ StackType_t emc2305TaskStack_2[configMINIMAL_STACK_SIZE];
 
 void Inits_Task(void* argument) {
     // Init UART printf
-    husart1->Init.BaudRate = BAUD_RATE;
+    husart1->Init.BaudRate = UART_BAUD_RATE;
     husart1->Init.WordLength = UART_WORDLENGTH_8B;
     husart1->Init.StopBits = UART_STOPBITS_1;
     husart1->Init.Parity = UART_PARITY_NONE;
@@ -215,7 +215,7 @@ int main(void) {
 
     // Init peripherals
     
-    if (!PumpController_Init();) Error_Handler();
+    if (!PumpController_Init()) Error_Handler();
 
     // LED_Blink(led_configs[STATUS_LED]);
     // Create tasks

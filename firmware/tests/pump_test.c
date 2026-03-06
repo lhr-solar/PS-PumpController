@@ -5,7 +5,7 @@
 #include "pumpController.h"
 
 extern I2C_HandleTypeDef hi2c1;
-// extern EMC2305_HandleTypeDef chip;
+EMC2305_HandleTypeDef chip;
 StackType_t initsTaskStack[configMINIMAL_STACK_SIZE];
 StaticTask_t initsTaskBuffer;
 StaticTask_t emc2305TaskBuffer_1;

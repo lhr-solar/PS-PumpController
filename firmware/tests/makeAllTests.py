@@ -39,10 +39,7 @@ def find_tests(tests_dir: Path):
 
     tests = []
     for cfile in tests_dir.glob("*.c"):
-        clean_name = cfile.name.replace("_test.c", "")
-        tests.append(clean_name)
-
-        ###
+        tests.append(cfile.stem)
 
     if not tests:
         error("Something is horribly wrong. No test files found in the tests directory.")
@@ -61,7 +58,7 @@ def compile_test(script_dir: Path, port: str, test_name: str,
         f"TEST={test_name}",
         f"PROJECT_TARGET={port}",
         "BEAR_ENABLE=0",
-        #f"PROJECT_BUILD_DIR={build_dir}",
+        f"PROJECT_BUILD_DIR={build_dir}",
         *make_flags,
     ]
 
