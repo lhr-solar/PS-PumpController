@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+      - name: Initialize Submodules
+        run: git submodule update --init firmware/Embedded-Sharepoint
 
       - name: Cache Nix
         uses: actions/cache@v3
