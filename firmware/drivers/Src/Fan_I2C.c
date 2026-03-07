@@ -100,16 +100,11 @@ FanChip_Status_t FanChip_Init(FanChip_Device_t device, FanChip_Mode_t mode) {
     config.watchdog_enable = true;
 
     if (EMC2305_SetGlobalConfig(&chip, &config) != EMC2305_OK) {
-        Error_Handler();
+        return FAN_CHIP_INIT_FAIL;
     }
-    printf("Task 1: Global Config Set\r\n");
     // Set config1 and config2
     EMC2305_Fan_Config1 config1 = { 0 };
-    if(mode == FSC_MODE) {
-        config1.enable_closed_loop = true; // Set this to true if using FSC (Closed Loop RPM Control)
-    } else {
-        config1.enable_closed_loop = false; // False for using PWM directly
-    }
+    config1.enable_closed_loop = (mode == FSC_MODE);    // true if using FSC (Closed Loop RPM Control),  false for pwm directly
     config1.edges = EMC2305_EDG_5; // 5 edges is default for 2 pole fans
     config1.range = EMC2305_RNG_2000;
 
@@ -120,25 +115,41 @@ FanChip_Status_t FanChip_Init(FanChip_Device_t device, FanChip_Mode_t mode) {
     config2.derivative_options = EMC2305_DPT_BOTH;
 
     if (EMC2305_SetFanConfig(&chip, device, &config1, &config2) != EMC2305_OK) {
-        Error_Handler();
+        return FAN_CHIP_INIT_FAIL;
     };
     // Depends on the fan (should be in datasheet)
     if (EMC2305_SetPWMBaseFrequency(&chip, device, EMC2305_PWM_19k53) != EMC2305_OK) {
-        Error_Handler();
+        return FAN_CHIP_INIT_FAIL;
     };
     // Set minimum drive to 0%
     if (EMC2305_WriteReg(&chip, EMC2305_FAN_REG_ADDR(device, EMC2305_REG_FAN1_MIN_DRIVE), 0x00) != EMC2305_OK) {
-        Error_Handler();
+        return FAN_CHIP_INIT_FAIL;
     };
     // Set PID Gain to lowest (1x)
     if (EMC2305_WriteReg(&chip, EMC2305_FAN_REG_ADDR(device, EMC2305_REG_GAIN1), 0x00) != EMC2305_OK) {
-        Error_Handler();
+        return FAN_CHIP_INIT_FAIL;
     };
 
     // Set PWM output mode to open-drain (use false for push-pull)
     if (EMC2305_SetPWMOutputMode(&chip, device, true) != EMC2305_OK) {
-        Error_Handler();
+        return FAN_CHIP_INIT_FAIL;
     };
 
+    return FAN_CHIP_OK;
+}
+
+FanChip_Status_t Cooling_Init(void) {
+    #if FAN_MODE == FAN_MODE_PWM
+        if (FanChip_Init(FAN2, PWM_MODE) != FAN_CHIP_OK)
+            return FAN_CHIP_INIT_FAIL;
+    #elif FAN_MODE == FAN_MODE_FSC
+        if (FanChip_Init(FAN2, FSC_MODE) != FAN_CHIP_OK)
+            return FAN_CHIP_INIT_FAIL;
+    #endif
+
+    #if PUMP_MODE == FAN_MODE_PWM
+        if (FanChip_Init(PUMP, PWM_MODE) != FAN_CHIP_OK)
+            return FAN_CHIP_INIT_FAIL;
+    #endif
     return FAN_CHIP_OK;
 }

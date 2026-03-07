@@ -73,7 +73,7 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc) {
     PeriphClkInit.PLLSAI1.PLLSAI1R = RCC_PLLR_DIV2;
     PeriphClkInit.PLLSAI1.PLLSAI1ClockOut = RCC_PLLSAI1_ADC1CLK;
     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK) {
-      Error_Handler();
+      return TEMP_INIT_FAIL;
     }
 
     /* Peripheral clock enable */

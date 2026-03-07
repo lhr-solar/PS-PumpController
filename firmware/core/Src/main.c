@@ -9,6 +9,6 @@ int main(void) {
 
 // TO DO:
 /*
-    - add compile flags to to control pump/fan speed settings instead of hardcoding
+    - CANNNNN
 
 */

@@ -32,7 +32,7 @@ Flow_Status_t MX_TIM2_Init(void) {
     );
 
     if (flowrate_queue == NULL)
-        Error_Handler();
+        return FLOWRATE_INIT_FAIL;
 
     HAL_NVIC_SetPriority(TIM2_IRQn, FLOW_INTERRUPT_PRIO, 0);
     HAL_NVIC_EnableIRQ(TIM2_IRQn);
@@ -44,7 +44,7 @@ Flow_Status_t MX_TIM2_Init(void) {
     htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
 
     if (HAL_TIM_IC_Init(&htim2) != HAL_OK)
-        Error_Handler();
+        return FLOWRATE_INIT_FAIL;
 
     TIM_IC_InitTypeDef sConfigIC = {0};
     sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_RISING;
@@ -53,7 +53,7 @@ Flow_Status_t MX_TIM2_Init(void) {
     sConfigIC.ICFilter = 0;
 
     if (HAL_TIM_IC_ConfigChannel(&htim2, &sConfigIC, TIM_CHANNEL_2) != HAL_OK)
-        Error_Handler();
+        return FLOWRATE_INIT_FAIL;
 
     HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_2);
 

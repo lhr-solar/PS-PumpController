@@ -60,19 +60,27 @@ void I2C1_EV_IRQHandler(void);
 void I2C1_ER_IRQHandler(void);
 
 /**
-* @brief Initializes the fan chip (EMC2305) over I2C, called at the start of fanchip task
+* @brief Initializes the fan chip (EMC2305) over I2C, called at the start of fanchip task. Configures the devices as PWM/FSC as set in macros
 * @return FanChip_Status_t indicating failure (0) or success (1) of initialization
 */
-FanChip_Status_t FanChip_Init(FanChip_Device_t device, FanChip_Mode_t mode);
+FanChip_Status_t Cooling_Init(void);
 
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
-/*                              PUMP CONTROL                                     */
+/*                       PUMP + FANS SPEED CONTROLS                              */
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
-// Pump macros
-#define PERCENT_0           0
-#define PERCENT_25          25
-#define PERCENT_50          50
-#define PERCENT_75          75
-#define PERCENT_100         100
+// fan control modes
+#define FAN_MODE_PWM   0
+#define FAN_MODE_FSC   1
+
+// !! CHANGE MODES AS NEEDED !!
+#define FAN_MODE        FAN_MODE_PWM
+#define PUMP_MODE       FAN_MODE_PWM        // should always be pwm
+
+
+// Test speeds
+#define FAN_TEST_PWM   50
+#define FAN_TEST_RPM   3000
+
+#define PUMP_TEST_PWM  100
