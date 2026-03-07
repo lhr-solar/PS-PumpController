@@ -5,7 +5,7 @@
 // pump control
 void PumpControl_Task(void* argument) {
 
-    if(!FanChip_Init(PUMP, PWM_MODE)) {
+    if(Cooling_Init() != FAN_CHIP_OK) {
         Error_Handler();
     }
 
