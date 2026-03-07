@@ -3,6 +3,7 @@
 
 extern EMC2305_HandleTypeDef chip;
 
+#define BLINKY_TASK_DELAY    pdMS_TO_TICKS(500)
 
 void Init_Task(void* argument) {
     // Init UART printf
@@ -30,6 +31,6 @@ void Init_Task(void* argument) {
 void Blinky_Task(void *pvParameters) {
     while (1) {
         HAL_GPIO_TogglePin(PUMP_STATUS_LED_PORT, PUMP_STATUS_LED_PIN);
-        vTaskDelay(pdMS_TO_TICKS(500));
+        vTaskDelay(BLINKY_TASK_DELAY);
     }
 }

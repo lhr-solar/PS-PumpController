@@ -1,4 +1,4 @@
-#include "TempDriver.h"
+#include "Temp.h"
 
 // extern ADC_HandleTypeDef hadc1;
 extern ADC_HandleTypeDef* hadc1;
@@ -10,7 +10,7 @@ extern const int16_t temp_table[4096];
 
 QueueHandle_t adc_queue;
 uint8_t adc_qStorage[ADC_QUEUE_LENGTH * ADC_ITEM_SIZE];
-static StaticQueue_t xStaticQueue_adc;
+static StaticQueue_t xADC_queue;
 
 ADC_ChannelConfTypeDef ADC_Config = {
     .Channel = TEMP1_ADC_CHANNEL,
@@ -24,7 +24,7 @@ Temp_Status_t Temp_ADC_Init() {
         ADC_QUEUE_LENGTH, 
         ADC_ITEM_SIZE, 
         adc_qStorage, 
-        &xStaticQueue_adc
+        &xADC_queue
     );
     
     /* ================ ADC Init Struct ================ */
@@ -98,7 +98,6 @@ Temp_Status_t Temp_StartADC(bool clearQueue) {
     // Clear queue if requested
     if (clearQueue) { xQueueReset(adc_queue); }
     // Start ADC conversion: result will appear in queue
-    // if (adc_read(TEMP1_ADC_CHANNEL, TEMP1_SAMPLE_TIME, hadc1, adc_queue) != ADC_OK) {
     if (adc_read(hadc1, &ADC_Config ,adc_queue) != ADC_OK) {
         return TEMP_ADC_START_FAIL;
     }

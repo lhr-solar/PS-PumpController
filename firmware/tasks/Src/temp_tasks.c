@@ -1,5 +1,7 @@
 #include "tasks.h"
 
+#define TEMP_TASK_DELAY      pdMS_TO_TICKS(100)
+
 void Temp_Task(void *pvParameters) {
     TempMsg_t message;
     TickType_t xLastWakeTime = xTaskGetTickCount();
@@ -19,6 +21,6 @@ void Temp_Task(void *pvParameters) {
         }
         
         HAL_GPIO_TogglePin(TEMP_LED_PORT, TEMP_LED_PIN);
-        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(1000));
+        vTaskDelayUntil(&xLastWakeTime, TEMP_TASK_DELAY);
     }
 }

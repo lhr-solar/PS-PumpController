@@ -6,17 +6,16 @@
 #include "stm32xx_hal.h"
 #include "printf.h"
 #include "UART.h"
-#include "LedDriver.h"
+#include "Leds.h"
 #include "Fan_I2C.h"
-#include "FlowrateDriver.h"
-#include "TempDriver.h"
+#include "Flowrate.h"
+#include "Temp.h"
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 /*                                    SHARED                                     */
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
 #define UART_BAUD_RATE 115200
-#define DELAY_TIME 10000
 
 // stores gpio pins concisely
 typedef struct {

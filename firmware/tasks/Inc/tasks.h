@@ -1,10 +1,10 @@
 #pragma once
 
 #include "Fan_I2C.h"
-#include "FlowrateDriver.h"
-#include "LedDriver.h"
-#include "TempDriver.h"
-#include "pumpController.h"
+#include "Flowrate.h"
+#include "Leds.h"
+#include "Temp.h"
+#include "PumpController.h"
 #include "common.h"
 #include "pindefs.h"
 #include "EMC2305.h"

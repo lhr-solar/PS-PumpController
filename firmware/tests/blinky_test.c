@@ -2,7 +2,7 @@
 /*              BLINKY TEST: Blinks every LED in sequence then loops             */
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
-#include "pumpController.h"
+#include "PumpController.h"
 
 int main(){
     HAL_Init();

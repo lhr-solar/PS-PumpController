@@ -1,5 +1,7 @@
 #include "tasks.h"
 
+#define FANS_TASK_DELAY     pdMS_TO_TICKS(10000)
+
 void FanControl_Task(void* argument) {
     
     if(!FanChip_Init(FAN2, PWM_MODE)) {
@@ -20,12 +22,12 @@ void FanControl_Task(void* argument) {
         if (EMC2305_SetFanPWM(&chip, EMC2305_FAN2, 50) != EMC2305_OK) {
             Error_Handler();
         };
-        vTaskDelay(pdMS_TO_TICKS(10000));
+        vTaskDelay(FANS_TASK_DELAY);
 
         if (EMC2305_SetFanPWM(&chip, EMC2305_FAN2, 0) != EMC2305_OK) {
             Error_Handler();
         };
-        vTaskDelay(pdMS_TO_TICKS(10000));
+        vTaskDelay(FANS_TASK_DELAY);
 
         // printf("Task 1: PWM2 drive set to 25%%\r\n");
 
@@ -53,7 +55,6 @@ void FanControl_Task(void* argument) {
         // printf("Drive PWM: %u\r\n", pwm);
 
         // Blink fan LED
-        // LED_Blink(led_configs[FANCHIP_LED]);
         HAL_GPIO_TogglePin(FANCHIP_LED_PORT, FANCHIP_LED_PIN);
 
     }

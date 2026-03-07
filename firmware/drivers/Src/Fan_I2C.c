@@ -3,6 +3,8 @@
 I2C_HandleTypeDef hi2c1;
 extern EMC2305_HandleTypeDef chip;
 
+#define EMC_POWER_ON_TIME       pdMS_TO_TICKS(250)
+
 // Initializes and configs I2C1 pins PB6 and PB7 for PSOM
 FanChip_Status_t MX_I2C1_Init(void) {
     // initialize I2C pins on PSOM
@@ -91,7 +93,7 @@ void HAL_I2C_MasterRxCpltCallback(I2C_HandleTypeDef* hi2c) {
 
 FanChip_Status_t FanChip_Init(FanChip_Device_t device, FanChip_Mode_t mode) {
     // Allow chip to power on
-    vTaskDelay(pdMS_TO_TICKS(250));
+    vTaskDelay(EMC_POWER_ON_TIME);
 
     // Set global config
     EMC2305_Global_Config config = { 0 };

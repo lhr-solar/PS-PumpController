@@ -1,4 +1,4 @@
-#include "FlowrateDriver.h"
+#include "Flowrate.h"
 
 TIM_HandleTypeDef htim2;
 
@@ -7,7 +7,7 @@ TIM_HandleTypeDef htim2;
 
 QueueHandle_t flowrate_queue;
 uint8_t flowrate_qStorage[FLOW_QUEUE_LENGTH * FLOW_ITEM_SIZE];
-static StaticQueue_t xStaticQueue_flowrate;
+static StaticQueue_t xflowrate_queue;
 
 Flow_Status_t MX_TIM2_Init(void) {
 
@@ -28,7 +28,7 @@ Flow_Status_t MX_TIM2_Init(void) {
         FLOW_QUEUE_LENGTH,
         FLOW_ITEM_SIZE,
         flowrate_qStorage,
-        &xStaticQueue_flowrate
+        &xflowrate_queue
     );
 
     if (flowrate_queue == NULL)
@@ -93,4 +93,17 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
             portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
         }
     }
+}
+
+Flow_Status_t Flow_GetReading(FlowMsg_t *message, TickType_t ticksToWait) {
+    
+    if (xQueueReceive(flowrate_queue, &message->diff, ticksToWait) != pdPASS) { 
+        return FLOWRATE_READ_FAIL;
+    }
+    
+    message->freq = DiffToFreq(message->diff);
+    message->flowrate_x10 = FreqToFlowrate(message->freq);
+
+    return FLOWRATE_OK;
+
 }
