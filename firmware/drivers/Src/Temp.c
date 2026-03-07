@@ -3,7 +3,7 @@
 // extern ADC_HandleTypeDef hadc1;
 extern ADC_HandleTypeDef* hadc1;
 // adc_status_t adc_read(uint32_t channel, uint32_t samplingTime, ADC_HandleTypeDef *h, QueueHandle_t q);
-extern const int16_t temp_table[4096];
+extern const int32_t temp_table[4096];
 
 #define ADC_ITEM_SIZE sizeof(uint16_t)
 #define ADC_QUEUE_LENGTH 2
@@ -89,7 +89,7 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc) {
     HAL_GPIO_Init(TEMP1_ADC_PORT, &GPIO_InitStruct);
 
     /* ADC1 interrupt Init: PRIO MUST BE AT LEAST 5 */
-    HAL_NVIC_SetPriority(ADC1_IRQn, configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY, 0);
+    HAL_NVIC_SetPriority(ADC1_IRQn, ADC_INTERRUPT_PRIO, 0);
     HAL_NVIC_EnableIRQ(ADC1_IRQn);
   }
 }
@@ -113,7 +113,7 @@ Temp_Status_t Temp_GetReading(TempMsg_t *message, TickType_t ticksToWait) {
     return TEMP_OK;
 }
 
-int16_t ADCToTemp(uint16_t adc_val) {
+int32_t ADCToTemp(uint16_t adc_val) {
     // Convert ADC value to temperature using lookup table
     if (adc_val >= TEMP_TABLE_SIZE) {
         return 0; // Cap at max index

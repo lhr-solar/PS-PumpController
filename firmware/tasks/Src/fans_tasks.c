@@ -4,7 +4,7 @@
 
 void FanControl_Task(void* argument) {
     
-    if(!FanChip_Init(FAN2, PWM_MODE)) {
+    if(FanChip_Init(FAN2, PWM_MODE) != FAN_CHIP_OK) {
         Error_Handler();
     }
 

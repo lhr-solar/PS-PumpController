@@ -15,9 +15,7 @@ void Temp_Task(void *pvParameters) {
 
         // Block until we receive data in queue
         if (Temp_GetReading(&message, portMAX_DELAY) == TEMP_OK) {
-            // Convert data to current measurent
-            message.temp_data = ADCToTemp(message.adc_val);
-            printf("ADC Value: %u, Temp: %d\n\r", message.adc_val, message.temp_data);
+            printf("ADC: %u Temp: %ld.%03ld C\n", message.adc_val, GetTempInt(message.temp_data), GetTempFrac(message.temp_data));
         }
         
         HAL_GPIO_TogglePin(TEMP_LED_PORT, TEMP_LED_PIN);

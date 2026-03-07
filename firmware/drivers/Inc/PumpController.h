@@ -31,6 +31,6 @@ typedef enum PumpController_Status {
 
 /**
 * @brief Initializes all peripherals (LEDs, UART, ADC, I2C) used by the pump controller. Should be called before any tasks are created.
-* @return PumpController_Status_t indicating failure (0) or success (1) of initialization
+* @return PumpController_Status_t indicating failure (0) or success (1) of initializations
 */
 PumpController_Status_t PumpController_Init();

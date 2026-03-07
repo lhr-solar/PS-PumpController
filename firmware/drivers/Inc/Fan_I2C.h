@@ -10,6 +10,8 @@
 /*                              FANS + FAN CHIP                                  */
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
+#define I2C_INTERRUPT_PRIO configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY
+
 // returned by MX_I2C1_Init()
 typedef enum FanChip_Status {
     FAN_CHIP_INIT_FAIL,

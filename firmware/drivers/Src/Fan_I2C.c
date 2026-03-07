@@ -32,9 +32,9 @@ FanChip_Status_t MX_I2C1_Init(void) {
     HAL_GPIO_Init(FAN_I2C_PORT, &GPIO_InitStruct);
 
     // I2C Interrupt Init
-    HAL_NVIC_SetPriority(I2C1_EV_IRQn, configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY, 0);
+    HAL_NVIC_SetPriority(I2C1_EV_IRQn, I2C_INTERRUPT_PRIO, 0);
     HAL_NVIC_EnableIRQ(I2C1_EV_IRQn);
-    HAL_NVIC_SetPriority(I2C1_ER_IRQn, configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY, 0);
+    HAL_NVIC_SetPriority(I2C1_ER_IRQn, I2C_INTERRUPT_PRIO, 0);
     HAL_NVIC_EnableIRQ(I2C1_ER_IRQn);
 
     /* Peripheral clock enable */
@@ -98,7 +98,6 @@ FanChip_Status_t FanChip_Init(FanChip_Device_t device, FanChip_Mode_t mode) {
     // Set global config
     EMC2305_Global_Config config = { 0 };
     config.watchdog_enable = true;
-    printf("global config set\n");
 
     if (EMC2305_SetGlobalConfig(&chip, &config) != EMC2305_OK) {
         Error_Handler();

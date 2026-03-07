@@ -1,9 +1,15 @@
-# creates table for converting ADC reading directly to temperature
+# therm_table.py
+# Generates drivers/Inc/TempTable.h
 
 import numpy as np
+from pathlib import Path
 
 ADC_MAX = 4095
-R_FIXED = 10000.0
+R_FIXED = 10000.0  # ohms
+
+# Determine output path relative to this script
+SCRIPT_DIR = Path(__file__).resolve().parent
+OUTPUT_FILE = SCRIPT_DIR.parent / "Inc" / "TempTable.h"
 
 # Temperature (°C), Resistance (kΩ)
 raw = """
@@ -180,11 +186,24 @@ R = np.array([p[1] for p in pairs])
 
 adc_pts = ADC_MAX * R / (R_FIXED + R)
 
-adc_to_temp = np.interp(np.arange(ADC_MAX + 1), adc_pts[::-1], temps[::-1])
+adc_values = np.arange(ADC_MAX + 1)
+adc_to_temp = np.interp(adc_values, adc_pts[::-1], temps[::-1])
 
-print("const int16_t adc_to_temp[4096] = {")
-for i, t in enumerate(adc_to_temp):
-    print(f"{int(round(t))},", end="")
-    if (i + 1) % 16 == 0:
-        print()
-print("};")
+adc_to_temp_mc = np.round(adc_to_temp * 1000).astype(int)
+
+# Write header (overwrite if exists)
+with open(OUTPUT_FILE, "w") as f:
+    f.write("#ifndef TEMP_TABLE_H\n")
+    f.write("#define TEMP_TABLE_H\n\n")
+    f.write("#include <stdint.h>\n\n")
+    f.write("static const int32_t temp_table[4096] = {\n")
+
+    for i, val in enumerate(adc_to_temp_mc):
+        f.write(f"{val}, ")
+        if (i + 1) % 16 == 0:
+            f.write("\n")
+
+    f.write("};\n\n")
+    f.write("#endif\n")
+
+print(f"Generated {OUTPUT_FILE}")

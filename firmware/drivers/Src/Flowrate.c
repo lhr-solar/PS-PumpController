@@ -34,9 +34,7 @@ Flow_Status_t MX_TIM2_Init(void) {
     if (flowrate_queue == NULL)
         Error_Handler();
 
-    HAL_NVIC_SetPriority(TIM2_IRQn,
-                         configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY,
-                         0);
+    HAL_NVIC_SetPriority(TIM2_IRQn, FLOW_INTERRUPT_PRIO, 0);
     HAL_NVIC_EnableIRQ(TIM2_IRQn);
 
     htim2.Instance = TIM2;

@@ -25,7 +25,6 @@ int main() {
     __HAL_RCC_PWR_CLK_ENABLE();
 
     if (!PumpController_Init()) Error_Handler();
-    HAL_GPIO_TogglePin(TEMP_LED_PORT, TEMP_LED_PIN);
 
     // Create tasks
     xTaskCreateStatic(Init_Task,

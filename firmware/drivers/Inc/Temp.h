@@ -11,6 +11,9 @@
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
 #define TEMP_TABLE_SIZE     4096    // 12 bit ADC
+#define ADC_INTERRUPT_PRIO configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY - 2
+#define GetTempInt(x)       x/1000  // find temp value to the left of decimal point in celsius
+#define GetTempFrac(x)      ((x) % 1000) < 0 ? -((x) % 1000) : ((x) % 1000)    // find value to the right of decimal point in celsius
 
 // returned by Temp_ADC_Init() and Temp_StartADC()
 typedef enum Temp_Status {
@@ -23,7 +26,7 @@ typedef enum Temp_Status {
 
 // stores temperature data and raw ADC value for each reading
 typedef struct {
-    int16_t temp_data;
+    int32_t temp_data;
     uint16_t adc_val;
 } TempMsg_t;
 
@@ -54,8 +57,8 @@ Temp_Status_t Temp_StartADC(bool clearQueue);
 Temp_Status_t Temp_GetReading(TempMsg_t *message, TickType_t ticksToWait);
 
 /**
-* @brief Converts raw ADC value to temperature using lookup table
-* @param adc_val: raw ADC value to be converted to temperature
-* @return int16_t temperature corresponding to the given ADC value
+* @brief Converts raw ADC value to temperature in milicelsius using lookup table
+* @param adc_val: raw ADC value to be converted to temperature in milicelsius
+* @return int32_t temperature in milicelsius corresponding to the given ADC value
 */
-int16_t ADCToTemp(uint16_t adc_val);
+int32_t ADCToTemp(uint16_t adc_val);
