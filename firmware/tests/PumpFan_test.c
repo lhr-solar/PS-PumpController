@@ -27,7 +27,7 @@ int main(void) {
     __HAL_RCC_SYSCFG_CLK_ENABLE();
     __HAL_RCC_PWR_CLK_ENABLE();
 
-    if (!PumpController_Init()) Error_Handler();
+    if (PumpController_Init() != PUMP_CONTROLLER_OK) Error_Handler();
     
     // Create tasks
     xTaskCreateStatic(Init_Task,

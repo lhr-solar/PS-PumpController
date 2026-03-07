@@ -37,23 +37,40 @@ Flow_Status_t MX_TIM2_Init(void) {
     HAL_NVIC_SetPriority(TIM2_IRQn, FLOW_INTERRUPT_PRIO, 0);
     HAL_NVIC_EnableIRQ(TIM2_IRQn);
 
+    TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_IC_InitTypeDef sConfigIC = {0};
+
+  /* USER CODE BEGIN TIM2_Init 1 */
+
+  /* USER CODE END TIM2_Init 1 */
     htim2.Instance = TIM2;
-    htim2.Init.Prescaler = 79;
+    htim2.Init.Prescaler = 0;
     htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-    htim2.Init.Period = 0xFFFFFFFF;
+    htim2.Init.Period = 4294967295;
     htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-
+    htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
     if (HAL_TIM_IC_Init(&htim2) != HAL_OK)
-        return FLOWRATE_INIT_FAIL;
-
-    TIM_IC_InitTypeDef sConfigIC = {0};
+    {
+    return FLOWRATE_INIT_FAIL;
+    }
+    sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+    sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+    if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
+    {
+    return FLOWRATE_INIT_FAIL;
+    }
     sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_RISING;
     sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
     sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
     sConfigIC.ICFilter = 0;
-
     if (HAL_TIM_IC_ConfigChannel(&htim2, &sConfigIC, TIM_CHANNEL_2) != HAL_OK)
-        return FLOWRATE_INIT_FAIL;
+    {
+    return FLOWRATE_INIT_FAIL;
+    }
+    if (HAL_TIM_IC_ConfigChannel(&htim2, &sConfigIC, TIM_CHANNEL_3) != HAL_OK)
+    {
+    return FLOWRATE_INIT_FAIL;
+    }
 
     HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_2);
 

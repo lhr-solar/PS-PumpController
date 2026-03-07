@@ -63,9 +63,13 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc) {
     if(hadc->Instance==ADC1) {
     /** Initializes the peripherals clock
      */
+    // PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC;
+    // PeriphClkInit.AdcClockSelection = RCC_ADCCLKSOURCE_PLLSAI1;
+
     PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC;
     PeriphClkInit.AdcClockSelection = RCC_ADCCLKSOURCE_PLLSAI1;
-    PeriphClkInit.PLLSAI1.PLLSAI1Source = RCC_PLLSOURCE_MSI;
+
+    PeriphClkInit.PLLSAI1.PLLSAI1Source = RCC_PLLSOURCE_HSE;
     PeriphClkInit.PLLSAI1.PLLSAI1M = 1;
     PeriphClkInit.PLLSAI1.PLLSAI1N = 16;
     PeriphClkInit.PLLSAI1.PLLSAI1P = RCC_PLLP_DIV7;

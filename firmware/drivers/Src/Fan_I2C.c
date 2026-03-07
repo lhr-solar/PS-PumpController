@@ -12,8 +12,9 @@ FanChip_Status_t MX_I2C1_Init(void) {
     RCC_PeriphCLKInitTypeDef ClkInit = { 0 };
 
     // Initializes the peripherals clock
-    ClkInit.PeriphClockSelection = RCC_PERIPHCLK_I2C1;
+    ClkInit.PeriphClockSelection |= RCC_PERIPHCLK_I2C1;
     ClkInit.I2c1ClockSelection = RCC_I2C1CLKSOURCE_PCLK1;
+
     if (HAL_RCCEx_PeriphCLKConfig(&ClkInit) != HAL_OK)
     {
         return FAN_CHIP_INIT_FAIL;
@@ -50,6 +51,7 @@ FanChip_Status_t MX_I2C1_Init(void) {
     hi2c1.Init.OwnAddress2Masks = I2C_OA2_NOMASK;
     hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
     hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+
     if (HAL_I2C_Init(&hi2c1) != HAL_OK)
     {
         return FAN_CHIP_INIT_FAIL;

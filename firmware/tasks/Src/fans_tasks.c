@@ -12,6 +12,8 @@ void FanControl_Task(void* argument) {
         #if FAN_MODE == FAN_MODE_PWM
 
             EMC2305_SetFanPWM(&chip, EMC2305_FAN2, FAN_TEST_PWM);
+            vTaskDelay(FANS_TASK_DELAY);
+            EMC2305_SetFanPWM(&chip, EMC2305_FAN2, FAN_TEST_PWM - 30);
 
         #elif FAN_MODE == FAN_MODE_FSC
 
