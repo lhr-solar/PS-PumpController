@@ -1,0 +1,31 @@
+name: Build Tests
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Initialize Submodules
+        run: git submodule update --init firmware/Embedded-Sharepoint
+
+      - name: Cache Nix
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cache/nix
+          key: nix-${{ runner.os }}-${{ hashFiles('flake.lock') }}
+          restore-keys: |
+            nix-${{ runner.os }}-
+
+      - name: Install Nix Action
+        uses: cachix/install-nix-action@v31
+
+      - name: Clean & Build tests
+        run: |
+          nix develop ./firmware/Embedded-Sharepoint --accept-flake-config --command bash -c "
+            cd firmware/ && make clean && python tests/makeAllTests.py
+          "
