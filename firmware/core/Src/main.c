@@ -13,6 +13,7 @@ int main(void) {
     - CAN
         - send messages (3x)
         - recieve temp messages
+        - change temp message to be 32 bit temps in milicelsius
     - cooling loop
         - pick temp setpoint
         - decide how to prioritize pump vs fan cooling

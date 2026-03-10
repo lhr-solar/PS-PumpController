@@ -15,7 +15,7 @@ StaticTask_t xBlinkyTaskBuffer;
 StackType_t xBlinkyStack[configMINIMAL_STACK_SIZE];
 
 StaticTask_t xTempTaskBuffer;
-StackType_t xTempStack[configMINIMAL_STACK_SIZE];
+StackType_t xTempStack[8*configMINIMAL_STACK_SIZE];
 
 int main() {
 

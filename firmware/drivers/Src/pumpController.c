@@ -14,11 +14,12 @@ PumpController_Status_t PumpController_Init() {
 
     // Init ADC temp sensor
     if (Temp_ADC_Init() != TEMP_OK) return PUMP_CONTROLLER_INIT_FAIL;
-    HAL_GPIO_TogglePin(TEMP_LED_PORT, TEMP_LED_PIN);
 
     // Init I2C fanchip
     if (MX_I2C1_Init() != FAN_CHIP_OK) return PUMP_CONTROLLER_INIT_FAIL;
-    HAL_GPIO_TogglePin(TEMP_LED_PORT, TEMP_LED_PIN);
+
+    if (CAN_Init() != CAN_INIT_OK) return PUMP_CONTROLLER_INIT_FAIL;
+
 
     return PUMP_CONTROLLER_OK;
 }

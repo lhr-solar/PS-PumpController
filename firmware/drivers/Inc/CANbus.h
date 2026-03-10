@@ -6,16 +6,27 @@
 #include "CAN.h"
 #include "Flowrate.h"
 #include "Fan_I2C.h"
+#include "Temp.h"
+#include "CarCAN_can_msgs.h"
+#include <string.h>
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 /*                                 CAR CAN BUS                                   */
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
-#define I2C_INTERRUPT_PRIO configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY
+#define CAN_INTERRUPT_PRIO configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY
 
 #define PUMP_STATUS_FLOWRATE_QUEUE_SIZE     5
 #define COOLANT_TEMPERATURE_QUEUE_SIZE      5
 #define RADIATOR_FANSPEED_QUEUE_SIZE        5
+
+#define PUMP_STATUS_FLOWRATE_DLC        sizeof(pump_status_flowrate_t)
+#define COOLANT_TEMPERATURE_DLC         sizeof(coolant_temperature_t)
+#define RADIATOR_FANSPEED_DLC           sizeof(radiator_fanspeed_t)
+
+#define CAN_TX_ITEM_SIZE sizeof(can_tx_payload_t)
+#define CAN_TX_QUEUE_LENGTH 20
+extern QueueHandle_t can_tx_queue;
 
 /*
 #define CAN_ID_BPS_VOLTAGE_TEMPERATURE_0 0x2
@@ -58,3 +69,5 @@ void HAL_CAN_MspInit(CAN_HandleTypeDef* hcan);
   * @retval None
   */
 void HAL_CAN_MspDeInit(CAN_HandleTypeDef* hcan);
+
+void PackTempCANMessage(CAN_TxHeaderTypeDef* header, TempMsg_t* message, uint8_t tx_data[8]);

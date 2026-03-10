@@ -10,6 +10,7 @@
 #include "Fan_I2C.h"
 #include "Flowrate.h"
 #include "Temp.h"
+#include "CANbus.h"
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 /*                                    SHARED                                     */

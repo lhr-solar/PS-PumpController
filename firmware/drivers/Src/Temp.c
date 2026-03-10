@@ -1,4 +1,5 @@
 #include "Temp.h"
+#include "printf.h"
 
 // extern ADC_HandleTypeDef hadc1;
 extern ADC_HandleTypeDef* hadc1;
@@ -6,7 +7,7 @@ extern ADC_HandleTypeDef* hadc1;
 extern const int32_t temp_table[4096];
 
 #define ADC_ITEM_SIZE sizeof(uint16_t)
-#define ADC_QUEUE_LENGTH 2
+#define ADC_QUEUE_LENGTH 50
 
 QueueHandle_t adc_queue;
 uint8_t adc_qStorage[ADC_QUEUE_LENGTH * ADC_ITEM_SIZE];
@@ -52,7 +53,7 @@ Temp_Status_t Temp_ADC_Init() {
     if (s != ADC_OK) return TEMP_INIT_FAIL;
     
     /* Calibrate after initialization (must be after clock setup)*/
-
+    HAL_ADCEx_Calibration_Start(hadc1, ADC_SINGLE_ENDED);
     return TEMP_OK;
 }
 
@@ -102,7 +103,7 @@ Temp_Status_t Temp_StartADC(bool clearQueue) {
     // Clear queue if requested
     if (clearQueue) { xQueueReset(adc_queue); }
     // Start ADC conversion: result will appear in queue
-    if (adc_read(hadc1, &ADC_Config ,adc_queue) != ADC_OK) {
+    if (adc_read(hadc1, &ADC_Config, adc_queue) != ADC_OK) {
         return TEMP_ADC_START_FAIL;
     }
     return TEMP_OK;
@@ -111,6 +112,7 @@ Temp_Status_t Temp_StartADC(bool clearQueue) {
 Temp_Status_t Temp_GetReading(TempMsg_t *message, TickType_t ticksToWait) {
     // Get ADC value from queue
     if (xQueueReceive(adc_queue, &(message->adc_val), ticksToWait) != pdPASS) { 
+                HAL_GPIO_TogglePin(FAN_LED_PORT, FAN_LED_PIN);
         return TEMP_ADC_READ_FAIL;
     }
     message->temp_data = ADCToTemp(message->adc_val);

@@ -28,7 +28,7 @@ typedef struct {
 // converts frequency in Hz to 10x flowrate
 #define FreqToFlowrate(x) (x * 10) / 11
 
-#define FLOW_INTERRUPT_PRIO configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY - 1
+#define FLOW_INTERRUPT_PRIO configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY + 2
 
 /**
   * @brief TIM2 Initialization Function

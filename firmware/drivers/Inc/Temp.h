@@ -11,7 +11,7 @@
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
 #define TEMP_TABLE_SIZE     4096    // 12 bit ADC
-#define ADC_INTERRUPT_PRIO configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY - 2
+#define ADC_INTERRUPT_PRIO configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY + 3
 #define GetTempInt(x)       x/1000  // find temp value to the left of decimal point in celsius
 #define GetTempFrac(x)      ((x) % 1000) < 0 ? -((x) % 1000) : ((x) % 1000)    // find value to the right of decimal point in celsius
 

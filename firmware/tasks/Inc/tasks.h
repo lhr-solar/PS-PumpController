@@ -8,6 +8,7 @@
 #include "common.h"
 #include "pindefs.h"
 #include "EMC2305.h"
+#include "CANbus.h"
 
 extern EMC2305_HandleTypeDef chip;
 extern I2C_HandleTypeDef hi2c1;
@@ -34,7 +35,7 @@ extern StackType_t FlowrateStack[configMINIMAL_STACK_SIZE];
 
 #define TEMP_TASK_PRIO       tskIDLE_PRIORITY + 2
 extern StaticTask_t xTempTaskBuffer;
-extern StackType_t xTempStack[configMINIMAL_STACK_SIZE];
+extern StackType_t xTempStack[8*configMINIMAL_STACK_SIZE];
 
 /**
   * @brief Initializes EMC2305 and UART, then kills itself. Only call from ONE task!
