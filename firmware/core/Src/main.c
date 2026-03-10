@@ -7,8 +7,14 @@ int main(void) {
 
 // Note: main is defined in the test files, this is just a placeholder to compile the shared code
 
-// TO DO:
 /*
-    - CANNNNN
+    TO DO:
+
+    - CAN
+        - send messages (3x)
+        - recieve temp messages
+    - cooling loop
+        - pick temp setpoint
+        - decide how to prioritize pump vs fan cooling
 
 */
