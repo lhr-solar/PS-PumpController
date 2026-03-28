@@ -101,10 +101,10 @@ void PackFlowrateCANMessage(CAN_TxHeaderTypeDef* header, pump_status_flowrate_t*
 
     tx_data[0] = FlowMsg->Pump_DutyCycle;
     tx_data[1] = FlowMsg->Pump_DutyCycle;
-    tx_data[2] = (FlowMsg->FlowRate_1 & 0xC) >> 2;
-    tx_data[3] = (FlowMsg->FlowRate_1 & 0x3);
-    tx_data[4] = (FlowMsg->FlowRate_2 & 0xC) >> 2;
-    tx_data[5] = (FlowMsg->FlowRate_2 & 0x3);
+    tx_data[2] = (FlowMsg->FlowRate_1 & 0xFF00) >> 8;
+    tx_data[3] = (FlowMsg->FlowRate_1 & 0xFF);
+    tx_data[4] = (FlowMsg->FlowRate_2 & 0xFF00) >> 8;
+    tx_data[5] = (FlowMsg->FlowRate_2 & 0xFF);
 
     return;
 }
@@ -117,20 +117,30 @@ void PackTempCANMessage(CAN_TxHeaderTypeDef* header, TempMsg_t* message, uint8_t
     header->DLC = COOLANT_TEMPERATURE_DLC;
     header->TransmitGlobalTime = DISABLE;
 
-    tx_data[0] = (message->temp_data & 0x00C0) >> 6;
-    tx_data[1] = (message->temp_data & 0x0030) >> 4;
-    tx_data[2] = (message->temp_data & 0x000C) >> 2;
-    tx_data[3] = message->temp_data & 0x0003;
+    tx_data[0] = (message->temp_data & 0xFF000000) >> 24;
+    tx_data[1] = (message->temp_data & 0x00FF0000) >> 16;
+    tx_data[2] = (message->temp_data & 0x0000FF00) >> 8;
+    tx_data[3] = (message->temp_data & 0x000000FF);
 }
 
-// void PackFanCANMessage(CAN_TxHeaderTypeDef* header, FlowMsg_t* FlowMsg) {
-    // header->StdId = CAN_ID_RADIATOR_FANSPEED;
-//     header->RTR = CAN_RTR_DATA;
-//     header->IDE = CAN_ID_STD;
-//     header->DLC = RADIATOR_FANSPEED_DLC;
-//     header->TransmitGlobalTime = DISABLE;
-//     return;
-// }
+void PackFanCANMessage(CAN_TxHeaderTypeDef* header, radiator_fanspeed_t* FanMsg, uint8_t tx_data[8]) {
+    header->StdId = CAN_ID_RADIATOR_FANSPEED;
+    header->RTR = CAN_RTR_DATA;
+    header->IDE = CAN_ID_STD;
+    header->DLC = RADIATOR_FANSPEED_DLC;
+    header->TransmitGlobalTime = DISABLE;
+
+    tx_data[0] = (FanMsg->Radiator_Fan_Speed_Measurement_1 & 0xFF00) >> 8;
+    tx_data[1] = (FanMsg->Radiator_Fan_Speed_Measurement_1 & 0xFF);
+    tx_data[2] = (FanMsg->Radiator_Fan_Speed_Measurement_2 & 0xFF00) >> 8;
+    tx_data[3] = (FanMsg->Radiator_Fan_Speed_Measurement_2 & 0xFF);
+    tx_data[4] = (FanMsg->Radiator_Fan_Speed_Target_1 & 0xFF00) >> 8;
+    tx_data[5] = (FanMsg->Radiator_Fan_Speed_Target_1 & 0xFF);
+    tx_data[6] = (FanMsg->Radiator_Fan_Speed_Target_2 & 0xFF00) >> 8;
+    tx_data[7] = (FanMsg->Radiator_Fan_Speed_Target_2 & 0xFF);
+
+    return;
+}
 
 
 // #define CAN_ID_PUMP_STATUS_FLOWRATE 0x500

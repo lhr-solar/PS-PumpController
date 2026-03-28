@@ -20,9 +20,14 @@ void Temp_Task(void *pvParameters) {
             
             PackTempCANMessage(&temp_header, &message, temp_tx_data);
             
-            if (can_send(hcan1, &temp_header, temp_tx_data, TEMP_TASK_DELAY) != CAN_OK) {
+            if (can_send(hcan1, &temp_header, temp_tx_data, CAN_TASK_DELAY) != CAN_OK) {
                 HAL_GPIO_TogglePin(FAN_LED_PORT, FAN_LED_PIN);
             }
+            printf("fan message:");
+        for(int i = 0; i < 8 ; i++) {
+            printf(" %u", temp_tx_data[i]);
+        }
+        printf("\n\r");
         }
         
         HAL_GPIO_TogglePin(TEMP_LED_PORT, TEMP_LED_PIN);

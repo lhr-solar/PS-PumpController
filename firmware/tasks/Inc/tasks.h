@@ -37,6 +37,8 @@ extern StackType_t FlowrateStack[configMINIMAL_STACK_SIZE];
 extern StaticTask_t xTempTaskBuffer;
 extern StackType_t xTempStack[8*configMINIMAL_STACK_SIZE];
 
+#define CAN_TASK_DELAY         pdMS_TO_TICKS(100)
+
 /**
   * @brief Initializes EMC2305 and UART, then kills itself. Only call from ONE task!
   */

@@ -36,7 +36,7 @@ void PumpControl_Task(void* argument) {
 
         PackFlowrateCANMessage(&flow_header, &pump_status_msg, flow_tx_data);
             
-        if (can_send(hcan1, &flow_header, flow_tx_data, FLOWRATE_TASK_DELAY) != CAN_OK) {
+        if (can_send(hcan1, &flow_header, flow_tx_data, CAN_TASK_DELAY) != CAN_OK) {
             Error_Handler();
         }
 

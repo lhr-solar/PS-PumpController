@@ -425,8 +425,8 @@ typedef struct {
 } pump_status_flowrate_t;
 
 typedef struct {
-    int16_t Coolant_Temperature_1;
-    int16_t Coolant_Temperature_2;
+    int32_t Coolant_Temperature_1;
+    int32_t Coolant_Temperature_2;
 } coolant_temperature_t;
 
 typedef struct {
