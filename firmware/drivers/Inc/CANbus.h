@@ -71,3 +71,5 @@ void HAL_CAN_MspInit(CAN_HandleTypeDef* hcan);
 void HAL_CAN_MspDeInit(CAN_HandleTypeDef* hcan);
 
 void PackTempCANMessage(CAN_TxHeaderTypeDef* header, TempMsg_t* message, uint8_t tx_data[8]);
+
+void PackFlowrateCANMessage(CAN_TxHeaderTypeDef* header, pump_status_flowrate_t* FlowMsg, uint8_t tx_data[8]);

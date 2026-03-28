@@ -18,6 +18,7 @@ PumpController_Status_t PumpController_Init() {
     // Init I2C fanchip
     if (MX_I2C1_Init() != FAN_CHIP_OK) return PUMP_CONTROLLER_INIT_FAIL;
 
+    // Init CAN
     if (CAN_Init() != CAN_INIT_OK) return PUMP_CONTROLLER_INIT_FAIL;
 
 

@@ -1,62 +1,51 @@
 #include "CANbus.h"
 #include "printf.h"
 
-QueueHandle_t can_tx_queue;
-uint8_t can_tx_qStorage[CAN_TX_QUEUE_LENGTH * CAN_TX_ITEM_SIZE];
-static StaticQueue_t xStaticQueue_can_tx;
+// QueueHandle_t can_tx_queue;
+// uint8_t can_tx_qStorage[CAN_TX_QUEUE_LENGTH * CAN_TX_ITEM_SIZE];
+// static StaticQueue_t xStaticQueue_can_tx;
 
 CarCAN_Status_t CAN_Init(void) {
-    // taken from cubemx
-  /* USER CODE BEGIN CAN1_Init 0 */
-  /* Initialize queue */
-    can_tx_queue = xQueueCreateStatic(
-        CAN_TX_QUEUE_LENGTH, 
-        CAN_TX_ITEM_SIZE, 
-        can_tx_qStorage, 
-        &xStaticQueue_can_tx
-    );
-    if (can_tx_queue == NULL) return CAN_INIT_FAIL;
 
-  /* USER CODE END CAN1_Init 0 */
+    // removed GPIO init block, it exists in MSP
+    // Create Filter
+    CAN_FilterTypeDef sFilterConfig;
+    sFilterConfig.FilterBank = 0;
+    sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
+    sFilterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
+    sFilterConfig.FilterIdHigh = 0x0000;
+    sFilterConfig.FilterIdLow = 0x0000;
+    sFilterConfig.FilterMaskIdHigh = 0x0000;
+    sFilterConfig.FilterMaskIdLow = 0x0000;
+    sFilterConfig.FilterFIFOAssignment = CAN_RX_FIFO0;
+    sFilterConfig.FilterActivation = ENABLE;
+    sFilterConfig.SlaveStartFilterBank = 14;
 
-  /* USER CODE BEGIN CAN1_Init 1 */
+    // Setup CAN1 Initialization
+    hcan1->Instance = CAN1;
+    hcan1->Init.Prescaler = 20;
+    hcan1->Init.Mode = CAN_MODE_NORMAL;
+    hcan1->Init.SyncJumpWidth = CAN_SJW_1TQ;
+    hcan1->Init.TimeSeg1 = CAN_BS1_13TQ;
+    hcan1->Init.TimeSeg2 = CAN_BS2_2TQ;
+    hcan1->Init.TimeTriggeredMode = DISABLE;
+    hcan1->Init.AutoBusOff = DISABLE;
+    hcan1->Init.AutoWakeUp = DISABLE;
+    hcan1->Init.AutoRetransmission = DISABLE;
+    hcan1->Init.ReceiveFifoLocked = DISABLE;
+    
+    // If TransmitFifoPriority is disabled, the hardware selects the mailbox based on the message ID priority. 
+    // If enabled, the hardware uses a FIFO mechanism to select the mailbox based on the order of transmission requests.
+    hcan1->Init.TransmitFifoPriority = ENABLE;
 
-  // create filter
-  CAN_FilterTypeDef  sFilterConfig;
-  sFilterConfig.FilterBank = 0;
-  sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
-  sFilterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
-  sFilterConfig.FilterIdHigh = 0x0000;
-  sFilterConfig.FilterIdLow = 0x0000;
-  sFilterConfig.FilterMaskIdHigh = 0x0000;
-  sFilterConfig.FilterMaskIdLow = 0x0000;
-  sFilterConfig.FilterFIFOAssignment = CAN_RX_FIFO0;
-  sFilterConfig.FilterActivation = ENABLE;
-  sFilterConfig.SlaveStartFilterBank = 14;
-
-  /* USER CODE END CAN1_Init 1 */
-  hcan1->Instance = CAN1;
-  hcan1->Init.Prescaler = 20;
-  hcan1->Init.Mode = CAN_MODE_NORMAL;
-  hcan1->Init.SyncJumpWidth = CAN_SJW_1TQ;
-  hcan1->Init.TimeSeg1 = CAN_BS1_13TQ;
-  hcan1->Init.TimeSeg2 = CAN_BS2_2TQ;
-  hcan1->Init.TimeTriggeredMode = DISABLE;
-  hcan1->Init.AutoBusOff = DISABLE;
-  hcan1->Init.AutoWakeUp = DISABLE;
-  hcan1->Init.AutoRetransmission = DISABLE; // switched from disable
-  hcan1->Init.ReceiveFifoLocked = DISABLE;
-  hcan1->Init.TransmitFifoPriority = ENABLE;
-  if (can_init(hcan1, &sFilterConfig) != CAN_OK)
-  {
-    return CAN_INIT_FAIL;
-  }
-  /* USER CODE BEGIN CAN1_Init 2 */
-  if (can_start(hcan1) != CAN_OK) {
-    return CAN_INIT_FAIL;
-  }
-
-  /* USER CODE END CAN1_Init 2 */
+    // Initialize CAN1
+    if (can_init(hcan1, &sFilterConfig) != CAN_OK) { 
+        return CAN_INIT_FAIL;
+    }
+    // Start CAN1
+    if (can_start(hcan1) != CAN_OK) { 
+        return CAN_INIT_FAIL;
+    }
     return CAN_INIT_OK;
 }
 
@@ -103,63 +92,44 @@ void HAL_CAN_MspDeInit(CAN_HandleTypeDef* hcan) {
   }
 }
 
-// CarCAN_Status_t SendFlowrateCAN(FlowMsg_t *data, TickType_t ticksToWait) {
-    
+void PackFlowrateCANMessage(CAN_TxHeaderTypeDef* header, pump_status_flowrate_t* FlowMsg, uint8_t tx_data[8]) {
+    header->StdId = CAN_ID_PUMP_STATUS_FLOWRATE;
+    header->RTR = CAN_RTR_DATA;
+    header->IDE = CAN_ID_STD;
+    header->DLC = PUMP_STATUS_FLOWRATE_DLC;
+    header->TransmitGlobalTime = DISABLE;
 
+    tx_data[0] = FlowMsg->Pump_DutyCycle;
+    tx_data[1] = FlowMsg->Pump_DutyCycle;
+    tx_data[2] = (FlowMsg->FlowRate_1 & 0xC) >> 2;
+    tx_data[3] = (FlowMsg->FlowRate_1 & 0x3);
+    tx_data[4] = (FlowMsg->FlowRate_2 & 0xC) >> 2;
+    tx_data[5] = (FlowMsg->FlowRate_2 & 0x3);
 
-// }
+    return;
+}
 
+void PackTempCANMessage(CAN_TxHeaderTypeDef* header, TempMsg_t* message, uint8_t tx_data[8]) {
 
-// need     CAN_TxHeaderTypeDef header = {0}; in task
-
-// static void PackFlowrateCANHeader(void) {
-//     header->StdId = CAN_ID_PUMP_STATUS_FLOWRATE;
-//     header->RTR = CAN_RTR_DATA;
-//     header->IDE = CAN_ID_STD;
-//     header->DLC = PUMP_STATUS_FLOWRATE_DLC;
-//     header->TransmitGlobalTime = DISABLE;
-//     return;
-// }
-
-static void PackTempCANHeader(CAN_TxHeaderTypeDef* header) {
     header->StdId = CAN_ID_COOLANT_TEMPERATURE;
     header->RTR = CAN_RTR_DATA;
     header->IDE = CAN_ID_STD;
     header->DLC = COOLANT_TEMPERATURE_DLC;
     header->TransmitGlobalTime = DISABLE;
-    return;
+
+    tx_data[0] = (message->temp_data & 0x00C0) >> 6;
+    tx_data[1] = (message->temp_data & 0x0030) >> 4;
+    tx_data[2] = (message->temp_data & 0x000C) >> 2;
+    tx_data[3] = message->temp_data & 0x0003;
 }
 
-// static void PackFanCANHeader(CAN_TxHeaderTypeDef* header) {
-//     header->StdId = CAN_ID_RADIATOR_FANSPEED;
+// void PackFanCANMessage(CAN_TxHeaderTypeDef* header, FlowMsg_t* FlowMsg) {
+    // header->StdId = CAN_ID_RADIATOR_FANSPEED;
 //     header->RTR = CAN_RTR_DATA;
 //     header->IDE = CAN_ID_STD;
 //     header->DLC = RADIATOR_FANSPEED_DLC;
 //     header->TransmitGlobalTime = DISABLE;
 //     return;
-// }
-
-// void PackFlowrateCANMessage(CAN_TxHeaderTypeDef* header, FlowMsg_t* FlowMsg) {
-
-// }
-
-// set struct in task
-// [CHANGE THIS] - dbc currently has 16 bits, both temp sensors
-void PackTempCANMessage(CAN_TxHeaderTypeDef* header, TempMsg_t* message, uint8_t tx_data[8]) {
-    PackTempCANHeader(header);
-    // memcpy(&tx_data[4], &(message->temp_data), sizeof(int32_t));
-    // memcpy(&tx_data[0], &(message->temp_data), sizeof(int32_t));
-    
-    
-    tx_data[0] = (message->temp_data & 0x00C0) >> 6;
-    tx_data[1] = (message->temp_data & 0x0030) >> 4;
-    tx_data[2] = (message->temp_data & 0x000C) >> 2;
-    tx_data[3] = message->temp_data & 0x0003;
-    // printf("data to send: %d \n\r", tx_data[0]);
-}
-
-// void PackFanCANMessage(CAN_TxHeaderTypeDef* header, FlowMsg_t* FlowMsg) {
-
 // }
 
 

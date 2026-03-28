@@ -5,6 +5,7 @@
 #include "tasks.h"
 #include "common.h"
 #include "pindefs.h"
+#include "PumpController.h"
 
 EMC2305_HandleTypeDef chip;
 

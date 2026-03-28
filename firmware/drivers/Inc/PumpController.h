@@ -26,8 +26,8 @@ typedef struct {
 
 // returned by PumpController_Init()
 typedef enum PumpController_Status {
-    PUMP_CONTROLLER_INIT_FAIL,
-    PUMP_CONTROLLER_OK
+    PUMP_CONTROLLER_OK,
+    PUMP_CONTROLLER_INIT_FAIL
 } PumpController_Status_t;
 
 /**
