@@ -4,8 +4,10 @@
 
 /* ================= CAN ID Macros ================= */
 
-#define CAN_ID_VCU_STATUS 0x10
-#define CAN_ID_CONTROLS_STATUS 0x15
+#define CAN_ID_BPS_STATUS 0x1
+#define CAN_ID_BPS_AGGREGATE_ARR 0xB
+#define CAN_ID_VCU_STATUS 0x18
+#define CAN_ID_CONTROLS_STATUS 0x19
 #define CAN_ID_VCU_PRECHARGE_VOLTAGES 0x21
 #define CAN_ID_ACCEL_BRAKE_POSITION 0x50
 #define CAN_ID_ACCEL_BRAKE_POSITION_VOLTAGE 0x51
@@ -30,19 +32,66 @@
 #define CAN_ID_RADIATOR_FANSPEED 0x502
 #define CAN_ID_LV_CARRIER_STATUS 0x600
 #define CAN_ID_BRAKE_PRESSURE 0x650
-#define CAN_ID_LIGHTING_BOARD0_STATUS 0x670
-#define CAN_ID_LIGHTING_BOARD1_STATUS 0x671
-#define CAN_ID_LIGHTING_BOARD2_STATUS 0x672
-#define CAN_ID_LIGHTING_BOARD3_STATUS 0x673
-#define CAN_ID_LIGHTING_BOARD4_STATUS 0x674
-#define CAN_ID_LIGHTING_BOARD5_STATUS 0x675
-#define CAN_ID_LIGHTING_BOARD6_STATUS 0x676
 #define CAN_ID_DISPLAY_CAMERAS_STATUS 0x700
 #define CAN_ID_TELEMETRY_STATUS 0x750
 #define CAN_ID_LWS_CONFIG 0x7C0
 
+/* ================= CAN Length Macros ================= */
+
+#define CAN_DLC_BPS_STATUS 7
+#define CAN_DLC_BPS_AGGREGATE_ARR 7
+#define CAN_DLC_VCU_STATUS 6
+#define CAN_DLC_CONTROLS_STATUS 4
+#define CAN_DLC_VCU_PRECHARGE_VOLTAGES 6
+#define CAN_DLC_ACCEL_BRAKE_POSITION 5
+#define CAN_DLC_ACCEL_BRAKE_POSITION_VOLTAGE 8
+#define CAN_DLC_DRIVER_INPUT_STATUS 2
+#define CAN_DLC_MPPT_A_POWER 8
+#define CAN_DLC_MPPT_A_STATUS 5
+#define CAN_DLC_MPPT_A_SETMODE 1
+#define CAN_DLC_MPPT_B_POWER 8
+#define CAN_DLC_MPPT_B_STATUS 5
+#define CAN_DLC_MPPT_B_SETMODE 1
+#define CAN_DLC_MPPT_C_POWER 8
+#define CAN_DLC_MPPT_C_STATUS 5
+#define CAN_DLC_MPPT_C_SETMODE 1
+#define CAN_DLC_LWS_STANDARD 5
+#define CAN_DLC_SUPP_BATTERY_STATUS 8
+#define CAN_DLC_SUPP_BATTERY_CHARGER_STATUS 8
+#define CAN_DLC_BBPDU_STATUS 5
+#define CAN_DLC_BBPDU_SET_SWITCHES 4
+#define CAN_DLC_BBPDU_SET_CURRENT_LIMIT 4
+#define CAN_DLC_PUMP_STATUS_FLOWRATE 6
+#define CAN_DLC_COOLANT_TEMPERATURE 4
+#define CAN_DLC_RADIATOR_FANSPEED 8
+#define CAN_DLC_LV_CARRIER_STATUS 2
+#define CAN_DLC_BRAKE_PRESSURE 8
+#define CAN_DLC_DISPLAY_CAMERAS_STATUS 2
+#define CAN_DLC_TELEMETRY_STATUS 8
+#define CAN_DLC_LWS_CONFIG 2
+
 
 /* ================= Value Table Enums ================= */
+
+typedef enum {
+    BPS_STATUS_BPS_FAULT_DISCHARGING_OVERCURRENT = 16,
+    BPS_STATUS_BPS_FAULT_CHARGING_OVERCURRENT = 15,
+    BPS_STATUS_BPS_FAULT_ESTOP_3 = 14,
+    BPS_STATUS_BPS_FAULT_ESTOP_2 = 13,
+    BPS_STATUS_BPS_FAULT_ESTOP_1 = 12,
+    BPS_STATUS_BPS_FAULT_ARRAY_PCHG_CONTACTOR_SENSE = 11,
+    BPS_STATUS_BPS_FAULT_ARRAY_CONTACTOR_SENSE = 10,
+    BPS_STATUS_BPS_FAULT_HV_MINUS_CONTACTOR_SENSE = 9,
+    BPS_STATUS_BPS_FAULT_HV_PLUS_CONTACTOR_SENSE = 8,
+    BPS_STATUS_BPS_FAULT_WATCHDOG = 7,
+    BPS_STATUS_BPS_FAULT_ARRAY_PRECHARGE_TIMEOUT = 6,
+    BPS_STATUS_BPS_FAULT_ELCON = 5,
+    BPS_STATUS_BPS_FAULT_OVERTEMPERATURE = 4,
+    BPS_STATUS_BPS_FAULT_REGEN = 3,
+    BPS_STATUS_BPS_FAULT_UNDERVOLTAGE = 2,
+    BPS_STATUS_BPS_FAULT_OVERVOLTAGE = 1,
+    BPS_STATUS_BPS_FAULT_NO_FAULT = 0,
+} bps_status_bps_fault_e;
 
 typedef enum {
     VCU_STATUS_VCU_FAULT_MOTOR_HV_UNDERVOLTAGE = 6,
@@ -53,6 +102,13 @@ typedef enum {
     VCU_STATUS_VCU_FAULT_MOTOR_CONTACTOR_SENSE = 1,
     VCU_STATUS_VCU_FAULT_NO_FAULT = 0,
 } vcu_status_vcu_fault_e;
+
+typedef enum {
+    CONTROLS_STATUS_CONTROLS_LEADER_FAULT_DRIVE_INPUTS_INVALID_ = 3,
+    CONTROLS_STATUS_CONTROLS_LEADER_FAULT_BPS_WATCHDOG = 2,
+    CONTROLS_STATUS_CONTROLS_LEADER_FAULT_STEERING_ANGLE_SENSOR_WATCHDOG = 1,
+    CONTROLS_STATUS_CONTROLS_LEADER_FAULT_NO_FAULT = 0,
+} controls_status_controls_leader_fault_e;
 
 typedef enum {
     BBPDU_SET_SWITCHES_HSS_CONTROL_13_DO_NOTHING_YOU_RE_STUPID = 3,
@@ -174,6 +230,24 @@ typedef enum {
 /* ================= Message Structs ================= */
 
 typedef struct {
+    uint8_t BPS_Fault;
+    uint8_t BPS_Charge_OK;
+    uint8_t BPS_Regen_OK;
+    uint8_t HV_Plus_Contactor_State;
+    uint8_t HV_Minus_Contactor_State;
+    uint8_t Array_Contactor_State;
+    uint8_t Array_Precharge_Contactor_State;
+    uint32_t Main_Battery_Voltage;
+    int16_t Main_Battery_Avg_Temperature;
+} bps_status_t;
+
+typedef struct {
+    uint8_t BPS_Tap_idx;
+    uint16_t BPS_Voltage_Tap_Data;
+    int32_t BPS_Temperature_Tap_Data;
+} bps_aggregate_arr_t;
+
+typedef struct {
     uint8_t VCU_Fault;
     uint8_t Motor_Contactor_State;
     uint8_t Motor_Precharge_Contactor_State;
@@ -182,7 +256,9 @@ typedef struct {
     uint8_t VCU_Pedals_OK;
     uint8_t VCU_Regen_OK;
     uint8_t VCU_Regen_Active;
+    uint8_t VCU_Steering_Angle_OK;
     uint8_t VCU_FSM_State;
+    uint16_t VCU_FSM_Inputs;
 } vcu_status_t;
 
 typedef struct {
@@ -349,8 +425,8 @@ typedef struct {
 } pump_status_flowrate_t;
 
 typedef struct {
-    int32_t Coolant_Temperature_1;
-    int32_t Coolant_Temperature_2;
+    int16_t Coolant_Temperature_1;
+    int16_t Coolant_Temperature_2;
 } coolant_temperature_t;
 
 typedef struct {
@@ -377,111 +453,6 @@ typedef struct {
     uint16_t Brake_Pressure_2;
     uint16_t Brake_Pressure_2_Voltage;
 } brake_pressure_t;
-
-typedef struct {
-    uint8_t Lights_Faults;
-    uint8_t Active_Light_Headlights;
-    uint8_t Active_Light_Brake;
-    uint8_t Active_Light_RTurn;
-    uint8_t Active_Light_LTurn;
-    uint8_t Active_Light_Strobe;
-    uint8_t Active_Light_Custom1;
-    uint8_t Active_Light_Custom2;
-    uint8_t Active_Light_Custom3;
-    uint16_t Addr_LED_Current;
-    uint16_t LED1_Current;
-    uint16_t LED2_Current;
-} lighting_board0_status_t;
-
-typedef struct {
-    uint8_t Lights_Faults;
-    uint8_t Active_Light_Headlights;
-    uint8_t Active_Light_Brake;
-    uint8_t Active_Light_RTurn;
-    uint8_t Active_Light_LTurn;
-    uint8_t Active_Light_Strobe;
-    uint8_t Active_Light_Custom1;
-    uint8_t Active_Light_Custom2;
-    uint8_t Active_Light_Custom3;
-    uint16_t Addr_LED_Current;
-    uint16_t LED1_Current;
-    uint16_t LED2_Current;
-} lighting_board1_status_t;
-
-typedef struct {
-    uint8_t Lights_Faults;
-    uint8_t Active_Light_Headlights;
-    uint8_t Active_Light_Brake;
-    uint8_t Active_Light_RTurn;
-    uint8_t Active_Light_LTurn;
-    uint8_t Active_Light_Strobe;
-    uint8_t Active_Light_Custom1;
-    uint8_t Active_Light_Custom2;
-    uint8_t Active_Light_Custom3;
-    uint16_t Addr_LED_Current;
-    uint16_t LED1_Current;
-    uint16_t LED2_Current;
-} lighting_board2_status_t;
-
-typedef struct {
-    uint8_t Lights_Faults;
-    uint8_t Active_Light_Headlights;
-    uint8_t Active_Light_Brake;
-    uint8_t Active_Light_RTurn;
-    uint8_t Active_Light_LTurn;
-    uint8_t Active_Light_Strobe;
-    uint8_t Active_Light_Custom1;
-    uint8_t Active_Light_Custom2;
-    uint8_t Active_Light_Custom3;
-    uint16_t Addr_LED_Current;
-    uint16_t LED1_Current;
-    uint16_t LED2_Current;
-} lighting_board3_status_t;
-
-typedef struct {
-    uint8_t Lights_Faults;
-    uint8_t Active_Light_Headlights;
-    uint8_t Active_Light_Brake;
-    uint8_t Active_Light_RTurn;
-    uint8_t Active_Light_LTurn;
-    uint8_t Active_Light_Strobe;
-    uint8_t Active_Light_Custom1;
-    uint8_t Active_Light_Custom2;
-    uint8_t Active_Light_Custom3;
-    uint16_t Addr_LED_Current;
-    uint16_t LED1_Current;
-    uint16_t LED2_Current;
-} lighting_board4_status_t;
-
-typedef struct {
-    uint8_t Lights_Faults;
-    uint8_t Active_Light_Headlights;
-    uint8_t Active_Light_Brake;
-    uint8_t Active_Light_RTurn;
-    uint8_t Active_Light_LTurn;
-    uint8_t Active_Light_Strobe;
-    uint8_t Active_Light_Custom1;
-    uint8_t Active_Light_Custom2;
-    uint8_t Active_Light_Custom3;
-    uint16_t Addr_LED_Current;
-    uint16_t LED1_Current;
-    uint16_t LED2_Current;
-} lighting_board5_status_t;
-
-typedef struct {
-    uint8_t Lights_Faults;
-    uint8_t Active_Light_Headlights;
-    uint8_t Active_Light_Brake;
-    uint8_t Active_Light_RTurn;
-    uint8_t Active_Light_LTurn;
-    uint8_t Active_Light_Strobe;
-    uint8_t Active_Light_Custom1;
-    uint8_t Active_Light_Custom2;
-    uint8_t Active_Light_Custom3;
-    uint16_t Addr_LED_Current;
-    uint16_t LED1_Current;
-    uint16_t LED2_Current;
-} lighting_board6_status_t;
 
 typedef struct {
     uint8_t Display_FrameRate;
