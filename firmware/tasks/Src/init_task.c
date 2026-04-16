@@ -38,6 +38,7 @@ void Init_Task(void* argument) {
 void Blinky_Task(void *pvParameters) {
     while (1) {
         HAL_GPIO_TogglePin(PUMP_STATUS_LED_PORT, PUMP_STATUS_LED_PIN);
+        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_7);
         vTaskDelay(BLINKY_TASK_DELAY);
     }
 }

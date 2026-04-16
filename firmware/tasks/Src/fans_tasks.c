@@ -21,6 +21,7 @@ void FanControl_Task(void* argument) {
     }
 
     while (1) {
+
         #if FAN_MODE == FAN_MODE_PWM
 
             EMC2305_SetFanPWM(&chip, EMC2305_FAN2, FAN_TEST_PWM);
@@ -38,7 +39,7 @@ void FanControl_Task(void* argument) {
         printf("target pwm: %d\n\r", FAN_TEST_PWM_TARGET);
         PackFanCANMessage(&fans_header, &FanMsg, fans_tx_data);
         if (can_send(hcan1, &fans_header, fans_tx_data, CAN_TASK_DELAY) != CAN_OK) {
-            Error_Handler();
+            HAL_GPIO_TogglePin(FANCHIP_LED_PORT, FANCHIP_LED_PIN);
         }
         printf("fan message:");
         for(int i = 0; i < 8 ; i++) {
@@ -47,6 +48,8 @@ void FanControl_Task(void* argument) {
         printf("\n\r");
 
         HAL_GPIO_TogglePin(FANCHIP_LED_PORT, FANCHIP_LED_PIN);
+
+
         vTaskDelay(FANS_TASK_DELAY);
 
     }

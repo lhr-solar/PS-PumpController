@@ -42,7 +42,7 @@ static void success_handler(void) {
 static void task(void *pvParameters) {
   // create payload to send
   CAN_TxHeaderTypeDef tx_header = {0};   
-  tx_header.StdId = CAN_ID_PUMP_STATUS_FLOWRATE;
+  tx_header.StdId = CAN_ID_PUMP_STATUS;
   tx_header.RTR = CAN_RTR_DATA;
   tx_header.IDE = CAN_ID_STD;
   tx_header.DLC = 2;

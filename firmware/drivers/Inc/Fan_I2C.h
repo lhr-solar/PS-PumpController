@@ -81,6 +81,7 @@ FanChip_Status_t Cooling_Init(void);
 
 // Test speeds
 #define FAN_TEST_PWM            50
+#define FAN_FAULT_PWM           100
 #define FAN_TEST_PWM_TARGET     2475 //4950 * (FAN_TEST_PWM/100)
 #define FAN_TEST_RPM            3000
 

@@ -5,6 +5,9 @@
 // uint8_t can_tx_qStorage[CAN_TX_QUEUE_LENGTH * CAN_TX_ITEM_SIZE];
 // static StaticQueue_t xStaticQueue_can_tx;
 
+uint32_t temp_counter = 0;
+#define ALL_TAPS_RECIEVED 0xFFFF
+
 CarCAN_Status_t CAN_Init(void) {
 
     // removed GPIO init block, it exists in MSP
@@ -13,9 +16,9 @@ CarCAN_Status_t CAN_Init(void) {
     sFilterConfig.FilterBank = 0;
     sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
     sFilterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
-    sFilterConfig.FilterIdHigh = 0x0000;
+    sFilterConfig.FilterIdHigh = (0x00B << 5); 
     sFilterConfig.FilterIdLow = 0x0000;
-    sFilterConfig.FilterMaskIdHigh = 0x0000;
+    sFilterConfig.FilterMaskIdHigh = (0x7FF << 5); 
     sFilterConfig.FilterMaskIdLow = 0x0000;
     sFilterConfig.FilterFIFOAssignment = CAN_RX_FIFO0;
     sFilterConfig.FilterActivation = ENABLE;
@@ -92,8 +95,8 @@ void HAL_CAN_MspDeInit(CAN_HandleTypeDef* hcan) {
   }
 }
 
-void PackFlowrateCANMessage(CAN_TxHeaderTypeDef* header, pump_status_flowrate_t* FlowMsg, uint8_t tx_data[8]) {
-    header->StdId = CAN_ID_PUMP_STATUS_FLOWRATE;
+void PackFlowrateCANMessage(CAN_TxHeaderTypeDef* header, pump_status_t* FlowMsg, uint8_t tx_data[8]) {
+    header->StdId = CAN_ID_PUMP_STATUS;
     header->RTR = CAN_RTR_DATA;
     header->IDE = CAN_ID_STD;
     header->DLC = PUMP_STATUS_FLOWRATE_DLC;
@@ -142,27 +145,53 @@ void PackFanCANMessage(CAN_TxHeaderTypeDef* header, radiator_fanspeed_t* FanMsg,
     return;
 }
 
+/*
+typedef struct {
+    uint8_t BPS_Tap_idx; 0
+    uint16_t BPS_Voltage_Tap_Data; 1, 2
+    int32_t BPS_Temperature_Tap_Data; 3, 4, 5, 6
+} bps_aggregate_arr_t;
 
-// #define CAN_ID_PUMP_STATUS_FLOWRATE 0x500
-// #define CAN_ID_COOLANT_TEMPERATURE 0x501
-// #define CAN_ID_RADIATOR_FANSPEED 0x502
+typedef struct {
+    uint8_t BPS_Tap_idx;
+    uint8_t BPS_Temperature_Tap_Fault;
+    int32_t BPS_Temperature_Tap_Data;
+    uint16_t BPS_Temperature_Tap_Age;
+    uint8_t BPS_Temperature_FrameID;
+} bps_temperature_aggregate_arr_t;
 
+*/
+
+// int32_t UnpackBattTempMessage(uint16_t id, const uint8_t rx_data[8], int32_t array[32]) {
+//     uint8_t index = rx_data[0];
+//     int32_t temp_tap = (int32_t)((rx_data[3] << 24) | (rx_data[4] << 16) | (rx_data[5] << 8) | (rx_data[6]));
+//     array[index] = temp_tap;
+
+
+// }
 
 // typedef struct {
-//     uint8_t Pump_DutyCycle;
-//     uint8_t Pump_Fault;
-//     uint16_t FlowRate_1;
-//     uint16_t FlowRate_2;
-// } pump_status_flowrate_t; // in L/min
+//     uint8_t BPS_Fault;
+//     uint8_t BPS_Charge_OK;
+//     uint8_t BPS_Regen_OK;
+//     uint8_t HV_Plus_Contactor_State;
+//     uint8_t HV_Minus_Contactor_State;
+//     uint8_t Array_Contactor_State;
+//     uint8_t Array_Precharge_Contactor_State;
+//     uint32_t Main_Battery_Voltage;
+//     int16_t Main_Battery_Avg_Temperature;
+//     uint8_t BPS_Segment0_Status;
+//     uint8_t BPS_Segment1_Status;
+//     uint8_t BPS_Segment2_Status;
+//     uint8_t BPS_Segment3_Status;
+//     uint8_t BPS_Segment4_Status;
+//     uint8_t BPS_Segment5_Status;
+//     uint8_t BPS_Segment6_Status;
+//     uint8_t BPS_Segment7_Status;
+// } bps_status_t;
 
-// typedef struct {
-//     int16_t Coolant_Temperature_1;
-//     int16_t Coolant_Temperature_2;
-// } coolant_temperature_t; // in celsius
-
-// typedef struct {
-//     uint16_t Radiator_Fan_Speed_Measurement_1;
-//     uint16_t Radiator_Fan_Speed_Measurement_2;
-//     uint16_t Radiator_Fan_Speed_Target_1;
-//     uint16_t Radiator_Fan_Speed_Target_2;
-// } radiator_fanspeed_t; // in RPM
+void UnpackBPSStatusMessage(bps_status_msg_t* msg, uint16_t id, const uint8_t rx_data[8]) {
+    msg->BPS_Fault = rx_data[0];
+    msg->Main_Battery_Avg_Temperature = ((rx_data[5] << 8) + rx_data[6]);
+    return;
+}

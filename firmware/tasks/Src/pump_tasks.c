@@ -11,7 +11,7 @@ static uint8_t flow_tx_data[8] = {0};
 // pump control
 void PumpControl_Task(void* argument) {
 
-    pump_status_flowrate_t pump_status_msg = {0};
+    pump_status_t pump_status_msg = {0};
     TickType_t xLastWakeTime = xTaskGetTickCount();
 
     if(Cooling_Init() != FAN_CHIP_OK) {
@@ -37,7 +37,8 @@ void PumpControl_Task(void* argument) {
         PackFlowrateCANMessage(&flow_header, &pump_status_msg, flow_tx_data);
             
         if (can_send(hcan1, &flow_header, flow_tx_data, CAN_TASK_DELAY) != CAN_OK) {
-            Error_Handler();
+            HAL_GPIO_TogglePin(FLOW_LED_PORT, FLOW_LED_PIN);
+            // Error_Handler();
         }
 
         vTaskDelayUntil(&xLastWakeTime, FLOWRATE_TASK_DELAY);

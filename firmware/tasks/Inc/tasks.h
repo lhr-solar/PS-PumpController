@@ -9,6 +9,7 @@
 #include "pindefs.h"
 #include "EMC2305.h"
 #include "CANbus.h"
+#include "faults.h"
 
 extern EMC2305_HandleTypeDef chip;
 extern I2C_HandleTypeDef hi2c1;
@@ -36,6 +37,10 @@ extern StackType_t FlowrateStack[configMINIMAL_STACK_SIZE];
 #define TEMP_TASK_PRIO       tskIDLE_PRIORITY + 2
 extern StaticTask_t xTempTaskBuffer;
 extern StackType_t xTempStack[8*configMINIMAL_STACK_SIZE];
+
+#define FAULT_TASK_PRIO       configMAX_PRIORITIES - 1
+extern StaticTask_t xFaultTaskBuffer;
+extern StackType_t xFaultStack[8*configMINIMAL_STACK_SIZE];
 
 #define CAN_TASK_DELAY         pdMS_TO_TICKS(100)
 
@@ -70,3 +75,5 @@ void Flowrate_Task(void* argument);
   * @brief Reads temperature from ADC, converts to Celsius, and prints to UART, while blinking temp LED
   */
 void Temp_Task(void *pvParameters);
+
+void CANrecv_Task();
