@@ -46,3 +46,20 @@ void CANrecv_Task() {
 
     }
 }
+
+void TempRecv_Task() {
+
+    while(1) {
+        if (can_recv(hcan1, CAN_ID_BPS_STATUS, &bps_header, bps_rx_data, CAN_TASK_DELAY) != CAN_OK) {
+            UnpackBPSStatusMessage(&bps_status_global, bps_header.StdId, bps_rx_data);
+            
+            if(bps_status_global.BPS_Fault){
+                printf("BPS FAULT DETECTED\n\r");
+                HAL_GPIO_TogglePin(TEMP_LED_PORT, TEMP_LED_PIN);
+            }
+            
+            HAL_GPIO_TogglePin(FAN_LED_PORT, FAN_LED_PIN);
+        }
+
+    }
+}

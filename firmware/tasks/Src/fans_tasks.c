@@ -54,4 +54,3 @@ void FanControl_Task(void* argument) {
 
     }
 }
-

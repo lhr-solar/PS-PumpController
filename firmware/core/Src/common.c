@@ -61,7 +61,7 @@ bool mx_uart_init(void) {
     PeriphClkInit.Usart1ClockSelection = RCC_USART1CLKSOURCE_PCLK2;
     if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
     {
-        Error_Handler();
+        return false;
     }
 
     /* Peripheral clock enable */
@@ -77,8 +77,9 @@ bool mx_uart_init(void) {
     InitStruct.Pull = GPIO_NOPULL;
     InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
     InitStruct.Alternate = GPIO_AF7_USART1;
+
     HAL_GPIO_Init(USART_PORT, &InitStruct);
-    printf("uart initialized\n");
+
     return true;
 }
 

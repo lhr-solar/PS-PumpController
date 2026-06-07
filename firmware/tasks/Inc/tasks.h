@@ -44,6 +44,8 @@ extern StackType_t xFaultStack[8*configMINIMAL_STACK_SIZE];
 
 #define CAN_TASK_DELAY         pdMS_TO_TICKS(100)
 
+extern bps_status_msg_t bps_status_global;
+
 /**
   * @brief Initializes EMC2305 and UART, then kills itself. Only call from ONE task!
   */
@@ -77,3 +79,5 @@ void Flowrate_Task(void* argument);
 void Temp_Task(void *pvParameters);
 
 void CANrecv_Task();
+
+void TempRecv_Task();

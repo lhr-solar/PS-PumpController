@@ -3,6 +3,7 @@
 #include "UART.h"
 #include "printf.h"
 #include "pindefs.h"
+#include "PumpController.h"
 
 void Error_Handler(void);
 void SystemClock_Config(void);

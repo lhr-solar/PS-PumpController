@@ -2,6 +2,7 @@
 
 #include "pindefs.h"
 #include "tempTable.h"
+#include "tempTable100k.h"
 
 #include "stm32xx_hal.h"
 #include "ADC.h"
@@ -14,6 +15,12 @@
 #define ADC_INTERRUPT_PRIO configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY + 3
 #define GetTempInt(x)       x/1000  // find temp value to the left of decimal point in celsius
 #define GetTempFrac(x)      ((x) % 1000) < 0 ? -((x) % 1000) : ((x) % 1000)    // find value to the right of decimal point in celsius
+
+typedef enum Thermistor {
+    THERMISTOR_10K,
+    THERMISTOR_100K
+} Thermistor_t;
+#define THERMISTOR_TYPE THERMISTOR_100K         // CHANGE THIS AS NEEDED
 
 // returned by Temp_ADC_Init() and Temp_StartADC()
 typedef enum Temp_Status {
@@ -62,3 +69,10 @@ Temp_Status_t Temp_GetReading(TempMsg_t *message, TickType_t ticksToWait);
 * @return int32_t temperature in milicelsius corresponding to the given ADC value
 */
 int32_t ADCToTemp(uint16_t adc_val);
+
+/**
+* @brief Converts raw ADC value of 100k thermistor to temperature in milicelsius using lookup table
+* @param adc_val: raw ADC value of 100k thermistor to be converted to temperature in milicelsius
+* @return int32_t temperature in milicelsius corresponding to the given ADC value of 100k thermistor
+*/
+int32_t ADCToTemp100k(uint16_t adc_val);

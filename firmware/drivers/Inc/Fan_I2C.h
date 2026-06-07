@@ -67,7 +67,7 @@ FanChip_Status_t Cooling_Init(void);
 
 
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
-/*                       PUMP + FANS SPEED CONTROLS                              */
+/*                        PUMP + FANS SPEED TESTING                              */
 /*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
 
 // fan control modes
@@ -86,3 +86,21 @@ FanChip_Status_t Cooling_Init(void);
 #define FAN_TEST_RPM            3000
 
 #define PUMP_TEST_PWM           100
+
+
+/*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
+/*                  PUMP + FANS SPEED SETPOINTS (REAL)                           */
+/*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*.·:·.✧ ✦ ✧.·:·.*/
+
+// pump temp setpoints (deg C)
+#define PUMP_TEMP_MIN        0
+#define PUMP_TEMP_SP1        40
+#define PUMP_TEMP_SP2        45
+#define PUMP_TEMP_SP3        50
+#define PUMP_TEMP_MAX        100
+
+// pump speed results
+#define PUMP_PWM_SP1        0
+#define PUMP_PWM_SP2        100
+#define PUMP_PWM_SP3        100
+#define PUMP_PWM_SP4        100

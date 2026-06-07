@@ -7,7 +7,7 @@ PumpController_Status_t PumpController_Init() {
     if (LEDs_Init() != LED_OK) return PUMP_CONTROLLER_INIT_FAIL;
 
     // Init UART printf
-    if (!mx_uart_init()) return PUMP_CONTROLLER_INIT_FAIL;
+    if (mx_uart_init() != true) return PUMP_CONTROLLER_INIT_FAIL;
 
     // Init TIM2 flowrate
     if (MX_TIM2_Init() != FLOWRATE_OK) return PUMP_CONTROLLER_INIT_FAIL;

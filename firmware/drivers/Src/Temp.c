@@ -115,7 +115,13 @@ Temp_Status_t Temp_GetReading(TempMsg_t *message, TickType_t ticksToWait) {
                 HAL_GPIO_TogglePin(FAN_LED_PORT, FAN_LED_PIN);
         return TEMP_ADC_READ_FAIL;
     }
-    message->temp_data = ADCToTemp(message->adc_val);
+    if (THERMISTOR_TYPE == THERMISTOR_10K) {
+        message->temp_data = ADCToTemp(message->adc_val);
+    } else if (THERMISTOR_TYPE == THERMISTOR_100K) {
+        message->temp_data = ADCToTemp100k(message->adc_val);
+    } else {
+        return TEMP_ADC_READ_FAIL;
+    }
     return TEMP_OK;
 }
 
@@ -125,4 +131,12 @@ int32_t ADCToTemp(uint16_t adc_val) {
         return 0; // Cap at max index
     }
     return temp_table[adc_val];
+}
+
+int32_t ADCToTemp100k(uint16_t adc_val) {
+    // Convert ADC value to temperature using lookup table
+    if (adc_val >= TEMP_TABLE_SIZE) {
+        return 0; // Cap at max index
+    }
+    return temp_table_100k[adc_val];
 }
