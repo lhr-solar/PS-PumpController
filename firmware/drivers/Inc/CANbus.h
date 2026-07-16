@@ -20,22 +20,14 @@
 #define COOLANT_TEMPERATURE_DLC         sizeof(coolant_temperature_t)
 #define RADIATOR_FANSPEED_DLC           sizeof(radiator_fanspeed_t)
 
+#define BPS_FAULT_INDEX 0
+#define BPS_TEMP_LOW_INDEX 6
+#define BPS_TEMP_HIGH_INDEX 5
+
 #define CAN_TX_ITEM_SIZE sizeof(can_tx_payload_t)
 #define CAN_TX_QUEUE_LENGTH 20
 extern QueueHandle_t can_tx_queue;
 
-// int32_t TempTapsArray[32] = {0};
-
-/*
-#define CAN_ID_BPS_VOLTAGE_TEMPERATURE_0 0x2
-#define CAN_ID_BPS_VOLTAGE_TEMPERATURE_1 0x3
-#define CAN_ID_BPS_VOLTAGE_TEMPERATURE_2 0x4
-#define CAN_ID_BPS_VOLTAGE_TEMPERATURE_3 0x5
-#define CAN_ID_BPS_VOLTAGE_TEMPERATURE_4 0x6
-#define CAN_ID_BPS_VOLTAGE_TEMPERATURE_5 0x7
-#define CAN_ID_BPS_VOLTAGE_TEMPERATURE_6 0x8
-#define CAN_ID_BPS_VOLTAGE_TEMPERATURE_7 0x9
-*/
 
 typedef struct {
     uint8_t BPS_Fault;

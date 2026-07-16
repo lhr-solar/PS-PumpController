@@ -2,13 +2,6 @@
 
 #define FANS_TASK_DELAY     pdMS_TO_TICKS(100)
 
-// typedef struct {
-//     uint16_t Radiator_Fan_Speed_Measurement_1;
-//     uint16_t Radiator_Fan_Speed_Measurement_2;
-//     uint16_t Radiator_Fan_Speed_Target_1;
-//     uint16_t Radiator_Fan_Speed_Target_2;
-// } radiator_fanspeed_t; // in RPM
-
 static CAN_TxHeaderTypeDef fans_header = {0};
 static uint8_t fans_tx_data[8] = {0};
 
@@ -52,5 +45,33 @@ void FanControl_Task(void* argument) {
 
         vTaskDelay(FANS_TASK_DELAY);
 
+    }
+}
+
+void FanControlLoop_Task(void* argument) {
+    radiator_fanspeed_t FanMsg = {0};
+
+    if(Cooling_Init() != FAN_CHIP_OK) {
+        Error_Handler();
+    }
+
+    while (1) {
+        // Read pump duty cycle thread-safely and scale 1:2
+        uint8_t target_fan_pwm = GetPumpDutyCycle() / 2;
+
+        EMC2305_SetFanPWM(&chip, EMC2305_FAN1, target_fan_pwm);
+        EMC2305_SetFanPWM(&chip, EMC2305_FAN2, target_fan_pwm);
+
+        FanMsg.Radiator_Fan_Speed_Target_1 = target_fan_pwm;
+        FanMsg.Radiator_Fan_Speed_Target_2 = target_fan_pwm;
+        FanMsg.Radiator_Fan_Speed_Measurement_1 = EMC2305_GetFanRPM(&chip, EMC2305_FAN1);
+        FanMsg.Radiator_Fan_Speed_Measurement_2 = EMC2305_GetFanRPM(&chip, EMC2305_FAN2);
+
+        PackFanCANMessage(&fans_header, &FanMsg, fans_tx_data);
+        can_send(hcan1, &fans_header, fans_tx_data, CAN_TASK_DELAY);
+
+        HAL_GPIO_TogglePin(FANCHIP_LED_PORT, FANCHIP_LED_PIN);
+
+        vTaskDelay(FANS_TASK_DELAY);
     }
 }

@@ -145,53 +145,8 @@ void PackFanCANMessage(CAN_TxHeaderTypeDef* header, radiator_fanspeed_t* FanMsg,
     return;
 }
 
-/*
-typedef struct {
-    uint8_t BPS_Tap_idx; 0
-    uint16_t BPS_Voltage_Tap_Data; 1, 2
-    int32_t BPS_Temperature_Tap_Data; 3, 4, 5, 6
-} bps_aggregate_arr_t;
-
-typedef struct {
-    uint8_t BPS_Tap_idx;
-    uint8_t BPS_Temperature_Tap_Fault;
-    int32_t BPS_Temperature_Tap_Data;
-    uint16_t BPS_Temperature_Tap_Age;
-    uint8_t BPS_Temperature_FrameID;
-} bps_temperature_aggregate_arr_t;
-
-*/
-
-// int32_t UnpackBattTempMessage(uint16_t id, const uint8_t rx_data[8], int32_t array[32]) {
-//     uint8_t index = rx_data[0];
-//     int32_t temp_tap = (int32_t)((rx_data[3] << 24) | (rx_data[4] << 16) | (rx_data[5] << 8) | (rx_data[6]));
-//     array[index] = temp_tap;
-
-
-// }
-
-// typedef struct {
-//     uint8_t BPS_Fault;
-//     uint8_t BPS_Charge_OK;
-//     uint8_t BPS_Regen_OK;
-//     uint8_t HV_Plus_Contactor_State;
-//     uint8_t HV_Minus_Contactor_State;
-//     uint8_t Array_Contactor_State;
-//     uint8_t Array_Precharge_Contactor_State;
-//     uint32_t Main_Battery_Voltage;
-//     int16_t Main_Battery_Avg_Temperature;
-//     uint8_t BPS_Segment0_Status;
-//     uint8_t BPS_Segment1_Status;
-//     uint8_t BPS_Segment2_Status;
-//     uint8_t BPS_Segment3_Status;
-//     uint8_t BPS_Segment4_Status;
-//     uint8_t BPS_Segment5_Status;
-//     uint8_t BPS_Segment6_Status;
-//     uint8_t BPS_Segment7_Status;
-// } bps_status_t;
-
 void UnpackBPSStatusMessage(bps_status_msg_t* msg, uint16_t id, const uint8_t rx_data[8]) {
-    msg->BPS_Fault = rx_data[0];
-    msg->Main_Battery_Avg_Temperature = ((rx_data[5] << 8) + rx_data[6]);
+    msg->BPS_Fault = rx_data[BPS_FAULT_INDEX];
+    msg->Main_Battery_Avg_Temperature = ((rx_data[BPS_TEMP_HIGH_INDEX] << 8) | rx_data[BPS_TEMP_LOW_INDEX]);
     return;
 }

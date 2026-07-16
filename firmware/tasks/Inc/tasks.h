@@ -9,7 +9,7 @@
 #include "pindefs.h"
 #include "EMC2305.h"
 #include "CANbus.h"
-#include "faults.h"
+#include "ControlLoop.h"
 
 extern EMC2305_HandleTypeDef chip;
 extern I2C_HandleTypeDef hi2c1;
@@ -38,13 +38,13 @@ extern StackType_t FlowrateStack[configMINIMAL_STACK_SIZE];
 extern StaticTask_t xTempTaskBuffer;
 extern StackType_t xTempStack[8*configMINIMAL_STACK_SIZE];
 
-#define FAULT_TASK_PRIO       configMAX_PRIORITIES - 1
-extern StaticTask_t xFaultTaskBuffer;
-extern StackType_t xFaultStack[8*configMINIMAL_STACK_SIZE];
+#define CAN_RECV_TASK_PRIO       configMAX_PRIORITIES - 1
+extern StaticTask_t xCANrecvTaskBuffer;
+extern StackType_t xCANrecvStack[configMINIMAL_STACK_SIZE];
 
 #define CAN_TASK_DELAY         pdMS_TO_TICKS(100)
 
-extern bps_status_msg_t bps_status_global;
+// extern bps_status_msg_t bps_status_global;
 
 /**
   * @brief Initializes EMC2305 and UART, then kills itself. Only call from ONE task!
@@ -62,11 +62,16 @@ void Blinky_Task(void *pvParameters);
   */
 void FanControl_Task(void* argument);
 
+void FanControlLoop_Task(void* argument);
+
 
 /**
   * @brief Sets pump duty cycle to 25% then 100% on loop, while blinking pump LED
   */
 void PumpControl_Task(void* argument);
+
+void PumpControlLoop_Task(void* argument);
+
 
 /**
   * @brief Reads flowrate from flowrate driver and prints to UART, while blinking flowrate LED
